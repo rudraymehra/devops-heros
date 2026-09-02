@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | **Name** | Rudray Mehra |
-| **Enrollment Number** | [ENROLLMENT_NUMBER] |
+| **Enrollment Number** | 24BCS10425 |
 | **GitHub** | [rudraymehra](https://github.com/rudraymehra) |
 | **Environment** | macOS 15.5 (Apple Silicon), Docker Desktop 28.3.2 |
 
