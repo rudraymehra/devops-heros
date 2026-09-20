@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | **Name** | Rudray Mehra |
-| **Enrollment Number** | 24BCS10425 |
+| **Enrollment Number** | 10425 |
 | **GitHub** | [rudraymehra](https://github.com/rudraymehra) |
 | **Environment** | macOS 15.5 (Apple Silicon), Docker Desktop 28.3.2 |
 
@@ -210,7 +210,7 @@ I containerised several different kinds of applications in this repository. Each
 |---|---|---|---|---|---|
 | 1 | Node.js (Express) | [`../nodejs-app`](../nodejs-app) | `node:18-alpine` | 3000 | `curl` returned `<h1>Hello World from Node.js!</h1>` |
 | 2 | Python (Flask) | [`../python-app`](../python-app) | `python:3.11-slim` | 5000 | `curl` returned `<h1>Hello World from Python!</h1>` |
-| 3 | Java (built-in HttpServer, multi-stage JDK -> JRE) | [`../java-app`](../java-app) | `eclipse-temurin:17-jdk-alpine` -> `17-jre-alpine` | 8080 | `curl` returned `<h1>Hello World from Java!</h1>` |
+| 3 | Java (built-in HttpServer, multi-stage JDK -> JRE) | [`../java-app`](../java-app) | `eclipse-temurin:17-jdk` -> `eclipse-temurin:17-jre` | 8080 | `curl` returned `<h1>Hello World from Java!</h1>` |
 | 4 | Apache HTTP Server (static site) | [`../Apache-app`](../Apache-app) | `httpd:2.4-alpine` | 80 | Custom `index.html` replaces the default page |
 | 5 | React (Vite build, multi-stage Node -> Nginx) | [`../React-app`](../React-app) | `node:18-alpine` -> `nginx:alpine` | 80 | Built bundle served by Nginx |
 | 6 | Nginx (static site) | [`../nginx-app`](../nginx-app) | `nginx:alpine` | 80 | Custom `index.html` served by Nginx |

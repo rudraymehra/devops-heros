@@ -231,10 +231,10 @@ ping: bad address 'hwdn-db'
 | From            | To              | Shared network?      | Result                           |
 |-----------------|-----------------|----------------------|----------------------------------|
 | `hwdn-backend`  | `hwdn-db`       | `hwdn-db-net`        | ping OK, TCP 3306 open           |
-| `hwdn-frontend` | `hwdn-backend`  | `hwdn-backend-net`   | ping OK, HTTP from backend works |
+| `hwdn-frontend` | `hwdn-backend`  | `hwdn-backend-net`   | ping OK; backend fetches frontend HTTP |
 | `hwdn-frontend` | `hwdn-db`       | none                 | `bad address`, 100% packet loss  |
 
-**What I understood:** a user-defined bridge network is both a broadcast domain and a DNS zone. Containers only resolve and reach each other if they share at least one network, and a container attached to two networks (like my backend) acts as the only bridge between the tiers. That is how network segmentation is done in Docker without writing any firewall rules.
+**What I understood:** a user-defined bridge network is both a broadcast domain and a DNS zone. Containers only resolve and reach each other if they share at least one network, and a container attached to two networks (like my backend) can initiate connections to both tiers. Joining two networks does not automatically make that container an IP router; application code must explicitly proxy requests if that is required. That is how network segmentation is done in Docker without writing any firewall rules.
 
 ---
 
@@ -438,7 +438,7 @@ curl -s http://localhost:8085 | grep h1
 
 The bridge networks from Task 1 only exist on one machine: `hwdn-db-net` is a Linux bridge inside my Docker host and a container on another server has no way to join it. An **overlay network** solves this. It is a virtual Layer 2 network that spans several Docker hosts, so containers on different physical machines get IPs from one shared subnet and talk to each other by name as if they were plugged into the same switch. The physical network between the hosts (the "underlay") only needs to route normal IP traffic between them.
 
-Overlay networks require **Swarm mode** (or another key-value store) because some component has to know which container IP lives on which host.
+Current Docker Engine overlay networks require **Swarm mode**, including attachable networks used by standalone containers, so Docker can track which container IP lives on which host.
 
 ### How it works across hosts
 

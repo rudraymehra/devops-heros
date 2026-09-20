@@ -20,6 +20,8 @@
 #    printf 'logs\nps.txt\n' | ./homework.sh   # non-interactive (piped input)
 # =============================================================================
 
+set -euo pipefail
+
 # -----------------------------------------------------------------------------
 # 1. Store system information in variables
 #    $(command) runs the command and captures its output into the variable.
@@ -28,7 +30,7 @@ CURRENT_DATE=$(date)          # current date and time
 HOST_NAME=$(hostname)         # machine hostname
 USER_NAME=$(whoami)           # user running the script
 DISK_USAGE=$(df -h)           # disk usage in human readable format
-PROCESS_COUNT=$(ps -e | wc -l | tr -d ' ')   # number of running processes
+PROCESS_COUNT=$(ps -e -o pid= | wc -l | tr -d ' ')   # number of running processes
 
 # A small helper variable so the separators look the same everywhere
 LINE="============================================================"
@@ -58,9 +60,9 @@ echo "$LINE"
 #    stays readable; the complete list goes into the file later on)
 # -----------------------------------------------------------------------------
 echo ""
-echo "RUNNING PROCESSES (ps aux | head -n 10)  -  total: $PROCESS_COUNT"
+echo "RUNNING PROCESSES (ps aux | sed -n '1,10p')  -  total: $PROCESS_COUNT"
 echo "$LINE"
-ps aux | head -n 10
+ps aux | sed -n '1,10p'
 echo "$LINE"
 
 # -----------------------------------------------------------------------------
@@ -69,11 +71,14 @@ echo "$LINE"
 #    the default value. This lets the script run non-interactively as well.
 # -----------------------------------------------------------------------------
 echo ""
-read -p "Enter the directory name to create [default: system_logs]: " DIR_NAME
+read -r -p "Enter the directory name to create [default: system_logs]: " DIR_NAME || :
 DIR_NAME=${DIR_NAME:-system_logs}
 
-read -p "Enter the file name to store processes [default: processes.txt]: " FILE_NAME
+read -r -p "Enter the file name to store processes [default: processes.txt]: " FILE_NAME || :
 FILE_NAME=${FILE_NAME:-processes.txt}
+case "$FILE_NAME" in
+    */*|.|..) echo "Enter a file name without directory separators." >&2; exit 1 ;;
+esac
 
 # Full path of the output file built from the two inputs
 FILE_PATH="$DIR_NAME/$FILE_NAME"
@@ -85,10 +90,10 @@ FILE_PATH="$DIR_NAME/$FILE_NAME"
 # -----------------------------------------------------------------------------
 echo ""
 echo "Creating directory : $DIR_NAME"
-mkdir -p "$DIR_NAME"
+mkdir -p -- "$DIR_NAME"
 
 echo "Creating file      : $FILE_PATH"
-touch "$FILE_PATH"
+touch -- "$FILE_PATH"
 
 # -----------------------------------------------------------------------------
 # 7. Store the running processes in the file using > output redirection
