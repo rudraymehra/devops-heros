@@ -1,0 +1,17 @@
+# Local lab images are loaded into Minikube. For a remote cluster replace these
+# image repositories and tags with the GHCR repositories and a passed CI commit SHA.
+frontend:
+  image: campusfix-frontend
+  tag: local
+backend:
+  image: campusfix-backend
+  tag: local
+replicaCount: 2
+ingress:
+  enabled: true
+  host: campusfix.local
+hpa:
+  enabled: true
+monitoring:
+  serviceMonitor:
+    enabled: true

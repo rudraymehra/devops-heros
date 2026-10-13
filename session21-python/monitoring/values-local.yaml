@@ -1,0 +1,22 @@
+# Small local lab; production values can retain the complete stack.
+alertmanager:
+  enabled: false
+nodeExporter:
+  enabled: false
+kubeStateMetrics:
+  enabled: false
+grafana:
+  adminPassword: campusfix-local-demo
+  service:
+    type: ClusterIP
+  resources:
+    requests: {cpu: 50m, memory: 128Mi}
+    limits: {cpu: 500m, memory: 512Mi}
+prometheus:
+  prometheusSpec:
+    retention: 2h
+    resources:
+      requests: {cpu: 100m, memory: 256Mi}
+      limits: {cpu: 500m, memory: 512Mi}
+    serviceMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorNamespaceSelector: {}
