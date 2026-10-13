@@ -139,7 +139,7 @@ kubectl apply -f app/argocd-application.yaml
 ```yaml
 # app/argocd-application.yaml
 source:
-  repoURL: https://github.com/Nency-Ravaliya/gitops-demo.git
+  repoURL: https://github.com/YOUR_GITHUB_USERNAME/gitops-demo.git
   targetRevision: main
   path: app          # ← Argo CD reads deployment.yaml + service.yaml from here
 
@@ -304,7 +304,7 @@ session20-gitops-app   3/3     3            3
                            │
                            ▼
                    GitHub Repository
-             (Nency-Ravaliya/gitops-demo)
+             (YOUR_GITHUB_USERNAME/gitops-demo)
                            │
               Argo CD polls every 3 minutes
                            │

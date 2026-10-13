@@ -1,17 +1,11 @@
-# Java Hello World - multi-stage build
-# Stage 1: compile with the full JDK
-# (eclipse-temurin:17-jdk-alpine is amd64-only, so the multi-arch Ubuntu based tag is used
-#  here to make the build work on Apple Silicon as well as on x86 Linux servers)
-FROM eclipse-temurin:17-jdk AS build
-WORKDIR /app
+FROM eclipse-temurin:21-jdk-alpine AS builder
+WORKDIR /src
 COPY Main.java .
-RUN javac Main.java
+RUN javac --add-modules jdk.httpserver Main.java
 
-# Stage 2: run with only the JRE (smaller image, no compiler shipped to production)
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
-COPY --from=build /app/Main.class .
-
+COPY --from=builder /src/Main.class .
+USER 10001:10001
 EXPOSE 8080
-
-CMD ["java", "Main"]
+ENTRYPOINT ["java", "--add-modules", "jdk.httpserver", "Main"]

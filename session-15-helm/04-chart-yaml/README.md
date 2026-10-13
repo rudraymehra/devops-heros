@@ -63,8 +63,8 @@ keywords:
   - web
 home: https://example.com
 maintainers:
-  - name: Nency
-    email: nency@example.com
+  - name: Sudhir Mehra
+    email: rudray.24bcs10425@sst.scaler.com
 ```
 
 ---

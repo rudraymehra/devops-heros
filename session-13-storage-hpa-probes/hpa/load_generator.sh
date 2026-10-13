@@ -25,7 +25,7 @@ if ! curl -s -f "$TARGET_URL" > /dev/null 2>&1; then
 fi
 
 # Run 10 parallel background workers firing requests in an infinite loop
-for i in {1..10}; do
+for _ in {1..10}; do
     while true; do
         curl -s "$TARGET_URL" > /dev/null || true
     done &

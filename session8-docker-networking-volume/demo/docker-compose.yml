@@ -27,10 +27,13 @@ services:
       - db_data:/var/lib/mysql
     networks:
       - backend_net
+      - database_net
 
 networks:
   frontend_net:
   backend_net:
+  database_net:
+    internal: true
 
 volumes:
   db_data:

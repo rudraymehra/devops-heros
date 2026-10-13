@@ -1,4 +1,5 @@
-# Apply this file from your local/admin environment; do not put it under the Git source path.
+# Apply this controller object from the admin environment. It intentionally lives
+# outside the Git directory rendered as the application workload.
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -6,16 +7,13 @@ metadata:
   namespace: argocd
 spec:
   project: default
-
   source:
-    repoURL: https://github.com/YOUR_USERNAME/YOUR_GITOPS_REPO.git
+    repoURL: https://github.com/rudraymehra/devops-heros.git
     targetRevision: main
-    path: app
-
+    path: session20-monitoring-observability-gitops/08-mini-project/app
   destination:
     server: https://kubernetes.default.svc
     namespace: session20
-
   syncPolicy:
     automated:
       prune: true

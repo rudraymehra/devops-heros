@@ -1,7 +1,7 @@
 .DS_Store
 **/.DS_Store
 node_modules/
-dist/
+*.zip
 __pycache__/
 *.py[cod]
 *.db
@@ -9,12 +9,12 @@ __pycache__/
 .coverage
 .venv/
 .env
-*.kubeconfig
-*.zip
 *.tfstate
 *.tfstate.*
-*.tfplan
 .terraform/
 terraform.tfvars
+dist/
+*.kubeconfig
+*.tfplan
 playwright-report/
 test-results/

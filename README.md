@@ -1,64 +1,41 @@
-# DevOps Homework — Rudray Mehra
+# DevOps assignments — Sudhir Mehra
 
-**Name:** Rudray Mehra
-**Enrollment number:** 10425
-**GitHub:** [rudraymehra](https://github.com/rudraymehra)
-**Public repository:** [rudraymehra/devops-heros](https://github.com/rudraymehra/devops-heros)
+**24 BCS 10425 · Batch B**
+rudray.24bcs10425@sst.scaler.com
 
-## Submission links
+This repository combines completed homework, runnable labs and **CampusFix**, a
+campus maintenance application with a distinct domain and repair workflow.
+Earlier homework history is retained; course source attribution is in [SOURCES.md](SOURCES.md).
 
-Both submission forms say **“Share Readme.md file GitHub link only”** and provide separate fields for 11 topics. Copy the corresponding README URL below into each field; these are file links, not repository-folder links.
+Start with the [submission guide](SUBMISSION-GUIDE.md) for all form links, or the
+[CampusFix capstone](session21-python/README.md) for the application, architecture,
+tests, containers, Kubernetes, security, Terraform and monitoring.
 
-| Form field | README link | Evidence status |
-| --- | --- | --- |
-| Linux Fundamentals | [README](https://github.com/rudraymehra/devops-heros/blob/main/session2-linux/README.md) | Existing commands and output |
-| Shell Scripting | [README](https://github.com/rudraymehra/devops-heros/blob/main/session3-shell-scripting/README.md) | Script, commands and output; error handling corrected |
-| Networking | [README](https://github.com/rudraymehra/devops-heros/blob/main/session4-networking/README.md) | Existing commands, output and explanations |
-| Git and GitHub | [README](https://github.com/rudraymehra/devops-heros/blob/main/session5-git-github/README.md) | Commit comparison and cherry-pick output |
-| Docker Fundamentals | [README](https://github.com/rudraymehra/devops-heros/blob/main/session6-7-docker/README.md) | Six applications, Dockerfiles and recorded build/run output |
-| Docker Images | [README](https://github.com/rudraymehra/devops-heros/blob/main/session6-7-docker/multi-stage-dockerfile/README.md) | Multi-stage app, port 8080 output and student details |
-| Docker Networking | [README](https://github.com/rudraymehra/devops-heros/blob/main/session8-docker-networking-volume/README.md) | Recorded output present; required screenshots pending |
-| Kubernetes Fundamentals | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/09-kubernetes-fundamentals/README.md) | Manifests and exercises prepared; cluster run pending |
-| Kubernetes Pods, ReplicaSets & Deployments | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/10-kubernetes-core-objects/README.md) | Manifests and exercises prepared; cluster run pending |
-| Kubernetes Networking & Services | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/11-kubernetes-services/README.md) | Manifests and exercises prepared; cluster run pending |
-| Kubernetes Ingress, ConfigMaps & Secrets | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/12-kubernetes-config-ingress/README.md) | Manifests and exercises prepared; cluster run pending |
+| Session | Topic | Submission |
+|---|---|---|
+| 1&2 | Linux Fundamentals | [README](https://github.com/rudraymehra/devops-heros/blob/main/session2-linux/README.md) |
+| 3 | Shell Scripting | [README](https://github.com/rudraymehra/devops-heros/blob/main/session3-shell-scripting/README.md) |
+| 4 | Networking | [README](https://github.com/rudraymehra/devops-heros/blob/main/session4-networking/README.md) |
+| 5 | Git and GitHub | [README](https://github.com/rudraymehra/devops-heros/blob/main/session5-git-github/README.md) |
+| 6 | Docker Fundamentals | [README](https://github.com/rudraymehra/devops-heros/blob/main/session6-7-docker/README.md) |
+| 7 | Docker Images | [README](https://github.com/rudraymehra/devops-heros/blob/main/session6-7-docker/multi-stage-dockerfile/README.md) |
+| 8 | Docker Networking | [README](https://github.com/rudraymehra/devops-heros/blob/main/session8-docker-networking-volume/README.md) |
+| 9 | Kubernetes Fundamentals | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/09-kubernetes-fundamentals/README.md) |
+| 10 | Kubernetes Pods, ReplicaSets & Deployments | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/10-kubernetes-core-objects/README.md) |
+| 11 | Kubernetes Networking & Services | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/11-kubernetes-services/README.md) |
+| 12 | Kubernetes Ingress, ConfigMaps & Secrets | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/12-kubernetes-config-ingress/README.md) |
+| 13 | Kubernetes Storage, HPA & Probes | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/13-storage-hpa-probes/README.md) |
+| 14 | Kubernetes Troubleshooting | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/14-troubleshooting/README.md) |
+| 15 | Helm | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/15-helm/README.md) |
+| 16 | CI/CD & GitHub Actions | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/16-cicd/README.md) |
+| 17 | Complete CI/CD & DevSecOps | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/17-devsecops/README.md) |
+| 18 | Terraform & Infrastructure as Code | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/18-terraform/README.md) |
+| 19 | Cloud & Terraform in Action | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/19-cloud/README.md) |
+| 20 | Monitoring, Observability & GitOps | [README](https://github.com/rudraymehra/devops-heros/blob/main/submissions/20-monitoring-gitops/README.md) |
+| 21 | Final DevOps Project & Troubleshooting | [README](https://github.com/rudraymehra/devops-heros/blob/main/session21-python/README.md) |
 
-## Completion status
+See [the completion report](ASSIGNMENT-COMPLETION.md) for actual verification results.
+Expected-output examples in course notes are not execution evidence.
 
-The original Linux-through-Docker submissions and their recorded September 3 command outputs are preserved. The enrollment number above was confirmed for this submission. The shell script and documentation corrections are included in this review.
-
-**Remaining before a fully verified submission:** capture the required Docker networking screenshots and execute the four new Kubernetes labs. Docker Desktop and the local Minikube cluster were unavailable during this review. No Kubernetes runtime output has been fabricated. See [verification details](evidence/verification.md).
-
-The linked homework document currently describes seven Linux-through-Docker topics. The live forms also require four Kubernetes topics. The added Kubernetes exercises follow the corresponding instructor repository sessions and clearly identify their execution status.
-
-## Repository contents
-
-- `session2-linux/`: links, user management, journald and Linux command practice.
-- `session3-shell-scripting/homework.sh`: interactive system report with process output saved to a file.
-- `session4-networking/`: networking command output and explanations.
-- `session5-git-github/`: staging, `commit -a -m`, branches and cherry-pick practice.
-- `session6-7-docker/`: `nodejs-app`, `python-app`, `java-app`, `Apache-app`, `React-app`, `nginx-app`, and the multi-stage app.
-- `session8-docker-networking-volume/`: container connectivity, host networking, bind mounts and overlay networks.
-- `submissions/09-*` through `submissions/12-*`: Kubernetes manifests, explanations and executable exercises.
-- `scripts/run-kubernetes-labs.py`: captures real command output and verifies the four Kubernetes exercises.
-
-## Running the Kubernetes exercises
-
-Use Docker Desktop and a dedicated local Minikube profile:
-
-```bash
-minikube start -p devops-homework --driver=docker --cpus=2 --memory=3072
-minikube addons enable ingress -p devops-homework
-python3 scripts/run-kubernetes-labs.py --context devops-homework
-```
-
-Each topic's `OUTPUT.md` is created only when its commands execute. The runner exits on a command/check failure. Resource names are confined to `rudray-devops-hw`; cleanup is documented in each topic.
-
-## Assignment and submission forms
-
-- [Homework instructions](https://docs.google.com/document/d/1cjXFYf2Thm8cBEN-0C48B-v02cj3jGLd47lcO18prHE/edit?usp=sharing)
-- [Section A submission form](https://forms.gle/ydjAJcwxjpjBXgxB8)
-- [Section B submission form](https://forms.gle/pAuXQaokwVzhRzit6)
-- [Instructor repository and session resources](https://github.com/Nency-Ravaliya/devops-heros)
-
-Submit through the form for your section. The forms have not been submitted by this repository update.
+[Section B form](https://forms.gle/pAuXQaokwVzhRzit6) ·
+[Official homework](https://docs.google.com/document/d/1cjXFYf2Thm8cBEN-0C48B-v02cj3jGLd47lcO18prHE/edit?usp=sharing)

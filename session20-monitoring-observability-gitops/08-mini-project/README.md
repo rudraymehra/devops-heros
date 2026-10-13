@@ -92,11 +92,15 @@ kubectl get pods -n argocd
 
 ---
 
-# Step 3 - Create a Git Repository
+# Step 3 - Review the Git source of truth
 
-Create a repository on GitHub/GitLab/Bitbucket.
+This repository already stores the desired application state in:
 
-Copy these application manifests into the Git repository:
+```text
+session20-monitoring-observability-gitops/08-mini-project/app/
+```
+
+The directory contains:
 
 ```text
 namespace.yaml
@@ -104,37 +108,28 @@ deployment.yaml
 service.yaml
 ```
 
-Your Git repository should contain:
-
-```text
-app/
-|
-|-- namespace.yaml
-|-- deployment.yaml
-|-- service.yaml
-```
-
-Keep this teaching project's `argocd-application.yaml` outside the Git `app/` path. The Application object tells Argo CD which repository/path to watch; it should not be rendered as one of the workload manifests from that same path.
+The `argocd-application.yaml` file is kept outside the Git `app/` path. The
+Application object tells Argo CD which repository/path to watch; it should not be
+rendered as one of the workload manifests from that same path.
 
 ---
 
-# Step 4 - Change Repository URL
+# Step 4 - Confirm the repository URL
 
 Open:
 
 ```text
-app/argocd-application.yaml
+argocd-application.yaml
 ```
 
-Replace:
+It is configured for this repository:
 
 ```text
-https://github.com/YOUR_USERNAME/YOUR_GITOPS_REPO.git
+https://github.com/rudraymehra/devops-heros.git
 ```
 
-with your actual repository URL.
-
-Commit and push.
+If you fork or rename the repository, update `spec.source.repoURL`, then commit and
+push the change before applying the Application.
 
 ---
 
@@ -143,7 +138,7 @@ Commit and push.
 Apply the Argo CD Application:
 
 ```bash
-kubectl apply -f app/argocd-application.yaml
+kubectl apply -f argocd-application.yaml
 ```
 
 Check:

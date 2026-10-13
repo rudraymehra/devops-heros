@@ -7,4 +7,6 @@ spec:
   template:
     metadata: {labels: {app: broken-image}}
     spec:
-      containers: [{name: backend, image: ghcr.io/example/taskboard-backend:does-not-exist}]
+      containers:
+        - name: backend
+          image: "ghcr.io/example/taskboard-backend:does-not-exist"

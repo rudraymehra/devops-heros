@@ -5,6 +5,10 @@ variable "aws_region" {
 }
 variable "bucket_name" {
   type        = string
-  description = "Name of the S3 bucket."
-  default     = "yatri1107"
+  description = "Globally unique name of the S3 bucket."
+
+  validation {
+    condition     = can(regex("^[a-z0-9][a-z0-9.-]{1,61}[a-z0-9]$", var.bucket_name))
+    error_message = "bucket_name must be a valid lowercase S3 bucket name."
+  }
 }

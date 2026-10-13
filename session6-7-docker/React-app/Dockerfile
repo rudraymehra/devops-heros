@@ -1,14 +1,11 @@
-# React Hello World - multi-stage build
-# Stage 1: install dependencies and build the static bundle
-FROM node:18-alpine AS build
+FROM node:22-alpine AS builder
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
+COPY package.json ./
+RUN npm ci
+COPY index.html ./
+COPY src ./src
 RUN npm run build
 
-# Stage 2: serve the built files with Nginx (Node is not needed at runtime)
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+FROM nginx:1.27-alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]

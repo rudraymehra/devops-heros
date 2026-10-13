@@ -81,7 +81,7 @@ flowchart LR
 
 ## Hands-on Lab: Deploying Ingress, ConfigMaps & Secrets
 
-> **Cloud Instance Students:** For the complete, single-file student lab exercise workbook with step-by-step tasks and grading checklist, open **[LAB-EXERCISES.md](file:///Users/nensiravaliya/Downloads/scaler-devops-session/devops-course/sessions/session-12-ingress-configmaps-secrets/LAB-EXERCISES.md)**.
+> **Cloud Instance Students:** Use the lab exercise workbook supplied with the course for step-by-step tasks and the grading checklist.
 
 Manifests are located in `./01-configmap/`, `./02-secret/`, `./03-ingress/`, and `./04-full-demo/`.
 

@@ -103,7 +103,7 @@ tests/test_app.py::test_status                    PASSED
 curl http://localhost:5001/health
 
 # Greet someone
-curl http://localhost:5001/api/greet/Nensi
+curl http://localhost:5001/api/greet/Sudhir
 
 # Add two numbers
 curl -X POST http://localhost:5001/api/add \

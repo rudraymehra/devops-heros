@@ -31,12 +31,12 @@ def test_health(client):
 # ── Test 3: Greet returns 200 and includes the name ───
 
 def test_greet(client):
-    response = client.get("/api/greet/Nensi")
+    response = client.get("/api/greet/Sudhir")
     assert response.status_code == 200
 
     data = response.get_json()
     # The response contains a random greeting — just check the name is in it
-    assert "Nensi" in data["message"]
+    assert "Sudhir" in data["message"]
 
 
 # ── Test 4: Add numbers returns correct result ─────────
@@ -95,3 +95,22 @@ def test_status(client):
     assert data["status"] == "running"
     assert "python_version" in data
     assert "uptime" in data
+
+
+def test_pipeline_simulation(client):
+    response = client.post(
+        "/api/pipeline/run",
+        json={"branch": "main", "fail_chance": 0},
+    )
+    assert response.status_code == 200
+    data = response.get_json()
+    assert data["overall_status"] == "passed"
+    assert len(data["stages"]) == 8
+
+
+def test_pipeline_rejects_invalid_probability(client):
+    response = client.post(
+        "/api/pipeline/run",
+        json={"fail_chance": 2},
+    )
+    assert response.status_code == 400

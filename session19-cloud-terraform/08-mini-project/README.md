@@ -21,7 +21,16 @@ VPC: 10.20.0.0/16
    +-- Route Table Association
    |
    +-- Web Security Group
+   |
+   +-- EC2 Web Server
+   |
+   +-- Private, Encrypted, Versioned S3 Bucket
 ```
+
+The EC2 instance uses the latest Amazon Linux 2023 AMI discovered at plan time,
+requires IMDSv2, and serves a small Nginx page. The S3 bucket blocks public access,
+enables versioning, and uses server-side encryption. These resources can incur AWS
+charges; use a lab account and run `terraform destroy` after verification.
 
 ---
 
@@ -163,6 +172,19 @@ aws_route_table_association.public
 aws_security_group.web
 aws_subnet.public
 aws_vpc.main
+aws_instance.web
+aws_s3_bucket.artifacts
+aws_s3_bucket_public_access_block.artifacts
+aws_s3_bucket_server_side_encryption_configuration.artifacts
+aws_s3_bucket_versioning.artifacts
+```
+
+Verify the web server after cloud-init finishes:
+
+```bash
+curl "$(terraform output -raw web_url)"
+aws s3api get-public-access-block --bucket "$(terraform output -raw artifact_bucket)"
+aws s3api get-bucket-versioning --bucket "$(terraform output -raw artifact_bucket)"
 ```
 
 ---

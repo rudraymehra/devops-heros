@@ -107,8 +107,9 @@ def services():
     e.run(K + ["wait", "--for=condition=Ready", "pod/network-client", "--timeout=180s"])
     e.run(K + ["get", "services", "-o", "wide"])
     e.run(K + ["get", "endpointslices", "-l", "kubernetes.io/service-name=web-clusterip"])
-    for host in [f"web-clusterip.{NS}.svc.cluster.local", "web-headless", "external-docs"]:
-        e.run(K + ["exec", "network-client", "--", "nslookup", host])
+    for service in ["web-clusterip", "web-headless", "external-docs"]:
+        host = f"{service}.{NS}.svc.cluster.local."
+        e.run(K + ["exec", "network-client", "--", "nslookup", "-type=A", host])
     for host in ["web-clusterip", "web-nodeport", "web-loadbalancer"]:
         html = e.run(K + ["exec", "network-client", "--", "wget", "-qO-", "http://" + host])
         assert "Welcome to nginx!" in html
