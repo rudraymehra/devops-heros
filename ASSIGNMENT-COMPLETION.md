@@ -1,60 +1,33 @@
-# Assignment Completion Report
+# Assignment completion and verification
+Sudhir Mehra · 24 BCS 10425 · Batch B · rudray.24bcs10425@sst.scaler.com
 
-**Student:** Sudhir Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
+All 20 form fields have source files and submission README entry points.
+Implementation coverage does not mean every requested runtime screenshot exists.
+See [submission links and instructions](SUBMISSION-GUIDE.md) and [sources](SOURCES.md).
 
-The repository contains implementation and documentation for every homework block
-from Linux through the final DevOps capstone.
+## Verified during this work (2026-10-13)
+- CampusFix: 24 API tests passed; [actual pytest output](session21-python/evidence/pytest.md).
+- Docker Compose ran the PostgreSQL, API and frontend stack.
+- Desktop/mobile browser exercised create, edit, resolve, reopen, search and delete,
+  including preservation of an unsaved draft on a server error.
+  [Screenshots, video and result](session21-python/evidence/browser/).
+- Backend/frontend images passed HIGH/CRITICAL Trivy checks locally.
+- Frontend production build, backend dependency audit, Bandit, Gitleaks,
+  Helm rendering and GitHub Actions lint passed locally.
+- AWS Terraform plan and apply created the EKS lab; the first failed attempt and
+  successful retry are both preserved in [cloud evidence](session21-python/evidence/).
+- Kubernetes sessions 9 and 10 ran on EKS: see their OUTPUT.md files.
+- Earlier homework evidence and student Git history are retained; they are not
+  presented as fresh executions.
 
-## Repository-complete work
+## In progress / not yet claimed complete
+- Published GitHub Actions runs and SHA-tagged GHCR images.
+- EKS application, remaining Kubernetes labs, monitoring and GitOps runtime checks.
+- AWS teardown confirmation.
+- Exact screenshot-only rubric requirements where only terminal text is available.
 
-- Linux links, user-management, journal, and command explanations
-- System-information shell script
-- Networking command collector and explanations
-- Git commit and cherry-pick exercise
-- Six Dockerized Hello World applications and a multi-stage build
-- Docker networking, volume, bind-mount, host-network, and overlay exercises
-- Kubernetes fundamentals, deployment strategies, lifecycle, Services, DNS,
-  Ingress, configuration, Secrets, storage, HPA, probes, and troubleshooting
-- Helm chart lifecycle and mini-project
-- Repository-root GitHub Actions workflows for CI, DevSecOps, and the capstone
-- Terraform S3 lab, AWS service research, VPC/EC2/S3 project, and EKS infrastructure
-- Prometheus, Grafana, GitOps, and Argo CD exercises
-- Full-stack final capstone with API tests, containers, Helm, Terraform, monitoring,
-  security gates, and troubleshooting manifests
-
-## Verified locally on 2026-10-13
-
-| Check | Result |
-|---|---|
-| Git commit/cherry-pick lab | Passed in an isolated repository |
-| Session 16 unit tests | 5 passed |
-| Session 17 unit tests | 10 passed |
-| Session 21 API tests | 9 passed |
-| Session 21 frontend production build | Passed |
-| Session 17 Bandit SAST | Passed |
-| Session 17 Python dependency audit | No known vulnerabilities |
-| Session 21 Python dependency audit | No known vulnerabilities |
-| Session 6 React dependency audit | No known vulnerabilities |
-| Gitleaks working-tree scan | No leaks found; documented fake Secret fixtures allowlisted |
-| ShellCheck for assignment scripts | Passed |
-| Session 15 Helm lint | Passed |
-| Session 21 Helm lint and render | Passed |
-| Docker Compose configuration validation | Passed |
-| GitHub Actions workflow lint | Passed |
-| YAML syntax audit | 218 files parsed |
-| Terraform HCL syntax audit | 28 files parsed |
-
-## Student-generated evidence still required
-
-The following cannot honestly be pre-filled because it must identify a real run in
-the student's own accounts or local environment:
-
-- terminal/browser screenshots requested by the homework
-- GitHub Actions run URLs and GHCR package pages
-- Kubernetes and Argo CD runtime output
-- AWS Console views, Terraform plan/apply output, and destroy confirmation
-- Prometheus target and Grafana dashboard screenshots
-- final presentation recording
-
-Use each session's `SUBMISSION.md` checklist. Do not submit unchecked placeholders or
-claim commands were executed when they were not.
+## Student-only final steps
+Give the narrated presentation/live demonstration described in
+[the speaking guide](session21-python/PRESENTATION.md), review the evidence and
+submit the [Section B form](https://forms.gle/pAuXQaokwVzhRzit6).
+The automated browser video is not a narrated student presentation.

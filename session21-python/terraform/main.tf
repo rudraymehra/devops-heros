@@ -31,6 +31,18 @@ module "eks" {
   cluster_endpoint_public_access           = true
   enable_cluster_creator_admin_permissions = true
   enable_irsa                              = true
+  # Pod IPs use the node security group. Permit HTTP between workers as well
+  # as the module's default ephemeral-port rules.
+  node_security_group_additional_rules = {
+    ingress_http_self = {
+      description = "HTTP between application pods on worker nodes"
+      protocol    = "tcp"
+      from_port   = 80
+      to_port     = 80
+      type        = "ingress"
+      self        = true
+    }
+  }
   cluster_addons = {
     coredns    = {}
     kube-proxy = {}

@@ -10,8 +10,8 @@ multi-stage-build exercise.
 | Node.js | `node-app` | 3000 | 3000 |
 | Python | `python-app` | 8000 | 8000 |
 | Java | `java-app` | 8080 | 8081 |
-| Apache | `apache-app` | 80 | 8082 |
-| React | `react-app` | 80 | 8083 |
+| Apache | `Apache-app` | 80 | 8082 |
+| React | `React-app` | 80 | 8083 |
 | Nginx | `nginx-web` | 80 | 8084 |
 
 ## Build and verify
@@ -20,8 +20,8 @@ multi-stage-build exercise.
 docker build -t homework-node ./node-app
 docker build -t homework-python ./python-app
 docker build -t homework-java ./java-app
-docker build -t homework-apache ./apache-app
-docker build -t homework-react ./react-app
+docker build -t homework-apache ./Apache-app
+docker build -t homework-react ./React-app
 docker build -t homework-nginx ./nginx-web
 
 docker run -d --name homework-node -p 3000:3000 homework-node
