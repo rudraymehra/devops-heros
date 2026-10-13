@@ -1,12 +1,14 @@
-# Local lab images are loaded into Minikube. For a remote cluster replace these
-# image repositories and tags with the GHCR repositories and a passed CI commit SHA.
+# Immutable images published by the successful CampusFix CI run 38342440632.
 frontend:
-  image: campusfix-frontend
-  tag: local
+  image: ghcr.io/rudraymehra/campusfix-frontend
+  tag: 0a1c12a5cbb3bb649b77f1be3b515357eca0d30e
 backend:
-  image: campusfix-backend
-  tag: local
+  image: ghcr.io/rudraymehra/campusfix-backend
+  tag: 0a1c12a5cbb3bb649b77f1be3b515357eca0d30e
 replicaCount: 2
+postgres:
+  storageClass: campusfix-gp3
+  createStorageClass: true
 ingress:
   enabled: true
   host: campusfix.local
