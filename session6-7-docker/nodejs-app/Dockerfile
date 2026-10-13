@@ -1,5 +1,5 @@
 # Node.js Hello World - Express server
-FROM node:18-alpine
+FROM node:22-alpine
 
 # All following commands run relative to /app inside the image
 WORKDIR /app

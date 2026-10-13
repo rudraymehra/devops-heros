@@ -1,0 +1,48 @@
+name: Homework foundation verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - "session6-7-docker/**"
+      - ".github/workflows/homework-foundations.yml"
+      - "scripts/foundation-check.sh"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {app: nodejs-app, port: 3000}
+          - {app: python-app, port: 8000}
+          - {app: java-app, port: 8080}
+          - {app: Apache-app, port: 80}
+          - {app: React-app, port: 80}
+          - {app: nginx-app, port: 80}
+          - {app: multi-stage-dockerfile, port: 8080}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build, run and request the actual image
+        env:
+          APP: ${{ matrix.app }}
+          PORT: ${{ matrix.port }}
+        run: |
+          docker build -t homework:test "session6-7-docker/$APP"
+          docker run -d --name homework -p "8080:$PORT" homework:test
+          curl --retry 20 --retry-delay 2 --retry-connrefused --fail http://127.0.0.1:8080
+          docker ps
+          docker logs homework
+          docker stop homework
+  linux-shell-git-networking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 session21-python/scripts/capture-command.py foundation-output.md -- bash scripts/foundation-check.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: foundation-command-evidence
+          path: foundation-output.md
