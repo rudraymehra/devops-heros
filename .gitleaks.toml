@@ -1,0 +1,21 @@
+title = "devops-heros secret scanning configuration"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Downloaded dependency caches and generated frontend output, excluded from source control"
+paths = ['''(^|/)(node_modules|\.terraform|\.venv|dist)/''']
+
+[[allowlists]]
+description = "Documented fake credentials used only in the Session 12 Secret lab"
+paths = [
+  '''^session-12-ingress-configmaps-secrets/secret/db-secret\.yaml$''',
+  '''^session-12-ingress-configmaps-secrets/02-secret/db-secret\.yaml$''',
+  '''^session-12-ingress-configmaps-secrets/04-full-demo/secret\.yaml$''',
+  '''^session-12-ingress-configmaps-secrets/02-secret/README\.md$''',
+  '''^session-12-ingress-configmaps-secrets/lab\.md$''',
+  '''^session-12-ingress-configmaps-secrets/instructor-notes\.md 09-40-19-923\.md$''',
+  '''^session-12-ingress-configmaps-secrets/instructor-notes\.md 10-38-18-235\.md$''',
+  '''^session-12-ingress-configmaps-secrets/instructor-notes\.md 16-26-12-145\.md$'''
+]

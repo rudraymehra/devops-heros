@@ -1,0 +1,96 @@
+name: Session 17 DevSecOps
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "session-17-devsecops/demo/**"
+      - ".github/workflows/session17-devsecops.yml"
+  pull_request:
+    paths:
+      - "session-17-devsecops/demo/**"
+      - ".github/workflows/session17-devsecops.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PROJECT_DIR: session-17-devsecops/demo
+
+jobs:
+  test-and-source-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test and security tools
+        run: pip install -r requirements-dev.txt bandit pip-audit
+        working-directory: ${{ env.PROJECT_DIR }}
+      - name: Unit tests
+        run: pytest --cov=app --cov-report=term-missing
+        working-directory: ${{ env.PROJECT_DIR }}
+      - name: SAST
+        run: bandit -r app
+        working-directory: ${{ env.PROJECT_DIR }}
+      - name: SCA
+        run: pip-audit -r requirements.txt
+        working-directory: ${{ env.PROJECT_DIR }}
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  image-security-and-publish:
+    needs: test-and-source-security
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set lowercase image name
+        run: echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/session17-devsecops" >> "$GITHUB_ENV"
+      - name: Build image
+        run: docker build -t "$IMAGE_NAME:${{ github.sha }}" .
+        working-directory: ${{ env.PROJECT_DIR }}
+      - name: Trivy security gate
+        uses: aquasecurity/trivy-action@0.30.0
+        with:
+          image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: "1"
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: docker push "$IMAGE_NAME:${{ github.sha }}"
+
+  deployment-smoke-test:
+    needs: image-security-and-publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: helm/kind-action@v1.10.0
+      - name: Build and load local image
+        run: |
+          docker build -t session17-python:test .
+          kind load docker-image session17-python:test
+        working-directory: ${{ env.PROJECT_DIR }}
+      - name: Deploy and verify
+        run: |
+          sed \
+            -e 's|ghcr.io/OWNER/session17-devsecops:__IMAGE_TAG__|session17-python:test|' \
+            -e 's|imagePullPolicy: Always|imagePullPolicy: IfNotPresent|' \
+            k8s/deployment.yaml | kubectl apply -f -
+          kubectl apply -f k8s/service.yaml
+          kubectl rollout status deployment/session17-python --timeout=120s
+        working-directory: ${{ env.PROJECT_DIR }}

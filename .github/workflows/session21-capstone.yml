@@ -1,0 +1,163 @@
+name: Session 21 CampusFix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "session21-python/**"
+      - ".github/workflows/session21-capstone.yml"
+      - ".gitleaks.toml"
+  pull_request:
+    paths:
+      - "session21-python/**"
+      - ".github/workflows/session21-capstone.yml"
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy this revision to the configured EKS cluster
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: campusfix-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test-and-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+        working-directory: session21-python/backend
+      - run: pytest -v --junitxml=test-results.xml
+        working-directory: session21-python/backend
+      - name: SAST — Bandit
+        run: bandit -r app -ll
+        working-directory: session21-python/backend
+      - name: SCA — Python dependencies
+        run: pip-audit -r requirements.txt
+        working-directory: session21-python/backend
+      - name: Secret scanning
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: session21-python/frontend/package-lock.json
+      - run: npm ci && npm audit --audit-level=high && npm run build
+        working-directory: session21-python/frontend
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: campusfix-test-results
+          path: session21-python/backend/test-results.xml
+
+  build-scan-push:
+    needs: test-and-scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        component: [backend, frontend]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set image name
+        run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/campusfix-${{ matrix.component }}" >> "$GITHUB_ENV"
+      - name: Build image
+        run: docker build -t "$IMAGE:${{ github.sha }}" "session21-python/${{ matrix.component }}"
+      - name: Container security gate
+        uses: aquasecurity/trivy-action@0.30.0
+        with:
+          image-ref: ${{ env.IMAGE }}:${{ github.sha }}
+          scanners: vuln
+          severity: HIGH,CRITICAL
+          exit-code: "1"
+          format: table
+          output: trivy-${{ matrix.component }}.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trivy-${{ matrix.component }}
+          path: trivy-${{ matrix.component }}.txt
+      - if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: docker push "$IMAGE:${{ github.sha }}"
+
+  validate-infrastructure:
+    needs: test-and-scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - run: helm lint session21-python/helm/taskboard
+      - run: helm template taskboard session21-python/helm/taskboard -f session21-python/helm/taskboard/values-prod.yaml > /tmp/campusfix-rendered.yaml
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.14.0"
+      - run: terraform init -backend=false && terraform validate
+        working-directory: session21-python/terraform
+
+  deploy:
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy
+    needs: [build-scan-push, validate-infrastructure]
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ vars.AWS_REGION || 'ap-south-1' }}
+      - name: Configure EKS access
+        env:
+          CLUSTER: ${{ vars.EKS_CLUSTER_NAME }}
+          REGION: ${{ vars.AWS_REGION || 'ap-south-1' }}
+        run: |
+          test -n "$CLUSTER"
+          aws eks update-kubeconfig --name "$CLUSTER" --region "$REGION"
+      - name: Configure registry access
+        env:
+          GHCR_PULL_TOKEN: ${{ secrets.GHCR_PULL_TOKEN }}
+        run: |
+          test -n "$GHCR_PULL_TOKEN"
+          kubectl create namespace taskboard --dry-run=client -o yaml | kubectl apply -f -
+          kubectl create secret docker-registry ghcr -n taskboard \
+            --docker-server=ghcr.io --docker-username="$GITHUB_ACTOR" \
+            --docker-password="$GHCR_PULL_TOKEN" --dry-run=client -o yaml | kubectl apply -f -
+      - name: Deploy immutable images
+        env:
+          TASKBOARD_DB_PASSWORD: ${{ secrets.TASKBOARD_DB_PASSWORD }}
+        run: |
+          test -n "$TASKBOARD_DB_PASSWORD"
+          owner="${GITHUB_REPOSITORY_OWNER,,}"
+          helm upgrade --install taskboard session21-python/helm/taskboard \
+            --namespace taskboard --create-namespace \
+            -f session21-python/helm/taskboard/values-prod.yaml \
+            --set 'imagePullSecrets[0].name=ghcr' \
+            --set backend.image="ghcr.io/${owner}/campusfix-backend" \
+            --set frontend.image="ghcr.io/${owner}/campusfix-frontend" \
+            --set backend.tag="${GITHUB_SHA}" --set frontend.tag="${GITHUB_SHA}" \
+            --set-string postgres.password="$TASKBOARD_DB_PASSWORD" --wait --timeout 10m
+          kubectl rollout status deployment/taskboard-backend -n taskboard --timeout=5m
+          kubectl rollout status deployment/taskboard-frontend -n taskboard --timeout=5m
