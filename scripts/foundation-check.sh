@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 set -x
+trap 'printf "::error::Foundation failed at line %s: %s\n" "$LINENO" "$BASH_COMMAND"' ERR
 lab_dir=$(mktemp -d)
+chmod 755 "$lab_dir"
 test ! -e "$lab_dir/original"
 printf 'Sudhir Mehra · 24 BCS 10425 · Batch B\n' > "$lab_dir/original"
 ln "$lab_dir/original" "$lab_dir/hard"

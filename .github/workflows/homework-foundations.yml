@@ -41,6 +41,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 session21-python/scripts/capture-command.py foundation-output.md -- bash scripts/foundation-check.sh
+      - name: Show recorded command evidence
+        if: always()
+        run: |
+          cat foundation-output.md
+          cat foundation-output.md >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
