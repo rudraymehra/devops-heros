@@ -30,15 +30,15 @@ bash session5-git-github/run-cherry-pick-lab.sh
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml up -d --build
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml ps
 docker network inspect campusfix-homework_frontend_net campusfix-homework_backend_net campusfix-homework_database_net
-curl --retry 20 --retry-delay 2 --retry-connrefused --fail http://127.0.0.1:8080
+curl --retry 20 --retry-delay 2 --retry-all-errors --fail http://127.0.0.1:8080
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml exec -T backend python -c 'import socket,time; time.sleep(20); print(socket.gethostbyname("database")); s=socket.create_connection(("database",3306),timeout=10); print("MySQL reachable from backend"); s.close()'
 printf 'Hello students\n' > "$lab_dir/index.html"
 docker run -d --name bind-demo -p 8081:80 -v "$lab_dir:/usr/share/nginx/html:ro" nginx:alpine
-curl --retry 20 --retry-delay 2 --retry-connrefused --fail http://127.0.0.1:8081
+curl --retry 20 --retry-delay 2 --retry-all-errors --fail http://127.0.0.1:8081
 printf 'Hello students — updated without restart\n' > "$lab_dir/index.html"
 curl --fail http://127.0.0.1:8081 | grep 'updated without restart'
 docker run -d --name host-demo --network host httpd:2.4-alpine
-curl --retry 20 --retry-delay 2 --retry-connrefused --fail http://127.0.0.1:80
+curl --retry 20 --retry-delay 2 --retry-all-errors --fail http://127.0.0.1:80
 docker rm -f bind-demo host-demo
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml down -v
 echo 'PASS: Linux, shell, Git, networking, Compose networks, bind mount and host networking.'
