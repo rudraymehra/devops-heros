@@ -1,10 +1,16 @@
 frontend:
-  image: ghcr.io/YOUR_ORG/taskboard-frontend
+  image: ghcr.io/rudraymehra/campusfix-frontend
 backend:
-  image: ghcr.io/YOUR_ORG/taskboard-backend
+  image: ghcr.io/rudraymehra/campusfix-backend
 replicaCount: 2
 ingress:
   enabled: true
-  host: taskboard.example.com
+  host: campusfix.local
 hpa:
   enabled: true
+postgres:
+  storageClass: campusfix-gp3
+  createStorageClass: true
+monitoring:
+  serviceMonitor:
+    enabled: true

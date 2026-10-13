@@ -10,13 +10,28 @@ spec:
     metadata:
       labels: {app: taskboard-backend}
     spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+{{ toYaml . | indent 8 }}
+      {{- end }}
       containers:
         - name: backend
           image: "{{ .Values.backend.image }}:{{ .Values.backend.tag }}"
           ports: [{containerPort: 8000}]
           env:
-            - name: DATABASE_URL
-              value: "postgresql+psycopg://{{ .Values.postgres.username }}:{{ .Values.postgres.password }}@{{ .Values.postgres.host }}:5432/{{ .Values.postgres.database }}"
+            - name: PG_HOST
+              value: {{ .Values.postgres.host | quote }}
+            - name: PG_DATABASE
+              value: {{ .Values.postgres.database | quote }}
+            - name: PG_USER
+              valueFrom:
+                secretKeyRef: {name: taskboard-postgres, key: username}
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: taskboard-postgres, key: password}
+          envFrom:
+            - configMapRef:
+                name: taskboard-config
           readinessProbe:
             httpGet: {path: /ready, port: 8000}
             initialDelaySeconds: 10
