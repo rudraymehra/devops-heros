@@ -1,10 +1,10 @@
 # Kubernetes Fundamentals
 
-**Name:** Rudray Mehra
-**Enrollment number:** 10425
+**Name:** Sudhir Mehra
+**Enrollment number:** 24 BCS 10425 · **Batch:** B
 **GitHub:** [rudraymehra](https://github.com/rudraymehra)
 
-> **Execution status:** Manifests and exercises prepared. Cluster execution and actual output are pending because Docker Desktop / Minikube is stopped. This page does not claim a successful cluster run.
+> **Execution status:** Passed on the approved EKS lab on 2026-10-13. [Actual commands and output](OUTPUT.md). The lab was destroyed after recording; commands below remain reproducible examples.
 
 Kubernetes reconciles a desired state stored through its API. The API server accepts requests, etcd stores cluster state, the scheduler assigns Pods to nodes, and controllers continuously reconcile objects. Each node runs a kubelet and container runtime; cluster networking and DNS let Pods find services.
 

@@ -5,6 +5,12 @@ metadata:
   namespace: argocd
 spec:
   project: default
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: taskboard-backend
+      jsonPointers:
+        - /spec/replicas
   source:
     repoURL: https://github.com/rudraymehra/devops-heros.git
     targetRevision: main
@@ -22,3 +28,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - RespectIgnoreDifferences=true

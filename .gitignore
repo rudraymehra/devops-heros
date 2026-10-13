@@ -18,3 +18,4 @@ dist/
 *.tfplan
 playwright-report/
 test-results/
+session21-python/evidence/**/video/

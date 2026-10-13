@@ -58,6 +58,15 @@ not a local file path or just the repository's home page.
    demonstration or recording. Submit a recording link separately if your instructor
    requests one; no separate capstone upload portal was identified in the form.
 
-The form has not been submitted by this work. URLs above target the main branch;
-verify the final push before using them. Historical homework is preserved under
+The form has not been submitted by this work. URLs above target the published main
+branch. Historical homework is preserved under
 `submissions/previous/` when replaced by a current submission guide.
+
+## Before clicking Submit
+
+Read [the verified completion report](ASSIGNMENT-COMPLETION.md), then provide your
+spoken presentation or recording if required by the instructor. The supplied
+browser walkthrough is automated. CLI cloud evidence is available, but authenticated
+AWS Console screenshots were not captured; confirm that the alternate evidence
+format is accepted. All paid lab deployments have been torn down, so there is no
+permanent live website link to submit.

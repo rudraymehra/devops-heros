@@ -9,19 +9,21 @@ from playwright.sync_api import expect, sync_playwright
 parser = argparse.ArgumentParser()
 parser.add_argument("--url", default="http://127.0.0.1:3000")
 parser.add_argument("--output", default="session21-python/evidence/browser")
+parser.add_argument("--host", help="HTTP Host header for a forwarded Kubernetes Ingress")
 args = parser.parse_args()
 output = Path(args.output)
 output.mkdir(parents=True, exist_ok=True)
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch()
+    browser = playwright.chromium.launch(args=[f"--host-resolver-rules=MAP {args.host} 127.0.0.1"] if args.host else [])
+    api = playwright.request.new_context(extra_http_headers={"Host": args.host} if args.host else {})
     context = browser.new_context(viewport={"width": 1440, "height": 1080},
                                   record_video_dir=str(output / "video"),
                                   record_video_size={"width": 1440, "height": 1080})
     page = context.new_page()
     errors = []
     page.on("pageerror", lambda error: errors.append(str(error)))
-    existing = context.request.get(args.url + "/api/requests").json()
+    existing = api.get(args.url + "/api/requests").json()
     samples = [
         ("Reading lamp flickers near the window", "Library · Floor 2, desk 12", "ELECTRICAL", "URGENT", "Light flickers after a few minutes of use. Please check the fixture."),
         ("Wi-Fi drops during practical sessions", "Computer lab · Room 204", "NETWORK", "NORMAL", "The connection drops at the back row. Reconnecting helps briefly."),
@@ -31,20 +33,20 @@ with sync_playwright() as playwright:
     for index, (title, location, category, urgency, description) in enumerate(samples):
         if any(item["title"] == title for item in existing):
             continue
-        response = context.request.post(args.url + "/api/requests", data={
+        response = api.post(args.url + "/api/requests", data={
             "title": title, "location": location, "category": category,
             "urgency": urgency, "description": description, "reporter": "Sudhir Mehra",
         })
         assert response.status == 201, response.text()
         item_id = response.json()["id"]
         if index in (1, 3):
-            assert context.request.put(args.url + "/api/requests/" + str(item_id), data={"status": "IN_PROGRESS"}).ok
+            assert api.put(args.url + "/api/requests/" + str(item_id), data={"status": "IN_PROGRESS"}).ok
         if index == 3:
-            assert context.request.put(args.url + "/api/requests/" + str(item_id), data={
+            assert api.put(args.url + "/api/requests/" + str(item_id), data={
                 "status": "RESOLVED", "resolution": "Tightened the leg fittings and checked stability.",
             }).ok
 
-    page.goto(args.url)
+    page.goto(args.url.replace("127.0.0.1", args.host) if args.host else args.url)
     expect(page.get_by_role("heading", name="Let’s get it fixed.")).to_be_visible()
     expect(page.get_by_role("button", name=samples[0][0], exact=True)).to_be_visible()
     page.screenshot(path=str(output / "desktop.png"), full_page=True)

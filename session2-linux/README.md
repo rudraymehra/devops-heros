@@ -1,9 +1,13 @@
 # Session 2 - Linux Fundamentals Homework
 
-**Name:** Rudray Mehra  
+**Name:** Sudhir Mehra · **Roll number:** 24 BCS 10425 · **Batch:** B
 **GitHub:** [rudraymehra](https://github.com/rudraymehra)
 
-This file covers the four Linux homework tasks from Session 2. All commands below were executed by me. Linux-specific commands (links, `useradd`/`adduser`, `journalctl`, `ip`, `ss`, `free`) were run inside an `ubuntu:22.04` Docker container on my Mac. I ran the container **non-interactively**, passing each block of commands with `docker run --rm ubuntu:22.04 bash -c '...'` (no `-it`, so there is no TTY and nothing can prompt me), and the general commands in Task 4 were run directly on my macOS terminal. For Task 3 I additionally built a small `systemd`-based image so that `journalctl` had a real journal to read. Anywhere an output could not be produced on my machine, it is clearly labelled as expected output rather than pasted as real.
+This file preserves the Linux homework evidence already present in the student's
+repository. Its original account labels and command output have not been rewritten
+to imply a fresh execution. The recorded environment was an Ubuntu 22.04 container
+on macOS, with a systemd-based image for journal checks. Expected-output examples
+remain examples, not verified runs from the current completion pass.
 
 ---
 

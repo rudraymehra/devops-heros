@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "devops553" {
   bucket        = var.bucket_name
-  force_destroy = true
+  force_destroy = false
   tags = {
     Name        = var.bucket_name
     Environment = "dev"

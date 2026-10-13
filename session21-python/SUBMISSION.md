@@ -45,19 +45,25 @@ AWS credentials.
 
 ## Final evidence checklist
 
-- [ ] Browser screenshot showing the working application
-- [ ] `pytest -v` with at least five passing API tests
-- [ ] At least ten meaningful Git commits
-- [ ] `docker compose` output and frontend/backend images
-- [ ] Successful GitHub Actions URL and GHCR SHA-tagged packages
-- [ ] Trivy results and explanation
-- [ ] Terraform plan, VPC/EKS console views, and destroy output
-- [ ] Running Kubernetes Pods, Services, Helm release, and Ingress response
-- [ ] Prometheus target `UP` and a Grafana panel with live metrics
-- [ ] Troubleshooting demonstration and resolution
+- [x] Local/EKS browser screenshots and automated recordings
+- [x] 24 passing API tests and captured output
+- [x] Meaningful Git history and history screenshot
+- [x] Working local Compose stack and published frontend/backend images
+- [x] Successful GitHub Actions URL and GHCR SHA-tagged packages
+- [x] Green Trivy HIGH/CRITICAL gates and written security explanation
+- [x] Terraform plan/apply, CLI VPC/EKS descriptions and successful destroy
+- [x] Running Pods, Services, Helm release and Ingress response
+- [x] Prometheus targets UP and Grafana panels with real metrics
+- [x] Troubleshooting, persistence, HPA and probe recovery demonstrations
+- [ ] Authenticated AWS Console screenshots and a Trivy job-log screenshot
+- [ ] Student's narrated presentation/live demonstration and form submission
+
+See the [evidence index](evidence/README.md) and
+[completion report](../ASSIGNMENT-COMPLETION.md). CLI logs are provided where
+authenticated console screenshots were unavailable. The cloud lab is destroyed.
 
 The production GitHub environment must define `AWS_ROLE_TO_ASSUME` (OIDC IAM role),
 `GHCR_PULL_TOKEN` (read-packages token), and `TASKBOARD_DB_PASSWORD`. Store them as
 GitHub environment secrets; never put their values in this repository. Production
-deployment is deliberately manual: run the **Session 21 Capstone** workflow with its
+deployment is deliberately manual: run the **Session 21 CampusFix** workflow with its
 `deploy` input enabled after reviewing the build and security-scan results.

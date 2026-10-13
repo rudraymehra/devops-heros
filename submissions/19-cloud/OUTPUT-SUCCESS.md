@@ -1,0 +1,1493 @@
+# Command evidence
+
+Student: Sudhir Mehra · 24 BCS 10425 · Batch B
+
+Captured: 2026-10-13T08:03:31.101158+00:00
+
+Working directory: .
+
+```text
+$ python3 session21-python/scripts/small-cloud-lab.py 19 --terraform /tmp/campusfix-tools.FCoLVB/terraform
+$ /tmp/campusfix-tools.FCoLVB/terraform init -no-color
+Initializing the backend...
+Initializing provider plugins...
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Using previously-installed hashicorp/aws v6.68.0
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform fmt -check
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform validate -no-color
+Success! The configuration is valid.
+
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform plan -no-color -out=/tmp/campusfix-session19.tfplan -var=project_suffix=sudhir24bcs10425-20261013
+data.aws_caller_identity.current: Reading...
+data.aws_ami.amazon_linux: Reading...
+data.aws_caller_identity.current: Read complete after 0s [id=[AWS_ACCOUNT_ID]]
+data.aws_ami.amazon_linux: Read complete after 2s [id=ami-0324b92f52e4d7a4a]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.web will be created
+  + resource "aws_instance" "web" {
+      + ami                                  = "ami-0324b92f52e4d7a4a"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = true
+      + availability_zone                    = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + enable_primary_ipv6                  = (known after apply)
+      + force_destroy                        = false
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t3.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_group_id                   = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + region                               = "ap-south-1"
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + spot_instance_request_id             = (known after apply)
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-web"
+          + "Session"   = "19"
+        }
+      + tags_all                             = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-web"
+          + "Session"   = "19"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = <<-EOT
+            #!/bin/bash
+            set -eux
+            dnf install -y nginx
+            echo '<h1>Sudhir Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>' > /usr/share/nginx/html/index.html
+            systemctl enable --now nginx
+        EOT
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + instance_market_options (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_protocol_ipv6          = "disabled"
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = "required"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface (known after apply)
+
+      + primary_network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device {
+          + delete_on_termination = true
+          + device_name           = (known after apply)
+          + encrypted             = true
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags_all              = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = 8
+          + volume_type           = "gp3"
+        }
+
+      + secondary_network_interface (known after apply)
+    }
+
+  # aws_internet_gateway.main will be created
+  + resource "aws_internet_gateway" "main" {
+      + arn      = (known after apply)
+      + id       = (known after apply)
+      + owner_id = (known after apply)
+      + region   = "ap-south-1"
+      + tags     = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-igw"
+          + "Session"   = "19"
+        }
+      + tags_all = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-igw"
+          + "Session"   = "19"
+        }
+      + vpc_id   = (known after apply)
+    }
+
+  # aws_route_table.public will be created
+  + resource "aws_route_table" "public" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + region           = "ap-south-1"
+      + route            = [
+          + {
+              + cidr_block                 = "0.0.0.0/0"
+              + gateway_id                 = (known after apply)
+                # (12 unchanged attributes hidden)
+            },
+        ]
+      + tags             = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-public-rt"
+          + "Session"   = "19"
+        }
+      + tags_all         = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-public-rt"
+          + "Session"   = "19"
+        }
+      + vpc_id           = (known after apply)
+    }
+
+  # aws_route_table_association.public will be created
+  + resource "aws_route_table_association" "public" {
+      + id             = (known after apply)
+      + region         = "ap-south-1"
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # aws_s3_bucket.artifacts will be created
+  + resource "aws_s3_bucket" "artifacts" {
+      + acceleration_status         = (known after apply)
+      + acl                         = (known after apply)
+      + arn                         = (known after apply)
+      + bucket                      = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+      + bucket_domain_name          = (known after apply)
+      + bucket_namespace            = (known after apply)
+      + bucket_prefix               = (known after apply)
+      + bucket_region               = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = false
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + object_lock_enabled         = (known after apply)
+      + policy                      = (known after apply)
+      + region                      = "ap-south-1"
+      + request_payer               = (known after apply)
+      + tags                        = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-artifacts"
+          + "Session"   = "19"
+        }
+      + tags_all                    = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-artifacts"
+          + "Session"   = "19"
+        }
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + cors_rule (known after apply)
+
+      + grant (known after apply)
+
+      + lifecycle_rule (known after apply)
+
+      + logging (known after apply)
+
+      + object_lock_configuration (known after apply)
+
+      + replication_configuration (known after apply)
+
+      + server_side_encryption_configuration (known after apply)
+
+      + versioning (known after apply)
+
+      + website (known after apply)
+    }
+
+  # aws_s3_bucket_public_access_block.artifacts will be created
+  + resource "aws_s3_bucket_public_access_block" "artifacts" {
+      + block_public_acls       = true
+      + block_public_policy     = true
+      + bucket                  = (known after apply)
+      + id                      = (known after apply)
+      + ignore_public_acls      = true
+      + region                  = "ap-south-1"
+      + restrict_public_buckets = true
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.artifacts will be created
+  + resource "aws_s3_bucket_server_side_encryption_configuration" "artifacts" {
+      + bucket = (known after apply)
+      + id     = (known after apply)
+      + region = "ap-south-1"
+
+      + rule {
+          + blocked_encryption_types = (known after apply)
+          + bucket_key_enabled       = (known after apply)
+
+          + apply_server_side_encryption_by_default {
+              + kms_master_key_id = (known after apply)
+              + sse_algorithm     = "AES256"
+            }
+        }
+    }
+
+  # aws_s3_bucket_versioning.artifacts will be created
+  + resource "aws_s3_bucket_versioning" "artifacts" {
+      + bucket = (known after apply)
+      + id     = (known after apply)
+      + region = "ap-south-1"
+
+      + versioning_configuration {
+          + mfa_delete = (known after apply)
+          + status     = "Enabled"
+        }
+    }
+
+  # aws_security_group.web will be created
+  + resource "aws_security_group" "web" {
+      + arn                    = (known after apply)
+      + description            = "Allow HTTP and HTTPS for Session 19"
+      + egress                 = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "Allow outbound IPv4"
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 0
+            },
+        ]
+      + id                     = (known after apply)
+      + ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "HTTP"
+              + from_port        = 80
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 80
+            },
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "HTTPS"
+              + from_port        = 443
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 443
+            },
+        ]
+      + name                   = "session19-mini-web-sg"
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + region                 = "ap-south-1"
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-web-sg"
+          + "Session"   = "19"
+        }
+      + tags_all               = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-web-sg"
+          + "Session"   = "19"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # aws_subnet.public will be created
+  + resource "aws_subnet" "public" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "ap-south-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.20.1.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block                                = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + region                                         = "ap-south-1"
+      + tags                                           = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-public-subnet"
+          + "Session"   = "19"
+        }
+      + tags_all                                       = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-public-subnet"
+          + "Session"   = "19"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_vpc.main will be created
+  + resource "aws_vpc" "main" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.20.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = true
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + region                               = "ap-south-1"
+      + tags                                 = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-vpc"
+          + "Session"   = "19"
+        }
+      + tags_all                             = {
+          + "ManagedBy" = "Terraform"
+          + "Name"      = "session19-mini-vpc"
+          + "Session"   = "19"
+        }
+    }
+
+Plan: 11 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + artifact_bucket   = (known after apply)
+  + instance_id       = (known after apply)
+  + security_group_id = (known after apply)
+  + subnet_id         = (known after apply)
+  + vpc_cidr          = "10.20.0.0/16"
+  + vpc_id            = (known after apply)
+  + web_url           = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: /tmp/campusfix-session19.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "/tmp/campusfix-session19.tfplan"
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform apply -no-color -auto-approve /tmp/campusfix-session19.tfplan
+aws_vpc.main: Creating...
+aws_s3_bucket.artifacts: Creating...
+aws_vpc.main: Creation complete after 2s [id=vpc-050ab74d3afc1d642]
+aws_internet_gateway.main: Creating...
+aws_subnet.public: Creating...
+aws_security_group.web: Creating...
+aws_internet_gateway.main: Creation complete after 0s [id=igw-01c49e1237066da7f]
+aws_route_table.public: Creating...
+aws_route_table.public: Creation complete after 1s [id=rtb-003919586fb751829]
+aws_security_group.web: Creation complete after 2s [id=sg-03d74f9a1b4e7ce5c]
+aws_s3_bucket.artifacts: Still creating... [00m10s elapsed]
+aws_subnet.public: Still creating... [00m10s elapsed]
+aws_subnet.public: Creation complete after 11s [id=subnet-0ff94dd30697f3b0e]
+aws_route_table_association.public: Creating...
+aws_instance.web: Creating...
+aws_s3_bucket.artifacts: Creation complete after 13s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_public_access_block.artifacts: Creating...
+aws_s3_bucket_versioning.artifacts: Creating...
+aws_s3_bucket_server_side_encryption_configuration.artifacts: Creating...
+aws_route_table_association.public: Creation complete after 0s [id=rtbassoc-07ca2a3f59f582979]
+aws_s3_bucket_public_access_block.artifacts: Creation complete after 0s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_server_side_encryption_configuration.artifacts: Creation complete after 0s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_versioning.artifacts: Creation complete after 2s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_instance.web: Still creating... [00m10s elapsed]
+aws_instance.web: Creation complete after 13s [id=i-0a6d4d98cfb4e49e5]
+
+Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+artifact_bucket = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+instance_id = "i-0a6d4d98cfb4e49e5"
+security_group_id = "sg-03d74f9a1b4e7ce5c"
+subnet_id = "subnet-0ff94dd30697f3b0e"
+vpc_cidr = "10.20.0.0/16"
+vpc_id = "vpc-050ab74d3afc1d642"
+web_url = "http://13.126.177.117"
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform show -no-color
+# data.aws_ami.amazon_linux:
+data "aws_ami" "amazon_linux" {
+    architecture          = "x86_64"
+    arn                   = "arn:aws:ec2:ap-south-1::image/ami-0324b92f52e4d7a4a"
+    block_device_mappings = [
+        {
+            device_name  = "/dev/xvda"
+            ebs          = {
+                "delete_on_termination"      = "true"
+                "encrypted"                  = "false"
+                "iops"                       = "3000"
+                "snapshot_id"                = "snap-02fc5398ca5c193c2"
+                "throughput"                 = "125"
+                "volume_initialization_rate" = "0"
+                "volume_size"                = "8"
+                "volume_type"                = "gp3"
+            }
+            no_device    = null
+            virtual_name = null
+        },
+    ]
+    boot_mode             = "uefi-preferred"
+    creation_date         = "2026-10-07T17:07:09.000Z"
+    deprecation_time      = "2027-01-05T17:09:00.000Z"
+    description           = "Amazon Linux 2023 AMI 2023.12.20261012.0 x86_64 HVM kernel-6.12"
+    ena_support           = true
+    hypervisor            = "xen"
+    id                    = "ami-0324b92f52e4d7a4a"
+    image_id              = "ami-0324b92f52e4d7a4a"
+    image_location        = "amazon/al2023-ami-2023.12.20261012.0-kernel-6.12-x86_64"
+    image_owner_alias     = "amazon"
+    image_type            = "machine"
+    imds_support          = "v2.0"
+    include_deprecated    = false
+    kernel_id             = null
+    last_launched_time    = null
+    most_recent           = true
+    name                  = "al2023-ami-2023.12.20261012.0-kernel-6.12-x86_64"
+    owner_id              = "[AWS_ACCOUNT_ID]"
+    owners                = [
+        "amazon",
+    ]
+    platform              = null
+    platform_details      = "Linux/UNIX"
+    product_codes         = []
+    public                = true
+    ramdisk_id            = null
+    region                = "ap-south-1"
+    root_device_name      = "/dev/xvda"
+    root_device_type      = "ebs"
+    root_snapshot_id      = "snap-02fc5398ca5c193c2"
+    sriov_net_support     = "simple"
+    state                 = "available"
+    state_reason          = {
+        "code"    = "UNSET"
+        "message" = "UNSET"
+    }
+    tags                  = {}
+    tpm_support           = null
+    usage_operation       = "RunInstances"
+    virtualization_type   = "hvm"
+
+    filter {
+        name   = "name"
+        values = [
+            "al2023-ami-2023.*-x86_64",
+        ]
+    }
+    filter {
+        name   = "virtualization-type"
+        values = [
+            "hvm",
+        ]
+    }
+}
+
+# data.aws_caller_identity.current:
+data "aws_caller_identity" "current" {
+    account_id = "[AWS_ACCOUNT_ID]"
+    arn        = "arn:aws:iam::[AWS_ACCOUNT_ID]:user/rudray-cli"
+    id         = "[AWS_ACCOUNT_ID]"
+    user_id    = "AIDAQ3AHBKZXRBXLZJ5YI"
+}
+
+# aws_instance.web:
+resource "aws_instance" "web" {
+    ami                                  = "ami-0324b92f52e4d7a4a"
+    arn                                  = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:instance/i-0a6d4d98cfb4e49e5"
+    associate_public_ip_address          = true
+    availability_zone                    = "ap-south-1a"
+    disable_api_stop                     = false
+    disable_api_termination              = false
+    ebs_optimized                        = false
+    force_destroy                        = false
+    get_password_data                    = false
+    hibernation                          = false
+    host_id                              = null
+    iam_instance_profile                 = null
+    id                                   = "i-0a6d4d98cfb4e49e5"
+    instance_initiated_shutdown_behavior = "stop"
+    instance_lifecycle                   = null
+    instance_state                       = "running"
+    instance_type                        = "t3.micro"
+    ipv6_address_count                   = 0
+    ipv6_addresses                       = []
+    key_name                             = null
+    monitoring                           = false
+    outpost_arn                          = null
+    password_data                        = null
+    placement_group                      = null
+    placement_group_id                   = null
+    placement_partition_number           = 0
+    primary_network_interface_id         = "eni-0d069c918e28bf8c4"
+    private_dns                          = "ip-10-20-1-80.ap-south-1.compute.internal"
+    private_ip                           = "10.20.1.80"
+    public_dns                           = "ec2-13-126-177-117.ap-south-1.compute.amazonaws.com"
+    public_ip                            = "13.126.177.117"
+    region                               = "ap-south-1"
+    secondary_private_ips                = []
+    security_groups                      = []
+    source_dest_check                    = true
+    spot_instance_request_id             = null
+    subnet_id                            = "subnet-0ff94dd30697f3b0e"
+    tags                                 = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-web"
+        "Session"   = "19"
+    }
+    tags_all                             = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-web"
+        "Session"   = "19"
+    }
+    tenancy                              = "default"
+    user_data                            = <<-EOT
+        #!/bin/bash
+        set -eux
+        dnf install -y nginx
+        echo '<h1>Sudhir Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>' > /usr/share/nginx/html/index.html
+        systemctl enable --now nginx
+    EOT
+    user_data_replace_on_change          = false
+    vpc_security_group_ids               = [
+        "sg-03d74f9a1b4e7ce5c",
+    ]
+
+    capacity_reservation_specification {
+        capacity_reservation_preference = "open"
+    }
+
+    cpu_options {
+        amd_sev_snp           = null
+        core_count            = 1
+        nested_virtualization = null
+        threads_per_core      = 2
+    }
+
+    credit_specification {
+        cpu_credits = "unlimited"
+    }
+
+    enclave_options {
+        enabled = false
+    }
+
+    maintenance_options {
+        auto_recovery = "default"
+    }
+
+    metadata_options {
+        http_endpoint               = "enabled"
+        http_protocol_ipv6          = "disabled"
+        http_put_response_hop_limit = 2
+        http_tokens                 = "required"
+        instance_metadata_tags      = "disabled"
+    }
+
+    primary_network_interface {
+        delete_on_termination = true
+        network_interface_id  = "eni-0d069c918e28bf8c4"
+    }
+
+    private_dns_name_options {
+        enable_resource_name_dns_a_record    = false
+        enable_resource_name_dns_aaaa_record = false
+        hostname_type                        = "ip-name"
+    }
+
+    root_block_device {
+        delete_on_termination = true
+        device_name           = "/dev/xvda"
+        encrypted             = true
+        iops                  = 3000
+        kms_key_id            = "arn:aws:kms:ap-south-1:[AWS_ACCOUNT_ID]:key/49853920-ab0b-48b7-a3fc-cb08c3e2e07c"
+        tags_all              = {}
+        throughput            = 125
+        volume_id             = "vol-0c52bad3b1065fb8e"
+        volume_size           = 8
+        volume_type           = "gp3"
+    }
+}
+
+# aws_internet_gateway.main:
+resource "aws_internet_gateway" "main" {
+    arn      = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:internet-gateway/igw-01c49e1237066da7f"
+    id       = "igw-01c49e1237066da7f"
+    owner_id = "[AWS_ACCOUNT_ID]"
+    region   = "ap-south-1"
+    tags     = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-igw"
+        "Session"   = "19"
+    }
+    tags_all = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-igw"
+        "Session"   = "19"
+    }
+    vpc_id   = "vpc-050ab74d3afc1d642"
+}
+
+# aws_route_table.public:
+resource "aws_route_table" "public" {
+    arn              = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:route-table/rtb-003919586fb751829"
+    id               = "rtb-003919586fb751829"
+    owner_id         = "[AWS_ACCOUNT_ID]"
+    propagating_vgws = []
+    region           = "ap-south-1"
+    route            = [
+        {
+            carrier_gateway_id         = null
+            cidr_block                 = "0.0.0.0/0"
+            core_network_arn           = null
+            destination_prefix_list_id = null
+            egress_only_gateway_id     = null
+            gateway_id                 = "igw-01c49e1237066da7f"
+            ipv6_cidr_block            = null
+            local_gateway_id           = null
+            nat_gateway_id             = null
+            network_interface_id       = null
+            odb_network_arn            = null
+            transit_gateway_id         = null
+            vpc_endpoint_id            = null
+            vpc_peering_connection_id  = null
+        },
+    ]
+    tags             = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-public-rt"
+        "Session"   = "19"
+    }
+    tags_all         = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-public-rt"
+        "Session"   = "19"
+    }
+    vpc_id           = "vpc-050ab74d3afc1d642"
+}
+
+# aws_route_table_association.public:
+resource "aws_route_table_association" "public" {
+    gateway_id     = null
+    id             = "rtbassoc-07ca2a3f59f582979"
+    region         = "ap-south-1"
+    route_table_id = "rtb-003919586fb751829"
+    subnet_id      = "subnet-0ff94dd30697f3b0e"
+}
+
+# aws_s3_bucket.artifacts:
+resource "aws_s3_bucket" "artifacts" {
+    acceleration_status         = null
+    arn                         = "arn:aws:s3:::session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    bucket                      = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    bucket_domain_name          = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013.s3.amazonaws.com"
+    bucket_namespace            = "global"
+    bucket_prefix               = null
+    bucket_region               = "ap-south-1"
+    bucket_regional_domain_name = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013.s3.ap-south-1.amazonaws.com"
+    force_destroy               = false
+    hosted_zone_id              = "Z11RGJOFQNVJUP"
+    id                          = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    object_lock_enabled         = false
+    policy                      = null
+    region                      = "ap-south-1"
+    request_payer               = "BucketOwner"
+    tags                        = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-artifacts"
+        "Session"   = "19"
+    }
+    tags_all                    = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-artifacts"
+        "Session"   = "19"
+    }
+
+    grant {
+        id          = "51d9942c138bedd4ad540722650899405083b3914d09df588a131d0193bf14d2"
+        permissions = [
+            "FULL_CONTROL",
+        ]
+        type        = "CanonicalUser"
+        uri         = null
+    }
+
+    server_side_encryption_configuration {
+        rule {
+            bucket_key_enabled = false
+
+            apply_server_side_encryption_by_default {
+                kms_master_key_id = null
+                sse_algorithm     = "AES256"
+            }
+        }
+    }
+
+    versioning {
+        enabled    = false
+        mfa_delete = false
+    }
+}
+
+# aws_s3_bucket_public_access_block.artifacts:
+resource "aws_s3_bucket_public_access_block" "artifacts" {
+    block_public_acls       = true
+    block_public_policy     = true
+    bucket                  = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    id                      = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    ignore_public_acls      = true
+    region                  = "ap-south-1"
+    restrict_public_buckets = true
+}
+
+# aws_s3_bucket_server_side_encryption_configuration.artifacts:
+resource "aws_s3_bucket_server_side_encryption_configuration" "artifacts" {
+    bucket                = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    expected_bucket_owner = null
+    id                    = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    region                = "ap-south-1"
+
+    rule {
+        blocked_encryption_types = [
+            "SSE-C",
+        ]
+        bucket_key_enabled       = false
+
+        apply_server_side_encryption_by_default {
+            kms_master_key_id = null
+            sse_algorithm     = "AES256"
+        }
+    }
+}
+
+# aws_s3_bucket_versioning.artifacts:
+resource "aws_s3_bucket_versioning" "artifacts" {
+    bucket                = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    expected_bucket_owner = null
+    id                    = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+    region                = "ap-south-1"
+
+    versioning_configuration {
+        mfa_delete = "Disabled"
+        status     = "Enabled"
+    }
+}
+
+# aws_security_group.web:
+resource "aws_security_group" "web" {
+    arn                    = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:security-group/sg-03d74f9a1b4e7ce5c"
+    description            = "Allow HTTP and HTTPS for Session 19"
+    egress                 = [
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = "Allow outbound IPv4"
+            from_port        = 0
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "-1"
+            security_groups  = []
+            self             = false
+            to_port          = 0
+        },
+    ]
+    id                     = "sg-03d74f9a1b4e7ce5c"
+    ingress                = [
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = "HTTP"
+            from_port        = 80
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "tcp"
+            security_groups  = []
+            self             = false
+            to_port          = 80
+        },
+        {
+            cidr_blocks      = [
+                "0.0.0.0/0",
+            ]
+            description      = "HTTPS"
+            from_port        = 443
+            ipv6_cidr_blocks = []
+            prefix_list_ids  = []
+            protocol         = "tcp"
+            security_groups  = []
+            self             = false
+            to_port          = 443
+        },
+    ]
+    name                   = "session19-mini-web-sg"
+    name_prefix            = null
+    owner_id               = "[AWS_ACCOUNT_ID]"
+    region                 = "ap-south-1"
+    revoke_rules_on_delete = false
+    tags                   = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-web-sg"
+        "Session"   = "19"
+    }
+    tags_all               = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-web-sg"
+        "Session"   = "19"
+    }
+    vpc_id                 = "vpc-050ab74d3afc1d642"
+}
+
+# aws_subnet.public:
+resource "aws_subnet" "public" {
+    arn                                            = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:subnet/subnet-0ff94dd30697f3b0e"
+    assign_ipv6_address_on_creation                = false
+    availability_zone                              = "ap-south-1a"
+    availability_zone_id                           = "aps1-az1"
+    cidr_block                                     = "10.20.1.0/24"
+    customer_owned_ipv4_pool                       = null
+    enable_dns64                                   = false
+    enable_lni_at_device_index                     = 0
+    enable_resource_name_dns_a_record_on_launch    = false
+    enable_resource_name_dns_aaaa_record_on_launch = false
+    id                                             = "subnet-0ff94dd30697f3b0e"
+    ipv6_cidr_block                                = null
+    ipv6_cidr_block_association_id                 = null
+    ipv6_native                                    = false
+    map_customer_owned_ip_on_launch                = false
+    map_public_ip_on_launch                        = true
+    outpost_arn                                    = null
+    owner_id                                       = "[AWS_ACCOUNT_ID]"
+    private_dns_hostname_type_on_launch            = "ip-name"
+    region                                         = "ap-south-1"
+    tags                                           = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-public-subnet"
+        "Session"   = "19"
+    }
+    tags_all                                       = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-public-subnet"
+        "Session"   = "19"
+    }
+    vpc_id                                         = "vpc-050ab74d3afc1d642"
+}
+
+# aws_vpc.main:
+resource "aws_vpc" "main" {
+    arn                                  = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:vpc/vpc-050ab74d3afc1d642"
+    assign_generated_ipv6_cidr_block     = false
+    cidr_block                           = "10.20.0.0/16"
+    default_network_acl_id               = "acl-00c03e572d455a252"
+    default_route_table_id               = "rtb-028841d74c30bba4a"
+    default_security_group_id            = "sg-0c6a1e8f55e741e15"
+    dhcp_options_id                      = "dopt-04099746251bf6721"
+    enable_dns_hostnames                 = true
+    enable_dns_support                   = true
+    enable_network_address_usage_metrics = false
+    id                                   = "vpc-050ab74d3afc1d642"
+    instance_tenancy                     = "default"
+    ipv6_association_id                  = null
+    ipv6_cidr_block                      = null
+    ipv6_cidr_block_network_border_group = null
+    ipv6_ipam_pool_id                    = null
+    ipv6_netmask_length                  = 0
+    main_route_table_id                  = "rtb-028841d74c30bba4a"
+    owner_id                             = "[AWS_ACCOUNT_ID]"
+    region                               = "ap-south-1"
+    tags                                 = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-vpc"
+        "Session"   = "19"
+    }
+    tags_all                             = {
+        "ManagedBy" = "Terraform"
+        "Name"      = "session19-mini-vpc"
+        "Session"   = "19"
+    }
+}
+
+
+Outputs:
+
+artifact_bucket = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+instance_id = "i-0a6d4d98cfb4e49e5"
+security_group_id = "sg-03d74f9a1b4e7ce5c"
+subnet_id = "subnet-0ff94dd30697f3b0e"
+vpc_cidr = "10.20.0.0/16"
+vpc_id = "vpc-050ab74d3afc1d642"
+web_url = "http://13.126.177.117"
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform output -json
+{
+  "artifact_bucket": {
+    "sensitive": false,
+    "type": "string",
+    "value": "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+  },
+  "instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-0a6d4d98cfb4e49e5"
+  },
+  "security_group_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-03d74f9a1b4e7ce5c"
+  },
+  "subnet_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "subnet-0ff94dd30697f3b0e"
+  },
+  "vpc_cidr": {
+    "sensitive": false,
+    "type": "string",
+    "value": "10.20.0.0/16"
+  },
+  "vpc_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "vpc-050ab74d3afc1d642"
+  },
+  "web_url": {
+    "sensitive": false,
+    "type": "string",
+    "value": "http://13.126.177.117"
+  }
+}
+ 
+PASS: EC2 bootstrapped Nginx serves: <h1>Sudhir Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>
+
+$ /tmp/campusfix-tools.FCoLVB/terraform destroy -no-color -auto-approve -var=project_suffix=sudhir24bcs10425-20261013
+Acquiring state lock. This may take a few moments...
+data.aws_ami.amazon_linux: Reading...
+data.aws_caller_identity.current: Reading...
+aws_vpc.main: Refreshing state... [id=vpc-050ab74d3afc1d642]
+data.aws_caller_identity.current: Read complete after 0s [id=[AWS_ACCOUNT_ID]]
+aws_s3_bucket.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+data.aws_ami.amazon_linux: Read complete after 1s [id=ami-0324b92f52e4d7a4a]
+aws_internet_gateway.main: Refreshing state... [id=igw-01c49e1237066da7f]
+aws_subnet.public: Refreshing state... [id=subnet-0ff94dd30697f3b0e]
+aws_security_group.web: Refreshing state... [id=sg-03d74f9a1b4e7ce5c]
+aws_route_table.public: Refreshing state... [id=rtb-003919586fb751829]
+aws_route_table_association.public: Refreshing state... [id=rtbassoc-07ca2a3f59f582979]
+aws_instance.web: Refreshing state... [id=i-0a6d4d98cfb4e49e5]
+aws_s3_bucket_versioning.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_public_access_block.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_server_side_encryption_configuration.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.web will be destroyed
+  - resource "aws_instance" "web" {
+      - ami                                  = "ami-0324b92f52e4d7a4a" -> null
+      - arn                                  = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:instance/i-0a6d4d98cfb4e49e5" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "ap-south-1a" -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - force_destroy                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-0a6d4d98cfb4e49e5" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t3.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-0d069c918e28bf8c4" -> null
+      - private_dns                          = "ip-10-20-1-80.ap-south-1.compute.internal" -> null
+      - private_ip                           = "10.20.1.80" -> null
+      - public_dns                           = "ec2-13-126-177-117.ap-south-1.compute.amazonaws.com" -> null
+      - public_ip                            = "13.126.177.117" -> null
+      - region                               = "ap-south-1" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-0ff94dd30697f3b0e" -> null
+      - tags                                 = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-web"
+          - "Session"   = "19"
+        } -> null
+      - tags_all                             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-web"
+          - "Session"   = "19"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data                            = <<-EOT
+            #!/bin/bash
+            set -eux
+            dnf install -y nginx
+            echo '<h1>Sudhir Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>' > /usr/share/nginx/html/index.html
+            systemctl enable --now nginx
+        EOT -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-03d74f9a1b4e7ce5c",
+        ] -> null
+        # (9 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count            = 1 -> null
+          - threads_per_core      = 2 -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - credit_specification {
+          - cpu_credits = "unlimited" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - primary_network_interface {
+          - delete_on_termination = true -> null
+          - network_interface_id  = "eni-0d069c918e28bf8c4" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:ap-south-1:[AWS_ACCOUNT_ID]:key/49853920-ab0b-48b7-a3fc-cb08c3e2e07c" -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0c52bad3b1065fb8e" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # aws_internet_gateway.main will be destroyed
+  - resource "aws_internet_gateway" "main" {
+      - arn      = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:internet-gateway/igw-01c49e1237066da7f" -> null
+      - id       = "igw-01c49e1237066da7f" -> null
+      - owner_id = "[AWS_ACCOUNT_ID]" -> null
+      - region   = "ap-south-1" -> null
+      - tags     = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-igw"
+          - "Session"   = "19"
+        } -> null
+      - tags_all = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-igw"
+          - "Session"   = "19"
+        } -> null
+      - vpc_id   = "vpc-050ab74d3afc1d642" -> null
+    }
+
+  # aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:route-table/rtb-003919586fb751829" -> null
+      - id               = "rtb-003919586fb751829" -> null
+      - owner_id         = "[AWS_ACCOUNT_ID]" -> null
+      - propagating_vgws = [] -> null
+      - region           = "ap-south-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-01c49e1237066da7f"
+                # (12 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-public-rt"
+          - "Session"   = "19"
+        } -> null
+      - tags_all         = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-public-rt"
+          - "Session"   = "19"
+        } -> null
+      - vpc_id           = "vpc-050ab74d3afc1d642" -> null
+    }
+
+  # aws_route_table_association.public will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-07ca2a3f59f582979" -> null
+      - region         = "ap-south-1" -> null
+      - route_table_id = "rtb-003919586fb751829" -> null
+      - subnet_id      = "subnet-0ff94dd30697f3b0e" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_s3_bucket.artifacts will be destroyed
+  - resource "aws_s3_bucket" "artifacts" {
+      - arn                         = "arn:aws:s3:::session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - bucket                      = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - bucket_domain_name          = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "ap-south-1" -> null
+      - bucket_regional_domain_name = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013.s3.ap-south-1.amazonaws.com" -> null
+      - force_destroy               = false -> null
+      - hosted_zone_id              = "Z11RGJOFQNVJUP" -> null
+      - id                          = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - object_lock_enabled         = false -> null
+      - region                      = "ap-south-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-artifacts"
+          - "Session"   = "19"
+        } -> null
+      - tags_all                    = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-artifacts"
+          - "Session"   = "19"
+        } -> null
+        # (3 unchanged attributes hidden)
+
+      - grant {
+          - id          = "51d9942c138bedd4ad540722650899405083b3914d09df588a131d0193bf14d2" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = true -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket_public_access_block.artifacts will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "artifacts" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - id                      = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "ap-south-1" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.artifacts will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "artifacts" {
+      - bucket                = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - id                    = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - region                = "ap-south-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # aws_s3_bucket_versioning.artifacts will be destroyed
+  - resource "aws_s3_bucket_versioning" "artifacts" {
+      - bucket                = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - id                    = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+      - region                = "ap-south-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - versioning_configuration {
+          - mfa_delete = "Disabled" -> null
+          - status     = "Enabled" -> null
+        }
+    }
+
+  # aws_security_group.web will be destroyed
+  - resource "aws_security_group" "web" {
+      - arn                    = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:security-group/sg-03d74f9a1b4e7ce5c" -> null
+      - description            = "Allow HTTP and HTTPS for Session 19" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Allow outbound IPv4"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-03d74f9a1b4e7ce5c" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "HTTP"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "HTTPS"
+              - from_port        = 443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 443
+            },
+        ] -> null
+      - name                   = "session19-mini-web-sg" -> null
+      - owner_id               = "[AWS_ACCOUNT_ID]" -> null
+      - region                 = "ap-south-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-web-sg"
+          - "Session"   = "19"
+        } -> null
+      - tags_all               = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-web-sg"
+          - "Session"   = "19"
+        } -> null
+      - vpc_id                 = "vpc-050ab74d3afc1d642" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_subnet.public will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:subnet/subnet-0ff94dd30697f3b0e" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "ap-south-1a" -> null
+      - availability_zone_id                           = "aps1-az1" -> null
+      - cidr_block                                     = "10.20.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0ff94dd30697f3b0e" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "[AWS_ACCOUNT_ID]" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "ap-south-1" -> null
+      - tags                                           = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-public-subnet"
+          - "Session"   = "19"
+        } -> null
+      - tags_all                                       = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-public-subnet"
+          - "Session"   = "19"
+        } -> null
+      - vpc_id                                         = "vpc-050ab74d3afc1d642" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_vpc.main will be destroyed
+  - resource "aws_vpc" "main" {
+      - arn                                  = "arn:aws:ec2:ap-south-1:[AWS_ACCOUNT_ID]:vpc/vpc-050ab74d3afc1d642" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.20.0.0/16" -> null
+      - default_network_acl_id               = "acl-00c03e572d455a252" -> null
+      - default_route_table_id               = "rtb-028841d74c30bba4a" -> null
+      - default_security_group_id            = "sg-0c6a1e8f55e741e15" -> null
+      - dhcp_options_id                      = "dopt-04099746251bf6721" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-050ab74d3afc1d642" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-028841d74c30bba4a" -> null
+      - owner_id                             = "[AWS_ACCOUNT_ID]" -> null
+      - region                               = "ap-south-1" -> null
+      - tags                                 = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-vpc"
+          - "Session"   = "19"
+        } -> null
+      - tags_all                             = {
+          - "ManagedBy" = "Terraform"
+          - "Name"      = "session19-mini-vpc"
+          - "Session"   = "19"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 11 to destroy.
+
+Changes to Outputs:
+  - artifact_bucket   = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013" -> null
+  - instance_id       = "i-0a6d4d98cfb4e49e5" -> null
+  - security_group_id = "sg-03d74f9a1b4e7ce5c" -> null
+  - subnet_id         = "subnet-0ff94dd30697f3b0e" -> null
+  - vpc_cidr          = "10.20.0.0/16" -> null
+  - vpc_id            = "vpc-050ab74d3afc1d642" -> null
+  - web_url           = "http://13.126.177.117" -> null
+aws_route_table_association.public: Destroying... [id=rtbassoc-07ca2a3f59f582979]
+aws_s3_bucket_server_side_encryption_configuration.artifacts: Destroying... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_versioning.artifacts: Destroying... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_s3_bucket_public_access_block.artifacts: Destroying... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_instance.web: Destroying... [id=i-0a6d4d98cfb4e49e5]
+aws_s3_bucket_versioning.artifacts: Destruction complete after 1s
+aws_route_table_association.public: Destruction complete after 1s
+aws_route_table.public: Destroying... [id=rtb-003919586fb751829]
+aws_s3_bucket_server_side_encryption_configuration.artifacts: Destruction complete after 1s
+aws_s3_bucket_public_access_block.artifacts: Destruction complete after 1s
+aws_s3_bucket.artifacts: Destroying... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+aws_route_table.public: Destruction complete after 0s
+aws_internet_gateway.main: Destroying... [id=igw-01c49e1237066da7f]
+aws_s3_bucket.artifacts: Destruction complete after 0s
+aws_instance.web: Still destroying... [id=i-0a6d4d98cfb4e49e5, 00m10s elapsed]
+aws_internet_gateway.main: Still destroying... [id=igw-01c49e1237066da7f, 00m10s elapsed]
+aws_internet_gateway.main: Destruction complete after 18s
+aws_instance.web: Still destroying... [id=i-0a6d4d98cfb4e49e5, 00m20s elapsed]
+aws_instance.web: Still destroying... [id=i-0a6d4d98cfb4e49e5, 00m30s elapsed]
+aws_instance.web: Destruction complete after 31s
+aws_subnet.public: Destroying... [id=subnet-0ff94dd30697f3b0e]
+aws_security_group.web: Destroying... [id=sg-03d74f9a1b4e7ce5c]
+aws_subnet.public: Destruction complete after 0s
+aws_security_group.web: Destruction complete after 0s
+aws_vpc.main: Destroying... [id=vpc-050ab74d3afc1d642]
+aws_vpc.main: Destruction complete after 1s
+
+Destroy complete! Resources: 11 destroyed.
+ 
+$ /tmp/campusfix-tools.FCoLVB/terraform state list
+ 
+PASS: lab resources destroyed and state resource list is empty.
+
+```
+
+Exit code: 0

@@ -38,7 +38,7 @@ resource "aws_route_table" "public" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id  = aws_internet_gateway.main.id
+    gateway_id = aws_internet_gateway.main.id
   }
 
   tags = {
@@ -122,7 +122,7 @@ resource "aws_instance" "web" {
     #!/bin/bash
     set -eux
     dnf install -y nginx
-    echo '<h1>Session 19 Terraform Project</h1>' > /usr/share/nginx/html/index.html
+    echo '<h1>Sudhir Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>' > /usr/share/nginx/html/index.html
     systemctl enable --now nginx
   USER_DATA
 

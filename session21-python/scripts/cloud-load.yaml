@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: campusfix-load
+  namespace: taskboard
+spec:
+  restartPolicy: Never
+  containers:
+    - name: load
+      image: python:3.12-alpine
+      resources:
+        requests: {cpu: 50m, memory: 32Mi}
+        limits: {cpu: 500m, memory: 128Mi}
+      command: ["python3", "-u", "-c"]
+      args:
+        - |
+          import concurrent.futures, time, urllib.request
+          end = time.monotonic() + 120
+          def worker(_):
+              success = failure = 0
+              while time.monotonic() < end:
+                  try:
+                      with urllib.request.urlopen("http://backend:8000/api/requests/stats", timeout=5) as r:
+                          r.read()
+                      success += 1
+                  except Exception:
+                      failure += 1
+              return success, failure
+          with concurrent.futures.ThreadPoolExecutor(max_workers=24) as pool:
+              results = list(pool.map(worker, range(24)))
+          print({"successful_requests": sum(x[0] for x in results), "failed_requests": sum(x[1] for x in results)})

@@ -1,0 +1,199 @@
+{
+  "timestamp": "2026-10-13T07:34:05.427946+00:00",
+  "status": "passed",
+  "targets": [
+    {
+      "discoveredLabels": {
+        "__address__": "10.20.1.224:8000",
+        "__always_scrape_classic_histograms__": "false",
+        "__convert_classic_histograms_to_nhcb__": "false",
+        "__meta_kubernetes_endpoint_address_target_kind": "Pod",
+        "__meta_kubernetes_endpoint_address_target_name": "taskboard-backend-b6b57c5cf-9sn7x",
+        "__meta_kubernetes_endpoint_node_name": "ip-10-20-1-116.ap-south-1.compute.internal",
+        "__meta_kubernetes_endpoint_port_name": "http",
+        "__meta_kubernetes_endpoint_port_protocol": "TCP",
+        "__meta_kubernetes_endpoint_ready": "true",
+        "__meta_kubernetes_endpoints_label_app": "taskboard-backend",
+        "__meta_kubernetes_endpoints_label_app_kubernetes_io_managed_by": "Helm",
+        "__meta_kubernetes_endpoints_label_endpoints_kubernetes_io_managed_by": "endpoint-controller",
+        "__meta_kubernetes_endpoints_labelpresent_app": "true",
+        "__meta_kubernetes_endpoints_labelpresent_app_kubernetes_io_managed_by": "true",
+        "__meta_kubernetes_endpoints_labelpresent_endpoints_kubernetes_io_managed_by": "true",
+        "__meta_kubernetes_endpoints_name": "backend",
+        "__meta_kubernetes_namespace": "taskboard",
+        "__meta_kubernetes_pod_container_image": "ghcr.io/rudraymehra/campusfix-backend:0a1c12a5cbb3bb649b77f1be3b515357eca0d30e",
+        "__meta_kubernetes_pod_container_init": "false",
+        "__meta_kubernetes_pod_container_name": "backend",
+        "__meta_kubernetes_pod_container_port_number": "8000",
+        "__meta_kubernetes_pod_container_port_protocol": "TCP",
+        "__meta_kubernetes_pod_controller_kind": "ReplicaSet",
+        "__meta_kubernetes_pod_controller_name": "taskboard-backend-b6b57c5cf",
+        "__meta_kubernetes_pod_host_ip": "10.20.1.116",
+        "__meta_kubernetes_pod_ip": "10.20.1.224",
+        "__meta_kubernetes_pod_label_app": "taskboard-backend",
+        "__meta_kubernetes_pod_label_pod_template_hash": "b6b57c5cf",
+        "__meta_kubernetes_pod_label_topology_kubernetes_io_region": "ap-south-1",
+        "__meta_kubernetes_pod_label_topology_kubernetes_io_zone": "ap-south-1a",
+        "__meta_kubernetes_pod_labelpresent_app": "true",
+        "__meta_kubernetes_pod_labelpresent_pod_template_hash": "true",
+        "__meta_kubernetes_pod_labelpresent_topology_kubernetes_io_region": "true",
+        "__meta_kubernetes_pod_labelpresent_topology_kubernetes_io_zone": "true",
+        "__meta_kubernetes_pod_name": "taskboard-backend-b6b57c5cf-9sn7x",
+        "__meta_kubernetes_pod_node_name": "ip-10-20-1-116.ap-south-1.compute.internal",
+        "__meta_kubernetes_pod_phase": "Running",
+        "__meta_kubernetes_pod_ready": "true",
+        "__meta_kubernetes_pod_uid": "b906f873-a6c9-4681-bf5e-9da600550fc0",
+        "__meta_kubernetes_service_annotation_argocd_argoproj_io_tracking_id": "campusfix:/Service:taskboard/backend",
+        "__meta_kubernetes_service_annotation_kubectl_kubernetes_io_last_applied_configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/tracking-id\":\"campusfix:/Service:taskboard/backend\"},\"labels\":{\"app\":\"taskboard-backend\"},\"name\":\"backend\",\"namespace\":\"taskboard\"},\"spec\":{\"ports\":[{\"name\":\"http\",\"port\":8000,\"targetPort\":8000}],\"selector\":{\"app\":\"taskboard-backend\"}}}\n",
+        "__meta_kubernetes_service_annotation_meta_helm_sh_release_name": "taskboard",
+        "__meta_kubernetes_service_annotation_meta_helm_sh_release_namespace": "taskboard",
+        "__meta_kubernetes_service_annotationpresent_argocd_argoproj_io_tracking_id": "true",
+        "__meta_kubernetes_service_annotationpresent_kubectl_kubernetes_io_last_applied_configuration": "true",
+        "__meta_kubernetes_service_annotationpresent_meta_helm_sh_release_name": "true",
+        "__meta_kubernetes_service_annotationpresent_meta_helm_sh_release_namespace": "true",
+        "__meta_kubernetes_service_label_app": "taskboard-backend",
+        "__meta_kubernetes_service_label_app_kubernetes_io_managed_by": "Helm",
+        "__meta_kubernetes_service_labelpresent_app": "true",
+        "__meta_kubernetes_service_labelpresent_app_kubernetes_io_managed_by": "true",
+        "__meta_kubernetes_service_name": "backend",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "15s",
+        "__scrape_native_histograms__": "false",
+        "__scrape_timeout__": "10s",
+        "job": "serviceMonitor/taskboard/taskboard-backend/0"
+      },
+      "labels": {
+        "container": "backend",
+        "endpoint": "http",
+        "instance": "10.20.1.224:8000",
+        "job": "backend",
+        "namespace": "taskboard",
+        "pod": "taskboard-backend-b6b57c5cf-9sn7x",
+        "service": "backend"
+      },
+      "scrapePool": "serviceMonitor/taskboard/taskboard-backend/0",
+      "scrapeUrl": "http://10.20.1.224:8000/metrics",
+      "globalUrl": "http://10.20.1.224:8000/metrics",
+      "lastError": "",
+      "lastScrape": "2026-10-13T07:33:15.573603192Z",
+      "lastScrapeDuration": 0.004602432,
+      "health": "up",
+      "scrapeInterval": "15s",
+      "scrapeTimeout": "10s"
+    },
+    {
+      "discoveredLabels": {
+        "__address__": "10.20.2.198:8000",
+        "__always_scrape_classic_histograms__": "false",
+        "__convert_classic_histograms_to_nhcb__": "false",
+        "__meta_kubernetes_endpoint_address_target_kind": "Pod",
+        "__meta_kubernetes_endpoint_address_target_name": "taskboard-backend-b6b57c5cf-d26md",
+        "__meta_kubernetes_endpoint_node_name": "ip-10-20-2-64.ap-south-1.compute.internal",
+        "__meta_kubernetes_endpoint_port_name": "http",
+        "__meta_kubernetes_endpoint_port_protocol": "TCP",
+        "__meta_kubernetes_endpoint_ready": "true",
+        "__meta_kubernetes_endpoints_label_app": "taskboard-backend",
+        "__meta_kubernetes_endpoints_label_app_kubernetes_io_managed_by": "Helm",
+        "__meta_kubernetes_endpoints_label_endpoints_kubernetes_io_managed_by": "endpoint-controller",
+        "__meta_kubernetes_endpoints_labelpresent_app": "true",
+        "__meta_kubernetes_endpoints_labelpresent_app_kubernetes_io_managed_by": "true",
+        "__meta_kubernetes_endpoints_labelpresent_endpoints_kubernetes_io_managed_by": "true",
+        "__meta_kubernetes_endpoints_name": "backend",
+        "__meta_kubernetes_namespace": "taskboard",
+        "__meta_kubernetes_pod_container_image": "ghcr.io/rudraymehra/campusfix-backend:0a1c12a5cbb3bb649b77f1be3b515357eca0d30e",
+        "__meta_kubernetes_pod_container_init": "false",
+        "__meta_kubernetes_pod_container_name": "backend",
+        "__meta_kubernetes_pod_container_port_number": "8000",
+        "__meta_kubernetes_pod_container_port_protocol": "TCP",
+        "__meta_kubernetes_pod_controller_kind": "ReplicaSet",
+        "__meta_kubernetes_pod_controller_name": "taskboard-backend-b6b57c5cf",
+        "__meta_kubernetes_pod_host_ip": "10.20.2.64",
+        "__meta_kubernetes_pod_ip": "10.20.2.198",
+        "__meta_kubernetes_pod_label_app": "taskboard-backend",
+        "__meta_kubernetes_pod_label_pod_template_hash": "b6b57c5cf",
+        "__meta_kubernetes_pod_label_topology_kubernetes_io_region": "ap-south-1",
+        "__meta_kubernetes_pod_label_topology_kubernetes_io_zone": "ap-south-1b",
+        "__meta_kubernetes_pod_labelpresent_app": "true",
+        "__meta_kubernetes_pod_labelpresent_pod_template_hash": "true",
+        "__meta_kubernetes_pod_labelpresent_topology_kubernetes_io_region": "true",
+        "__meta_kubernetes_pod_labelpresent_topology_kubernetes_io_zone": "true",
+        "__meta_kubernetes_pod_name": "taskboard-backend-b6b57c5cf-d26md",
+        "__meta_kubernetes_pod_node_name": "ip-10-20-2-64.ap-south-1.compute.internal",
+        "__meta_kubernetes_pod_phase": "Running",
+        "__meta_kubernetes_pod_ready": "true",
+        "__meta_kubernetes_pod_uid": "3ced0c4c-012f-47b8-a01b-282587dba791",
+        "__meta_kubernetes_service_annotation_argocd_argoproj_io_tracking_id": "campusfix:/Service:taskboard/backend",
+        "__meta_kubernetes_service_annotation_kubectl_kubernetes_io_last_applied_configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/tracking-id\":\"campusfix:/Service:taskboard/backend\"},\"labels\":{\"app\":\"taskboard-backend\"},\"name\":\"backend\",\"namespace\":\"taskboard\"},\"spec\":{\"ports\":[{\"name\":\"http\",\"port\":8000,\"targetPort\":8000}],\"selector\":{\"app\":\"taskboard-backend\"}}}\n",
+        "__meta_kubernetes_service_annotation_meta_helm_sh_release_name": "taskboard",
+        "__meta_kubernetes_service_annotation_meta_helm_sh_release_namespace": "taskboard",
+        "__meta_kubernetes_service_annotationpresent_argocd_argoproj_io_tracking_id": "true",
+        "__meta_kubernetes_service_annotationpresent_kubectl_kubernetes_io_last_applied_configuration": "true",
+        "__meta_kubernetes_service_annotationpresent_meta_helm_sh_release_name": "true",
+        "__meta_kubernetes_service_annotationpresent_meta_helm_sh_release_namespace": "true",
+        "__meta_kubernetes_service_label_app": "taskboard-backend",
+        "__meta_kubernetes_service_label_app_kubernetes_io_managed_by": "Helm",
+        "__meta_kubernetes_service_labelpresent_app": "true",
+        "__meta_kubernetes_service_labelpresent_app_kubernetes_io_managed_by": "true",
+        "__meta_kubernetes_service_name": "backend",
+        "__metrics_path__": "/metrics",
+        "__scheme__": "http",
+        "__scrape_interval__": "15s",
+        "__scrape_native_histograms__": "false",
+        "__scrape_timeout__": "10s",
+        "job": "serviceMonitor/taskboard/taskboard-backend/0"
+      },
+      "labels": {
+        "container": "backend",
+        "endpoint": "http",
+        "instance": "10.20.2.198:8000",
+        "job": "backend",
+        "namespace": "taskboard",
+        "pod": "taskboard-backend-b6b57c5cf-d26md",
+        "service": "backend"
+      },
+      "scrapePool": "serviceMonitor/taskboard/taskboard-backend/0",
+      "scrapeUrl": "http://10.20.2.198:8000/metrics",
+      "globalUrl": "http://10.20.2.198:8000/metrics",
+      "lastError": "",
+      "lastScrape": "2026-10-13T07:33:20.742701296Z",
+      "lastScrapeDuration": 0.005610708,
+      "health": "up",
+      "scrapeInterval": "15s",
+      "scrapeTimeout": "10s"
+    }
+  ],
+  "queries": {
+    "request_rate": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {},
+            "value": [
+              1791876807.819,
+              "0.4631578947368421"
+            ]
+          }
+        ]
+      }
+    },
+    "latency_p95": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {},
+            "value": [
+              1791876807.855,
+              "0.09500000000000001"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "argocd": "Synced and Healthy shown in live UI"
+}

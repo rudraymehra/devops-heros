@@ -10,3 +10,7 @@ checklist maps the required work to its files. Runtime results, when available,
 are linked from the [completion report](../../ASSIGNMENT-COMPLETION.md).
 Course examples with expected output are retained as references and are not
 claimed as executed evidence.
+
+## Verified execution — 2026-10-13
+
+[Actual Helm lifecycle output](OUTPUT.md): chart lint, install, upgrade to two replicas, history, rollback to one replica and uninstall.

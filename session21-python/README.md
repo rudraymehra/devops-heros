@@ -98,6 +98,21 @@ The runner creates four clearly synthetic demonstration reports, runs the comple
 repair workflow, verifies failed-save behaviour and saves desktop/mobile screenshots.
 Its video is an automated application demo, not a narrated final presentation.
 
+## Verified cloud run and submission status
+
+The application ran on EKS with two frontend replicas, a persistent PostgreSQL
+volume and 2–6 backend replicas. Under real HTTP load the HPA scaled to six;
+30,291 requests completed with zero failures. Persistence, probe recovery,
+Prometheus/Grafana and Argo CD self-healing were verified.
+
+[Evidence index](evidence/README.md) ·
+[Green CI run](https://github.com/rudraymehra/devops-heros/actions/runs/38342666849) ·
+[Final cleanup audit](evidence/aws-cleanup-verification.md)
+
+The paid lab is now destroyed; its endpoints are intentionally offline. The code,
+images and recordings remain available. See the completion report for the student
+presentation and screenshot-format requirements that still need review.
+
 ## API
 
 | Method | Path | Purpose |
