@@ -2,6 +2,9 @@ services:
 
   frontend:
     image: nginx:latest
+    depends_on:
+      backend:
+        condition: service_healthy
     ports:
       - "8080:80"
     volumes:
@@ -16,13 +19,24 @@ services:
       - frontend_net
       - backend_net
     depends_on:
-      - database
+      database:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/', timeout=3)"]
+      interval: 5s
+      timeout: 4s
+      retries: 20
 
   database:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: demo
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 5s
+      timeout: 4s
+      retries: 30
     volumes:
       - db_data:/var/lib/mysql
     networks:
