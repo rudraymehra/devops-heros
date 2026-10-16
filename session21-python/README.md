@@ -14,6 +14,10 @@ The original license and source attribution are preserved in the repository.
 
 ![CampusFix desktop](evidence/browser/desktop.png)
 
+This is an archived 2026-10-13 run, before the name correction. The current UI
+uses Rudray Mehra; [fresh native captures](evidence/terminal/README.md) must come
+from the rebuilt app, not edited pixels in this older image.
+
 ## What is different from TaskBoard?
 
 - Maintenance reports have a physical location, category, urgency and reporter.
@@ -138,13 +142,13 @@ updates. Invalid state transitions return 409; missing resolution notes return 4
 For the local lab, first build the images and load them into Minikube:
 
 ```bash
-minikube start -p sudhir-devops --driver=docker --cpus=2 --memory=3072 --addons=ingress,metrics-server
-minikube image load campusfix-backend:local campusfix-frontend:local -p sudhir-devops
-helm upgrade --install taskboard helm/taskboard --kube-context sudhir-devops \
+minikube start -p rudray-devops --driver=docker --cpus=2 --memory=3072 --addons=ingress,metrics-server
+minikube image load campusfix-backend:local campusfix-frontend:local -p rudray-devops
+helm upgrade --install taskboard helm/taskboard --kube-context rudray-devops \
   -n taskboard --create-namespace -f helm/taskboard/values-dev.yaml \
   --set backend.image=campusfix-backend --set frontend.image=campusfix-frontend \
   --wait --timeout 5m
-kubectl --context sudhir-devops get pods,svc,pvc,hpa,ingress -n taskboard
+kubectl --context rudray-devops get pods,svc,pvc,hpa,ingress -n taskboard
 ```
 
 Two backend and two frontend replicas are configured. PostgreSQL uses a PVC and a
@@ -157,7 +161,7 @@ Ingress sends `/` to the frontend and `/api` to the API for host `campusfix.loca
 For a localhost test that does not edit /etc/hosts:
 
 ```bash
-kubectl --context sudhir-devops -n ingress-nginx port-forward svc/ingress-nginx-controller 8088:80
+kubectl --context rudray-devops -n ingress-nginx port-forward svc/ingress-nginx-controller 8088:80
 curl -H 'Host: campusfix.local' http://localhost:8088/api/requests
 ```
 
@@ -174,12 +178,15 @@ terraform init
 terraform validate
 terraform plan
 terraform apply
-aws eks update-kubeconfig --region ap-south-1 --name sudhir-campusfix
+aws eks update-kubeconfig --region ap-south-1 --name rudray-campusfix
 # After completing the demo and removing workloads/load balancers:
 terraform destroy
 ```
 
 These are paid resources. Keep state local and preserve it until destroy succeeds.
+The default name now applies to **new labs**. Historical cleanup scripts still
+target the original cluster; do not rename resources in existing state or use a
+name change as a substitute for destroying the correct old lab.
 The execution report records actual apply and cleanup results; a plan alone is not
 evidence of a running EKS cluster.
 

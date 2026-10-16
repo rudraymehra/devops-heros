@@ -1,0 +1,82 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "M2 \u2014 actual isolated API tests",
+      "status": "PASS",
+      "command": [
+        "/Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-v"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python/backend",
+      "timestamp": "2026-10-16T15:35:02.057996+00:00",
+      "exit_code": 0,
+      "log": "01-pytest.txt",
+      "log_sha256": "1b4b1a440fc7e22a76e192df33cd5b573cc0792c91b3a36a496d5e11acfad4aa",
+      "screenshot": null
+    },
+    {
+      "title": "M1/M5 \u2014 React production build",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python/frontend",
+      "timestamp": "2026-10-16T15:35:03.675041+00:00",
+      "exit_code": 0,
+      "log": "02-frontend-build.txt",
+      "log_sha256": "63947f95fa224d5851d0014ead0d5605e4aad737819faeb94dd0e3282e4869bf",
+      "screenshot": null
+    },
+    {
+      "title": "M8 \u2014 Helm syntax check (not deployment)",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/helm",
+        "lint",
+        "helm/taskboard"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-16T15:35:04.785543+00:00",
+      "exit_code": 0,
+      "log": "03-helm-lint.txt",
+      "log_sha256": "2928256eda8cd4cf211e860010ba41327ba88a48c9e1e11f726ceeb162183cf2",
+      "screenshot": null
+    },
+    {
+      "title": "M7 \u2014 Terraform validation (not cloud execution)",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "/private/tmp/campusfix-tools.FCoLVB/terraform",
+        "validate",
+        "-no-color"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python/terraform",
+      "timestamp": "2026-10-16T15:35:05.041137+00:00",
+      "exit_code": 1,
+      "log": "04-terraform-validate.txt",
+      "log_sha256": "31d3c961dd2b04deadb23eefcf9c9c8070bbfd52aaa4ee8dc0cd42549d1dcd78",
+      "screenshot": null
+    },
+    {
+      "title": "Compose/live API/browser",
+      "status": "NOT RUN: Not requested; add --compose to run this local lab"
+    },
+    {
+      "title": "Kubernetes/Helm deployment",
+      "status": "NOT RUN: No explicit --kube-context supplied; the earlier AWS lab was destroyed"
+    },
+    {
+      "title": "AWS plan/Console/destroy",
+      "status": "NOT RUN: Historical logs exist; no new paid lab authorized or run by this helper"
+    },
+    {
+      "title": "CI/Trivy/GHCR and cluster monitoring",
+      "status": "NOT RUN: Requires actual pipeline/browser evidence; local checks do not substitute"
+    }
+  ]
+}

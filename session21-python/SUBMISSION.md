@@ -45,6 +45,10 @@ AWS credentials.
 
 ## Final evidence checklist
 
+Use the [detailed screenshot audit](evidence/SCREENSHOT-CHECKLIST.md) for exact
+missing files and the genuine Mac capture command. Checked historical execution
+items below do not imply that every required screenshot has been captured.
+
 - [x] Local/EKS browser screenshots and automated recordings
 - [x] 24 passing API tests and captured output
 - [x] User-supplied native Mac test screenshot, preserved unchanged

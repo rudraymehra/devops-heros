@@ -31,6 +31,29 @@ The inspected `04-docker-compose-01.png` also includes a port-9090 allocation
 failure. It cannot serve as evidence that all three CampusFix services started.
 No reference image has been renamed, retouched or included as a CampusFix run.
 
+## Exact capstone screenshot groups in the supplied archive
+
+The archive has **21 command-oriented images and 4 browser images** under
+`session-21-final-devops-project/final-devops-project/screenshots/`.
+These are filename groups, not a claim that every screenshot demonstrates success.
+
+| Reference filenames | CampusFix counterpart/status |
+|---|---|
+| `01-tests-01.png`, `01-tests-02.png` | Native original pytest screenshot; fresh 24-pass log; corrected-name capture helper |
+| `02-security-scans-01.png` | Actual CI SAST/SCA/secrets steps; fresh job-log capture pending |
+| `03-docker-build-trivy-01.png` through `03.png` | Backend/frontend CI build/scan jobs; new workflow prints both actual Trivy reports for capture |
+| `04-docker-compose-01.png` | Genuine Compose startup/status capture pending; native helper prepared |
+| `05-terraform-01.png` through `03.png` | Original EKS plan/apply/destroy logs; missing native/Console screenshots recorded separately |
+| `06-helm-deploy-01.png`, `06-helm-deploy-02.png` | Original Helm deployment output; live native capture needs an existing running cluster |
+| `07-kubernetes-verify-01.png` | Original EKS verification output; optional explicit-context native helper checks |
+| `08-troubleshooting-01.png` through `03.png` | Own troubleshooting/probe/persistence logs; no new failure scenario run for screenshots |
+| `09-gitops-monitoring-hpa-01.png` through `03.png` | Own recorded HPA, Prometheus, Grafana and Argo checks/screenshots; cluster no longer live |
+| `10-act-pipeline-run-01.png`, `10-act-pipeline-run-02.png` | Real GitHub Actions runs are the rubric's required proof; an `act` screenshot is not required |
+| `app-ui.png`, `grafana-taskboard.png`, `k8s-app-via-service.png`, `prometheus-targets.png` | Own historical local/EKS/Grafana/Prometheus browser screenshots; fresh corrected-profile app capture pending |
+
+See the [precise screenshot audit and capture instructions](session21-python/evidence/SCREENSHOT-CHECKLIST.md).
+No number of labelled log-view images is counted as newly captured native evidence.
+
 ## Coursework coverage
 
 The ZIP contains session folders for all 20 submission fields (Sessions 1 and 2

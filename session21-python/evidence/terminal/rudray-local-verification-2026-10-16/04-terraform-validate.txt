@@ -1,0 +1,103 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+M7 — Terraform validation (not cloud execution)
+UTC: 2026-10-16T15:35:05.041137+00:00
+Directory: /Users/rudraym/devops-heros/session21-python/terraform
+Command: /private/tmp/campusfix-tools.FCoLVB/terraform validate -no-color
+
+
+Error: Failed to load plugin schemas
+
+Error while loading schemas for plugin components: 5 problems:
+
+- Failed to obtain provider schema: Could not load the schema for provider
+registry.terraform.io/hashicorp/aws: failed to instantiate provider
+"registry.terraform.io/hashicorp/aws" to obtain schema: Unrecognized remote
+plugin message: 
+Failed to read any lines from plugin's stdout
+This usually means
+  the plugin was not compiled for this architecture,
+  the plugin is missing dynamic-link libraries necessary to run,
+  the plugin is not executable by this process due to file permissions, or
+  the plugin failed to negotiate the initial go-plugin protocol handshake
+
+Additional notes about plugin:
+  Path: .terraform/providers/registry.terraform.io/hashicorp/aws/5.100.0/darwin_arm64/terraform-provider-aws_v5.100.0_x5
+  Mode: -rwxr-xr-x
+  Owner: 501 [rudraym] (current: 501 [rudraym])
+  Group: 20 [staff] (current: 20 [staff])
+  MachO architecture: CpuArm64 (current architecture: arm64)
+.
+- Failed to obtain provider schema: Could not load the schema for provider
+registry.terraform.io/hashicorp/cloudinit: failed to instantiate provider
+"registry.terraform.io/hashicorp/cloudinit" to obtain schema: Unrecognized
+remote plugin message: 
+Failed to read any lines from plugin's stdout
+This usually means
+  the plugin was not compiled for this architecture,
+  the plugin is missing dynamic-link libraries necessary to run,
+  the plugin is not executable by this process due to file permissions, or
+  the plugin failed to negotiate the initial go-plugin protocol handshake
+
+Additional notes about plugin:
+  Path: .terraform/providers/registry.terraform.io/hashicorp/cloudinit/2.4.1/darwin_arm64/terraform-provider-cloudinit_v2.4.1_x5
+  Mode: -rwxr-xr-x
+  Owner: 501 [rudraym] (current: 501 [rudraym])
+  Group: 20 [staff] (current: 20 [staff])
+  MachO architecture: CpuArm64 (current architecture: arm64)
+.
+- Failed to obtain provider schema: Could not load the schema for provider
+registry.terraform.io/hashicorp/null: failed to instantiate provider
+"registry.terraform.io/hashicorp/null" to obtain schema: Unrecognized remote
+plugin message: 
+Failed to read any lines from plugin's stdout
+This usually means
+  the plugin was not compiled for this architecture,
+  the plugin is missing dynamic-link libraries necessary to run,
+  the plugin is not executable by this process due to file permissions, or
+  the plugin failed to negotiate the initial go-plugin protocol handshake
+
+Additional notes about plugin:
+  Path: .terraform/providers/registry.terraform.io/hashicorp/null/3.3.2/darwin_arm64/terraform-provider-null_v3.3.2_x5
+  Mode: -rwxr-xr-x
+  Owner: 501 [rudraym] (current: 501 [rudraym])
+  Group: 20 [staff] (current: 20 [staff])
+  MachO architecture: CpuArm64 (current architecture: arm64)
+.
+- Failed to obtain provider schema: Could not load the schema for provider
+registry.terraform.io/hashicorp/time: failed to instantiate provider
+"registry.terraform.io/hashicorp/time" to obtain schema: Unrecognized remote
+plugin message: 
+Failed to read any lines from plugin's stdout
+This usually means
+  the plugin was not compiled for this architecture,
+  the plugin is missing dynamic-link libraries necessary to run,
+  the plugin is not executable by this process due to file permissions, or
+  the plugin failed to negotiate the initial go-plugin protocol handshake
+
+Additional notes about plugin:
+  Path: .terraform/providers/registry.terraform.io/hashicorp/time/0.14.2/darwin_arm64/terraform-provider-time_v0.14.2_x5
+  Mode: -rwxr-xr-x
+  Owner: 501 [rudraym] (current: 501 [rudraym])
+  Group: 20 [staff] (current: 20 [staff])
+  MachO architecture: CpuArm64 (current architecture: arm64)
+.
+- Failed to obtain provider schema: Could not load the schema for provider
+registry.terraform.io/hashicorp/tls: failed to instantiate provider
+"registry.terraform.io/hashicorp/tls" to obtain schema: Unrecognized remote
+plugin message: 
+Failed to read any lines from plugin's stdout
+This usually means
+  the plugin was not compiled for this architecture,
+  the plugin is missing dynamic-link libraries necessary to run,
+  the plugin is not executable by this process due to file permissions, or
+  the plugin failed to negotiate the initial go-plugin protocol handshake
+
+Additional notes about plugin:
+  Path: .terraform/providers/registry.terraform.io/hashicorp/tls/4.4.1/darwin_arm64/terraform-provider-tls_v4.4.1_x5
+  Mode: -rwxr-xr-x
+  Owner: 501 [rudraym] (current: 501 [rudraym])
+  Group: 20 [staff] (current: 20 [staff])
+  MachO architecture: CpuArm64 (current architecture: arm64)
+..
+
+Exit code: 1 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

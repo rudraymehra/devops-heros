@@ -4,6 +4,11 @@ Rudray Mehra · 24 BCS 10425 · Batch B.
 These are actual results from the student repository and approved AWS labs.
 The application samples are synthetic maintenance reports, not real campus records.
 
+**Current screenshot gaps:** see the [rubric-by-rubric audit and native capture
+instructions](SCREENSHOT-CHECKLIST.md). Fresh terminal PNGs are not marked complete
+until actual captures have been reviewed. The latest local test/build/lint results
+are [logs only](terminal/rudray-local-verification-2026-10-16/README.md).
+
 ## Identity correction and evidence types
 
 The student corrected the submission name to **Rudray Mehra** on 2026-10-16;

@@ -7,9 +7,9 @@ The Application lives outside the rendered chart, preventing recursive ownership
 After the repository is published and the images are loaded into the local cluster:
 
 ```bash
-kubectl --context sudhir-devops apply -f session21-python/gitops/application.yaml
-kubectl --context sudhir-devops get application campusfix -n argocd
-kubectl --context sudhir-devops get pods -n taskboard
+kubectl --context rudray-devops apply -f session21-python/gitops/application.yaml
+kubectl --context rudray-devops get application campusfix -n argocd
+kubectl --context rudray-devops get pods -n taskboard
 ```
 
 For GHCR deployment, put the passed pipeline's immutable commit SHA in both image

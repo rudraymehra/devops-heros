@@ -7,6 +7,14 @@ course examples and expected output are not represented as executed work.
 
 ## 2026-10-16 submission update
 
+- Added a [rubric-by-rubric screenshot audit and native Mac capture helper](session21-python/evidence/SCREENSHOT-CHECKLIST.md).
+  The latest rerun passed 24 API tests, frontend build and Helm lint. Native GUI
+  capture and Docker are blocked in this editing sandbox; fresh PNGs are not
+  claimed. Terraform validation's current provider-handshake failure is recorded.
+- New local/cloud lab instructions use Rudray's name. Historical resources and
+  cleanup targets remain unchanged. Both Trivy matrix jobs now print their actual
+  report for screenshot capture after the new workflow is published and run.
+
 - Corrected the student name to Rudray Mehra in authored submission headers and
   the CampusFix interface. Historical execution records retain the earlier label;
   see the [evidence identity note](session21-python/evidence/README.md).

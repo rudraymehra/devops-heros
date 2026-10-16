@@ -82,6 +82,14 @@ jobs:
           exit-code: "1"
           format: table
           output: trivy-${{ matrix.component }}.txt
+      - name: Display actual Trivy report for screenshot evidence
+        if: always()
+        run: |
+          if [ -f "trivy-${{ matrix.component }}.txt" ]; then
+            cat "trivy-${{ matrix.component }}.txt"
+          else
+            echo "No report generated; inspect the Container security gate step."
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
