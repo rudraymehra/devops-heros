@@ -1,9 +1,26 @@
 # Assignment completion and verification
-Sudhir Mehra · 24 BCS 10425 · Batch B · rudray.24bcs10425@sst.scaler.com
+Rudray Mehra · 24 BCS 10425 · Batch B · rudray.24bcs10425@sst.scaler.com
 
 All 20 submission fields have a README entry point in the
 [submission guide](SUBMISSION-GUIDE.md). The results below identify actual runs;
 course examples and expected output are not represented as executed work.
+
+## 2026-10-16 submission update
+
+- Corrected the student name to Rudray Mehra in authored submission headers and
+  the CampusFix interface. Historical execution records retain the earlier label;
+  see the [evidence identity note](session21-python/evidence/README.md).
+- Added the user's original [Mac pytest screenshot](session21-python/evidence/terminal/README.md)
+  unchanged, with its source checksum.
+- Reran all 24 API tests successfully after the correction and rebuilt the frontend.
+- Removed the capstone push path filter to meet the rubric's every-main-push
+  requirement. This local change still requires a successful published CI run.
+- Compared the supplied reference archive; its Flask/SQLite/EC2 capstone images
+  do not demonstrate this FastAPI/React/PostgreSQL/EKS project. See
+  [REFERENCE-COMPARISON.md](REFERENCE-COMPARISON.md).
+
+These local updates do not mean that the final presentation, missing native/Console
+screenshots, publication of this revision, or form submission have been completed.
 
 ## Verified results
 

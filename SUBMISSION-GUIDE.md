@@ -1,10 +1,21 @@
-# Submission guide — Sudhir Mehra
+# Submission guide — Rudray Mehra
 
-Name: **Sudhir Mehra**
+Name: **Rudray Mehra**
 Roll number: **24 BCS 10425**
 Batch/section: **B**
 Email: **rudray.24bcs10425@sst.scaler.com**
 GitHub account: [rudraymehra](https://github.com/rudraymehra)
+
+## Separate capstone form — check before submitting
+
+The capstone form screenshot supplied by the student on 2026-10-13 asks for the
+**GitHub repository URL**, states a deadline of **2026-10-16 at 11:59 PM**, and says
+resubmissions are not accepted. It is distinct from the homework form below, which
+asks for individual README links. Its full URL and the student's Group A/B selection
+still need confirmation, as does the instructor's separate `student-guide.md`.
+Do not assume the homework form is the capstone submission portal.
+
+Capstone repository URL: https://github.com/rudraymehra/devops-heros
 
 ## Where to submit
 

@@ -1,6 +1,6 @@
 # Session 18: Terraform & Infrastructure as Code
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session18-terraform-iac/) ·
 [Deliverables and evidence checklist](../../session18-terraform-iac/SUBMISSION.md)

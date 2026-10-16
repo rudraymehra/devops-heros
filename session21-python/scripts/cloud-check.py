@@ -29,7 +29,7 @@ run(["get", "nodes", "-o", "wide"])
 run(["get", "pods,svc,pvc,hpa,ingress", "-n", "taskboard", "-o", "wide"])
 before = api("/api/requests", {"title": "Persistence verification", "location": "Cloud lab",
                              "description": "Synthetic report retained across database Pod replacement.",
-                             "category": "OTHER", "urgency": "NORMAL", "reporter": "Sudhir Mehra"})
+                             "category": "OTHER", "urgency": "NORMAL", "reporter": "Rudray Mehra"})
 run(["delete", "pod", "-n", "taskboard", "-l", "app=taskboard-postgres", "--wait=true"])
 run(["rollout", "status", "deployment/taskboard-postgres", "-n", "taskboard", "--timeout=180s"])
 time.sleep(5)

@@ -1,0 +1,59 @@
+RECORDED LOG VIEW — not a native terminal or AWS Console screenshot
+
+Terraform destroy — recorded result
+Submission: Rudray Mehra · 24 BCS 10425 · Batch B
+Original execution dates, historical labels and resource names are unchanged.
+Historical cloud evidence does not imply a currently running deployment.
+Source: evidence/aws-destroy.md
+SHA-256: 00fc58a6181042e30eaa881c4ad5cd22845f043de968267eeaf103d80e8814a1
+Rendered: 2026-10-16T15:05:40.437645+00:00
+
+0001  # Command evidence
+0002  
+0003  Student: Sudhir Mehra · 24 BCS 10425 · Batch B
+0004  
+0005  Captured: 2026-10-13T07:51:47.107308+00:00
+0006  
+0007  Working directory: session21-python/terraform
+0008  
+0009  ```text
+0010  $ /tmp/campusfix-tools.FCoLVB/terraform destroy -auto-approve -no-color
+[... intervening source lines omitted; see linked full log ...]
+1991  module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Destruction complete after 1s
+1992  module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Destroying... [id=sgrule-3019032963]
+1993  module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Destruction complete after 1s
+1994  module.vpc.aws_subnet.private[1]: Destroying... [id=subnet-04516a733d2088208]
+1995  module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Destruction complete after 2s
+1996  module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Destruction complete after 2s
+1997  module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Destroying... [id=sgrule-4251643989]
+1998  module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Destroying... [id=sgrule-3292919307]
+1999  module.eks.aws_security_group_rule.node["ingress_http_self"]: Destruction complete after 2s
+2000  module.vpc.aws_subnet.private[0]: Destroying... [id=subnet-082b0fed2e03ccecf]
+2001  module.vpc.aws_subnet.private[1]: Destruction complete after 0s
+2002  module.eks.module.kms.aws_kms_key.this[0]: Destroying... [id=37fe050d-bcf3-4652-bcd2-2ad9cd2e1e4c]
+2003  module.eks.aws_security_group_rule.node["egress_all"]: Destruction complete after 3s
+2004  module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Destroying... [id=sgrule-3797039093]
+2005  module.vpc.aws_subnet.private[0]: Destruction complete after 1s
+2006  module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Destruction complete after 3s
+2007  module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Destruction complete after 0s
+2008  module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Destruction complete after 4s
+2009  module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Destruction complete after 4s
+2010  module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Destruction complete after 4s
+2011  module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Destruction complete after 4s
+2012  module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Destruction complete after 3s
+2013  module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Destruction complete after 4s
+2014  module.eks.aws_security_group.cluster[0]: Destroying... [id=sg-0522074d7a5b86fe2]
+2015  module.eks.aws_security_group.node[0]: Destroying... [id=sg-0cc92304f43995481]
+2016  module.eks.aws_security_group.cluster[0]: Destruction complete after 0s
+2017  module.eks.aws_security_group.node[0]: Destruction complete after 0s
+2018  module.vpc.aws_vpc.this[0]: Destroying... [id=vpc-0b236660178acfe8c]
+2019  module.vpc.aws_vpc.this[0]: Destruction complete after 1s
+2020  module.eks.module.kms.aws_kms_key.this[0]: Destruction complete after 8s
+2021  module.eks.aws_iam_role.this[0]: Destroying... [id=sudhir-campusfix-cluster-20261013022113872700000002]
+2022  module.eks.aws_iam_role.this[0]: Destruction complete after 1s
+2023  
+2024  Destroy complete! Resources: 63 destroyed.
+2025  
+2026  ```
+2027  
+2028  Exit code: 0

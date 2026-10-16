@@ -1,6 +1,6 @@
 # Session 21 Final Capstone Submission
 
-**Student:** Sudhir Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
+**Student:** Rudray Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
 
 CampusFix is a full-stack campus-maintenance application used to demonstrate an
 end-to-end DevOps delivery path. It includes a React frontend, FastAPI CRUD API,
@@ -47,6 +47,7 @@ AWS credentials.
 
 - [x] Local/EKS browser screenshots and automated recordings
 - [x] 24 passing API tests and captured output
+- [x] User-supplied native Mac test screenshot, preserved unchanged
 - [x] Meaningful Git history and history screenshot
 - [x] Working local Compose stack and published frontend/backend images
 - [x] Successful GitHub Actions URL and GHCR SHA-tagged packages
@@ -57,10 +58,17 @@ AWS credentials.
 - [x] Troubleshooting, persistence, HPA and probe recovery demonstrations
 - [ ] Authenticated AWS Console screenshots and a Trivy job-log screenshot
 - [ ] Student's narrated presentation/live demonstration and form submission
+- [ ] Native Compose, Kubernetes/Helm, metrics and Terraform screenshots where explicitly required; recorded log views are labelled alternatives, not automatic substitutes
+- [ ] Successful CI verification after publishing the 2026-10-16 identity/trigger update
 
 See the [evidence index](evidence/README.md) and
 [completion report](../ASSIGNMENT-COMPLETION.md). CLI logs are provided where
 authenticated console screenshots were unavailable. The cloud lab is destroyed.
+
+The [native Mac screenshot](evidence/terminal/README.md) and
+[recorded log views](evidence/recorded-log-views/README.md) are distinct evidence
+types. Historical records retain earlier identity labels; see the correction in
+the evidence index. No other student's screenshot is used as a CampusFix run.
 
 The production GitHub environment must define `AWS_ROLE_TO_ASSUME` (OIDC IAM role),
 `GHCR_PULL_TOKEN` (read-packages token), and `TASKBOARD_DB_PASSWORD`. Store them as

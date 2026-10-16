@@ -5,7 +5,7 @@ trap 'printf "::error::Foundation failed at line %s: %s\n" "$LINENO" "$BASH_COMM
 lab_dir=$(mktemp -d)
 chmod 755 "$lab_dir"
 test ! -e "$lab_dir/original"
-printf 'Sudhir Mehra · 24 BCS 10425 · Batch B\n' > "$lab_dir/original"
+printf 'Rudray Mehra · 24 BCS 10425 · Batch B\n' > "$lab_dir/original"
 ln "$lab_dir/original" "$lab_dir/hard"
 ln -s "$lab_dir/original" "$lab_dir/soft"
 ls -li "$lab_dir"
@@ -14,7 +14,7 @@ rm "$lab_dir/original"
 test -f "$lab_dir/hard"
 test ! -e "$lab_dir/soft"
 getent passwd campusfix-lab && exit 1
-sudo adduser --disabled-password --gecos 'Sudhir Mehra lab' campusfix-lab
+sudo adduser --disabled-password --gecos 'Rudray Mehra lab' campusfix-lab
 id campusfix-lab
 sudo deluser --remove-home campusfix-lab
 sudo journalctl -u ssh --no-pager -n 15
@@ -27,7 +27,7 @@ ip route
 ss -tuln
 getent hosts github.com
 curl -I --fail https://example.com
-printf 'Sudhir Mehra\n24 BCS 10425\n' | bash session3-shell-scripting/system-info.sh
+printf 'Rudray Mehra\n24 BCS 10425\n' | bash session3-shell-scripting/system-info.sh
 bash session5-git-github/run-cherry-pick-lab.sh
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml up -d --build --wait --wait-timeout 180
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml ps

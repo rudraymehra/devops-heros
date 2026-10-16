@@ -1,6 +1,6 @@
 # Session 16: CI/CD & GitHub Actions
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session-16-github-actions/) ·
 [Deliverables and evidence checklist](../../session-16-github-actions/SUBMISSION.md)

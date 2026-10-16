@@ -1,0 +1,68 @@
+RECORDED LOG VIEW — not a native terminal or AWS Console screenshot
+
+Terraform plan — recorded result
+Submission: Rudray Mehra · 24 BCS 10425 · Batch B
+Original execution dates, historical labels and resource names are unchanged.
+Historical cloud evidence does not imply a currently running deployment.
+Source: evidence/aws-plan.md
+SHA-256: 98697545165bcdba1b3a28b603b3a6d84a79b790383fdb020214de1395fa89f1
+Rendered: 2026-10-16T15:05:40.437645+00:00
+
+0001  # Command evidence
+0002  
+0003  Student: Sudhir Mehra · 24 BCS 10425 · Batch B
+0004  
+0005  Captured: 2026-10-13T02:05:44.082556+00:00
+0006  
+0007  Working directory: session21-python/terraform
+0008  
+0009  ```text
+0010  $ /tmp/campusfix-tools.FCoLVB/terraform show -no-color /tmp/campusfix.tfplan
+0011  
+0012  Terraform used the selected providers to generate the following execution
+0013  plan. Resource actions are indicated with the following symbols:
+0014    + create
+0015   <= read (data resources)
+0016  
+0017  Terraform will perform the following actions:
+[... intervening source lines omitted; see linked full log ...]
+1520        + arn                                = (known after apply)
+1521        + bypass_policy_lockout_safety_check = false
+1522        + customer_master_key_spec           = "SYMMETRIC_DEFAULT"
+1523        + description                        = "sudhir-campusfix cluster encryption key"
+1524        + enable_key_rotation                = true
+1525        + id                                 = (known after apply)
+1526        + is_enabled                         = true
+1527        + key_id                             = (known after apply)
+1528        + key_usage                          = "ENCRYPT_DECRYPT"
+1529        + multi_region                       = false
+1530        + policy                             = (known after apply)
+1531        + rotation_period_in_days            = (known after apply)
+1532        + tags                               = {
+1533            + "Environment"           = "dev"
+1534            + "ManagedBy"             = "Terraform"
+1535            + "terraform-aws-modules" = "eks"
+1536          }
+1537        + tags_all                           = {
+1538            + "Environment"           = "dev"
+1539            + "ManagedBy"             = "Terraform"
+1540            + "terraform-aws-modules" = "eks"
+1541          }
+1542      }
+1543  
+1544    # module.eks.module.eks_managed_node_group["main"].module.user_data.null_resource.validate_cluster_service_cidr will be created
+1545    + resource "null_resource" "validate_cluster_service_cidr" {
+1546        + id = (known after apply)
+1547      }
+1548  
+1549  Plan: 62 to add, 0 to change, 0 to destroy.
+1550  
+1551  Changes to Outputs:
+1552    + cluster_endpoint  = (known after apply)
+1553    + cluster_name      = "sudhir-campusfix"
+1554    + configure_kubectl = "aws eks update-kubeconfig --region ap-south-1 --name sudhir-campusfix"
+1555    + vpc_id            = (known after apply)
+1556  
+1557  ```
+1558  
+1559  Exit code: 0

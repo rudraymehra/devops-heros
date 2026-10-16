@@ -1,6 +1,6 @@
 # Git Homework
 
-**Student:** Sudhir Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
+**Student:** Rudray Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
 
 ## Task 1: `git commit -a -m` versus `git commit -m`
 

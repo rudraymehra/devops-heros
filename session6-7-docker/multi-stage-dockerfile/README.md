@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| **Name** | Sudhir Mehra |
+| **Name** | Rudray Mehra |
 | **Enrollment Number** | 24 BCS 10425 |
 | **Batch** | B |
 | **GitHub** | [rudraymehra](https://github.com/rudraymehra) |

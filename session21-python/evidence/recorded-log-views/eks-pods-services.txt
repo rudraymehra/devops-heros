@@ -1,0 +1,52 @@
+RECORDED LOG VIEW — not a native terminal or AWS Console screenshot
+
+EKS Pods, Services and storage — recorded result
+Submission: Rudray Mehra · 24 BCS 10425 · Batch B
+Original execution dates, historical labels and resource names are unchanged.
+Historical cloud evidence does not imply a currently running deployment.
+Source: evidence/eks-verification.md
+SHA-256: cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f
+Rendered: 2026-10-16T15:05:40.437645+00:00
+
+0001  # Command evidence
+0002  
+0003  Student: Sudhir Mehra · 24 BCS 10425 · Batch B
+0004  
+0005  Captured: 2026-10-13T03:48:04.878520+00:00
+0006  
+0007  Working directory: .
+0008  
+0009  ```text
+0010  $ python3 session21-python/scripts/cloud-check.py
+0011  $ kubectl --context campusfix-eks --request-timeout=30s get nodes -o wide
+0012  NAME                                         STATUS   ROLES    AGE   VERSION               INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                        KERNEL-VERSION
+                     CONTAINER-RUNTIME
+0013  ip-10-20-1-116.ap-south-1.compute.internal   Ready    <none>   75m   v1.35.8-eks-3b4a6ca   10.20.1.116   <none>        Amazon Linux 2023.12.20260930   
+6.12.110-135.202.amzn2023.x86_64   containerd://2.2.7+unknown
+0014  ip-10-20-2-64.ap-south-1.compute.internal    Ready    <none>   75m   v1.35.8-eks-3b4a6ca   10.20.2.64    <none>        Amazon Linux 2023.12.20260930   
+6.12.110-135.202.amzn2023.x86_64   containerd://2.2.7+unknown
+0015   
+0016  $ kubectl --context campusfix-eks --request-timeout=30s get pods,svc,pvc,hpa,ingress -n taskboard -o wide
+0017  NAME                                      READY   STATUS    RESTARTS   AGE   IP            NODE                                         NOMINATED NODE   READINESS GATES
+0018  pod/taskboard-backend-b6b57c5cf-9sn7x     1/1     Running   0          10m   10.20.1.224   ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+0019  pod/taskboard-backend-b6b57c5cf-d26md     1/1     Running   0          10m   10.20.2.198   ip-10-20-2-64.ap-south-1.compute.internal    <none>           <none>
+0020  pod/taskboard-frontend-66967b946f-69khs   1/1     Running   0          10m   10.20.1.60    ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+0021  pod/taskboard-frontend-66967b946f-qpkbd   1/1     Running   0          10m   10.20.2.204   ip-10-20-2-64.ap-south-1.compute.internal    <none>           <none>
+0022  pod/taskboard-postgres-5c4567ddcb-t87t2   1/1     Running   0          10m   10.20.2.229   ip-10-20-2-64.ap-south-1.compute.internal    <none>           <none>
+0023  
+0024  NAME                         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE   SELECTOR
+0025  service/backend              ClusterIP   172.20.80.124   <none>        8000/TCP   10m   app=taskboard-backend
+0026  service/taskboard-frontend   ClusterIP   172.20.99.131   <none>        80/TCP     10m   app=taskboard-frontend
+0027  service/taskboard-postgres   ClusterIP   172.20.211.51   <none>        5432/TCP   10m   app=taskboard-postgres
+0028  
+0029  NAME                                            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+   VOLUMEMODE
+0030  persistentvolumeclaim/taskboard-postgres-data   Bound    pvc-2c1c6543-f3b2-45d2-91d4-eb3e1ee0a8ce   5Gi        RWO            campusfix-gp3   <unset>                 10m
+   Filesystem
+0031  
+0032  NAME                                                    REFERENCE                      TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+0033  horizontalpodautoscaler.autoscaling/taskboard-backend   Deployment/taskboard-backend   cpu: 2%/60%   2         6         2          10m
+0034  
+0035  NAME                                  CLASS   HOSTS             ADDRESS         PORTS   AGE
+0036  ingress.networking.k8s.io/taskboard   nginx   campusfix.local   172.20.98.234   80      10m
+0037   

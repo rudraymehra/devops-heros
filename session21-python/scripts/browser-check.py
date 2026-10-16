@@ -35,7 +35,7 @@ with sync_playwright() as playwright:
             continue
         response = api.post(args.url + "/api/requests", data={
             "title": title, "location": location, "category": category,
-            "urgency": urgency, "description": description, "reporter": "Sudhir Mehra",
+            "urgency": urgency, "description": description, "reporter": "Rudray Mehra",
         })
         assert response.status == 201, response.text()
         item_id = response.json()["id"]

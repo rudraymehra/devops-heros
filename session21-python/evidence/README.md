@@ -1,8 +1,23 @@
 # Execution evidence index
-Sudhir Mehra · 24 BCS 10425 · Batch B.
+Rudray Mehra · 24 BCS 10425 · Batch B.
 
 These are actual results from the student repository and approved AWS labs.
 The application samples are synthetic maintenance reports, not real campus records.
+
+## Identity correction and evidence types
+
+The student corrected the submission name to **Rudray Mehra** on 2026-10-16;
+roll number 24 BCS 10425 and Batch B are unchanged. Earlier runs used the previously
+supplied label "Sudhir Mehra". Historical logs, screenshots, resource identifiers
+and timestamps have not been rewritten. This accounts for that older label in
+recorded evidence; current authored documentation and the app profile are corrected.
+
+- [Original Mac terminal screenshot](terminal/README.md): user-supplied and copied unchanged.
+- [Fresh local test execution](pytest-2026-10-16.md): captured after the name correction.
+- [Recorded log views](recorded-log-views/README.md): explicitly labelled source-linked excerpts,
+  not native terminal or AWS Console screenshots.
+- [Reference comparison](../../REFERENCE-COMPARISON.md): why the supplied TaskBoard Lite
+  images are not substituted for CampusFix runs.
 
 ## Application and CI
 - [24 API tests](pytest.md) and [rendered actual test log](published/pytest-log-view.png).

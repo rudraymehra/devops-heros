@@ -1,6 +1,6 @@
 # Session 14: Kubernetes Troubleshooting
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session-14-kubernetes-troubleshooting/) ·
 [Deliverables and evidence checklist](../../session-14-kubernetes-troubleshooting/SUBMISSION.md)

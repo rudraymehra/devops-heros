@@ -1,6 +1,6 @@
 # Session 13: Kubernetes Storage, HPA & Probes
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session-13-storage-hpa-probes/) ·
 [Deliverables and evidence checklist](../../session-13-storage-hpa-probes/SUBMISSION.md)

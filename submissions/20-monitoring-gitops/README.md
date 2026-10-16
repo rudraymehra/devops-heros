@@ -1,6 +1,6 @@
 # Session 20: Monitoring, Observability & GitOps
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session20-monitoring-observability-gitops/) ·
 [Deliverables and evidence checklist](../../session20-monitoring-observability-gitops/SUBMISSION.md)

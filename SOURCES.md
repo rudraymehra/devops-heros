@@ -1,6 +1,6 @@
 # Sources and authorship
 
-Submission identity: Sudhir Mehra, 24 BCS 10425, Batch B.
+Submission identity: Rudray Mehra, 24 BCS 10425, Batch B.
 
 - The course materials and TaskBoard infrastructure scaffold originate from
   [Nency-Ravaliya/devops-heros](https://github.com/Nency-Ravaliya/devops-heros)

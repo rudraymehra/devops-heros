@@ -41,7 +41,7 @@ try:
             try:
                 with urllib.request.urlopen(url, timeout=10) as response:
                     body = response.read().decode()
-                assert "Sudhir Mehra" in body and "24 BCS 10425" in body
+                assert "Rudray Mehra" in body and "24 BCS 10425" in body
                 print("PASS: EC2 bootstrapped Nginx serves:", body, flush=True)
                 break
             except (urllib.error.URLError, TimeoutError):

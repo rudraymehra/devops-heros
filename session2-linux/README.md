@@ -1,6 +1,6 @@
 # Session 2 - Linux Fundamentals Homework
 
-**Name:** Sudhir Mehra · **Roll number:** 24 BCS 10425 · **Batch:** B
+**Name:** Rudray Mehra · **Roll number:** 24 BCS 10425 · **Batch:** B
 **GitHub:** [rudraymehra](https://github.com/rudraymehra)
 
 This file preserves the Linux homework evidence already present in the student's

@@ -1,6 +1,6 @@
 # Docker Homework Submission
 
-**Student:** Sudhir Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
+**Student:** Rudray Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
 
 This directory contains six independent Hello World applications and a separate
 multi-stage-build exercise.

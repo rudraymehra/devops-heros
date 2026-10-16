@@ -1,6 +1,6 @@
 # Kubernetes Pods, ReplicaSets & Deployments
 
-**Name:** Sudhir Mehra
+**Name:** Rudray Mehra
 **Enrollment number:** 24 BCS 10425 · **Batch:** B
 **GitHub:** [rudraymehra](https://github.com/rudraymehra)
 

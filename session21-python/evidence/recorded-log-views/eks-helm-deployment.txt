@@ -1,0 +1,33 @@
+RECORDED LOG VIEW — not a native terminal or AWS Console screenshot
+
+EKS Helm installation — recorded result
+Submission: Rudray Mehra · 24 BCS 10425 · Batch B
+Original execution dates, historical labels and resource names are unchanged.
+Historical cloud evidence does not imply a currently running deployment.
+Source: evidence/eks-helm-deploy.md
+SHA-256: 46a0781addcd6c31ccbaef72ea6e9b27b20775067cd80f914d8683241223a087
+Rendered: 2026-10-16T15:05:40.437645+00:00
+
+0001  # Command evidence
+0002  
+0003  Student: Sudhir Mehra · 24 BCS 10425 · Batch B
+0004  
+0005  Captured: 2026-10-13T03:39:54.790932+00:00
+0006  
+0007  Working directory: .
+0008  
+0009  ```text
+0010  $ helm upgrade --install taskboard session21-python/helm/taskboard --namespace taskboard --create-namespace -f session21-python/helm/taskboard/values-prod.yaml --set 
+backend.tag=0a1c12a5cbb3bb649b77f1be3b515357eca0d30e --set frontend.tag=0a1c12a5cbb3bb649b77f1be3b515357eca0d30e --wait --timeout 5m
+0011  Release "taskboard" does not exist. Installing it now.
+0012  NAME: taskboard
+0013  LAST DEPLOYED: Tue Oct 13 09:07:35 2026
+0014  NAMESPACE: taskboard
+0015  STATUS: deployed
+0016  REVISION: 1
+0017  DESCRIPTION: Install complete
+0018  TEST SUITE: None
+0019  
+0020  ```
+0021  
+0022  Exit code: 0

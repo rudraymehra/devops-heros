@@ -11,7 +11,7 @@ echo "$variable"
 
 
 
-name="Sudhir"
+name="Rudray"
 roll_no="24 BCS 10425"
 comment="Awesome"
 echo "My name is $name"

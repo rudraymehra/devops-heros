@@ -18,7 +18,7 @@ result = subprocess.run(command, cwd=args.cwd, text=True, stdout=subprocess.PIPE
 redacted = re.sub(r"\b\d{12}\b", "[AWS_ACCOUNT_ID]", result.stdout)
 args.output.parent.mkdir(parents=True, exist_ok=True)
 args.output.write_text(
-    "# Command evidence\n\nStudent: Sudhir Mehra · 24 BCS 10425 · Batch B\n\n"
+    "# Command evidence\n\nStudent: Rudray Mehra · 24 BCS 10425 · Batch B\n\n"
     + "Captured: " + datetime.now(timezone.utc).isoformat() + "\n\n"
     + "Working directory: " + args.cwd + "\n\n"
     + "```text\n$ " + shlex.join(command) + "\n" + redacted + "\n```\n\n"

@@ -1,4 +1,4 @@
-# DevOps assignments — Sudhir Mehra
+# DevOps assignments — Rudray Mehra
 
 **24 BCS 10425 · Batch B**
 rudray.24bcs10425@sst.scaler.com

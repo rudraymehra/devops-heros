@@ -5,7 +5,7 @@ import './styles.css';
 const categories = ['ELECTRICAL', 'PLUMBING', 'NETWORK', 'FURNITURE', 'OTHER'];
 const labels = {REPORTED: 'Reported', IN_PROGRESS: 'In progress', RESOLVED: 'Resolved'};
 const pretty = text => text.charAt(0) + text.slice(1).toLowerCase().replaceAll('_', ' ');
-const emptyRequest = () => ({title: '', description: '', location: '', category: 'ELECTRICAL', urgency: 'NORMAL', reporter: 'Sudhir Mehra'});
+const emptyRequest = () => ({title: '', description: '', location: '', category: 'ELECTRICAL', urgency: 'NORMAL', reporter: 'Rudray Mehra'});
 const when = value => new Date(value.endsWith('Z') || value.includes('+') ? value : value + 'Z').toLocaleString([], {month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'});
 
 async function api(path, method = 'GET', body) {
@@ -84,7 +84,7 @@ function App() {
       <p className="sidebar-label">CAMPUS OPERATIONS</p>
       <button className="nav-item active" onClick={() => {setFilter('ALL'); setSearch(''); setCategory('ALL');}}>▤ <span>Maintenance desk</span><b>{stats.total}</b></button>
       <div className="sidebar-note"><span className="note-symbol">↗</span><h3>Small fixes.<br/>Better campus.</h3><p>Report an issue, track the repair, and close the loop.</p></div>
-      <div className="profile"><span className="avatar">SM</span><div><strong>Sudhir Mehra</strong><small>24 BCS 10425 · Batch B</small></div></div>
+      <div className="profile"><span className="avatar">RM</span><div><strong>Rudray Mehra</strong><small>24 BCS 10425 · Batch B</small></div></div>
     </aside>
     <main>
       <header className="page-header"><div><p className="eyebrow">CAMPUS / MAINTENANCE</p><h1>Let’s get it fixed.</h1><p className="subtitle">One place for the things that need attention.</p></div><button className="primary" onClick={() => startForm(null)}>＋ Report an issue</button></header>
@@ -113,7 +113,7 @@ function App() {
           <section className="help-card"><span>THE REPAIR LOOP</span><h3>Every report<br/>has a next step.</h3><ol><li>Report the issue and location.</li><li>Start work when it’s picked up.</li><li>Resolve it with a repair note.</li></ol><p>Still broken? Reopen a resolved request.</p></section>
         </aside>
       </div>
-      <footer className="page-footer"><span>CampusFix · Campus maintenance desk</span><span>Built by Sudhir Mehra</span></footer>
+      <footer className="page-footer"><span>CampusFix · Campus maintenance desk</span><span>Built by Rudray Mehra</span></footer>
     </main>
     {form && <Modal title={form === 'new' ? 'Report a campus issue' : 'Edit request'} close={() => !busy && setForm(null)}><p className="modal-intro">A clear location and description help the repair reach the right place.</p>{errorView}<form onSubmit={submit}>
       <label>Issue title<input autoFocus required minLength={3} maxLength={200} value={draft.title} onChange={e => setDraft({...draft, title: e.target.value})} placeholder="e.g. Reading lamp flickers"/></label>

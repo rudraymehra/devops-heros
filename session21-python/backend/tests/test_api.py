@@ -26,7 +26,7 @@ def client():
 
 def report(client, **changes):
     data = {"title": "Library lamp flickers", "location": "Library desk 12",
-            "category": "ELECTRICAL", "reporter": "Sudhir Mehra", "urgency": "URGENT"}
+            "category": "ELECTRICAL", "reporter": "Rudray Mehra", "urgency": "URGENT"}
     data.update(changes)
     response = client.post("/api/requests", json=data)
     assert response.status_code == 201, response.text
@@ -102,7 +102,7 @@ def test_invalid_updates_do_not_change_data(client, body):
 
 @pytest.mark.parametrize("field,value", [("title", " "), ("location", ""), ("reporter", ""), ("category", "UNKNOWN"), ("urgency", "HIGH")])
 def test_invalid_reports(client, field, value):
-    payload = {"title": "Chair leg loose", "location": "Lab 1", "reporter": "Sudhir", "category": "FURNITURE"}
+    payload = {"title": "Chair leg loose", "location": "Lab 1", "reporter": "Rudray", "category": "FURNITURE"}
     payload[field] = value
     assert client.post("/api/requests", json=payload).status_code == 422
 

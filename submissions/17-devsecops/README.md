@@ -1,6 +1,6 @@
 # Session 17: Complete CI/CD & DevSecOps
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session-17-devsecops/) ·
 [Deliverables and evidence checklist](../../session-17-devsecops/SUBMISSION.md)

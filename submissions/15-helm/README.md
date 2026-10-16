@@ -1,6 +1,6 @@
 # Session 15: Helm
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 
 [Implementation and session files](../../session-15-helm/) ·
 [Deliverables and evidence checklist](../../session-15-helm/SUBMISSION.md)

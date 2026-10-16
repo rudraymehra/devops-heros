@@ -1,0 +1,50 @@
+[
+  {
+    "image": "terraform-plan.png",
+    "source": "evidence/aws-plan.md",
+    "source_sha256": "98697545165bcdba1b3a28b603b3a6d84a79b790383fdb020214de1395fa89f1",
+    "rendered_at": "2026-10-16T15:05:40.437645+00:00",
+    "kind": "recorded-log-view",
+    "title": "Terraform plan \u2014 recorded result"
+  },
+  {
+    "image": "terraform-destroy.png",
+    "source": "evidence/aws-destroy.md",
+    "source_sha256": "00fc58a6181042e30eaa881c4ad5cd22845f043de968267eeaf103d80e8814a1",
+    "rendered_at": "2026-10-16T15:05:40.437645+00:00",
+    "kind": "recorded-log-view",
+    "title": "Terraform destroy \u2014 recorded result"
+  },
+  {
+    "image": "eks-pods-services.png",
+    "source": "evidence/eks-verification.md",
+    "source_sha256": "cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f",
+    "rendered_at": "2026-10-16T15:05:40.437645+00:00",
+    "kind": "recorded-log-view",
+    "title": "EKS Pods, Services and storage \u2014 recorded result"
+  },
+  {
+    "image": "eks-helm-deployment.png",
+    "source": "evidence/eks-helm-deploy.md",
+    "source_sha256": "46a0781addcd6c31ccbaef72ea6e9b27b20775067cd80f914d8683241223a087",
+    "rendered_at": "2026-10-16T15:05:40.437645+00:00",
+    "kind": "recorded-log-view",
+    "title": "EKS Helm installation \u2014 recorded result"
+  },
+  {
+    "image": "prometheus-target-results.png",
+    "source": "evidence/observability/result.json",
+    "source_sha256": "d08709bdd2e1ae49eaed0117de4b8367a6fd8282beffe989e843a07efd7558e6",
+    "rendered_at": "2026-10-16T15:05:40.437645+00:00",
+    "kind": "recorded-log-view",
+    "title": "Prometheus targets \u2014 selected recorded JSON fields"
+  },
+  {
+    "image": "pytest-2026-10-16.png",
+    "source": "evidence/pytest-2026-10-16.md",
+    "source_sha256": "33b0ddb2dbb2d5df6e228bb7c758160f99254b34e0d2948d7195815e0c955d42",
+    "rendered_at": "2026-10-16T15:05:40.437645+00:00",
+    "kind": "recorded-log-view",
+    "title": "Local pytest \u2014 captured execution log"
+  }
+]

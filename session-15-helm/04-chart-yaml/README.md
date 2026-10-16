@@ -63,7 +63,7 @@ keywords:
   - web
 home: https://example.com
 maintainers:
-  - name: Sudhir Mehra
+  - name: Rudray Mehra
     email: rudray.24bcs10425@sst.scaler.com
 ```
 

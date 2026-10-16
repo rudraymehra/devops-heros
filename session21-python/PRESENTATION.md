@@ -1,6 +1,6 @@
 # CampusFix presentation guide
 
-Sudhir Mehra · 24 BCS 10425 · Batch B.
+Rudray Mehra · 24 BCS 10425 · Batch B.
 
 Use this as a speaking outline and demonstrate your own running environment.
 The saved automated browser video can illustrate the app, but the rubric also

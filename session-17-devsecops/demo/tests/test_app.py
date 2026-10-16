@@ -31,12 +31,12 @@ def test_health(client):
 # ── Test 3: Greet returns 200 and includes the name ───
 
 def test_greet(client):
-    response = client.get("/api/greet/Sudhir")
+    response = client.get("/api/greet/Rudray")
     assert response.status_code == 200
 
     data = response.get_json()
     # The response contains a random greeting — just check the name is in it
-    assert "Sudhir" in data["message"]
+    assert "Rudray" in data["message"]
 
 
 # ── Test 4: Add numbers returns correct result ─────────

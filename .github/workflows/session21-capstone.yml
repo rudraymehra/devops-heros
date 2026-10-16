@@ -3,10 +3,6 @@ name: Session 21 CampusFix
 on:
   push:
     branches: [main]
-    paths:
-      - "session21-python/**"
-      - ".github/workflows/session21-capstone.yml"
-      - ".gitleaks.toml"
   pull_request:
     paths:
       - "session21-python/**"

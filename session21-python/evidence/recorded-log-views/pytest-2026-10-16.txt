@@ -1,0 +1,65 @@
+RECORDED LOG VIEW — not a native terminal or AWS Console screenshot
+
+Local pytest — captured execution log
+Submission: Rudray Mehra · 24 BCS 10425 · Batch B
+Original execution dates, historical labels and resource names are unchanged.
+Historical cloud evidence does not imply a currently running deployment.
+Source: evidence/pytest-2026-10-16.md
+SHA-256: 33b0ddb2dbb2d5df6e228bb7c758160f99254b34e0d2948d7195815e0c955d42
+Rendered: 2026-10-16T15:05:40.437645+00:00
+
+0001  # Command evidence
+0002  
+0003  Student: Rudray Mehra · 24 BCS 10425 · Batch B
+0004  
+0005  Captured: 2026-10-16T15:00:47.953405+00:00
+0006  
+0007  Working directory: /Users/rudraym/devops-heros/session21-python/backend
+0008  
+0009  ```text
+0010  $ /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python -m pytest -v
+0011  ============================= test session starts ==============================
+0012  platform darwin -- Python 3.13.11, pytest-9.1.1, pluggy-1.6.0 -- /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python
+0013  cachedir: .pytest_cache
+0014  rootdir: /Users/rudraym/devops-heros/session21-python/backend
+0015  configfile: pytest.ini
+0016  plugins: platformdirs-4.13.0, anyio-4.15.1
+0017  collecting ... collected 24 items
+0018  
+0019  tests/test_api.py::test_health_and_identity PASSED                       [  4%]
+0020  tests/test_api.py::test_create_read_and_list PASSED                      [  8%]
+0021  tests/test_api.py::test_filter_by_status_category_and_location PASSED    [ 12%]
+0022  tests/test_api.py::test_resolution_and_reopening PASSED                  [ 16%]
+0023  tests/test_api.py::test_resolution_cannot_be_set_on_open_request PASSED  [ 20%]
+0024  tests/test_api.py::test_edit_records_real_activity PASSED                [ 25%]
+0025  tests/test_api.py::test_invalid_updates_do_not_change_data[body0] PASSED [ 29%]
+0026  tests/test_api.py::test_invalid_updates_do_not_change_data[body1] PASSED [ 33%]
+0027  tests/test_api.py::test_invalid_updates_do_not_change_data[body2] PASSED [ 37%]
+0028  tests/test_api.py::test_invalid_updates_do_not_change_data[body3] PASSED [ 41%]
+0029  tests/test_api.py::test_invalid_reports[title- ] PASSED                  [ 45%]
+0030  tests/test_api.py::test_invalid_reports[location-] PASSED                [ 50%]
+0031  tests/test_api.py::test_invalid_reports[reporter-] PASSED                [ 54%]
+0032  tests/test_api.py::test_invalid_reports[category-UNKNOWN] PASSED         [ 58%]
+0033  tests/test_api.py::test_invalid_reports[urgency-HIGH] PASSED             [ 62%]
+0034  tests/test_api.py::test_whitespace_trimmed PASSED                        [ 66%]
+0035  tests/test_api.py::test_delete_removes_related_activity PASSED           [ 70%]
+0036  tests/test_api.py::test_missing_request[get] PASSED                      [ 75%]
+0037  tests/test_api.py::test_missing_request[put] PASSED                      [ 79%]
+0038  tests/test_api.py::test_missing_request[delete] PASSED                   [ 83%]
+0039  tests/test_api.py::test_stats PASSED                                     [ 87%]
+0040  tests/test_api.py::test_readiness_failure_keeps_liveness PASSED          [ 91%]
+0041  tests/test_api.py::test_metrics_include_requests PASSED                  [ 95%]
+0042  tests/test_api.py::test_activity_limit PASSED                            [100%]
+0043  
+0044  =============================== warnings summary ===============================
+0045  .venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+0046    /Users/rudraym/devops-heros/session21-python/backend/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with 
+`starlette.testclient` is deprecated; install `httpx2` instead.
+0047      from starlette.testclient import TestClient as TestClient  # noqa
+0048  
+0049  -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+0050  ======================== 24 passed, 1 warning in 0.93s =========================
+0051  
+0052  ```
+0053  
+0054  Exit code: 0

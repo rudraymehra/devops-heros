@@ -122,7 +122,7 @@ resource "aws_instance" "web" {
     #!/bin/bash
     set -eux
     dnf install -y nginx
-    echo '<h1>Sudhir Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>' > /usr/share/nginx/html/index.html
+    echo '<h1>Rudray Mehra: Terraform Cloud Lab</h1><p>24 BCS 10425 | Batch B</p>' > /usr/share/nginx/html/index.html
     systemctl enable --now nginx
   USER_DATA
 

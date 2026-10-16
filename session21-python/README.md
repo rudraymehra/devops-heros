@@ -1,7 +1,11 @@
 # CampusFix — campus maintenance desk
 
-**Sudhir Mehra · 24 BCS 10425 · Batch B**
+**Rudray Mehra · 24 BCS 10425 · Batch B**
 Email: rudray.24bcs10425@sst.scaler.com
+
+The student corrected the submission name on 2026-10-16. Earlier evidence retains
+its original "Sudhir Mehra" labels and cloud resource names; see the
+[identity and evidence note](evidence/README.md#identity-correction-and-evidence-types).
 
 CampusFix helps a campus team report broken facilities, locate the problem, track
 repairs and record what was fixed. The application domain, interface, repair-state
@@ -201,6 +205,8 @@ Argo CD reconciliation or manual CI Helm deployment.
 - [Browser screenshots and real interaction results](evidence/browser/result.json)
 - [Browser walkthrough video](evidence/browser/browser-walkthrough.webm)
 - [Terraform plan](evidence/aws-plan.md)
+- [Original Mac test screenshot](evidence/terminal/README.md)
+- [Recorded command-log views](evidence/recorded-log-views/README.md)
 - [Submission checklist](SUBMISSION.md)
 - [Presentation guide](PRESENTATION.md)
 - [All course submission links](../SUBMISSION-GUIDE.md)
