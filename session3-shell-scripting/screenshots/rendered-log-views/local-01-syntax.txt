@@ -1,0 +1,19 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 03 — shell script syntax
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session3-shell-scripting/screenshots/rudray-20261016-215104-093414/01-syntax.txt
+Source SHA-256: 5981abea7936c26f57285f2872b76aa43a6fd76a7a732a7afb9cefd892ebbb9e
+Image rendered: 2026-10-16T16:24:22.787082+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 03 — shell script syntax
+00003  UTC: 2026-10-16T16:21:46.385686+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: bash -n session3-shell-scripting/system-info.sh
+00006  
+00007  
+00008  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

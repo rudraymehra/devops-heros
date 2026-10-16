@@ -1,0 +1,26 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 04-ping
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session4-networking/screenshots/rudray-20261016-215104-093414/04-ping.txt
+Source SHA-256: 58ebc29ba3ec5cd684c3473d88ddb0a444c8e110f74186701e2ae16b381b22b5
+Image rendered: 2026-10-16T16:24:22.979476+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 04 — actual 04-ping
+00003  UTC: 2026-10-16T16:21:58.402010+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: ping -c 2 1.1.1.1
+00006  
+00007  PING 1.1.1.1 (1.1.1.1): 56 data bytes
+00008  64 bytes from 1.1.1.1: icmp_seq=0 ttl=57 time=18.695 ms
+00009  64 bytes from 1.1.1.1: icmp_seq=1 ttl=57 time=11.422 ms
+00010  
+00011  --- 1.1.1.1 ping statistics ---
+00012  2 packets transmitted, 2 packets received, 0.0% packet loss
+00013  round-trip min/avg/max/stddev = 11.422/15.059/18.695/3.637 ms
+00014  
+00015  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

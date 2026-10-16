@@ -1,0 +1,26 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 01-02 — real hard/symbolic links on this host
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session2-linux/screenshots/rudray-20261016-215104-093414/01-links.txt
+Source SHA-256: eeba740bd65ba63a0107e98e797ea5d3b8095167db4c86a721ff7a09f78d117e
+Image rendered: 2026-10-16T16:24:21.586427+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 01-02 — real hard/symbolic links on this host
+00003  UTC: 2026-10-16T16:21:04.093688+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/rudraym/devops-heros/scripts/coursework-evidence.py basics links
+00006  
+00007  Rudray Mehra | 24 BCS 10425 | Batch B
+00008  total 16
+00009  129067665 -rw-r--r--@ 2 rudraym  staff  33 Oct 16 21:51 hard.txt
+00010  129067665 -rw-r--r--@ 2 rudraym  staff  33 Oct 16 21:51 original.txt
+00011  129067668 lrwxr-xr-x@ 1 rudraym  staff  12 Oct 16 21:51 soft.txt -> original.txt
+00012  PASS: hard link shares the inode and survives unlink; symlink becomes dangling.
+00013  Actual host: darwin; this is not evidence of a Linux VM or journalctl.
+00014  
+00015  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

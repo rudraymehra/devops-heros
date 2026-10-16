@@ -1,0 +1,19 @@
+RENDERED CI METADATA — NOT a native screenshot or command-output log
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 06 — recorded CI result (metadata only)
+Evidence type: recorded-ci-metadata
+Selected recorded JSON object: foundation. Not a fresh CI check, Docker build log, or Trivy report.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/published/ci-runs.json
+Source SHA-256: e920524337f43d2470fd434373d224b86fa0f9055079e27e27f636a7e7fb7e38
+Image rendered: 2026-10-16T16:24:23.074790+00:00
+
+{
+  "id": 38372002674,
+  "name": "Homework foundation verification",
+  "head_sha": "f8650ece717c603825c724ffcc1dbdd40efaf2be",
+  "html_url": "https://github.com/rudraymehra/devops-heros/actions/runs/38372002674",
+  "conclusion": "success",
+  "updated_at": "2026-10-13T08:52:19Z"
+}

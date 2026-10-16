@@ -1,0 +1,17 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 10 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/10-kubernetes-core-objects/STRATEGIES-SUCCESS.md
+Source SHA-256: 25b1b9a8d6fbb2b48c16f1d22a75fabc90bb1590b7c0b7cddebd1c060aa71a87
+Image rendered: 2026-10-16T16:24:23.690900+00:00
+
+00363  $ kubectl --context campusfix-eks --request-timeout=30s -n campusfix-strategies get pods -l app=app-recreate -L version
+00364  NAME                            READY   STATUS    RESTARTS   AGE   VERSION
+00365  app-recreate-75f5965c97-nl8j8   1/1     Running   0          44s   v2
+00366  app-recreate-75f5965c97-qjfzm   1/1     Running   0          44s   v2
+00367  app-recreate-75f5965c97-s96wl   1/1     Running   0          44s   v2
+00368    [exit: 0 ]

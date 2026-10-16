@@ -1,0 +1,30 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 18 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/18-terraform/OUTPUT.md
+Source SHA-256: 261f9c0af76afd0d4e1367ac7dd7d5ce5cef9a43f60f3b293b179a46bcd003d7
+Image rendered: 2026-10-16T16:24:24.983770+00:00
+
+00148  $ /tmp/campusfix-tools.FCoLVB/terraform apply -no-color -auto-approve /tmp/campusfix-session18.tfplan
+00149  aws_s3_bucket.devops553: Creating...
+00150  aws_s3_bucket.devops553: Still creating... [00m10s elapsed]
+00151  aws_s3_bucket.devops553: Creation complete after 10s [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00152  aws_s3_bucket_versioning.devops553: Creating...
+00153  aws_s3_bucket_public_access_block.devops553: Creating...
+00154  aws_s3_bucket_server_side_encryption_configuration.devops553: Creating...
+00155  aws_s3_bucket_public_access_block.devops553: Creation complete after 0s [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00156  aws_s3_bucket_server_side_encryption_configuration.devops553: Creation complete after 0s [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00157  aws_s3_bucket_versioning.devops553: Creation complete after 2s [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00158  
+00159  Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+00160  
+00161  Outputs:
+00162  
+00163  bucket_arn = "arn:aws:s3:::sudhir-mehra-24bcs10425-lab-20261013-0738"
+00164  bucket_name = "sudhir-mehra-24bcs10425-lab-20261013-0738"
+00165  bucket_region = "ap-south-1"
+00166   

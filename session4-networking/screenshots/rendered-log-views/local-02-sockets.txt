@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 02-sockets
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session4-networking/screenshots/rudray-20261016-215104-093414/02-sockets.txt
+Source SHA-256: 9085e91747610376d5c73769905ceb966a6821afae3f1a1b3098bc7c2ed7bc27
+Image rendered: 2026-10-16T16:24:22.886592+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 04 — actual 02-sockets
+00003  UTC: 2026-10-16T16:21:53.271432+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: netstat -an -p tcp
+00006  
+00007  Active Internet connections (including servers)
+00008  Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+00009  tcp4       0      0  100.129.165.245.63033  20.62.58.5.443         ESTABLISHED
+00010  tcp4       0      0  100.129.165.245.63025  69.192.1.194.443       ESTABLISHED
+00011  tcp4       0      0  100.129.165.245.63017  172.217.24.142.443     ESTABLISHED
+00012  tcp4       0      0  100.129.165.245.63016  44.202.79.217.443      CLOSE_WAIT 
+00013  tcp4      24      0  100.129.165.245.63015  44.202.79.217.443      CLOSE_WAIT 
+00014  tcp4      24      0  100.129.165.245.63014  44.202.79.217.443      CLOSE_WAIT 
+00015  tcp4       0      0  100.129.165.245.62979  104.18.18.125.443      ESTABLISHED
+00016  tcp4       0      0  100.129.165.245.62951  216.239.36.178.443     ESTABLISHED
+00017  tcp4       0      0  100.129.165.245.62930  172.217.117.4.443      ESTABLISHED
+00018  tcp4      39      0  100.129.165.245.62854  18.172.83.177.443      CLOSE_WAIT 
+[... source lines omitted for readability; see complete linked record ...]
+00067  tcp6       0      0  fe80::7c70:7f7b:.1032  fe80::e38:8561:9.1025  ESTABLISHED
+00068  tcp6       0      0  fe80::7c70:7f7b:.1024  fe80::e38:8561:9.1024  ESTABLISHED
+00069  tcp6       0      0  ::1.27017              *.*                    LISTEN     
+00070  tcp4       0      0  127.0.0.1.27017        *.*                    LISTEN     
+00071  tcp4       0      0  127.0.0.1.11434        *.*                    LISTEN     
+00072  tcp4       0      0  127.0.0.1.5432         *.*                    LISTEN     
+00073  tcp6       0      0  ::1.5432               *.*                    LISTEN     
+00074  tcp4       0      0  127.0.0.1.7265         *.*                    LISTEN     
+00075  tcp6       0      0  *.5000                 *.*                    LISTEN     
+00076  tcp4       0      0  *.5000                 *.*                    LISTEN     
+00077  tcp6       0      0  *.7000                 *.*                    LISTEN     
+00078  tcp4       0      0  *.7000                 *.*                    LISTEN     
+00079  tcp4       0      0  100.129.165.245.62896  142.250.207.165.443    TIME_WAIT  
+00080  tcp4       0      0  100.129.165.245.58168  142.251.126.113.443    TIME_WAIT  
+00081  tcp4       0      0  100.129.165.245.58162  202.140.63.209.443     ESTABLISHED
+00082  tcp4       0      0  100.129.165.245.58161  17.23.96.10.443        ESTABLISHED
+00083  tcp4       0      0  100.129.165.245.58160  17.248.239.10.443      ESTABLISHED
+00084  tcp4       0      0  100.129.165.245.58159  17.248.239.10.443      ESTABLISHED
+00085  tcp4       0      0  100.129.165.245.58158  202.140.63.209.443     ESTABLISHED
+00086  tcp4       0      0  100.129.165.245.58157  17.248.239.10.443      ESTABLISHED
+00087  tcp4       0      0  100.129.165.245.58156  17.248.239.10.443      ESTABLISHED
+00088  tcp4       0      0  100.129.165.245.58155  17.248.239.10.443      ESTABLISHED
+00089  tcp4       0      0  100.129.165.245.58120  57.144.243.33.443      ESTABLISHED
+00090  tcp4       0      0  100.129.165.245.57323  17.242.13.4.5223       ESTABLISHED
+00091  
+00092  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

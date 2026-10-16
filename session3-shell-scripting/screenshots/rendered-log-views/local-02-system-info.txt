@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 03 — actual script with identity input
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session3-shell-scripting/screenshots/rudray-20261016-215104-093414/02-system-info.txt
+Source SHA-256: 9b22ef52b964fcae454666b439cff63f2034dc0f51c9ec7000a65462234cd790
+Image rendered: 2026-10-16T16:24:22.811389+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 03 — actual script with identity input
+00003  UTC: 2026-10-16T16:21:47.709066+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/rudraym/devops-heros/scripts/coursework-evidence.py basics system-info
+00006  
+00007  Rudray Mehra | 24 BCS 10425 | Batch B
+00008  Running processes:
+00009    PID  PPID COMM
+00010      1     0 /sbin/launchd
+00011    137     1 /usr/libexec/logd
+00012    139     1 /usr/libexec/UserEventAgent
+00013    141     1 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd
+00014    142     1 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted
+00015    145     1 /usr/sbin/systemstats
+00016    148     1 /usr/libexec/configd
+00017    150     1 /System/Library/CoreServices/powerd.bundle/powerd
+00018    151     1 /usr/libexec/IOMFB_bics_daemon
+[... source lines omitted for readability; see complete linked record ...]
+00541  Student: Rudray Mehra
+00542  Enrollment number: 24 BCS 10425
+00543  Current date: Fri Oct 16 21:51:47 IST 2026
+00544  Hostname: MacBook-Air-9.local
+00545  Username: rudraym
+00546  
+00547  Disk usage:
+00548  Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+00549  /dev/disk3s1s1   228Gi    17Gi   6.5Gi    73%    426k   68M    1%   /
+00550  devfs            219Ki   219Ki     0Bi   100%     758     0  100%   /dev
+00551  /dev/disk3s6     228Gi    11Gi   6.5Gi    63%      11   68M    0%   /System/Volumes/VM
+00552  /dev/disk3s2     228Gi    16Gi   6.5Gi    71%    2.0k   68M    0%   /System/Volumes/Preboot
+00553  /dev/disk3s4     228Gi   751Mi   6.5Gi    11%     330   68M    0%   /System/Volumes/Update
+00554  /dev/disk1s2     500Mi   6.0Mi   482Mi     2%       1  4.9M    0%   /System/Volumes/xarts
+00555  /dev/disk1s1     500Mi   5.6Mi   482Mi     2%      34  4.9M    0%   /System/Volumes/iSCPreboot
+00556  /dev/disk1s3     500Mi   1.2Mi   482Mi     1%      68  4.9M    0%   /System/Volumes/Hardware
+00557  /dev/disk3s5     228Gi   175Gi   6.5Gi    97%    2.1M   68M    3%   /System/Volumes/Data
+00558  map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+00559  /dev/disk2s1     5.0Gi   1.7Gi   3.2Gi    35%      66   34M    0%   /System/Volumes/Update/SFR/mnt1
+00560  /dev/disk3s1     228Gi    17Gi   6.5Gi    73%    459k   68M    1%   /System/Volumes/Update/mnt1
+00561  
+00562  Process list saved to: system-info-output/processes.txt
+00563  Report created successfully: system-info-output/report.txt
+00564  PASS: both real output files created; process arguments were excluded. Temporary test files removed after verification.
+00565  
+00566  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

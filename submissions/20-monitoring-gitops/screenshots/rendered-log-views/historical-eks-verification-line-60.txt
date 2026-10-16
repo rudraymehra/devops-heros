@@ -1,0 +1,40 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 20 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/eks-verification.md
+Source SHA-256: cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f
+Image rendered: 2026-10-16T16:24:25.523080+00:00
+
+00060  $ kubectl --context campusfix-eks --request-timeout=30s get configmap taskboard-config -n taskboard -o json
+00061  {
+00062      "apiVersion": "v1",
+00063      "data": {
+00064          "APP_NAME": "CampusFix API",
+00065          "ENVIRONMENT": "development"
+00066      },
+00067      "kind": "ConfigMap",
+00068      "metadata": {
+00069          "annotations": {
+00070              "argocd.argoproj.io/tracking-id": "campusfix:/ConfigMap:taskboard/taskboard-config",
+00071              "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"data\":{\"APP_NAME\":\"CampusFix 
+API\",\"ENVIRONMENT\":\"development\"},\"kind\":\"ConfigMap\",\"metadata\":{\"annotations\":{\"argocd.argoproj.io/tracking-id\":\"campusfix:/ConfigMap:taskboard/taskboard-
+config\"},\"name\":\"taskboard-config\",\"namespace\":\"taskboard\"}}\n",
+00072              "meta.helm.sh/release-name": "taskboard",
+00073              "meta.helm.sh/release-namespace": "taskboard"
+00074          },
+00075          "creationTimestamp": "2026-10-13T03:37:38Z",
+00076          "labels": {
+00077              "app.kubernetes.io/managed-by": "Helm"
+00078          },
+00079          "name": "taskboard-config",
+00080          "namespace": "taskboard",
+00081          "resourceVersion": "20377",
+00082          "uid": "a67fc55f-c586-4d80-99eb-a812ca9670cb"
+00083      }
+00084  }
+00085   
+00086  PASS: Argo CD restored the committed application name after an intentional live edit.

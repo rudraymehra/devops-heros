@@ -5,6 +5,22 @@
 [Session-by-session audit](evidence/coursework/README.md) ·
 [All submission README links](SUBMISSION-GUIDE.md)
 
+## Generated images of our records
+
+[Open the rendered log-image gallery](evidence/coursework/RENDERED-LOG-GALLERY.md).
+Each image displays **Rudray Mehra**, its actual source/hash and a visible statement
+that it is a rendered record, not a native Terminal/AWS Console screenshot.
+Local failures are shown as failures; historic cloud results remain dated and
+offline. Sessions 6–8 use recorded CI metadata where command logs are unavailable,
+not invented Docker output. These images do not fill native-only rubric requirements
+without the instructor accepting that format.
+
+Regenerate on this Mac with:
+
+```bash
+/opt/homebrew/bin/python3.13 scripts/render-coursework-evidence.py
+```
+
 All **19 homework entry points** (Sessions 1 and 2 share one) were compared against
 the **179 images** in Vivek's supplied ZIP. Every session now has a `screenshots/`
 page listing the exact reference filenames, our core implementation files,
@@ -13,9 +29,21 @@ No reference image was copied, retouched or used as evidence of Rudray's executi
 
 ## What was actually verified in this update
 
+- **85 labelled record images** were generated, separately from **10 visually
+  accepted native captures** in the user's `rudray-20261016-215104-093414` run.
+  The native captures cover macOS host/disk, shell syntax/system-info, routes,
+  sockets, DNS, ping and Helm lint/template. They are not proof of all exercises.
+  [Hash-bound image review](evidence/coursework/native-review.json).
+- Two native images selected the chat tab instead of command output: Session 5
+  Git and Session 4 HTTP. Their originals remain local but are excluded from the
+  publishing clone. Retake them with the actual Terminal output visible; the
+  HTTP command itself timed out, so it also needs a successful retry.
 - Local hard/symbolic links passed on macOS, explicitly not described as Linux VM evidence.
-- The shell script passes syntax checking. Its actual run is blocked here by macOS
-  process-inspection permissions; no process-list screenshot is claimed.
+- The shell script passes syntax checking. The original sandbox run was blocked
+  by process-inspection permissions; the later user-run Terminal execution passed,
+  including real report/process-file checks, with a native output-tail screenshot.
+- The user's route, sockets, DNS and ping checks passed. The HTTP request timed
+  out. Earlier sandbox network failures remain in their original logs.
 - Git `commit -a` and cherry-pick exercises passed in a newly created disposable
   repository, with Rudray Mehra as the actual local commit author. The coursework
   repository's existing Git history/index was not used for that exercise.
@@ -30,10 +58,10 @@ No reference image was copied, retouched or used as evidence of Rudray's executi
   fail in the editing sandbox, so fresh validation is marked failed/blocked.
 - [42 Python/shell source files](evidence/coursework/source-syntax.md) pass non-executing
   syntax checks. All three homework workflow files pass actionlint.
-- The 8 coursework-audit tests and 9 native-recorder tests pass. The recorder now
+- Coursework-audit and native-recorder tests pass. The recorder now
   rejects `Operation not permitted` even when a macOS command returns exit 0.
 
-**No new native screenshots were captured by this editing session.** macOS Terminal
+**The native screenshots came from the user's interactive run, not this editing sandbox.** macOS Terminal
 access and Docker access are restricted, and the approval service previously
 failed with HTTP 404. Native PNGs must be taken in the user's interactive Terminal.
 Raw LAN-neighbour output was withheld from publication; the narrower default-route
@@ -58,8 +86,10 @@ Screen Recording permission for Terminal in System Settings.
 
 Files go to a separate timestamped directory inside each submission's
 `screenshots/` folder. Logs, exit codes, untouched native PNGs and SHA-256 checksums
-are retained together. The session pages embed captured PNGs automatically.
+are retained together. The session pages embed only hash-verified, visually accepted PNGs.
 Selecting the wrong window can still create a PNG, so review each image yourself.
+Record decisions in `evidence/coursework/native-review.json`, tied to each image's
+exact SHA-256, and refresh the audit. Changed image bytes require another review.
 An error screenshot documents a failure; it does not complete that exercise.
 
 For fewer prompts, choose sessions:

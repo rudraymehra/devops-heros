@@ -1,0 +1,32 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 10 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/10-kubernetes-core-objects/OUTPUT.md
+Source SHA-256: f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6
+Image rendered: 2026-10-16T16:24:23.567330+00:00
+
+01142  $ kubectl --context campusfix-eks --request-timeout=30s -n rudray-devops-hw get pods,rs,deployments
+01143  NAME                                  READY   STATUS    RESTARTS   AGE
+01144  pod/deployment-web-858f686f95-9vlkq   1/1     Running   0          8s
+01145  pod/deployment-web-858f686f95-qndwh   1/1     Running   0          6s
+01146  pod/deployment-web-858f686f95-r5h4r   1/1     Running   0          4s
+01147  pod/hello-kubernetes                  1/1     Running   0          43s
+01148  pod/replica-web-cb7zx                 1/1     Running   0          22s
+01149  pod/replica-web-jbkvj                 1/1     Running   0          30s
+01150  pod/standalone-web                    1/1     Running   0          31s
+01151  
+01152  NAME                                        DESIRED   CURRENT   READY   AGE
+01153  replicaset.apps/deployment-web-84b596885b   0         0         0       15s
+01154  replicaset.apps/deployment-web-858f686f95   3         3         3       30s
+01155  replicaset.apps/replica-web                 2         2         2       31s
+01156  
+01157  NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+01158  deployment.apps/deployment-web   3/3     3            3           30s
+01159  [exit status: 0]
+01160  ```
+01161  
+01162  All checks in this topic completed successfully.

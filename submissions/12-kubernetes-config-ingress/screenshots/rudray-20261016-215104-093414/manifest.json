@@ -1,0 +1,13 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Live Kubernetes/Helm/monitoring capture",
+      "status": "NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture ConfigMap/Secret metadata and actual ingress requests, plus the failure/recovery exercises. Never screenshot decoded real Secret values."
+    }
+  ]
+}

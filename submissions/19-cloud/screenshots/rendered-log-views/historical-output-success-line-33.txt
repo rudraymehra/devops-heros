@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/19-cloud/OUTPUT-SUCCESS.md
+Source SHA-256: 87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247
+Image rendered: 2026-10-16T16:24:25.356148+00:00
+
+00033  $ /tmp/campusfix-tools.FCoLVB/terraform plan -no-color -out=/tmp/campusfix-session19.tfplan -var=project_suffix=sudhir24bcs10425-20261013
+00034  data.aws_caller_identity.current: Reading...
+00035  data.aws_ami.amazon_linux: Reading...
+00036  data.aws_caller_identity.current: Read complete after 0s [id=[AWS_ACCOUNT_ID]]
+00037  data.aws_ami.amazon_linux: Read complete after 2s [id=ami-0324b92f52e4d7a4a]
+00038  
+00039  Terraform used the selected providers to generate the following execution
+00040  plan. Resource actions are indicated with the following symbols:
+00041    + create
+00042  
+00043  Terraform will perform the following actions:
+00044  
+00045    # aws_instance.web will be created
+00046    + resource "aws_instance" "web" {
+00047        + ami                                  = "ami-0324b92f52e4d7a4a"
+00048        + arn                                  = (known after apply)
+00049        + associate_public_ip_address          = true
+00050        + availability_zone                    = (known after apply)
+[... source lines omitted for readability; see complete linked record ...]
+00415          }
+00416        + tags_all                             = {
+00417            + "ManagedBy" = "Terraform"
+00418            + "Name"      = "session19-mini-vpc"
+00419            + "Session"   = "19"
+00420          }
+00421      }
+00422  
+00423  Plan: 11 to add, 0 to change, 0 to destroy.
+00424  
+00425  Changes to Outputs:
+00426    + artifact_bucket   = (known after apply)
+00427    + instance_id       = (known after apply)
+00428    + security_group_id = (known after apply)
+00429    + subnet_id         = (known after apply)
+00430    + vpc_cidr          = "10.20.0.0/16"
+00431    + vpc_id            = (known after apply)
+00432    + web_url           = (known after apply)
+00433  
+00434  ─────────────────────────────────────────────────────────────────────────────
+00435  
+00436  Saved the plan to: /tmp/campusfix-session19.tfplan
+00437  
+00438  To perform exactly these actions, run the following command to apply:
+00439      terraform apply "/tmp/campusfix-session19.tfplan"
+00440   

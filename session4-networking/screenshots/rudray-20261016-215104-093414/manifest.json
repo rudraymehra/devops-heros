@@ -1,0 +1,111 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 04 \u2014 actual 01-route",
+      "status": "PASS",
+      "command": [
+        "/sbin/route",
+        "-n",
+        "get",
+        "default"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:49.262617+00:00",
+      "exit_code": 0,
+      "log": "01-route.txt",
+      "log_sha256": "c6cb07c20da7db352ec0e4e96548822427ef73deaefc6a28bf9d0ec66c548cc2",
+      "screenshot": {
+        "file": "01-route.png",
+        "sha256": "53721815c19d6fd70128dace0064e1527e41a63817f9ca9e5a1318b1847e7449",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 04 \u2014 actual 02-sockets",
+      "status": "PASS",
+      "command": [
+        "netstat",
+        "-an",
+        "-p",
+        "tcp"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:53.271432+00:00",
+      "exit_code": 0,
+      "log": "02-sockets.txt",
+      "log_sha256": "9085e91747610376d5c73769905ceb966a6821afae3f1a1b3098bc7c2ed7bc27",
+      "screenshot": {
+        "file": "02-sockets.png",
+        "sha256": "2ae325766461690330d089ad68e7049e44da8a491ecbedeeafd5a4bcca7d789a",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 04 \u2014 actual 03-dns",
+      "status": "PASS",
+      "command": [
+        "dig",
+        "+time=3",
+        "+tries=1",
+        "example.com"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:57.571394+00:00",
+      "exit_code": 0,
+      "log": "03-dns.txt",
+      "log_sha256": "8806f4a7c4723581c12c5634842f4ea85b2c43728221ea612fd0f8f8fd6c75db",
+      "screenshot": {
+        "file": "03-dns.png",
+        "sha256": "c1e42bb8dfc2ae2652637e3f29871a853f0cd4704d95a1fbe9458388d8fb4565",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 04 \u2014 actual 04-ping",
+      "status": "PASS",
+      "command": [
+        "ping",
+        "-c",
+        "2",
+        "1.1.1.1"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:58.402010+00:00",
+      "exit_code": 0,
+      "log": "04-ping.txt",
+      "log_sha256": "58ebc29ba3ec5cd684c3473d88ddb0a444c8e110f74186701e2ae16b381b22b5",
+      "screenshot": {
+        "file": "04-ping.png",
+        "sha256": "4712d49c0e18cfdb7931542450bfa4c9d65928faaaeea6746d48bd8c9250153a",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 04 \u2014 actual 05-http",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "curl",
+        "--head",
+        "--fail",
+        "--max-time",
+        "10",
+        "https://example.com"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:22:00.966882+00:00",
+      "exit_code": 28,
+      "log": "05-http.txt",
+      "log_sha256": "87078fe98281216ed18d94f3ffd7d9054f8da6f67a22f3eaf019a1f0a75eb5f9",
+      "screenshot": {
+        "file": "05-http.png",
+        "sha256": "4b6246977a27c8ba744fbc7f78b44d435880bf5979149740417f784e21fb0c83",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture routes, sockets, DNS, ping and HTTP on the actual host. Record network restrictions as failures, not successful connectivity."
+    }
+  ]
+}

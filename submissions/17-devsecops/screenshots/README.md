@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 14. New native files awaiting visual review: 0.
+Reference images: 14. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -16,6 +16,12 @@ Reference images: 14. New native files awaiting visual review: 0.
 - [Session 17 — actual source scan](rudray-20261016-212856-656600/02-bandit.txt): PASS.
 - CI/image/security/deployment screenshots: NOT RUN: Use actual jobs for the submitted SHA; local test success alone is not CI success.
 - Reference-specific pending items: NOT RUN: Capture real unit/SAST/SCA/secret/image scan and deployment results. Before/after findings must come from real revisions; never invent a vulnerable scan..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

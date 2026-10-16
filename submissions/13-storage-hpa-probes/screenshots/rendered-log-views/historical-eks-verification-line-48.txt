@@ -1,0 +1,15 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 13 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/eks-verification.md
+Source SHA-256: cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f
+Image rendered: 2026-10-16T16:24:24.167633+00:00
+
+00048  $ kubectl --context campusfix-eks --request-timeout=30s get pvc -n taskboard
+00049  NAME                      STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS    VOLUMEATTRIBUTESCLASS   AGE
+00050  taskboard-postgres-data   Bound    pvc-2c1c6543-f3b2-45d2-91d4-eb3e1ee0a8ce   5Gi        RWO            campusfix-gp3   <unset>                 10m
+00051   

@@ -1,0 +1,66 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 01-02 \u2014 real hard/symbolic links on this host",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/rudraym/devops-heros/scripts/coursework-evidence.py",
+        "basics",
+        "links"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:04.093688+00:00",
+      "exit_code": 0,
+      "log": "01-links.txt",
+      "log_sha256": "eeba740bd65ba63a0107e98e797ea5d3b8095167db4c86a721ff7a09f78d117e",
+      "screenshot": null
+    },
+    {
+      "title": "Session 01-02 \u2014 actual OS/kernel",
+      "status": "PASS",
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:20.710414+00:00",
+      "exit_code": 0,
+      "log": "02-host.txt",
+      "log_sha256": "32b2b740a4a0e42a0f8941612f60c349140704e725e918b37cbacbed20519986",
+      "screenshot": {
+        "file": "02-host.png",
+        "sha256": "951f6097523e8de0e760215a65f85a2c20834296db35d2f4eb7d748f72318853",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 01-02 \u2014 actual disk usage",
+      "status": "PASS",
+      "command": [
+        "df",
+        "-h",
+        "/Users/rudraym/devops-heros"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:39.921596+00:00",
+      "exit_code": 0,
+      "log": "03-disk.txt",
+      "log_sha256": "6197c15ec2aaa2d4706b82df35e9ffb6cc8b0793697b56e59441a86d46d7cdfb",
+      "screenshot": {
+        "file": "03-disk.png",
+        "sha256": "aa0c4016450f07cf7299e877e01b7a0b51c3bb224270c9ffa8f2105679a3e12a",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Linux user management and journalctl",
+      "status": "NOT RUN: Requires Linux/systemd; no host users created"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Linux useradd/adduser and journalctl need a real Linux/systemd environment. macOS link tests are labelled macOS, not Linux VM results."
+    }
+  ]
+}

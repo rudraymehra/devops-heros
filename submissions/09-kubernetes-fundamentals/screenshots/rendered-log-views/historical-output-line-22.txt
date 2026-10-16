@@ -1,0 +1,22 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 09 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/09-kubernetes-fundamentals/OUTPUT.md
+Source SHA-256: f6c18606d5ddd6651f38cb7dcda08c4aaba08b59eddf351b46588ab4c2118215
+Image rendered: 2026-10-16T16:24:23.195798+00:00
+
+00022  $ kubectl --context campusfix-eks --request-timeout=30s get nodes -o wide
+00023  NAME                                         STATUS   ROLES    AGE   VERSION               INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                        KERNEL-VERSION
+                     CONTAINER-RUNTIME
+00024  ip-10-20-1-116.ap-south-1.compute.internal   Ready    <none>   44m   v1.35.8-eks-3b4a6ca   10.20.1.116   <none>        Amazon Linux 2023.12.20260930   
+6.12.110-135.202.amzn2023.x86_64   containerd://2.2.7+unknown
+00025  ip-10-20-2-64.ap-south-1.compute.internal    Ready    <none>   44m   v1.35.8-eks-3b4a6ca   10.20.2.64    <none>        Amazon Linux 2023.12.20260930   
+6.12.110-135.202.amzn2023.x86_64   containerd://2.2.7+unknown
+00026  [exit status: 0]
+00027  ```
+00028  
+00029  ```console

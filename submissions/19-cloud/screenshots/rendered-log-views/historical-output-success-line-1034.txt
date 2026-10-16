@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/19-cloud/OUTPUT-SUCCESS.md
+Source SHA-256: 87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247
+Image rendered: 2026-10-16T16:24:25.453290+00:00
+
+01034  $ /tmp/campusfix-tools.FCoLVB/terraform destroy -no-color -auto-approve -var=project_suffix=sudhir24bcs10425-20261013
+01035  Acquiring state lock. This may take a few moments...
+01036  data.aws_ami.amazon_linux: Reading...
+01037  data.aws_caller_identity.current: Reading...
+01038  aws_vpc.main: Refreshing state... [id=vpc-050ab74d3afc1d642]
+01039  data.aws_caller_identity.current: Read complete after 0s [id=[AWS_ACCOUNT_ID]]
+01040  aws_s3_bucket.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+01041  data.aws_ami.amazon_linux: Read complete after 1s [id=ami-0324b92f52e4d7a4a]
+01042  aws_internet_gateway.main: Refreshing state... [id=igw-01c49e1237066da7f]
+01043  aws_subnet.public: Refreshing state... [id=subnet-0ff94dd30697f3b0e]
+01044  aws_security_group.web: Refreshing state... [id=sg-03d74f9a1b4e7ce5c]
+01045  aws_route_table.public: Refreshing state... [id=rtb-003919586fb751829]
+01046  aws_route_table_association.public: Refreshing state... [id=rtbassoc-07ca2a3f59f582979]
+01047  aws_instance.web: Refreshing state... [id=i-0a6d4d98cfb4e49e5]
+01048  aws_s3_bucket_versioning.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+01049  aws_s3_bucket_public_access_block.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+01050  aws_s3_bucket_server_side_encryption_configuration.artifacts: Refreshing state... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+01051  
+[... source lines omitted for readability; see complete linked record ...]
+01461  aws_s3_bucket_public_access_block.artifacts: Destroying... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+01462  aws_instance.web: Destroying... [id=i-0a6d4d98cfb4e49e5]
+01463  aws_s3_bucket_versioning.artifacts: Destruction complete after 1s
+01464  aws_route_table_association.public: Destruction complete after 1s
+01465  aws_route_table.public: Destroying... [id=rtb-003919586fb751829]
+01466  aws_s3_bucket_server_side_encryption_configuration.artifacts: Destruction complete after 1s
+01467  aws_s3_bucket_public_access_block.artifacts: Destruction complete after 1s
+01468  aws_s3_bucket.artifacts: Destroying... [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+01469  aws_route_table.public: Destruction complete after 0s
+01470  aws_internet_gateway.main: Destroying... [id=igw-01c49e1237066da7f]
+01471  aws_s3_bucket.artifacts: Destruction complete after 0s
+01472  aws_instance.web: Still destroying... [id=i-0a6d4d98cfb4e49e5, 00m10s elapsed]
+01473  aws_internet_gateway.main: Still destroying... [id=igw-01c49e1237066da7f, 00m10s elapsed]
+01474  aws_internet_gateway.main: Destruction complete after 18s
+01475  aws_instance.web: Still destroying... [id=i-0a6d4d98cfb4e49e5, 00m20s elapsed]
+01476  aws_instance.web: Still destroying... [id=i-0a6d4d98cfb4e49e5, 00m30s elapsed]
+01477  aws_instance.web: Destruction complete after 31s
+01478  aws_subnet.public: Destroying... [id=subnet-0ff94dd30697f3b0e]
+01479  aws_security_group.web: Destroying... [id=sg-03d74f9a1b4e7ce5c]
+01480  aws_subnet.public: Destruction complete after 0s
+01481  aws_security_group.web: Destruction complete after 0s
+01482  aws_vpc.main: Destroying... [id=vpc-050ab74d3afc1d642]
+01483  aws_vpc.main: Destruction complete after 1s
+01484  
+01485  Destroy complete! Resources: 11 destroyed.
+01486   

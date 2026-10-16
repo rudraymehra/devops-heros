@@ -1,0 +1,25 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 14 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/14-troubleshooting/OUTPUT.md
+Source SHA-256: 25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338
+Image rendered: 2026-10-16T16:24:24.413459+00:00
+
+06065  $ kubectl --context campusfix-eks --request-timeout=30s -n campusfix-troubleshooting logs fail-4-dns-failure-pod --tail=10
+06066  
+06067  <p>For online documentation and support please refer to
+06068  <a href="http://nginx.org/">nginx.org</a>.<br/>
+06069  Commercial support is available at
+06070  <a href="http://nginx.com/">nginx.com</a>.</p>
+06071  
+06072  <p><em>Thank you for using nginx.</em></p>
+06073  </body>
+06074  </html>
+06075  
+06076    0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+06077  100   615  100   615    0     0  66307      0 --:--:-- --:--:-- --:--:-- 76875
+06078    [exit: 0 ]

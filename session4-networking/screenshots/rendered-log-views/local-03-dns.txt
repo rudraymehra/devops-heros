@@ -1,0 +1,50 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 03-dns
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session4-networking/screenshots/rudray-20261016-215104-093414/03-dns.txt
+Source SHA-256: 8806f4a7c4723581c12c5634842f4ea85b2c43728221ea612fd0f8f8fd6c75db
+Image rendered: 2026-10-16T16:24:22.932914+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 04 — actual 03-dns
+00003  UTC: 2026-10-16T16:21:57.571394+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: dig +time=3 +tries=1 example.com
+00006  
+00007  
+00008  ; <<>> DiG 9.10.6 <<>> +time=3 +tries=1 example.com
+00009  ;; global options: +cmd
+00010  ;; Got answer:
+00011  ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57787
+00012  ;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 2, ADDITIONAL: 6
+00013  
+00014  ;; QUESTION SECTION:
+00015  ;example.com.           IN  A
+00016  
+00017  ;; ANSWER SECTION:
+00018  example.com.        165 IN  A   104.20.23.154
+00019  example.com.        165 IN  A   172.66.147.243
+00020  
+00021  ;; AUTHORITY SECTION:
+00022  example.com.        50601   IN  NS  hera.ns.cloudflare.com.
+00023  example.com.        50601   IN  NS  elliott.ns.cloudflare.com.
+00024  
+00025  ;; ADDITIONAL SECTION:
+00026  hera.ns.cloudflare.com. 2688    IN  A   108.162.192.162
+00027  hera.ns.cloudflare.com. 2688    IN  A   172.64.32.162
+00028  hera.ns.cloudflare.com. 2688    IN  A   173.245.58.162
+00029  elliott.ns.cloudflare.com. 84090 IN A   162.159.44.228
+00030  elliott.ns.cloudflare.com. 84090 IN A   172.64.35.228
+00031  elliott.ns.cloudflare.com. 84090 IN A   108.162.195.228
+00032  
+00033  ;; Query time: 52 msec
+00034  ;; SERVER: 100.129.160.1#53(100.129.160.1)
+00035  ;; WHEN: Fri Oct 16 21:51:57 IST 2026
+00036  ;; MSG SIZE  rcvd: 212
+00037  
+00038  
+00039  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

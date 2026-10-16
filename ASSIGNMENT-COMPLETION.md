@@ -7,6 +7,13 @@ course examples and expected output are not represented as executed work.
 
 ## 2026-10-16 submission update
 
+- Added [85 labelled images of actual records](evidence/coursework/RENDERED-LOG-GALLERY.md)
+  across Sessions 1–20, plus 10 visually accepted native captures from Rudray's
+  interactive Terminal run. Two wrong-window captures (Git and HTTP) are excluded
+  from publication; their untouched originals remain local. The shell script,
+  DNS and ping passed in that user run; HTTP timed out. Rendered log images are
+  not substitutes for native-only evidence unless the instructor accepts them.
+
 - Audited all 179 reference images for Sessions 1–20 and added a screenshot/evidence
   page to every homework entry point. [Coursework audit](evidence/coursework/README.md)
   and [capture guide](COURSEWORK-EVIDENCE.md) distinguish fresh passing checks,

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Session 17 \u2014 actual project tests",
+    "image": "local-01-pytest.png",
+    "image_sha256": "297c73670e5b02506ce12d1c64e8bbeed6347ec8968597ae1c314698c0475ba5",
+    "text": "local-01-pytest.txt",
+    "source": "submissions/17-devsecops/screenshots/rudray-20261016-212856-656600/01-pytest.txt",
+    "source_sha256": "e32d226a66393e4120f238f4987c506047fd0ae1dc922d0bbf4b3991bfb63443",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 17 \u2014 actual source scan",
+    "image": "local-02-bandit.png",
+    "image_sha256": "83c31c38452d368258e17daed91da9e8b64c2aeb62a1ae56136d1a62babbb86a",
+    "text": "local-02-bandit.txt",
+    "source": "submissions/17-devsecops/screenshots/rudray-20261016-212856-656600/02-bandit.txt",
+    "source_sha256": "0bc3e6e30325e2b25410b67935b3adf0579a198301dd44c949e46c81b975e357",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 17 \u2014 recorded CI result (metadata only)",
+    "image": "recorded-ci-result.png",
+    "image_sha256": "c9acb7391727e3f417fdc351c171b43851953c71670baeb56b8e72f5dff8ac09",
+    "text": "recorded-ci-result.txt",
+    "source": "session21-python/evidence/published/ci-runs.json",
+    "source_sha256": "e920524337f43d2470fd434373d224b86fa0f9055079e27e27f636a7e7fb7e38",
+    "kind": "recorded-ci-metadata",
+    "native_screenshot": false
+  }
+]

@@ -8,8 +8,9 @@ on:
       - "session4-networking/**"
       - "session5-git-github/**"
       - "scripts/*coursework*"
+      - "scripts/test_rendered_evidence.py"
       - "session21-python/scripts/*native*"
-      - "evidence/coursework/reference-manifest.json"
+      - "evidence/coursework/**"
       - ".github/workflows/homework-foundations.yml"
       - "scripts/foundation-check.sh"
   workflow_dispatch:
@@ -23,6 +24,7 @@ jobs:
       - name: Validate coursework audit and honest capture behaviour
         run: |
           python3 scripts/test_coursework_evidence.py
+          python3 scripts/test_rendered_evidence.py
           python3 session21-python/scripts/test_capture_native_evidence.py
           python3 scripts/check-coursework-syntax.py
   hello-world:

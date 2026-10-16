@@ -121,6 +121,42 @@ def valid_native_file(directory, shot):
             and native.file_hash(path) == shot.get("sha256"))
 
 
+def screenshot_review(directory, shot, reviews):
+    """Bind visual decisions to exact bytes; rejection survives publication exclusion."""
+    if not shot:
+        return "not-captured", "No native image captured."
+    filename = shot.get("file", "")
+    if not filename or filename != Path(filename).name:
+        return "invalid", "Invalid screenshot filename."
+    key = (directory / filename).relative_to(ROOT).as_posix()
+    review = reviews.get(key, {})
+    if review.get("sha256") == shot.get("sha256") and review.get("decision") == "rejected":
+        return "rejected", review["note"]
+    if not valid_native_file(directory, shot):
+        return "invalid", "Declared image missing or checksum differs."
+    if review.get("sha256") == shot.get("sha256") and review.get("decision") == "accepted":
+        return "accepted", review["note"]
+    return "pending", "Visual review required; not counted as accepted evidence."
+
+
+def reviewed_run_index(directory, run, reviews):
+    """Regenerate navigation only; never modify raw logs, PNGs or capture manifests."""
+    lines = ["# Fresh command evidence — reviewed index", "", native.IDENTITY, "",
+             "Raw logs and capture manifests are unchanged. Visual decisions are hash-bound in",
+             "[the review record](" + link_from(directory, "evidence/coursework/native-review.json") + ").",
+             "Rejected images remain local and are excluded from publication. A pass is only for the named command.", ""]
+    for record in run["records"]:
+        lines += ["## " + record["title"], "", "Execution: " + record["status"] + ".", ""]
+        if record.get("log"):
+            lines += [f"[Original command output]({record['log']})", ""]
+        shot = record.get("screenshot")
+        decision, note = screenshot_review(directory, shot, reviews)
+        lines += ["Native capture: **" + decision + "**. " + note, ""]
+        if decision == "accepted":
+            lines += [f"![Reviewed native window capture]({shot['file']})", ""]
+    return "\n".join(lines)
+
+
 def audit(zip_path=None):
     folder = ROOT / "evidence/coursework"
     folder.mkdir(parents=True, exist_ok=True)
@@ -128,6 +164,8 @@ def audit(zip_path=None):
     if zip_path:
         manifest_path.write_text(json.dumps(manifest_for_zip(zip_path), indent=2) + "\n")
     reference = json.loads(manifest_path.read_text())
+    review_path = folder / "native-review.json"
+    reviews = json.loads(review_path.read_text())["images"] if review_path.exists() else {}
     rows = []
     results = []
     for item in CATALOG:
@@ -138,33 +176,46 @@ def audit(zip_path=None):
         records = []
         for path in sorted(directory.glob("rudray-*/manifest.json")):
             records.append((path, json.loads(path.read_text())))
-        captured = sum(valid_native_file(path.parent, r.get("screenshot")) for path, run in records for r in run["records"])
+        decisions = [screenshot_review(path.parent, r.get("screenshot"), reviews)[0]
+                     for path, run in records for r in run["records"]]
+        accepted, pending, rejected = (decisions.count(kind) for kind in ("accepted", "pending", "rejected"))
         row = {"session": item["key"], "required_files_missing": missing,
-               "reference_images": len(images), "native_files_pending_review": captured,
+               "reference_images": len(images), "native_files_accepted": accepted,
+               "native_files_pending_review": pending, "native_files_rejected": rejected,
                "runs": [str(path.parent.relative_to(ROOT)) for path, _ in records], "pending": item["pending"]}
         results.append(row)
         lines = [f"# Session {item['key']} — evidence and screenshots", "", native.IDENTITY, "",
                  "Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imported images.",
                  "No reference screenshot has been relabelled. A command log is not a native screenshot.", "",
                  f"Required entry point/core-file checks: {'MISSING: ' + ', '.join(missing) if missing else 'all listed files present (not a runtime pass)' }.",
-                 f"Reference images: {len(images)}. New native files awaiting visual review: {captured}.", "",
+                 f"Reference images: {len(images)}. Native captures: {accepted} accepted; {pending} awaiting review; {rejected} rejected.", "",
                  "## Fresh execution records", ""]
         if not records:
             lines.append("No fresh run recorded here yet. Native terminal captures remain pending.")
         for path, run in records:
             relative = path.parent.relative_to(directory).as_posix()
+            if any((path.parent / r.get("screenshot", {}).get("file", "")).relative_to(ROOT).as_posix() in reviews
+                   for r in run["records"] if r.get("screenshot")):
+                (path.parent / "README.md").write_text(reviewed_run_index(path.parent, run, reviews))
             lines += [f"### [{path.parent.name}]({relative}/README.md)", ""]
             for record in run["records"]:
                 if record.get("log"):
                     lines.append(f"- [{record['title']}]({relative}/{record['log']}): {record['status']}.")
                 shot = record.get("screenshot")
-                if valid_native_file(path.parent, shot):
-                    lines += ["", f"![Native window capture — review contents]({relative}/{shot['file']})", ""]
+                decision, note = screenshot_review(path.parent, shot, reviews)
+                if decision == "accepted":
+                    lines += ["", "Reviewed native capture: " + note, "",
+                              f"![Reviewed native window capture]({relative}/{shot['file']})", ""]
                 elif shot:
-                    lines.append("- Declared screenshot is missing or its hash differs: NOT VERIFIED.")
+                    lines.append("- Native capture " + decision.upper() + ": " + note)
                 elif not record.get("log"):
                     lines.append(f"- {record['title']}: {record['status']}.")
             lines += [""]
+        rendered = directory / "rendered-log-views/README.md"
+        if rendered.exists():
+            lines += ["", "## Rendered record images (not native screenshots)", "",
+                      "[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).",
+                      "These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.", ""]
         lines += ["", "## Existing historical evidence", ""]
         for target in item["historical"]:
             lines.append(f"- [{Path(target).name if not target.startswith('https:') else 'Earlier GitHub Actions run'}]({link_from(directory, target)})")
@@ -177,13 +228,16 @@ def audit(zip_path=None):
         lines += [f"- [{Path(name).name}]({link_from(directory, name)})" for name in item["required"]]
         (directory / "README.md").write_text("\n".join(lines) + "\n")
         url = link_from(folder, str((directory / "README.md").relative_to(ROOT)))
-        rows.append(f"| {item['key']} | {len(images)} | {'Missing files' if missing else 'Present'} | {captured} | [Evidence]({url}) |")
+        rows.append(f"| {item['key']} | {len(images)} | {'Missing files' if missing else 'Present'} | {accepted} | {pending} | {rejected} | [Evidence]({url}) |")
     report = ["# Sessions 1–20 — screenshot audit", "", native.IDENTITY, "",
               f"Compared all **{sum(len(v) for v in reference['groups'].values())} reference images** in the supplied ZIP against all 19 homework entry points (Sessions 1 and 2 share one).",
-              "Core-file presence is not execution success. Native files must be visually reviewed; zero means none captured by this helper.",
-              "", "| Session | ZIP images | Core files | New native files to review | Details |", "|---|---:|---|---:|---|"] + rows
+              "Core-file presence is not execution success. Accepted counts mean visual review of those images only, not full session completion.",
+              "Rejected wrong-window images are kept locally but excluded from publication. Renderings are counted separately.",
+              "", "| Session | ZIP images | Core files | Native accepted | To review | Rejected | Details |", "|---|---:|---|---:|---:|---:|---|"] + rows
     report += ["", "See [capture instructions](../../COURSEWORK-EVIDENCE.md). Each session page lists every reference image, actual local results, historical evidence and remaining gaps.",
                "", "Archive SHA-256: `" + reference["sha256"] + "`.", ""]
+    if (folder / "RENDERED-LOG-GALLERY.md").exists():
+        report += ["[Generated record-image gallery](RENDERED-LOG-GALLERY.md) — labelled renderings, not native screenshots.", ""]
     (folder / "README.md").write_text("\n".join(report))
     (folder / "audit.json").write_text(json.dumps(results, indent=2) + "\n")
     print(f"Audited {len(results)} homework groups; {sum(len(v) for v in reference['groups'].values())} reference images; no screenshots fabricated.")

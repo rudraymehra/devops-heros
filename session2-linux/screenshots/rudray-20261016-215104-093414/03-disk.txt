@@ -1,0 +1,10 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 01-02 — actual disk usage
+UTC: 2026-10-16T16:21:39.921596+00:00
+Directory: /Users/rudraym/devops-heros
+Command: df -h /Users/rudraym/devops-heros
+
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   228Gi   175Gi   6.5Gi    97%    2.1M   68M    3%   /System/Volumes/Data
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 3. New native files awaiting visual review: 0.
+Reference images: 3. Native captures: 2 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -15,6 +15,28 @@ Reference images: 3. New native files awaiting visual review: 0.
 - [Session 03 — shell script syntax](rudray-20261016-212856-656600/01-syntax.txt): PASS.
 - [Session 03 — actual script with identity input](rudray-20261016-212856-656600/02-system-info.txt): FAILED / BLOCKED.
 - Reference-specific pending items: NOT RUN: Capture the actual system-info script and process/report files. Process arguments are omitted to avoid exposing credentials..
+
+### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
+
+- [Session 03 — shell script syntax](rudray-20261016-215104-093414/01-syntax.txt): PASS.
+
+Reviewed native capture: Shell syntax command and success visible; syntax check only.
+
+![Reviewed native window capture](rudray-20261016-215104-093414/01-syntax.png)
+
+- [Session 03 — actual script with identity input](rudray-20261016-215104-093414/02-system-info.txt): PASS.
+
+Reviewed native capture: Actual system-info output tail, Rudray identity and report-file verification visible; paired log has complete output.
+
+![Reviewed native window capture](rudray-20261016-215104-093414/02-system-info.png)
+
+- Reference-specific pending items: NOT RUN: Capture the actual system-info script and process/report files. Process arguments are omitted to avoid exposing credentials..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

@@ -1,0 +1,19 @@
+RENDERED CI METADATA — NOT a native screenshot or command-output log
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 17 — recorded CI result (metadata only)
+Evidence type: recorded-ci-metadata
+Selected recorded JSON object: session17. Not a fresh CI check, Docker build log, or Trivy report.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/published/ci-runs.json
+Source SHA-256: e920524337f43d2470fd434373d224b86fa0f9055079e27e27f636a7e7fb7e38
+Image rendered: 2026-10-16T16:24:24.820818+00:00
+
+{
+  "id": 38342666869,
+  "name": "Session 17 DevSecOps",
+  "head_sha": "29baa4154ed5aeb7bd13963cfcfe787f1e755cd5",
+  "html_url": "https://github.com/rudraymehra/devops-heros/actions/runs/38342666869",
+  "conclusion": "success",
+  "updated_at": "2026-10-13T03:40:55Z"
+}

@@ -1,0 +1,15 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 10 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/10-kubernetes-core-objects/STRATEGIES-SUCCESS.md
+Source SHA-256: 25b1b9a8d6fbb2b48c16f1d22a75fabc90bb1590b7c0b7cddebd1c060aa71a87
+Image rendered: 2026-10-16T16:24:23.614262+00:00
+
+00055  $ kubectl --context campusfix-eks --request-timeout=30s -n campusfix-strategies get endpointslices -l kubernetes.io/service-name=myapp-service -o wide
+00056  NAME                  ADDRESSTYPE   PORTS   ENDPOINTS                            AGE
+00057  myapp-service-bpssq   IPv4          80      10.20.1.42,10.20.1.206,10.20.2.167   13s
+00058    [exit: 0 ]

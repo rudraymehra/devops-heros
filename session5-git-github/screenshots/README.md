@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 3. New native files awaiting visual review: 0.
+Reference images: 3. Native captures: 0 accepted; 0 awaiting review; 1 rejected.
 
 ## Fresh execution records
 
@@ -14,6 +14,18 @@ Reference images: 3. New native files awaiting visual review: 0.
 
 - [Session 05 — actual isolated Git lab](rudray-20261016-212856-656600/01-commit-and-cherry-pick.txt): PASS.
 - Reference-specific pending items: NOT RUN: Capture real commit -a status and cherry-pick graph in the disposable lab, not the dirty coursework repository..
+
+### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
+
+- [Session 05 — actual isolated Git lab](rudray-20261016-215104-093414/01-commit-and-cherry-pick.txt): PASS.
+- Native capture REJECTED: Wrong window: chat conversation instead of Git lab output. Retake the terminal capture; the actual Git log is retained.
+- Reference-specific pending items: NOT RUN: Capture real commit -a status and cherry-pick graph in the disposable lab, not the dirty coursework repository..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

@@ -1,0 +1,33 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 16 — actual project tests
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/16-cicd/screenshots/rudray-20261016-215104-093414/01-pytest.txt
+Source SHA-256: 3abf599c2af5f5339fb5876aa693aa212102061572fc0121c3c6d0a14802f4d3
+Image rendered: 2026-10-16T16:24:24.696273+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 16 — actual project tests
+00003  UTC: 2026-10-16T16:22:29.584964+00:00
+00004  Directory: /Users/rudraym/devops-heros/session-16-github-actions/session-16-github-actions/10-final-cicd-pipeline
+00005  Command: /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python -m pytest -v
+00006  
+00007  ============================= test session starts ==============================
+00008  platform darwin -- Python 3.13.11, pytest-9.1.1, pluggy-1.6.0 -- /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python
+00009  cachedir: .pytest_cache
+00010  rootdir: /Users/rudraym/devops-heros/session-16-github-actions/session-16-github-actions/10-final-cicd-pipeline
+00011  plugins: platformdirs-4.13.0, anyio-4.15.1
+00012  collecting ... collected 5 items
+00013  
+00014  tests/test_calculator.py::test_add PASSED                                [ 20%]
+00015  tests/test_calculator.py::test_subtract PASSED                           [ 40%]
+00016  tests/test_calculator.py::test_multiply PASSED                           [ 60%]
+00017  tests/test_calculator.py::test_divide PASSED                             [ 80%]
+00018  tests/test_calculator.py::test_divide_by_zero PASSED                     [100%]
+00019  
+00020  ============================== 5 passed in 0.01s ===============================
+00021  
+00022  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

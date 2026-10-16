@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Session 16 \u2014 actual project tests",
+    "image": "local-01-pytest.png",
+    "image_sha256": "9714c13a485e7d8d05fa1822fd5b4ba410b415b954a08c57cf5e0d7d4fc3b9f8",
+    "text": "local-01-pytest.txt",
+    "source": "submissions/16-cicd/screenshots/rudray-20261016-215104-093414/01-pytest.txt",
+    "source_sha256": "3abf599c2af5f5339fb5876aa693aa212102061572fc0121c3c6d0a14802f4d3",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 16 \u2014 recorded CI result (metadata only)",
+    "image": "recorded-ci-result.png",
+    "image_sha256": "cfea410acaa3da062fbbc6a14a55a0a9ab550c0cbf164845e1371bf94d8471c0",
+    "text": "recorded-ci-result.txt",
+    "source": "session21-python/evidence/published/ci-runs.json",
+    "source_sha256": "e920524337f43d2470fd434373d224b86fa0f9055079e27e27f636a7e7fb7e38",
+    "kind": "recorded-ci-metadata",
+    "native_screenshot": false
+  }
+]

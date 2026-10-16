@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Session 01-02 \u2014 real hard/symbolic links on this host",
+    "image": "local-01-links.png",
+    "image_sha256": "71ee0520758122de98061bbc2f95f73af57e982d0a9c44916214ec6a8838e36e",
+    "text": "local-01-links.txt",
+    "source": "session2-linux/screenshots/rudray-20261016-215104-093414/01-links.txt",
+    "source_sha256": "eeba740bd65ba63a0107e98e797ea5d3b8095167db4c86a721ff7a09f78d117e",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 01-02 \u2014 actual OS/kernel",
+    "image": "local-02-host.png",
+    "image_sha256": "bf11b0516db33a15d14f9c6064634978f6ebe224064ad06c6ba660a6fab8004b",
+    "text": "local-02-host.txt",
+    "source": "session2-linux/screenshots/rudray-20261016-215104-093414/02-host.txt",
+    "source_sha256": "32b2b740a4a0e42a0f8941612f60c349140704e725e918b37cbacbed20519986",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 01-02 \u2014 actual disk usage",
+    "image": "local-03-disk.png",
+    "image_sha256": "27e2222cc9dfb53f26f59ff9c4426e9a84ffb100854dee684da30e7acb206130",
+    "text": "local-03-disk.txt",
+    "source": "session2-linux/screenshots/rudray-20261016-215104-093414/03-disk.txt",
+    "source_sha256": "6197c15ec2aaa2d4706b82df35e9ffb6cc8b0793697b56e59441a86d46d7cdfb",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  }
+]

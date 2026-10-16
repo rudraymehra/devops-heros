@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-5693.png",
+    "image_sha256": "b13069cdd41719e185e84fc623bf5b52d470a2d2c72e26f650e1c359be6aae8f",
+    "text": "historical-output-line-5693.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-5826.png",
+    "image_sha256": "2c0289bca434668b458c8247426c92b4a9d3c2dccbe78699a6d22545a3caebee",
+    "text": "historical-output-line-5826.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-5899.png",
+    "image_sha256": "2346649f0e6a49b06babbf7449aa781baa0937cb7043dfc5b539f480426f1dad",
+    "text": "historical-output-line-5899.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-5964.png",
+    "image_sha256": "2bd2269e5ffe32dca007c41b575c176712a6b211f7cd306eeccbcfa57ff03a1a",
+    "text": "historical-output-line-5964.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-6065.png",
+    "image_sha256": "2cb11462191cdf5c5cdafbf57d1731461b9db8108024cb6a7105624254f23559",
+    "text": "historical-output-line-6065.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-6167.png",
+    "image_sha256": "c62ddf94b41ffb7bb7cb81075991350c9a54bb94565dc7a833867a795111485a",
+    "text": "historical-output-line-6167.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 14 \u2014 recorded command excerpt",
+    "image": "historical-output-line-6170.png",
+    "image_sha256": "94972d94cbf622324520767d7b67c4f2e52a12002027e3fd87faf0809a8317c6",
+    "text": "historical-output-line-6170.txt",
+    "source": "submissions/14-troubleshooting/OUTPUT.md",
+    "source_sha256": "25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

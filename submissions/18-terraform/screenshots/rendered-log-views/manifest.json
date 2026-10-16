@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Session 18 \u2014 Terraform format check",
+    "image": "local-01-format.png",
+    "image_sha256": "5424428ff7fe084d24b7e36e18cc23d95614ae3a7568a1eb5e3e6d1b04ad47e8",
+    "text": "local-01-format.txt",
+    "source": "submissions/18-terraform/screenshots/rudray-20261016-212856-656600/01-format.txt",
+    "source_sha256": "d9a9bc5bc342e31aa12042f254a2956b9741fb15236c3155116d584c11c0ae39",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 18 \u2014 actual Terraform validate (not apply)",
+    "image": "local-02-validate.png",
+    "image_sha256": "5eb2e12af2f6ca6165959f1f6ae632db665672007ea7fea7c7125e57b333af25",
+    "text": "local-02-validate.txt",
+    "source": "submissions/18-terraform/screenshots/rudray-20261016-212856-656600/02-validate.txt",
+    "source_sha256": "b0b03025fb898855bec98d087618f0c2b92ade8e2126b076fea2795fb37feb71",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 18 \u2014 recorded command excerpt",
+    "image": "historical-output-line-11.png",
+    "image_sha256": "5ca4425f3478e4b24a1f2bd1d3f767a8c32bf289231d9e39166a686d87826a6e",
+    "text": "historical-output-line-11.txt",
+    "source": "submissions/18-terraform/OUTPUT.md",
+    "source_sha256": "261f9c0af76afd0d4e1367ac7dd7d5ce5cef9a43f60f3b293b179a46bcd003d7",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 18 \u2014 recorded command excerpt",
+    "image": "historical-output-line-30.png",
+    "image_sha256": "c1f78cb039f3e619ccbdee2ea9ce073f53d632bce4e6cb23b2b8782e0a13f87f",
+    "text": "historical-output-line-30.txt",
+    "source": "submissions/18-terraform/OUTPUT.md",
+    "source_sha256": "261f9c0af76afd0d4e1367ac7dd7d5ce5cef9a43f60f3b293b179a46bcd003d7",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 18 \u2014 recorded command excerpt",
+    "image": "historical-output-line-34.png",
+    "image_sha256": "841c211b5c418de8bb8cfeea4ce49a13a8ab90bbc56cc51a832223427ef92094",
+    "text": "historical-output-line-34.txt",
+    "source": "submissions/18-terraform/OUTPUT.md",
+    "source_sha256": "261f9c0af76afd0d4e1367ac7dd7d5ce5cef9a43f60f3b293b179a46bcd003d7",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 18 \u2014 recorded command excerpt",
+    "image": "historical-output-line-148.png",
+    "image_sha256": "56e217e11b5e1447d8abec885225da1a8874ee1f0c78b82e6747e5c9a15c54ef",
+    "text": "historical-output-line-148.txt",
+    "source": "submissions/18-terraform/OUTPUT.md",
+    "source_sha256": "261f9c0af76afd0d4e1367ac7dd7d5ce5cef9a43f60f3b293b179a46bcd003d7",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 18 \u2014 recorded command excerpt",
+    "image": "historical-destroy-retry-line-10.png",
+    "image_sha256": "9bbec8cc6a330efc7055503126f5bbff20c94d9c07ae658d1431b004cf02a6cc",
+    "text": "historical-destroy-retry-line-10.txt",
+    "source": "submissions/18-terraform/DESTROY-RETRY.md",
+    "source_sha256": "451c202fda3fda9ed8b0cf2bf499e52ce37a790fbf4d7ad19e9a0729ddc5bfa1",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

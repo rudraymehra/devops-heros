@@ -1,0 +1,24 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 11 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/11-kubernetes-services/OUTPUT.md
+Source SHA-256: b231e90ebcf88450d634364a07765143986152c841406b096aa579bf3ab23417
+Image rendered: 2026-10-16T16:24:23.799372+00:00
+
+00036  $ kubectl --context campusfix-eks --request-timeout=30s -n rudray-devops-hw get services -o wide
+00037  NAME                TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)        AGE   SELECTOR
+00038  external-docs       ExternalName   <none>           kubernetes.io                                                             <none>         16m   <none>
+00039  homework-backend    ClusterIP      172.20.114.137   <none>                                                                    80/TCP         13m   app=homework-backend
+00040  homework-frontend   ClusterIP      172.20.213.198   <none>                                                                    80/TCP         13m   app=homework-frontend
+00041  web-clusterip       ClusterIP      172.20.221.62    <none>                                                                    80/TCP         16m   app=service-web
+00042  web-headless        ClusterIP      None             <none>                                                                    80/TCP         16m   app=service-web
+00043  web-loadbalancer    LoadBalancer   172.20.158.123   afc147309a5ce41248aa0272f3b8e839-278856017.ap-south-1.elb.amazonaws.com   80:32103/TCP   16m   app=service-web
+00044  web-nodeport        NodePort       172.20.64.104    <none>                                                                    80:32455/TCP   16m   app=service-web
+00045  [exit status: 0]
+00046  ```
+00047  
+00048  ```console

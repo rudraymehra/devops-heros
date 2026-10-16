@@ -1,0 +1,47 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 17 — actual source scan
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/17-devsecops/screenshots/rudray-20261016-212856-656600/02-bandit.txt
+Source SHA-256: 0bc3e6e30325e2b25410b67935b3adf0579a198301dd44c949e46c81b975e357
+Image rendered: 2026-10-16T16:24:24.784668+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 17 — actual source scan
+00003  UTC: 2026-10-16T15:59:10.195348+00:00
+00004  Directory: /Users/rudraym/devops-heros/session-17-devsecops/demo
+00005  Command: /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python -m bandit -r app
+00006  
+00007  [main]  INFO    profile include tests: None
+00008  [main]  INFO    profile exclude tests: None
+00009  [main]  INFO    cli include tests: None
+00010  [main]  INFO    cli exclude tests: None
+00011  [main]  INFO    running on Python 3.13.11
+00012  [tester]    WARNING nosec encountered (B104), but no failed test on line 241
+00013  Run started:2026-10-16 15:59:10.378459
+00014  
+00015  Test results:
+00016      No issues identified.
+00017  
+00018  Code scanned:
+00019      Total lines of code: 177
+00020      Total lines skipped (#nosec): 0
+00021      Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 1
+00022  
+00023  Run metrics:
+00024      Total issues (by severity):
+00025          Undefined: 0
+00026          Low: 0
+00027          Medium: 0
+00028          High: 0
+00029      Total issues (by confidence):
+00030          Undefined: 0
+00031          Low: 0
+00032          Medium: 0
+00033          High: 0
+00034  Files skipped (0):
+00035  
+00036  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

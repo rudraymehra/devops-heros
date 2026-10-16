@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 5. New native files awaiting visual review: 0.
+Reference images: 5. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -15,6 +15,16 @@ Reference images: 5. New native files awaiting visual review: 0.
 - [Session 16 — actual project tests](rudray-20261016-212856-656600/01-pytest.txt): PASS.
 - CI/image/security/deployment screenshots: NOT RUN: Use actual jobs for the submitted SHA; local test success alone is not CI success.
 - Reference-specific pending items: NOT RUN: Capture current tests/build and the actual GitHub Actions run. Local act simulation is not a substitute for a published workflow..
+
+### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
+
+- [Session 16 — actual project tests](rudray-20261016-215104-093414/01-pytest.txt): PASS.
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

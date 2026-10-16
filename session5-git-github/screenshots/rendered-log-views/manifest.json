@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Session 05 \u2014 actual isolated Git lab",
+    "image": "local-01-commit-and-cherry-pick.png",
+    "image_sha256": "435cd7bd10826e1a7379101b9966550cea20f3e673a09f21d014d8fd385d497a",
+    "text": "local-01-commit-and-cherry-pick.txt",
+    "source": "session5-git-github/screenshots/rudray-20261016-215104-093414/01-commit-and-cherry-pick.txt",
+    "source_sha256": "6d160d92001b7cb0e4a57b2ffec12910e92de1483f3412baf4e97cdad922316e",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  }
+]

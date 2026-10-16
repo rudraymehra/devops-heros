@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Session 12 \u2014 recorded command excerpt",
+    "image": "historical-output-line-52.png",
+    "image_sha256": "e1b0c6ffb907b0d1eed8f86f7fb8f5feaf78aed06439b7fb9c51ee75a54b1621",
+    "text": "historical-output-line-52.txt",
+    "source": "submissions/12-kubernetes-config-ingress/OUTPUT.md",
+    "source_sha256": "56e9388af353b490c3c8e5bfc1d546dd50ac46080d27df5972127ca2115c38c5",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 12 \u2014 recorded command excerpt",
+    "image": "historical-output-line-82.png",
+    "image_sha256": "bcb9f94c6a52b32531ed6393b79d93db3f67ddc3510b5e0b43d043b1d753a052",
+    "text": "historical-output-line-82.txt",
+    "source": "submissions/12-kubernetes-config-ingress/OUTPUT.md",
+    "source_sha256": "56e9388af353b490c3c8e5bfc1d546dd50ac46080d27df5972127ca2115c38c5",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 12 \u2014 recorded command excerpt",
+    "image": "historical-output-line-123.png",
+    "image_sha256": "eecbb9abc6cbe887cf9b4c922dc6c5cf7d495eab7758c6e9310ae16ac34d8193",
+    "text": "historical-output-line-123.txt",
+    "source": "submissions/12-kubernetes-config-ingress/OUTPUT.md",
+    "source_sha256": "56e9388af353b490c3c8e5bfc1d546dd50ac46080d27df5972127ca2115c38c5",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 12 \u2014 recorded command excerpt",
+    "image": "historical-output-line-151.png",
+    "image_sha256": "ad38af7e6bb34bdd86fca6febf4d7c84b21c0332f0fbc48726dfbbcfbc731916",
+    "text": "historical-output-line-151.txt",
+    "source": "submissions/12-kubernetes-config-ingress/OUTPUT.md",
+    "source_sha256": "56e9388af353b490c3c8e5bfc1d546dd50ac46080d27df5972127ca2115c38c5",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 12 \u2014 recorded command excerpt",
+    "image": "historical-output-line-160.png",
+    "image_sha256": "07d626dad0bdca4fa404f441e375e6e5c87b4da2a733f7988e5ba5aad26dbc28",
+    "text": "historical-output-line-160.txt",
+    "source": "submissions/12-kubernetes-config-ingress/OUTPUT.md",
+    "source_sha256": "56e9388af353b490c3c8e5bfc1d546dd50ac46080d27df5972127ca2115c38c5",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

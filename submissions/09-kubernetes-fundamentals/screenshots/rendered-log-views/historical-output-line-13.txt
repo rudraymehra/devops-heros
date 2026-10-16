@@ -1,0 +1,20 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 09 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/09-kubernetes-fundamentals/OUTPUT.md
+Source SHA-256: f6c18606d5ddd6651f38cb7dcda08c4aaba08b59eddf351b46588ab4c2118215
+Image rendered: 2026-10-16T16:24:23.167863+00:00
+
+00013  $ kubectl --context campusfix-eks --request-timeout=30s cluster-info
+00014  Kubernetes control plane is running at https://C8FE139F4147098CE5611530B3ADF3F5.gr7.ap-south-1.eks.amazonaws.com
+00015  CoreDNS is running at https://C8FE139F4147098CE5611530B3ADF3F5.gr7.ap-south-1.eks.amazonaws.com/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+00016  
+00017  To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+00018  [exit status: 0]
+00019  ```
+00020  
+00021  ```console

@@ -1,0 +1,52 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 15 \u2014 real chart lint (not install)",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/helm",
+        "lint",
+        "session-15-helm/mini-project/notes-chart"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:22:13.860957+00:00",
+      "exit_code": 0,
+      "log": "01-helm-lint.txt",
+      "log_sha256": "f56dad70b9303de215e0a955047b049cd0ebd904317f2b38e2851be89acf74a2",
+      "screenshot": {
+        "file": "01-helm-lint.png",
+        "sha256": "3d78cbd49743a8ad74efcdae5cb92b8b3151bf452f984bfd1c759cac60275758",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 15 \u2014 actual template rendering (not install)",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/helm",
+        "template",
+        "rudray-notes",
+        "session-15-helm/mini-project/notes-chart"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:22:21.201444+00:00",
+      "exit_code": 0,
+      "log": "02-helm-template.txt",
+      "log_sha256": "9827b3872bfe891e5303017b9f06855fc3c775e1f347160a73e7db7efdd1c9f2",
+      "screenshot": {
+        "file": "02-helm-template.png",
+        "sha256": "a4d5acbc630cfb58249cac9645b729429941753418bb3b51b8c8323ff8628a29",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Live Kubernetes/Helm/monitoring capture",
+      "status": "NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Lint/template can run offline. Install, upgrade, history, rollback and uninstall screenshots require their actual lifecycle, not lint output."
+    }
+  ]
+}

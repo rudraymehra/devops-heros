@@ -1,0 +1,21 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 01-02 — actual disk usage
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session2-linux/screenshots/rudray-20261016-215104-093414/03-disk.txt
+Source SHA-256: 6197c15ec2aaa2d4706b82df35e9ffb6cc8b0793697b56e59441a86d46d7cdfb
+Image rendered: 2026-10-16T16:24:22.762185+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 01-02 — actual disk usage
+00003  UTC: 2026-10-16T16:21:39.921596+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: df -h /Users/rudraym/devops-heros
+00006  
+00007  Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+00008  /dev/disk3s5   228Gi   175Gi   6.5Gi    97%    2.1M   68M    3%   /System/Volumes/Data
+00009  
+00010  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

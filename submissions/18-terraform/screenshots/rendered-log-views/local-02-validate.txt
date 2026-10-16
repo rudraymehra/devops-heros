@@ -1,0 +1,41 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 18 — actual Terraform validate (not apply)
+Evidence type: local-recorded-command
+Actual recorded result: FAILED / BLOCKED; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/18-terraform/screenshots/rudray-20261016-212856-656600/02-validate.txt
+Source SHA-256: b0b03025fb898855bec98d087618f0c2b92ade8e2126b076fea2795fb37feb71
+Image rendered: 2026-10-16T16:24:24.866833+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 18 — actual Terraform validate (not apply)
+00003  UTC: 2026-10-16T15:59:10.715259+00:00
+00004  Directory: /Users/rudraym/devops-heros/session18-terraform-iac/terraform-s3-demo
+00005  Command: /private/tmp/campusfix-tools.FCoLVB/terraform validate -no-color
+00006  
+00007  
+00008  Error: Failed to load plugin schemas
+00009  
+00010  Error while loading schemas for plugin components: Failed to obtain provider
+00011  schema: Could not load the schema for provider
+00012  registry.terraform.io/hashicorp/aws: failed to instantiate provider
+00013  "registry.terraform.io/hashicorp/aws" to obtain schema: Unrecognized remote
+00014  plugin message: 
+00015  Failed to read any lines from plugin's stdout
+00016  This usually means
+00017    the plugin was not compiled for this architecture,
+00018    the plugin is missing dynamic-link libraries necessary to run,
+00019    the plugin is not executable by this process due to file permissions, or
+00020    the plugin failed to negotiate the initial go-plugin protocol handshake
+00021  
+00022  Additional notes about plugin:
+00023    Path: .terraform/providers/registry.terraform.io/hashicorp/aws/6.66.0/darwin_arm64/terraform-provider-aws_v6.66.0_x5
+00024    Mode: -rwxr-xr-x
+00025    Owner: 501 [rudraym] (current: 501 [rudraym])
+00026    Group: 20 [staff] (current: 20 [staff])
+00027    MachO architecture: CpuArm64 (current architecture: arm64)
+00028  ..
+00029  
+00030  Exit code: 1 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

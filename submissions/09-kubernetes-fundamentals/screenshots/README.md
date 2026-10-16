@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 9. New native files awaiting visual review: 0.
+Reference images: 9. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -14,6 +14,17 @@ Reference images: 9. New native files awaiting visual review: 0.
 
 - Live Kubernetes/Helm/monitoring capture: NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed.
 - Reference-specific pending items: NOT RUN: Capture actual cluster-info, nodes and Pods. Architecture explanations are not screenshots of a live cluster..
+
+### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
+
+- Live Kubernetes/Helm/monitoring capture: NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed.
+- Reference-specific pending items: NOT RUN: Capture actual cluster-info, nodes and Pods. Architecture explanations are not screenshots of a live cluster..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

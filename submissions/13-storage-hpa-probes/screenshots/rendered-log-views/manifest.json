@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Session 13 \u2014 recorded command excerpt",
+    "image": "historical-eks-verification-line-42.png",
+    "image_sha256": "0c67cfe17be0bc477e539e663c9bf4ec4d965a393363ab64a24e75eb695b014e",
+    "text": "historical-eks-verification-line-42.txt",
+    "source": "session21-python/evidence/eks-verification.md",
+    "source_sha256": "cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 13 \u2014 recorded command excerpt",
+    "image": "historical-eks-verification-line-48.png",
+    "image_sha256": "9f2d88c70803a92807e2261ef6f840d5503be17f1b0aac8b60827f7d0914e2fd",
+    "text": "historical-eks-verification-line-48.txt",
+    "source": "session21-python/evidence/eks-verification.md",
+    "source_sha256": "cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 13 \u2014 recorded command excerpt",
+    "image": "historical-scaling-and-probes-line-2120.png",
+    "image_sha256": "d034deeb97b3d78d7a75b001ccf7e5049093038eeca23da5f3f944a9c4c14c5e",
+    "text": "historical-scaling-and-probes-line-2120.txt",
+    "source": "session21-python/evidence/scaling-and-probes.md",
+    "source_sha256": "d5c8211ce3231706b3ce92f89445ff7babc879233bfa3eb9ea25b408283e1808",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

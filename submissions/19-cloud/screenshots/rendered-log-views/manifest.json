@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Session 19 \u2014 Terraform format check",
+    "image": "local-01-format.png",
+    "image_sha256": "568e75dbcd4984c739a21201b85193e820f39773a0fa54ae14d9c028d0522285",
+    "text": "local-01-format.txt",
+    "source": "submissions/19-cloud/screenshots/rudray-20261016-212856-656600/01-format.txt",
+    "source_sha256": "3947b1bc8ef37f1b84bf35adfa535a6e822cdf9152bb317a2389f2dc6731f470",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 actual Terraform validate (not apply)",
+    "image": "local-02-validate.png",
+    "image_sha256": "f48123743829f42f32c10053bb9f72478058e06ad2c31b85744d75100fb0065e",
+    "text": "local-02-validate.txt",
+    "source": "submissions/19-cloud/screenshots/rudray-20261016-212856-656600/02-validate.txt",
+    "source_sha256": "5f8babb82d07d94110b7e59513b593c2b788a91194e7e0f426248fc3fd3f9494",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 recorded command excerpt",
+    "image": "historical-output-success-line-11.png",
+    "image_sha256": "81f00ff26c8de5865bfd14b1d332b1f8db2c581198d2f08d1d9cdae92812cfe3",
+    "text": "historical-output-success-line-11.txt",
+    "source": "submissions/19-cloud/OUTPUT-SUCCESS.md",
+    "source_sha256": "87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 recorded command excerpt",
+    "image": "historical-output-success-line-29.png",
+    "image_sha256": "f7c4b6f22933864f1042e8bba7fff1e1a8fa0ed8f24850f6dfd2372853445b28",
+    "text": "historical-output-success-line-29.txt",
+    "source": "submissions/19-cloud/OUTPUT-SUCCESS.md",
+    "source_sha256": "87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 recorded command excerpt",
+    "image": "historical-output-success-line-33.png",
+    "image_sha256": "e0a8367d88b775a670da579872e17b7d25d46f8d48374bed8227252123ef2562",
+    "text": "historical-output-success-line-33.txt",
+    "source": "submissions/19-cloud/OUTPUT-SUCCESS.md",
+    "source_sha256": "87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 recorded command excerpt",
+    "image": "historical-output-success-line-441.png",
+    "image_sha256": "6a0e5791958524f66815a4ede9b19b289c83a58f93fc0560e92cff0baa2460c4",
+    "text": "historical-output-success-line-441.txt",
+    "source": "submissions/19-cloud/OUTPUT-SUCCESS.md",
+    "source_sha256": "87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 recorded command excerpt",
+    "image": "historical-output-success-line-1034.png",
+    "image_sha256": "a7a836726e5817b2ddcbb91d1ef8a0107fead781d8a5cd816b0b5a584b8c2f56",
+    "text": "historical-output-success-line-1034.txt",
+    "source": "submissions/19-cloud/OUTPUT-SUCCESS.md",
+    "source_sha256": "87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 19 \u2014 recorded command excerpt",
+    "image": "historical-output-success-line-1487.png",
+    "image_sha256": "c1cafea85414471fdb2b75ff56d5fdbfbac41129718a183c6ff33d52e648d85e",
+    "text": "historical-output-success-line-1487.txt",
+    "source": "submissions/19-cloud/OUTPUT-SUCCESS.md",
+    "source_sha256": "87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

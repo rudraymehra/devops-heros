@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 20 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/eks-verification.md
+Source SHA-256: cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f
+Image rendered: 2026-10-16T16:24:25.579421+00:00
+
+00091  $ kubectl --context campusfix-eks --request-timeout=30s get pods -n monitoring
+00092  NAME                                             READY   STATUS    RESTARTS   AGE
+00093  kube-prometheus-stack-grafana-6cbcbb9d4c-w287h   3/3     Running   0          30m
+00094  kube-prometheus-stack-operator-fdf784bc5-htvk9   1/1     Running   0          30m
+00095  prometheus-kube-prometheus-stack-prometheus-0    2/2     Running   0          30m
+00096   
+00097  PASS: backend Prometheus targets: [
+00098    {
+00099      "discoveredLabels": {
+00100        "__address__": "10.20.1.224:8000",
+00101        "__always_scrape_classic_histograms__": "false",
+00102        "__convert_classic_histograms_to_nhcb__": "false",
+00103        "__meta_kubernetes_endpoint_address_target_kind": "Pod",
+00104        "__meta_kubernetes_endpoint_address_target_name": "taskboard-backend-b6b57c5cf-9sn7x",
+00105        "__meta_kubernetes_endpoint_node_name": "ip-10-20-1-116.ap-south-1.compute.internal",
+00106        "__meta_kubernetes_endpoint_port_name": "http",
+00107        "__meta_kubernetes_endpoint_port_protocol": "TCP",
+00108        "__meta_kubernetes_endpoint_ready": "true",
+[... source lines omitted for readability; see complete linked record ...]
+00241        "job": "serviceMonitor/taskboard/taskboard-backend/0"
+00242      },
+00243      "labels": {
+00244        "container": "backend",
+00245        "endpoint": "http",
+00246        "instance": "10.20.2.198:8000",
+00247        "job": "backend",
+00248        "namespace": "taskboard",
+00249        "pod": "taskboard-backend-b6b57c5cf-d26md",
+00250        "service": "backend"
+00251      },
+00252      "scrapePool": "serviceMonitor/taskboard/taskboard-backend/0",
+00253      "scrapeUrl": "http://10.20.2.198:8000/metrics",
+00254      "globalUrl": "http://10.20.2.198:8000/metrics",
+00255      "lastError": "",
+00256      "lastScrape": "2026-10-13T03:47:50.742701296Z",
+00257      "lastScrapeDuration": 0.005560369,
+00258      "health": "up",
+00259      "scrapeInterval": "15s",
+00260      "scrapeTimeout": "10s"
+00261    }
+00262  ]
+00263  
+00264  ```
+00265  
+00266  Exit code: 0

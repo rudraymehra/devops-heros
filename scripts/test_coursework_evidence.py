@@ -60,6 +60,45 @@ class CourseworkTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             coursework.run_sessions(Namespace(screenshots=False, sessions="99"))
 
+    def fixture_shot(self, directory):
+        image = directory / "fixture.png"
+        image.write_bytes(coursework.native.PNG_SIGNATURE + b"unit test only")
+        return {"file": image.name, "sha256": coursework.native.file_hash(image)}
+
+    def test_verified_bytes_still_need_visual_review(self):
+        with tempfile.TemporaryDirectory() as scratch, patch.object(coursework, "ROOT", Path(scratch)):
+            folder = Path(scratch)
+            shot = self.fixture_shot(folder)
+            self.assertEqual(coursework.screenshot_review(folder, shot, {})[0], "pending")
+            reviews = {"fixture.png": {"sha256": shot["sha256"], "decision": "accepted", "note": "test only"}}
+            self.assertEqual(coursework.screenshot_review(folder, shot, reviews)[0], "accepted")
+            reviews["fixture.png"]["sha256"] = "0" * 64
+            self.assertEqual(coursework.screenshot_review(folder, shot, reviews)[0], "pending")
+
+    def test_accepted_missing_image_is_invalid(self):
+        with tempfile.TemporaryDirectory() as scratch, patch.object(coursework, "ROOT", Path(scratch)):
+            shot = {"file": "absent.png", "sha256": "0" * 64}
+            reviews = {"absent.png": {"sha256": "0" * 64, "decision": "accepted", "note": "test only"}}
+            self.assertEqual(coursework.screenshot_review(Path(scratch), shot, reviews)[0], "invalid")
+
+    def test_rejected_image_can_be_excluded_without_broken_links(self):
+        with tempfile.TemporaryDirectory() as scratch, patch.object(coursework, "ROOT", Path(scratch)):
+            shot = {"file": "absent.png", "sha256": "0" * 64}
+            reviews = {"absent.png": {"sha256": "0" * 64, "decision": "rejected", "note": "wrong window"}}
+            self.assertEqual(coursework.screenshot_review(Path(scratch), shot, reviews)[0], "rejected")
+            run = {"records": [{"title": "test", "status": "PASS", "log": "result.txt", "screenshot": shot}]}
+            index = coursework.reviewed_run_index(Path(scratch), run, reviews)
+            self.assertIn("wrong window", index)
+            self.assertIn("result.txt", index)
+            self.assertNotIn("absent.png", index)
+
+    def test_changed_rejected_hash_needs_review_again(self):
+        with tempfile.TemporaryDirectory() as scratch, patch.object(coursework, "ROOT", Path(scratch)):
+            folder = Path(scratch)
+            shot = self.fixture_shot(folder)
+            reviews = {"fixture.png": {"sha256": "0" * 64, "decision": "rejected", "note": "old review"}}
+            self.assertEqual(coursework.screenshot_review(folder, shot, reviews)[0], "pending")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

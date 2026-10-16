@@ -1,0 +1,13 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Live Kubernetes/Helm/monitoring capture",
+      "status": "NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Native lifecycle/rolling/blue-green/canary/Recreate sequence captures still need a live run. A current get snapshot alone does not prove those transitions."
+    }
+  ]
+}

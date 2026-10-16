@@ -1,0 +1,45 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 17 — actual project tests
+Evidence type: local-recorded-command
+Actual recorded result: FAILED / BLOCKED; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/17-devsecops/screenshots/rudray-20261016-212856-656600/01-pytest.txt
+Source SHA-256: e32d226a66393e4120f238f4987c506047fd0ae1dc922d0bbf4b3991bfb63443
+Image rendered: 2026-10-16T16:24:24.749101+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 17 — actual project tests
+00003  UTC: 2026-10-16T15:59:09.921865+00:00
+00004  Directory: /Users/rudraym/devops-heros/session-17-devsecops/demo
+00005  Command: /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python -m pytest -v
+00006  
+00007  ============================= test session starts ==============================
+00008  platform darwin -- Python 3.13.11, pytest-9.1.1, pluggy-1.6.0 -- /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python
+00009  cachedir: .pytest_cache
+00010  rootdir: /Users/rudraym/devops-heros/session-17-devsecops/demo
+00011  configfile: pytest.ini
+00012  testpaths: tests
+00013  plugins: platformdirs-4.13.0, anyio-4.15.1
+00014  collecting ... collected 0 items / 1 error
+00015  
+00016  ==================================== ERRORS ====================================
+00017  ______________________ ERROR collecting tests/test_app.py ______________________
+00018  ImportError while importing test module '/Users/rudraym/devops-heros/session-17-devsecops/demo/tests/test_app.py'.
+00019  Hint: make sure your test modules/packages have valid Python names.
+00020  Traceback:
+00021  /opt/homebrew/Cellar/python@3.13/3.13.11/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+00022      return _bootstrap._gcd_import(name[level:], package, level)
+00023             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+00024  tests/test_app.py:2: in <module>
+00025      from app.app import app
+00026  app/app.py:1: in <module>
+00027      from flask import Flask, jsonify, request, render_template
+00028  E   ModuleNotFoundError: No module named 'flask'
+00029  =========================== short test summary info ============================
+00030  ERROR tests/test_app.py
+00031  !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+00032  =============================== 1 error in 0.08s ===============================
+00033  
+00034  Exit code: 2 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

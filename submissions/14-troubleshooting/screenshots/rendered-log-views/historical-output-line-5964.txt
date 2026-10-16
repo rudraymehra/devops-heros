@@ -1,0 +1,23 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 14 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/14-troubleshooting/OUTPUT.md
+Source SHA-256: 25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338
+Image rendered: 2026-10-16T16:24:24.381198+00:00
+
+05964  $ kubectl --context campusfix-eks --request-timeout=30s -n campusfix-troubleshooting logs fail-3-pending-pod --tail=10
+05965  /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+05966  /docker-entrypoint.sh: Configuration complete; ready for start up
+05967  2026/10/13 03:56:01 [notice] 1#1: using the "epoll" event method
+05968  2026/10/13 03:56:01 [notice] 1#1: nginx/1.31.6
+05969  2026/10/13 03:56:01 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+05970  2026/10/13 03:56:01 [notice] 1#1: OS: Linux 6.12.110-135.202.amzn2023.x86_64
+05971  2026/10/13 03:56:01 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 65536:1048576
+05972  2026/10/13 03:56:01 [notice] 1#1: start worker processes
+05973  2026/10/13 03:56:01 [notice] 1#1: start worker process 31
+05974  2026/10/13 03:56:01 [notice] 1#1: start worker process 32
+05975    [exit: 0 ]

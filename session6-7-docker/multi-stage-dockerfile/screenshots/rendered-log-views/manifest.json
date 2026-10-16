@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Session 07 \u2014 recorded CI result (metadata only)",
+    "image": "recorded-ci-result.png",
+    "image_sha256": "bb27684022728595885590f612d803fd88ff86a0b0d3cb6706de8a1ea0927853",
+    "text": "recorded-ci-result.txt",
+    "source": "session21-python/evidence/published/ci-runs.json",
+    "source_sha256": "e920524337f43d2470fd434373d224b86fa0f9055079e27e27f636a7e7fb7e38",
+    "kind": "recorded-ci-metadata",
+    "native_screenshot": false
+  }
+]

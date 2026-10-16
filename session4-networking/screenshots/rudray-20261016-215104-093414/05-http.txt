@@ -1,0 +1,24 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 05-http
+UTC: 2026-10-16T16:22:00.966882+00:00
+Directory: /Users/rudraym/devops-heros
+Command: curl --head --fail --max-time 10 https://example.com
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0
+curl: (28) Resolving timed out after 10004 milliseconds
+
+Exit code: 28 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

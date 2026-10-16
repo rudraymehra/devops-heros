@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Session 15 \u2014 real chart lint (not install)",
+    "image": "local-01-helm-lint.png",
+    "image_sha256": "fa3215d836b507ae5e600eaf7ec1d85a0c7177a11789194b296d0e3f5ee35f17",
+    "text": "local-01-helm-lint.txt",
+    "source": "submissions/15-helm/screenshots/rudray-20261016-215104-093414/01-helm-lint.txt",
+    "source_sha256": "f56dad70b9303de215e0a955047b049cd0ebd904317f2b38e2851be89acf74a2",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 actual template rendering (not install)",
+    "image": "local-02-helm-template.png",
+    "image_sha256": "297a6cd0e59d6bfb7d193a209164c58f5fdf81d9b9b24a10cd9707df25a371c1",
+    "text": "local-02-helm-template.txt",
+    "source": "submissions/15-helm/screenshots/rudray-20261016-215104-093414/02-helm-template.txt",
+    "source_sha256": "9827b3872bfe891e5303017b9f06855fc3c775e1f347160a73e7db7efdd1c9f2",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 recorded command excerpt",
+    "image": "historical-output-line-20.png",
+    "image_sha256": "53aba20da243933ff3cb425f6724ec5e9bfacf07ca329e941467fb9f940cebcf",
+    "text": "historical-output-line-20.txt",
+    "source": "submissions/15-helm/OUTPUT.md",
+    "source_sha256": "2c5997a6a89d659d4ac9edc1eef1e6353d8882ff7ca007cdbfbbefc3e6d90f81",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 recorded command excerpt",
+    "image": "historical-output-line-29.png",
+    "image_sha256": "bc0f1d58b1055b0f842e43db2b3aefe996c8d7717076a1b90795572cfd4abb5d",
+    "text": "historical-output-line-29.txt",
+    "source": "submissions/15-helm/OUTPUT.md",
+    "source_sha256": "2c5997a6a89d659d4ac9edc1eef1e6353d8882ff7ca007cdbfbbefc3e6d90f81",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 recorded command excerpt",
+    "image": "historical-output-line-39.png",
+    "image_sha256": "58a96ae132f97d2a8908b4b26e117ba55f69bbaf5670758774b3820142eec379",
+    "text": "historical-output-line-39.txt",
+    "source": "submissions/15-helm/OUTPUT.md",
+    "source_sha256": "2c5997a6a89d659d4ac9edc1eef1e6353d8882ff7ca007cdbfbbefc3e6d90f81",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 recorded command excerpt",
+    "image": "historical-output-line-55.png",
+    "image_sha256": "880c85ffc8e71147d0030cdb0d9b862f5974466037457b7920ba7602c796f5d0",
+    "text": "historical-output-line-55.txt",
+    "source": "submissions/15-helm/OUTPUT.md",
+    "source_sha256": "2c5997a6a89d659d4ac9edc1eef1e6353d8882ff7ca007cdbfbbefc3e6d90f81",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 recorded command excerpt",
+    "image": "historical-output-line-58.png",
+    "image_sha256": "fbffe15367ebfad0dcc240b1cfa6fd8fb3d3835bebaa4848454747e9c9b44140",
+    "text": "historical-output-line-58.txt",
+    "source": "submissions/15-helm/OUTPUT.md",
+    "source_sha256": "2c5997a6a89d659d4ac9edc1eef1e6353d8882ff7ca007cdbfbbefc3e6d90f81",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 15 \u2014 recorded command excerpt",
+    "image": "historical-output-line-68.png",
+    "image_sha256": "5daf5dcd93f4b1d703ede4ce732ed16c0405763111c70fa6f41a4f50d38f8e32",
+    "text": "historical-output-line-68.txt",
+    "source": "submissions/15-helm/OUTPUT.md",
+    "source_sha256": "2c5997a6a89d659d4ac9edc1eef1e6353d8882ff7ca007cdbfbbefc3e6d90f81",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

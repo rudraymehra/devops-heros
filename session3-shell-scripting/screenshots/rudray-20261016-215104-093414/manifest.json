@@ -1,0 +1,48 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 03 \u2014 shell script syntax",
+      "status": "PASS",
+      "command": [
+        "bash",
+        "-n",
+        "session3-shell-scripting/system-info.sh"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:46.385686+00:00",
+      "exit_code": 0,
+      "log": "01-syntax.txt",
+      "log_sha256": "5981abea7936c26f57285f2872b76aa43a6fd76a7a732a7afb9cefd892ebbb9e",
+      "screenshot": {
+        "file": "01-syntax.png",
+        "sha256": "26bdfd7dd92f83af05e638670589dfada1d0840b22bb62a5e2a59bf6d98dbcde",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Session 03 \u2014 actual script with identity input",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/rudraym/devops-heros/scripts/coursework-evidence.py",
+        "basics",
+        "system-info"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:21:47.709066+00:00",
+      "exit_code": 0,
+      "log": "02-system-info.txt",
+      "log_sha256": "9b22ef52b964fcae454666b439cff63f2034dc0f51c9ec7000a65462234cd790",
+      "screenshot": {
+        "file": "02-system-info.png",
+        "sha256": "7dd5a1a37d6ef20b2da6e0f50c371baad65477c54b86acf98853c635e7d5c40e",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture the actual system-info script and process/report files. Process arguments are omitted to avoid exposing credentials."
+    }
+  ]
+}

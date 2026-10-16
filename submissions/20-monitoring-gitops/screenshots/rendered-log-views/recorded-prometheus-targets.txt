@@ -1,0 +1,45 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 20 — recorded Prometheus target fields
+Evidence type: historical-monitoring-json
+Selected actual JSON fields, not a fabricated curl command or live Targets page.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/observability/result.json
+Source SHA-256: d08709bdd2e1ae49eaed0117de4b8367a6fd8282beffe989e843a07efd7558e6
+Image rendered: 2026-10-16T16:24:25.628677+00:00
+
+{
+  "timestamp": "2026-10-13T07:34:05.427946+00:00",
+  "status": "passed",
+  "targets": [
+    {
+      "labels": {
+        "container": "backend",
+        "endpoint": "http",
+        "instance": "10.20.1.224:8000",
+        "job": "backend",
+        "namespace": "taskboard",
+        "pod": "taskboard-backend-b6b57c5cf-9sn7x",
+        "service": "backend"
+      },
+      "health": "up",
+      "lastError": "",
+      "scrapeUrl": "http://10.20.1.224:8000/metrics"
+    },
+    {
+      "labels": {
+        "container": "backend",
+        "endpoint": "http",
+        "instance": "10.20.2.198:8000",
+        "job": "backend",
+        "namespace": "taskboard",
+        "pod": "taskboard-backend-b6b57c5cf-d26md",
+        "service": "backend"
+      },
+      "health": "up",
+      "lastError": "",
+      "scrapeUrl": "http://10.20.2.198:8000/metrics"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/19-cloud/OUTPUT-SUCCESS.md
+Source SHA-256: 87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247
+Image rendered: 2026-10-16T16:24:25.500835+00:00
+
+01487  $ /tmp/campusfix-tools.FCoLVB/terraform state list
+01488   
+01489  PASS: lab resources destroyed and state resource list is empty.
+01490  
+01491  ```
+01492  
+01493  Exit code: 0

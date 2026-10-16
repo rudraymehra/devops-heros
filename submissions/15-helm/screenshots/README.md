@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 11. New native files awaiting visual review: 0.
+Reference images: 11. Native captures: 2 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -16,6 +16,29 @@ Reference images: 11. New native files awaiting visual review: 0.
 - [Session 15 — actual template rendering (not install)](rudray-20261016-212856-656600/02-helm-template.txt): PASS.
 - Live Kubernetes/Helm/monitoring capture: NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed.
 - Reference-specific pending items: NOT RUN: Lint/template can run offline. Install, upgrade, history, rollback and uninstall screenshots require their actual lifecycle, not lint output..
+
+### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
+
+- [Session 15 — real chart lint (not install)](rudray-20261016-215104-093414/01-helm-lint.txt): PASS.
+
+Reviewed native capture: Actual Helm lint output visible; not proof of installing a release.
+
+![Reviewed native window capture](rudray-20261016-215104-093414/01-helm-lint.png)
+
+- [Session 15 — actual template rendering (not install)](rudray-20261016-215104-093414/02-helm-template.txt): PASS.
+
+Reviewed native capture: Actual rendered-manifest output tail visible; paired log gives command context. Not proof of a live deployment.
+
+![Reviewed native window capture](rudray-20261016-215104-093414/02-helm-template.png)
+
+- Live Kubernetes/Helm/monitoring capture: NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed.
+- Reference-specific pending items: NOT RUN: Lint/template can run offline. Install, upgrade, history, rollback and uninstall screenshots require their actual lifecycle, not lint output..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

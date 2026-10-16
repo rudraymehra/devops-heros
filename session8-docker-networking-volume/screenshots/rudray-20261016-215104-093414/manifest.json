@@ -1,0 +1,13 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Docker live labs",
+      "status": "NOT RUN: Add --docker-labs; never inferred from file presence"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture Compose networks/connectivity. Bind-mount edit/reload and host-network behaviour need their own live run; Docker Desktop host networking may need explicit support."
+    }
+  ]
+}

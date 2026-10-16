@@ -1,0 +1,20 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 14 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/14-troubleshooting/OUTPUT.md
+Source SHA-256: 25b494063d085c592973bf2c847e8099807887f2fa9090c7cd770c5259aca338
+Image rendered: 2026-10-16T16:24:24.295198+00:00
+
+05693  $ kubectl --context campusfix-eks --request-timeout=30s -n campusfix-troubleshooting get pods -o wide
+05694  NAME                         READY   STATUS         RESTARTS      AGE   IP            NODE                                         NOMINATED NODE   READINESS GATES
+05695  dns-target-cb6d46759-v74z4   1/1     Running        0             36s   10.20.1.15    ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+05696  fail-1-crashloop-pod         0/1     Error          2 (28s ago)   34s   10.20.1.70    ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+05697  fail-2-imagepull-pod         0/1     ErrImagePull   0             33s   10.20.1.225   ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+05698  fail-3-pending-pod           0/1     Pending        0             32s   <none>        <none>                                       <none>           <none>
+05699  fail-4-dns-failure-pod       1/1     Running        0             31s   10.20.1.42    ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+05700  fail-5-oomkilled-pod         0/1     OOMKilled      1 (5s ago)    30s   10.20.1.53    ip-10-20-1-116.ap-south-1.compute.internal   <none>           <none>
+05701    [exit: 0 ]

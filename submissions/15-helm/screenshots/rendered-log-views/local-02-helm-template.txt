@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 15 — actual template rendering (not install)
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/15-helm/screenshots/rudray-20261016-215104-093414/02-helm-template.txt
+Source SHA-256: 9827b3872bfe891e5303017b9f06855fc3c775e1f347160a73e7db7efdd1c9f2
+Image rendered: 2026-10-16T16:24:24.519407+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 15 — actual template rendering (not install)
+00003  UTC: 2026-10-16T16:22:21.201444+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: /opt/homebrew/bin/helm template rudray-notes session-15-helm/mini-project/notes-chart
+00006  
+00007  ---
+00008  # Source: notes-chart/templates/configmap.yaml
+00009  apiVersion: v1
+00010  kind: ConfigMap
+00011  metadata:
+00012    name: rudray-notes-config
+00013  data:
+00014    APP_NAME: "notes-app"
+00015    ENVIRONMENT: "development"
+00016  
+00017  ---
+00018  # Source: notes-chart/templates/service.yaml
+[... source lines omitted for readability; see complete linked record ...]
+00035  kind: Deployment
+00036  metadata:
+00037    name: rudray-notes-deploy
+00038    labels:
+00039      app: rudray-notes
+00040      environment: development
+00041  spec:
+00042    replicas: 1
+00043    selector:
+00044      matchLabels:
+00045        app: rudray-notes
+00046    template:
+00047      metadata:
+00048        labels:
+00049          app: rudray-notes
+00050      spec:
+00051        containers:
+00052          - name: notes
+00053            image: "nginx:1.24"
+00054            ports:
+00055              - containerPort: 80
+00056            envFrom:
+00057              - configMapRef:
+00058                  name: rudray-notes-config
+00059  
+00060  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

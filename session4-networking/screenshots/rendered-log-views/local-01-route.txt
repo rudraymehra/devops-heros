@@ -1,0 +1,27 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 01-route
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session4-networking/screenshots/rudray-20261016-215104-093414/01-route.txt
+Source SHA-256: c6cb07c20da7db352ec0e4e96548822427ef73deaefc6a28bf9d0ec66c548cc2
+Image rendered: 2026-10-16T16:24:22.859620+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 04 — actual 01-route
+00003  UTC: 2026-10-16T16:21:49.262617+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: /sbin/route -n get default
+00006  
+00007     route to: default
+00008  destination: default
+00009         mask: default
+00010      gateway: 100.129.160.1
+00011    interface: en0
+00012        flags: <UP,GATEWAY,DONE,STATIC,PRCLONING,GLOBAL>
+00013   recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+00014         0         0         0         0         0         0      1500         0 
+00015  
+00016  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

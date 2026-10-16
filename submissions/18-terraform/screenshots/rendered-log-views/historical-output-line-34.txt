@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 18 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/18-terraform/OUTPUT.md
+Source SHA-256: 261f9c0af76afd0d4e1367ac7dd7d5ce5cef9a43f60f3b293b179a46bcd003d7
+Image rendered: 2026-10-16T16:24:24.946756+00:00
+
+00034  $ /tmp/campusfix-tools.FCoLVB/terraform plan -no-color -out=/tmp/campusfix-session18.tfplan -var=bucket_name=sudhir-mehra-24bcs10425-lab-20261013-0738
+00035  
+00036  Terraform used the selected providers to generate the following execution
+00037  plan. Resource actions are indicated with the following symbols:
+00038    + create
+00039  
+00040  Terraform will perform the following actions:
+00041  
+00042    # aws_s3_bucket.devops553 will be created
+00043    + resource "aws_s3_bucket" "devops553" {
+00044        + acceleration_status         = (known after apply)
+00045        + acl                         = (known after apply)
+00046        + arn                         = (known after apply)
+00047        + bucket                      = "sudhir-mehra-24bcs10425-lab-20261013-0738"
+00048        + bucket_domain_name          = (known after apply)
+00049        + bucket_namespace            = (known after apply)
+00050        + bucket_prefix               = (known after apply)
+00051        + bucket_region               = (known after apply)
+[... source lines omitted for readability; see complete linked record ...]
+00122    # aws_s3_bucket_versioning.devops553 will be created
+00123    + resource "aws_s3_bucket_versioning" "devops553" {
+00124        + bucket = (known after apply)
+00125        + id     = (known after apply)
+00126        + region = "ap-south-1"
+00127  
+00128        + versioning_configuration {
+00129            + mfa_delete = (known after apply)
+00130            + status     = "Enabled"
+00131          }
+00132      }
+00133  
+00134  Plan: 4 to add, 0 to change, 0 to destroy.
+00135  
+00136  Changes to Outputs:
+00137    + bucket_arn    = (known after apply)
+00138    + bucket_name   = "sudhir-mehra-24bcs10425-lab-20261013-0738"
+00139    + bucket_region = "ap-south-1"
+00140  
+00141  ─────────────────────────────────────────────────────────────────────────────
+00142  
+00143  Saved the plan to: /tmp/campusfix-session18.tfplan
+00144  
+00145  To perform exactly these actions, run the following command to apply:
+00146      terraform apply "/tmp/campusfix-session18.tfplan"
+00147   

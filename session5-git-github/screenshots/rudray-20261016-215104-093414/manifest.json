@@ -1,0 +1,27 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 05 \u2014 actual isolated Git lab",
+      "status": "PASS",
+      "command": [
+        "bash",
+        "session5-git-github/run-cherry-pick-lab.sh"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:22:12.420393+00:00",
+      "exit_code": 0,
+      "log": "01-commit-and-cherry-pick.txt",
+      "log_sha256": "6d160d92001b7cb0e4a57b2ffec12910e92de1483f3412baf4e97cdad922316e",
+      "screenshot": {
+        "file": "01-commit-and-cherry-pick.png",
+        "sha256": "ded548f82bf16bfee45d0ed0c6d50eac799ac4d7f991788fcb944bae99752067",
+        "type": "native macOS window capture; selected by user; visual review required"
+      }
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture real commit -a status and cherry-pick graph in the disposable lab, not the dirty coursework repository."
+    }
+  ]
+}

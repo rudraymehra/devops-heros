@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Session 20 \u2014 recorded command excerpt",
+    "image": "historical-eks-verification-line-60.png",
+    "image_sha256": "7e6945745a32d98671fc72b387bca07c80bcda5896d3307762523657d32043bc",
+    "text": "historical-eks-verification-line-60.txt",
+    "source": "session21-python/evidence/eks-verification.md",
+    "source_sha256": "cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 20 \u2014 recorded command excerpt",
+    "image": "historical-eks-verification-line-87.png",
+    "image_sha256": "1846906ee6d0cd433eab5dea2e89ba24b70fd07f838f49d79df888040f189aa1",
+    "text": "historical-eks-verification-line-87.txt",
+    "source": "session21-python/evidence/eks-verification.md",
+    "source_sha256": "cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 20 \u2014 recorded command excerpt",
+    "image": "historical-eks-verification-line-91.png",
+    "image_sha256": "05cf02404392b52b6daa41646c7be6f73bd9919ac58895204878e54cdc515bf4",
+    "text": "historical-eks-verification-line-91.txt",
+    "source": "session21-python/evidence/eks-verification.md",
+    "source_sha256": "cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 20 \u2014 recorded Prometheus target fields",
+    "image": "recorded-prometheus-targets.png",
+    "image_sha256": "c692d2628e1212f88ec26684b29f3c6ca7c39166223477484cf700d34968c7bc",
+    "text": "recorded-prometheus-targets.txt",
+    "source": "session21-python/evidence/observability/result.json",
+    "source_sha256": "d08709bdd2e1ae49eaed0117de4b8367a6fd8282beffe989e843a07efd7558e6",
+    "kind": "historical-monitoring-json",
+    "native_screenshot": false
+  }
+]

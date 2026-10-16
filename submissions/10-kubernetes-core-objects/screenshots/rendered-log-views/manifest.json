@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-12.png",
+    "image_sha256": "5f0dbaed014c2ecbb8930e22f923123467600514efbeb313703c795597c4ae5e",
+    "text": "historical-output-line-12.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-41.png",
+    "image_sha256": "908dbedd7dd52b66c401efdf0457902c2b0b1e2f049d98ff12391516e1b69309",
+    "text": "historical-output-line-41.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-554.png",
+    "image_sha256": "4a074e1e64ba8f5e7f01538e55541d4e37552f13da33856ebb9c0371fdfd9d21",
+    "text": "historical-output-line-554.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-1069.png",
+    "image_sha256": "37ea33898e4a2a171c98f27b23443575b07307e8b0c1c38f766d5fe9396694be",
+    "text": "historical-output-line-1069.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-1082.png",
+    "image_sha256": "034902a1145d73dcef3ec1bb7ba904d9f661e646f0f48bb375b04fb9ef646a9d",
+    "text": "historical-output-line-1082.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-1104.png",
+    "image_sha256": "b098a53038a55a4cb73200653ce030fc7fa1ca273072f2a2320215a10741fb6f",
+    "text": "historical-output-line-1104.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-1114.png",
+    "image_sha256": "f1cd54002378c5dc86ccb51112fdc228fb1369483108832d91beb14172dcef9b",
+    "text": "historical-output-line-1114.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-output-line-1142.png",
+    "image_sha256": "67251a36db182ddf57a803d4a69eb5eefcbbd126c323f348711738c9213a7d8b",
+    "text": "historical-output-line-1142.txt",
+    "source": "submissions/10-kubernetes-core-objects/OUTPUT.md",
+    "source_sha256": "f879b0321e3353184867b3b5e5e51bac7a0a70cd2b24a0cfc40378ac4a2750b6",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-strategies-success-line-55.png",
+    "image_sha256": "d93f0e3b5d21f00205ff8d8a65d67aaa3df1739adaedbda2e0730b2b8dea75b7",
+    "text": "historical-strategies-success-line-55.txt",
+    "source": "submissions/10-kubernetes-core-objects/STRATEGIES-SUCCESS.md",
+    "source_sha256": "25b1b9a8d6fbb2b48c16f1d22a75fabc90bb1590b7c0b7cddebd1c060aa71a87",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-strategies-success-line-81.png",
+    "image_sha256": "23d17a483cd1aaa67df3cdbb05451b52f232b748b15dc55cd33a3f89154189b9",
+    "text": "historical-strategies-success-line-81.txt",
+    "source": "submissions/10-kubernetes-core-objects/STRATEGIES-SUCCESS.md",
+    "source_sha256": "25b1b9a8d6fbb2b48c16f1d22a75fabc90bb1590b7c0b7cddebd1c060aa71a87",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 10 \u2014 recorded command excerpt",
+    "image": "historical-strategies-success-line-363.png",
+    "image_sha256": "1df4acedde3342e9b80e091b31bd1b1cf7c7c686196ccdf89a7289ddfbced6fa",
+    "text": "historical-strategies-success-line-363.txt",
+    "source": "submissions/10-kubernetes-core-objects/STRATEGIES-SUCCESS.md",
+    "source_sha256": "25b1b9a8d6fbb2b48c16f1d22a75fabc90bb1590b7c0b7cddebd1c060aa71a87",
+    "kind": "historical-command-excerpt",
+    "native_screenshot": false
+  }
+]

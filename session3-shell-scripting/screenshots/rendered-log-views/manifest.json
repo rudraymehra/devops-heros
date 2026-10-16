@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Session 03 \u2014 shell script syntax",
+    "image": "local-01-syntax.png",
+    "image_sha256": "55524e224293240aaa4b4d19a75117b3c04b36b0d4c0d797bcbf60bd9dbb5fcf",
+    "text": "local-01-syntax.txt",
+    "source": "session3-shell-scripting/screenshots/rudray-20261016-215104-093414/01-syntax.txt",
+    "source_sha256": "5981abea7936c26f57285f2872b76aa43a6fd76a7a732a7afb9cefd892ebbb9e",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  },
+  {
+    "title": "Session 03 \u2014 actual script with identity input",
+    "image": "local-02-system-info.png",
+    "image_sha256": "6eaecb91916450cf78b5c6f166ead98b47401b35cbc73879ca9df836a5a49c0b",
+    "text": "local-02-system-info.txt",
+    "source": "session3-shell-scripting/screenshots/rudray-20261016-215104-093414/02-system-info.txt",
+    "source_sha256": "9b22ef52b964fcae454666b439cff63f2034dc0f51c9ec7000a65462234cd790",
+    "kind": "local-recorded-command",
+    "native_screenshot": false
+  }
+]

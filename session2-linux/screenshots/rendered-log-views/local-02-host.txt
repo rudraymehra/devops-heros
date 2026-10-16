@@ -1,0 +1,20 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 01-02 — actual OS/kernel
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session2-linux/screenshots/rudray-20261016-215104-093414/02-host.txt
+Source SHA-256: 32b2b740a4a0e42a0f8941612f60c349140704e725e918b37cbacbed20519986
+Image rendered: 2026-10-16T16:24:22.736014+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 01-02 — actual OS/kernel
+00003  UTC: 2026-10-16T16:21:20.710414+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: uname -a
+00006  
+00007  Darwin MacBook-Air-9.local 24.5.0 Darwin Kernel Version 24.5.0: Tue Apr 22 19:54:26 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T8112 arm64
+00008  
+00009  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

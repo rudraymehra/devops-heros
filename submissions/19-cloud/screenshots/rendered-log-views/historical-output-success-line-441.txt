@@ -1,0 +1,50 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/19-cloud/OUTPUT-SUCCESS.md
+Source SHA-256: 87da81f45439dd01e9d323a9ef37f5cab810126de2d6a1a2a8f9f8c7540d0247
+Image rendered: 2026-10-16T16:24:25.413072+00:00
+
+00441  $ /tmp/campusfix-tools.FCoLVB/terraform apply -no-color -auto-approve /tmp/campusfix-session19.tfplan
+00442  aws_vpc.main: Creating...
+00443  aws_s3_bucket.artifacts: Creating...
+00444  aws_vpc.main: Creation complete after 2s [id=vpc-050ab74d3afc1d642]
+00445  aws_internet_gateway.main: Creating...
+00446  aws_subnet.public: Creating...
+00447  aws_security_group.web: Creating...
+00448  aws_internet_gateway.main: Creation complete after 0s [id=igw-01c49e1237066da7f]
+00449  aws_route_table.public: Creating...
+00450  aws_route_table.public: Creation complete after 1s [id=rtb-003919586fb751829]
+00451  aws_security_group.web: Creation complete after 2s [id=sg-03d74f9a1b4e7ce5c]
+00452  aws_s3_bucket.artifacts: Still creating... [00m10s elapsed]
+00453  aws_subnet.public: Still creating... [00m10s elapsed]
+00454  aws_subnet.public: Creation complete after 11s [id=subnet-0ff94dd30697f3b0e]
+00455  aws_route_table_association.public: Creating...
+00456  aws_instance.web: Creating...
+00457  aws_s3_bucket.artifacts: Creation complete after 13s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+00458  aws_s3_bucket_public_access_block.artifacts: Creating...
+00459  aws_s3_bucket_versioning.artifacts: Creating...
+00460  aws_s3_bucket_server_side_encryption_configuration.artifacts: Creating...
+00461  aws_route_table_association.public: Creation complete after 0s [id=rtbassoc-07ca2a3f59f582979]
+00462  aws_s3_bucket_public_access_block.artifacts: Creation complete after 0s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+00463  aws_s3_bucket_server_side_encryption_configuration.artifacts: Creation complete after 0s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+00464  aws_s3_bucket_versioning.artifacts: Creation complete after 2s [id=session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013]
+00465  aws_instance.web: Still creating... [00m10s elapsed]
+00466  aws_instance.web: Creation complete after 13s [id=i-0a6d4d98cfb4e49e5]
+00467  
+00468  Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+00469  
+00470  Outputs:
+00471  
+00472  artifact_bucket = "session19-[AWS_ACCOUNT_ID]-sudhir24bcs10425-20261013"
+00473  instance_id = "i-0a6d4d98cfb4e49e5"
+00474  security_group_id = "sg-03d74f9a1b4e7ce5c"
+00475  subnet_id = "subnet-0ff94dd30697f3b0e"
+00476  vpc_cidr = "10.20.0.0/16"
+00477  vpc_id = "vpc-050ab74d3afc1d642"
+00478  web_url = "http://13.126.177.117"
+00479   

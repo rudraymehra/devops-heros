@@ -1,0 +1,56 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 18 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/18-terraform/DESTROY-RETRY.md
+Source SHA-256: 451c202fda3fda9ed8b0cf2bf499e52ce37a790fbf4d7ad19e9a0729ddc5bfa1
+Image rendered: 2026-10-16T16:24:25.009683+00:00
+
+00010  $ /tmp/campusfix-tools.FCoLVB/terraform destroy -no-color -auto-approve -var=bucket_name=sudhir-mehra-24bcs10425-lab-20261013-0738
+00011  aws_s3_bucket.devops553: Refreshing state... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00012  aws_s3_bucket_public_access_block.devops553: Refreshing state... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00013  aws_s3_bucket_versioning.devops553: Refreshing state... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00014  aws_s3_bucket_server_side_encryption_configuration.devops553: Refreshing state... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00015  
+00016  Terraform used the selected providers to generate the following execution
+00017  plan. Resource actions are indicated with the following symbols:
+00018    - destroy
+00019  
+00020  Terraform will perform the following actions:
+00021  
+00022    # aws_s3_bucket.devops553 will be destroyed
+00023    - resource "aws_s3_bucket" "devops553" {
+00024        - arn                         = "arn:aws:s3:::sudhir-mehra-24bcs10425-lab-20261013-0738" -> null
+00025        - bucket                      = "sudhir-mehra-24bcs10425-lab-20261013-0738" -> null
+00026        - bucket_domain_name          = "sudhir-mehra-24bcs10425-lab-20261013-0738.s3.amazonaws.com" -> null
+00027        - bucket_namespace            = "global" -> null
+[... source lines omitted for readability; see complete linked record ...]
+00114        - versioning_configuration {
+00115            - mfa_delete = "Disabled" -> null
+00116            - status     = "Enabled" -> null
+00117          }
+00118      }
+00119  
+00120  Plan: 0 to add, 0 to change, 4 to destroy.
+00121  
+00122  Changes to Outputs:
+00123    - bucket_arn    = "arn:aws:s3:::sudhir-mehra-24bcs10425-lab-20261013-0738" -> null
+00124    - bucket_name   = "sudhir-mehra-24bcs10425-lab-20261013-0738" -> null
+00125    - bucket_region = "ap-south-1" -> null
+00126  aws_s3_bucket_public_access_block.devops553: Destroying... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00127  aws_s3_bucket_versioning.devops553: Destroying... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00128  aws_s3_bucket_server_side_encryption_configuration.devops553: Destroying... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00129  aws_s3_bucket_public_access_block.devops553: Destruction complete after 1s
+00130  aws_s3_bucket_server_side_encryption_configuration.devops553: Destruction complete after 1s
+00131  aws_s3_bucket_versioning.devops553: Destruction complete after 1s
+00132  aws_s3_bucket.devops553: Destroying... [id=sudhir-mehra-24bcs10425-lab-20261013-0738]
+00133  aws_s3_bucket.devops553: Destruction complete after 1s
+00134  
+00135  Destroy complete! Resources: 4 destroyed.
+00136  
+00137  ```
+00138  
+00139  Exit code: 0

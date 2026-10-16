@@ -3,9 +3,12 @@
     "session": "01-02",
     "required_files_missing": [],
     "reference_images": 8,
+    "native_files_accepted": 2,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "session2-linux/screenshots/rudray-20261016-212856-656600"
+      "session2-linux/screenshots/rudray-20261016-212856-656600",
+      "session2-linux/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Linux useradd/adduser and journalctl need a real Linux/systemd environment. macOS link tests are labelled macOS, not Linux VM results."
   },
@@ -13,9 +16,12 @@
     "session": "03",
     "required_files_missing": [],
     "reference_images": 3,
+    "native_files_accepted": 2,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "session3-shell-scripting/screenshots/rudray-20261016-212856-656600"
+      "session3-shell-scripting/screenshots/rudray-20261016-212856-656600",
+      "session3-shell-scripting/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture the actual system-info script and process/report files. Process arguments are omitted to avoid exposing credentials."
   },
@@ -23,9 +29,12 @@
     "session": "04",
     "required_files_missing": [],
     "reference_images": 6,
+    "native_files_accepted": 4,
     "native_files_pending_review": 0,
+    "native_files_rejected": 1,
     "runs": [
-      "session4-networking/screenshots/rudray-20261016-213010-192514"
+      "session4-networking/screenshots/rudray-20261016-213010-192514",
+      "session4-networking/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture routes, sockets, DNS, ping and HTTP on the actual host. Record network restrictions as failures, not successful connectivity."
   },
@@ -33,9 +42,12 @@
     "session": "05",
     "required_files_missing": [],
     "reference_images": 3,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 1,
     "runs": [
-      "session5-git-github/screenshots/rudray-20261016-212856-656600"
+      "session5-git-github/screenshots/rudray-20261016-212856-656600",
+      "session5-git-github/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture real commit -a status and cherry-pick graph in the disposable lab, not the dirty coursework repository."
   },
@@ -43,9 +55,12 @@
     "session": "06",
     "required_files_missing": [],
     "reference_images": 17,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "session6-7-docker/screenshots/rudray-20261016-212856-656600"
+      "session6-7-docker/screenshots/rudray-20261016-212856-656600",
+      "session6-7-docker/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Docker must be running. Capture six real image builds, HTTP responses, container state and corresponding browser pages."
   },
@@ -53,9 +68,12 @@
     "session": "07",
     "required_files_missing": [],
     "reference_images": 4,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "session6-7-docker/multi-stage-dockerfile/screenshots/rudray-20261016-212856-656600"
+      "session6-7-docker/multi-stage-dockerfile/screenshots/rudray-20261016-212856-656600",
+      "session6-7-docker/multi-stage-dockerfile/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture the actual multi-stage image build, image metadata, running application and browser. App-type discussion is documentation, not runtime proof."
   },
@@ -63,9 +81,12 @@
     "session": "08",
     "required_files_missing": [],
     "reference_images": 6,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "session8-docker-networking-volume/screenshots/rudray-20261016-212856-656600"
+      "session8-docker-networking-volume/screenshots/rudray-20261016-212856-656600",
+      "session8-docker-networking-volume/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture Compose networks/connectivity. Bind-mount edit/reload and host-network behaviour need their own live run; Docker Desktop host networking may need explicit support."
   },
@@ -73,9 +94,12 @@
     "session": "09",
     "required_files_missing": [],
     "reference_images": 9,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/09-kubernetes-fundamentals/screenshots/rudray-20261016-212856-656600"
+      "submissions/09-kubernetes-fundamentals/screenshots/rudray-20261016-212856-656600",
+      "submissions/09-kubernetes-fundamentals/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture actual cluster-info, nodes and Pods. Architecture explanations are not screenshots of a live cluster."
   },
@@ -83,9 +107,12 @@
     "session": "10",
     "required_files_missing": [],
     "reference_images": 21,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/10-kubernetes-core-objects/screenshots/rudray-20261016-212856-656600"
+      "submissions/10-kubernetes-core-objects/screenshots/rudray-20261016-212856-656600",
+      "submissions/10-kubernetes-core-objects/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Native lifecycle/rolling/blue-green/canary/Recreate sequence captures still need a live run. A current get snapshot alone does not prove those transitions."
   },
@@ -93,9 +120,12 @@
     "session": "11",
     "required_files_missing": [],
     "reference_images": 7,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/11-kubernetes-services/screenshots/rudray-20261016-212856-656600"
+      "submissions/11-kubernetes-services/screenshots/rudray-20261016-212856-656600",
+      "submissions/11-kubernetes-services/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture five Service types, DNS/HTTP and endpoint checks; an external LoadBalancer address needs a real controller/tunnel, not an invented IP."
   },
@@ -103,9 +133,12 @@
     "session": "12",
     "required_files_missing": [],
     "reference_images": 11,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/12-kubernetes-config-ingress/screenshots/rudray-20261016-212856-656600"
+      "submissions/12-kubernetes-config-ingress/screenshots/rudray-20261016-212856-656600",
+      "submissions/12-kubernetes-config-ingress/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture ConfigMap/Secret metadata and actual ingress requests, plus the failure/recovery exercises. Never screenshot decoded real Secret values."
   },
@@ -113,9 +146,12 @@
     "session": "13",
     "required_files_missing": [],
     "reference_images": 9,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/13-storage-hpa-probes/screenshots/rudray-20261016-212856-656600"
+      "submissions/13-storage-hpa-probes/screenshots/rudray-20261016-212856-656600",
+      "submissions/13-storage-hpa-probes/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture real PVC persistence, HPA scale up/down and probe recovery. The older EKS results use integrated CampusFix and retain their original timestamps."
   },
@@ -123,9 +159,12 @@
     "session": "14",
     "required_files_missing": [],
     "reference_images": 15,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/14-troubleshooting/screenshots/rudray-20261016-212856-656600"
+      "submissions/14-troubleshooting/screenshots/rudray-20261016-212856-656600",
+      "submissions/14-troubleshooting/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Five scenarios were recorded previously; the ZIP also names service, pod-network and ContainerCreating cases. Those additional live demonstrations are not certified by the five-scenario log."
   },
@@ -133,9 +172,12 @@
     "session": "15",
     "required_files_missing": [],
     "reference_images": 11,
+    "native_files_accepted": 2,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/15-helm/screenshots/rudray-20261016-212856-656600"
+      "submissions/15-helm/screenshots/rudray-20261016-212856-656600",
+      "submissions/15-helm/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Lint/template can run offline. Install, upgrade, history, rollback and uninstall screenshots require their actual lifecycle, not lint output."
   },
@@ -143,9 +185,12 @@
     "session": "16",
     "required_files_missing": [],
     "reference_images": 5,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
-      "submissions/16-cicd/screenshots/rudray-20261016-212856-656600"
+      "submissions/16-cicd/screenshots/rudray-20261016-212856-656600",
+      "submissions/16-cicd/screenshots/rudray-20261016-215104-093414"
     ],
     "pending": "Capture current tests/build and the actual GitHub Actions run. Local act simulation is not a substitute for a published workflow."
   },
@@ -153,7 +198,9 @@
     "session": "17",
     "required_files_missing": [],
     "reference_images": 14,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
       "submissions/17-devsecops/screenshots/rudray-20261016-212856-656600"
     ],
@@ -163,7 +210,9 @@
     "session": "18",
     "required_files_missing": [],
     "reference_images": 7,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
       "submissions/18-terraform/screenshots/rudray-20261016-212856-656600"
     ],
@@ -173,7 +222,9 @@
     "session": "19",
     "required_files_missing": [],
     "reference_images": 8,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
       "submissions/19-cloud/screenshots/rudray-20261016-212856-656600"
     ],
@@ -183,7 +234,9 @@
     "session": "20",
     "required_files_missing": [],
     "reference_images": 15,
+    "native_files_accepted": 0,
     "native_files_pending_review": 0,
+    "native_files_rejected": 0,
     "runs": [
       "submissions/20-monitoring-gitops/screenshots/rudray-20261016-212856-656600"
     ],

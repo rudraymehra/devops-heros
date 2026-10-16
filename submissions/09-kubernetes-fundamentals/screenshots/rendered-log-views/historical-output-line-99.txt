@@ -1,0 +1,26 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 09 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/09-kubernetes-fundamentals/OUTPUT.md
+Source SHA-256: f6c18606d5ddd6651f38cb7dcda08c4aaba08b59eddf351b46588ab4c2118215
+Image rendered: 2026-10-16T16:24:23.281917+00:00
+
+00099  $ kubectl --context campusfix-eks --request-timeout=30s -n rudray-devops-hw logs hello-kubernetes --tail=10
+00100  2026/10/13 03:17:22 [notice] 1#1: using the "epoll" event method
+00101  2026/10/13 03:17:22 [notice] 1#1: nginx/1.28.3
+00102  2026/10/13 03:17:22 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+00103  2026/10/13 03:17:22 [notice] 1#1: OS: Linux 6.12.110-135.202.amzn2023.x86_64
+00104  2026/10/13 03:17:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 65536:1048576
+00105  2026/10/13 03:17:22 [notice] 1#1: start worker processes
+00106  2026/10/13 03:17:22 [notice] 1#1: start worker process 31
+00107  2026/10/13 03:17:22 [notice] 1#1: start worker process 32
+00108  10.20.1.116 - - [13/Oct/2026:03:17:23 +0000] "GET / HTTP/1.1" 200 615 "-" "kube-probe/1.35" "-"
+00109  127.0.0.1 - - [13/Oct/2026:03:17:25 +0000] "GET / HTTP/1.1" 200 615 "-" "Wget" "-"
+00110  [exit status: 0]
+00111  ```
+00112  
+00113  All checks in this topic completed successfully.

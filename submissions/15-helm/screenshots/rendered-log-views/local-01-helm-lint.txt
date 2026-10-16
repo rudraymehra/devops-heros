@@ -1,0 +1,23 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 15 — real chart lint (not install)
+Evidence type: local-recorded-command
+Actual recorded result: PASS; this is a log rendering, not a new execution.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: submissions/15-helm/screenshots/rudray-20261016-215104-093414/01-helm-lint.txt
+Source SHA-256: f56dad70b9303de215e0a955047b049cd0ebd904317f2b38e2851be89acf74a2
+Image rendered: 2026-10-16T16:24:24.494253+00:00
+
+00001  Rudray Mehra | 24 BCS 10425 | Batch B
+00002  Session 15 — real chart lint (not install)
+00003  UTC: 2026-10-16T16:22:13.860957+00:00
+00004  Directory: /Users/rudraym/devops-heros
+00005  Command: /opt/homebrew/bin/helm lint session-15-helm/mini-project/notes-chart
+00006  
+00007  ==> Linting session-15-helm/mini-project/notes-chart
+00008  [INFO] Chart.yaml: icon is recommended
+00009  
+00010  1 chart(s) linted, 0 chart(s) failed
+00011  
+00012  Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

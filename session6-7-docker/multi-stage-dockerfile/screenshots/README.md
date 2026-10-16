@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 4. New native files awaiting visual review: 0.
+Reference images: 4. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -14,6 +14,17 @@ Reference images: 4. New native files awaiting visual review: 0.
 
 - Docker live labs: NOT RUN: Add --docker-labs; never inferred from file presence.
 - Reference-specific pending items: NOT RUN: Capture the actual multi-stage image build, image metadata, running application and browser. App-type discussion is documentation, not runtime proof..
+
+### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
+
+- Docker live labs: NOT RUN: Add --docker-labs; never inferred from file presence.
+- Reference-specific pending items: NOT RUN: Capture the actual multi-stage image build, image metadata, running application and browser. App-type discussion is documentation, not runtime proof..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

@@ -1,0 +1,19 @@
+RENDERED EXECUTION LOG — NOT a native Terminal or AWS Console screenshot
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 13 — recorded command excerpt
+Evidence type: historical-command-excerpt
+Historical 2026-10-13 run; lab already destroyed. Line numbers identify the unchanged source excerpt.
+Historical resource names and outcomes are not rewritten. This image does not prove a current live deployment.
+Source: session21-python/evidence/eks-verification.md
+Source SHA-256: cfcbaae4ecd34099c33d4b63340d18f8836ecabe7509a8e60d6336bf56641e4f
+Image rendered: 2026-10-16T16:24:24.138049+00:00
+
+00042  $ kubectl --context campusfix-eks --request-timeout=30s rollout status deployment/taskboard-postgres -n taskboard --timeout=180s
+00043  Waiting for deployment "taskboard-postgres" rollout to finish: 0 of 1 updated replicas are available...
+00044  deployment "taskboard-postgres" successfully rolled out
+00045   
+00046  /api/requests/6 {"title": "Persistence verification", "description": "Synthetic report retained across database Pod replacement.", "location": "Cloud lab", "category": 
+"OTHER", "urgency": "NORMAL", "reporter": "Sudhir Mehra", "id": 6, "status": "REPORTED", "resolution": "", "created_at": "2026-10-13T03:47:41.779678Z", "updated_at": 
+"2026-10-13T03:47:41.779682Z"}
+00047  PASS: PostgreSQL PVC retains the exact report after database Pod replacement.

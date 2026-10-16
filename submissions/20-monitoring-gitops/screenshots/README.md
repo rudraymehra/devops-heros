@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 15. New native files awaiting visual review: 0.
+Reference images: 15. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -14,6 +14,12 @@ Reference images: 15. New native files awaiting visual review: 0.
 
 - Live Kubernetes/Helm/monitoring capture: NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed.
 - Reference-specific pending items: NOT RUN: Targets/dashboard/self-healing have historical evidence. New alert firing/recovery, cAdvisor and live cluster captures are not proven by those images; the cloud cluster is offline..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

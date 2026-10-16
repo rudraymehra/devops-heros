@@ -1,0 +1,66 @@
+{
+  "review_date": "2026-10-16",
+  "method": "Visual inspection of untouched user-selected macOS window captures; decisions apply only to the listed SHA-256. Originals remain unchanged.",
+  "images": {
+    "session2-linux/screenshots/rudray-20261016-215104-093414/02-host.png": {
+      "sha256": "951f6097523e8de0e760215a65f85a2c20834296db35d2f4eb7d748f72318853",
+      "decision": "accepted",
+      "note": "Actual uname output and Rudray heading visible; macOS host, not a Linux VM."
+    },
+    "session2-linux/screenshots/rudray-20261016-215104-093414/03-disk.png": {
+      "sha256": "aa0c4016450f07cf7299e877e01b7a0b51c3bb224270c9ffa8f2105679a3e12a",
+      "decision": "accepted",
+      "note": "Actual disk-usage output and Rudray heading visible."
+    },
+    "session3-shell-scripting/screenshots/rudray-20261016-215104-093414/01-syntax.png": {
+      "sha256": "26bdfd7dd92f83af05e638670589dfada1d0840b22bb62a5e2a59bf6d98dbcde",
+      "decision": "accepted",
+      "note": "Shell syntax command and success visible; syntax check only."
+    },
+    "session3-shell-scripting/screenshots/rudray-20261016-215104-093414/02-system-info.png": {
+      "sha256": "7dd5a1a37d6ef20b2da6e0f50c371baad65477c54b86acf98853c635e7d5c40e",
+      "decision": "accepted",
+      "note": "Actual system-info output tail, Rudray identity and report-file verification visible; paired log has complete output."
+    },
+    "session4-networking/screenshots/rudray-20261016-215104-093414/01-route.png": {
+      "sha256": "53721815c19d6fd70128dace0064e1527e41a63817f9ca9e5a1318b1847e7449",
+      "decision": "accepted",
+      "note": "Actual default-route output and Rudray heading visible."
+    },
+    "session4-networking/screenshots/rudray-20261016-215104-093414/02-sockets.png": {
+      "sha256": "2ae325766461690330d089ad68e7049e44da8a491ecbedeeafd5a4bcca7d789a",
+      "decision": "accepted",
+      "note": "Socket output tail and identity visible; command is above the viewport, so use the paired original log for context."
+    },
+    "session4-networking/screenshots/rudray-20261016-215104-093414/03-dns.png": {
+      "sha256": "c1e42bb8dfc2ae2652637e3f29871a853f0cd4704d95a1fbe9458388d8fb4565",
+      "decision": "accepted",
+      "note": "Actual DNS result and Rudray heading visible."
+    },
+    "session4-networking/screenshots/rudray-20261016-215104-093414/04-ping.png": {
+      "sha256": "4712d49c0e18cfdb7931542450bfa4c9d65928faaaeea6746d48bd8c9250153a",
+      "decision": "accepted",
+      "note": "Actual ping results and Rudray heading visible."
+    },
+    "session4-networking/screenshots/rudray-20261016-215104-093414/05-http.png": {
+      "sha256": "4b6246977a27c8ba744fbc7f78b44d435880bf5979149740417f784e21fb0c83",
+      "decision": "rejected",
+      "note": "Wrong window: chat conversation instead of HTTP command output. Retake; the paired curl log records a timeout, not success."
+    },
+    "session5-git-github/screenshots/rudray-20261016-215104-093414/01-commit-and-cherry-pick.png": {
+      "sha256": "ded548f82bf16bfee45d0ed0c6d50eac799ac4d7f991788fcb944bae99752067",
+      "decision": "rejected",
+      "note": "Wrong window: chat conversation instead of Git lab output. Retake the terminal capture; the actual Git log is retained."
+    },
+    "submissions/15-helm/screenshots/rudray-20261016-215104-093414/01-helm-lint.png": {
+      "sha256": "3d78cbd49743a8ad74efcdae5cb92b8b3151bf452f984bfd1c759cac60275758",
+      "decision": "accepted",
+      "note": "Actual Helm lint output visible; not proof of installing a release."
+    },
+    "submissions/15-helm/screenshots/rudray-20261016-215104-093414/02-helm-template.png": {
+      "sha256": "a4d5acbc630cfb58249cac9645b729429941753418bb3b51b8c8323ff8628a29",
+      "decision": "accepted",
+      "note": "Actual rendered-manifest output tail visible; paired log gives command context. Not proof of a live deployment."
+    }
+  }
+}

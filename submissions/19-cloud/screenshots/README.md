@@ -6,7 +6,7 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 8. New native files awaiting visual review: 0.
+Reference images: 8. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
 
@@ -16,6 +16,12 @@ Reference images: 8. New native files awaiting visual review: 0.
 - [Session 19 — actual Terraform validate (not apply)](rudray-20261016-212856-656600/02-validate.txt): FAILED / BLOCKED.
 - AWS plan/apply/output/destroy screenshots: NOT RUN: Old lab destroyed; no cloud apply/destroy performed.
 - Reference-specific pending items: NOT RUN: Original 11-resource apply/HTTP/destroy logs exist. New live AWS screenshots require a newly approved paid lab. The architecture image in the ZIP is not terminal evidence..
+
+
+## Rendered record images (not native screenshots)
+
+[View generated images of our actual logs/recorded CI metadata](rendered-log-views/README.md).
+These are explicitly labelled renderings. They do not change native-capture counts or turn failures into passes.
 
 
 ## Existing historical evidence

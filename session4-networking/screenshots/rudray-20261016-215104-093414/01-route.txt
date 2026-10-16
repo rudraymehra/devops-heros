@@ -1,0 +1,16 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 01-route
+UTC: 2026-10-16T16:21:49.262617+00:00
+Directory: /Users/rudraym/devops-heros
+Command: /sbin/route -n get default
+
+   route to: default
+destination: default
+       mask: default
+    gateway: 100.129.160.1
+  interface: en0
+      flags: <UP,GATEWAY,DONE,STATIC,PRCLONING,GLOBAL>
+ recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+       0         0         0         0         0         0      1500         0 
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B
