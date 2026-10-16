@@ -1,0 +1,91 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 04 \u2014 actual 01-route",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "/sbin/route",
+        "-n",
+        "get",
+        "default"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:00:10.192959+00:00",
+      "exit_code": 71,
+      "log": "01-route.txt",
+      "log_sha256": "e51494b810fb574a7ee26189111fae29af0220aa52a382e3d5f165edf15d53e8",
+      "screenshot": null
+    },
+    {
+      "title": "Session 04 \u2014 actual 02-sockets",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "netstat",
+        "-an",
+        "-p",
+        "tcp"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:00:10.199552+00:00",
+      "exit_code": 0,
+      "log": "02-sockets.txt",
+      "log_sha256": "99d5a63ccb61a47ce378355922ce8c946f21ecf9de1825e7a04d127a2f548771",
+      "screenshot": null
+    },
+    {
+      "title": "Session 04 \u2014 actual 03-dns",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "dig",
+        "+time=3",
+        "+tries=1",
+        "example.com"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:00:10.205294+00:00",
+      "exit_code": 10,
+      "log": "03-dns.txt",
+      "log_sha256": "2878df9d8c5b8373ca8aa95409b3b12d1458baf69262ec1606eb515e55f692b8",
+      "screenshot": null
+    },
+    {
+      "title": "Session 04 \u2014 actual 04-ping",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "ping",
+        "-c",
+        "2",
+        "1.1.1.1"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:00:10.220448+00:00",
+      "exit_code": 2,
+      "log": "04-ping.txt",
+      "log_sha256": "1a26464361f9fcee87cabf00a90e5bb88cc3c75ec1f91796d910461e3fd102c9",
+      "screenshot": null
+    },
+    {
+      "title": "Session 04 \u2014 actual 05-http",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "curl",
+        "--head",
+        "--fail",
+        "--max-time",
+        "10",
+        "https://example.com"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T16:00:22.243471+00:00",
+      "exit_code": 6,
+      "log": "05-http.txt",
+      "log_sha256": "ed27c27629883701caabfc349f9573ab00097fa0a1a0e17a1a77c6c24d70a852",
+      "screenshot": null
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture routes, sockets, DNS, ping and HTTP on the actual host. Record network restrictions as failures, not successful connectivity."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Live Kubernetes/Helm/monitoring capture",
+      "status": "NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture real PVC persistence, HPA scale up/down and probe recovery. The older EKS results use integrated CampusFix and retain their original timestamps."
+    }
+  ]
+}

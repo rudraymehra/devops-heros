@@ -1,0 +1,43 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 18 \u2014 Terraform format check",
+      "status": "PASS",
+      "command": [
+        "/private/tmp/campusfix-tools.FCoLVB/terraform",
+        "fmt",
+        "-check"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session18-terraform-iac/terraform-s3-demo",
+      "timestamp": "2026-10-16T15:59:10.393825+00:00",
+      "exit_code": 0,
+      "log": "01-format.txt",
+      "log_sha256": "d9a9bc5bc342e31aa12042f254a2956b9741fb15236c3155116d584c11c0ae39",
+      "screenshot": null
+    },
+    {
+      "title": "Session 18 \u2014 actual Terraform validate (not apply)",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "/private/tmp/campusfix-tools.FCoLVB/terraform",
+        "validate",
+        "-no-color"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session18-terraform-iac/terraform-s3-demo",
+      "timestamp": "2026-10-16T15:59:10.715259+00:00",
+      "exit_code": 1,
+      "log": "02-validate.txt",
+      "log_sha256": "b0b03025fb898855bec98d087618f0c2b92ade8e2126b076fea2795fb37feb71",
+      "screenshot": null
+    },
+    {
+      "title": "AWS plan/apply/output/destroy screenshots",
+      "status": "NOT RUN: Old lab destroyed; no cloud apply/destroy performed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Original S3 apply/destroy logs exist, but native images were not captured. Validation now is not proof of that earlier apply/destroy. No paid lab is recreated automatically."
+    }
+  ]
+}

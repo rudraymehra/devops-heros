@@ -1,0 +1,58 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 01-02 \u2014 real hard/symbolic links on this host",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/rudraym/devops-heros/scripts/coursework-evidence.py",
+        "basics",
+        "links"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:58:56.664190+00:00",
+      "exit_code": 0,
+      "log": "01-links.txt",
+      "log_sha256": "b05cafe39f4125f10f8d6a1e5a1824f9c5ab8cb5147f6ad5b8ef2443d1a85387",
+      "screenshot": null
+    },
+    {
+      "title": "Session 01-02 \u2014 actual OS/kernel",
+      "status": "PASS",
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:58:56.723904+00:00",
+      "exit_code": 0,
+      "log": "02-host.txt",
+      "log_sha256": "6caff0eb8a39223a55d6205a04031656a2e92de74c5900348db03367316ecdea",
+      "screenshot": null
+    },
+    {
+      "title": "Session 01-02 \u2014 actual disk usage",
+      "status": "PASS",
+      "command": [
+        "df",
+        "-h",
+        "/Users/rudraym/devops-heros"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:58:56.728792+00:00",
+      "exit_code": 0,
+      "log": "03-disk.txt",
+      "log_sha256": "4d4a63cf005e82c6893625013131ff7f715f118c021e0055d97c116b1595e6a1",
+      "screenshot": null
+    },
+    {
+      "title": "Linux user management and journalctl",
+      "status": "NOT RUN: Requires Linux/systemd; no host users created"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Linux useradd/adduser and journalctl need a real Linux/systemd environment. macOS link tests are labelled macOS, not Linux VM results."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 03 \u2014 shell script syntax",
+      "status": "PASS",
+      "command": [
+        "bash",
+        "-n",
+        "session3-shell-scripting/system-info.sh"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:58:56.734411+00:00",
+      "exit_code": 0,
+      "log": "01-syntax.txt",
+      "log_sha256": "eadb2873100793d39232c55e12da13ce0c04f119c7128c824dacd7a44bff6da9",
+      "screenshot": null
+    },
+    {
+      "title": "Session 03 \u2014 actual script with identity input",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/rudraym/devops-heros/scripts/coursework-evidence.py",
+        "basics",
+        "system-info"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:58:56.738365+00:00",
+      "exit_code": 1,
+      "log": "02-system-info.txt",
+      "log_sha256": "f567f443ff36c1473f93dfe8d019d1f4b1e7464817966a82988b0b451c716c05",
+      "screenshot": null
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Capture the actual system-info script and process/report files. Process arguments are omitted to avoid exposing credentials."
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # ⚡ hey-cicd — DevSecOps Dashboard
 
+**Rudray Mehra · 24 BCS 10425 · Batch B**
+
+[Current execution and screenshot audit](../../submissions/17-devsecops/screenshots/README.md).
+Expected-output examples below are not fresh run evidence. The current suite
+defines 10 tests; its local dependency blocker is recorded in the audit.
+
 ## 📁 Project Structure
 
 ```
@@ -46,8 +52,8 @@ hey-cicd/
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/hey-cicd.git
-cd hey-cicd
+git clone https://github.com/rudraymehra/devops-heros.git
+cd devops-heros/session-17-devsecops/demo
 ```
 
 ### Step 2 — Create a virtual environment
@@ -103,7 +109,7 @@ tests/test_app.py::test_status                    PASSED
 curl http://localhost:5001/health
 
 # Greet someone
-curl http://localhost:5001/api/greet/Sudhir
+curl http://localhost:5001/api/greet/Rudray
 
 # Add two numbers
 curl -X POST http://localhost:5001/api/add \

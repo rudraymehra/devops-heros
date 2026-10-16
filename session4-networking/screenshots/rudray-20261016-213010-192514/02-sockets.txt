@@ -1,0 +1,10 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 02-sockets
+UTC: 2026-10-16T16:00:10.199552+00:00
+Directory: /Users/rudraym/devops-heros
+Command: netstat -an -p tcp
+
+netstat: sysctl: net.inet.tcp.pcblist_n: Operation not permitted
+
+Exit code: 0 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B
+Assessment: command reported a permission error despite exit 0; not accepted as successful evidence.

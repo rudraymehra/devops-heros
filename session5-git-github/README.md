@@ -1,5 +1,10 @@
 # Git Homework
 
+## Screenshot evidence audit — 2026-10-16
+
+See [this session's screenshot inventory and actual capture results](screenshots/README.md).
+Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
+
 **Student:** Rudray Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
 
 ## Task 1: `git commit -a -m` versus `git commit -m`
@@ -13,7 +18,7 @@ Safe practice sequence in a disposable repository:
 ```bash
 mkdir git-homework-demo && cd git-homework-demo
 git init
-git config user.name "Sudhir Mehra"
+git config user.name "Rudray Mehra"
 git config user.email "rudray.24bcs10425@sst.scaler.com"
 printf 'first\n' > notes.txt
 git add notes.txt
@@ -52,6 +57,7 @@ it does not merge the complete feature branch.
 ## Evidence checklist
 
 - [x] Replace the example name with your own identity (set your GitHub email before running).
-- [ ] Add `git status --short` output demonstrating the `-a` behavior.
-- [ ] Add the final `git log --oneline --graph --decorate --all` output.
-- [ ] Add the public repository URL or submission screenshot.
+- [x] Actual `git status --short` output demonstrates the `-a` behavior.
+- [x] Actual branch graph and Rudray Mehra commit author recorded in [the fresh lab log](screenshots/README.md).
+- [x] Public repository: https://github.com/rudraymehra/devops-heros
+- [ ] Native screenshot of the fresh lab: run the capture helper from Terminal.

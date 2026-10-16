@@ -1,0 +1,15 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 04-ping
+UTC: 2026-10-16T16:00:10.220448+00:00
+Directory: /Users/rudraym/devops-heros
+Command: ping -c 2 1.1.1.1
+
+ping: sendto: Operation not permitted
+ping: sendto: Operation not permitted
+PING 1.1.1.1 (1.1.1.1): 56 data bytes
+Request timeout for icmp_seq 0
+
+--- 1.1.1.1 ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss
+
+Exit code: 2 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

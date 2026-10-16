@@ -7,6 +7,13 @@ course examples and expected output are not represented as executed work.
 
 ## 2026-10-16 submission update
 
+- Audited all 179 reference images for Sessions 1–20 and added a screenshot/evidence
+  page to every homework entry point. [Coursework audit](evidence/coursework/README.md)
+  and [capture guide](COURSEWORK-EVIDENCE.md) distinguish fresh passing checks,
+  blocked attempts and missing native PNGs. No reference images were imported.
+  The fresh Git lab, five Session 16 tests, Helm lint/rendering, Session 17 Bandit
+  scan and 42 source-file syntax checks passed; the remaining blockers are explicit.
+
 - Added a [rubric-by-rubric screenshot audit and native Mac capture helper](session21-python/evidence/SCREENSHOT-CHECKLIST.md).
   The latest rerun passed 24 API tests, frontend build and Helm lint. Native GUI
   capture and Docker are blocked in this editing sandbox; fresh PNGs are not

@@ -11,7 +11,8 @@ report_file="${output_directory}/report.txt"
 mkdir -p "$output_directory"
 touch "$process_file" "$report_file"
 printf 'Running processes:\n'
-ps aux | tee "$process_file"
+# Do not publish full process arguments: they can contain tokens or passwords.
+ps -eo pid,ppid,comm | tee "$process_file"
 
 {
   printf 'Student: %s\n' "$student_name"

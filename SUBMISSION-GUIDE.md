@@ -6,6 +6,10 @@ Batch/section: **B**
 Email: **rudray.24bcs10425@sst.scaler.com**
 GitHub account: [rudraymehra](https://github.com/rudraymehra)
 
+Before submission, review the [Sessions 1–20 screenshot audit](evidence/coursework/README.md)
+and [native capture guide](COURSEWORK-EVIDENCE.md). A README link or historical log
+does not imply all requested screenshots have been captured.
+
 ## Separate capstone form — check before submitting
 
 The capstone form screenshot supplied by the student on 2026-10-13 asks for the

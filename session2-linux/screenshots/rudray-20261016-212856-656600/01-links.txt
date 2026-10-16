@@ -1,0 +1,15 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 01-02 — real hard/symbolic links on this host
+UTC: 2026-10-16T15:58:56.664190+00:00
+Directory: /Users/rudraym/devops-heros
+Command: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/rudraym/devops-heros/scripts/coursework-evidence.py basics links
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+total 16
+129062369 -rw-r--r--@ 2 rudraym  staff  33 Oct 16 21:28 hard.txt
+129062369 -rw-r--r--@ 2 rudraym  staff  33 Oct 16 21:28 original.txt
+129062372 lrwxr-xr-x@ 1 rudraym  staff  12 Oct 16 21:28 soft.txt -> original.txt
+PASS: hard link shares the inode and survives unlink; symlink becomes dangling.
+Actual host: darwin; this is not evidence of a Linux VM or journalctl.
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

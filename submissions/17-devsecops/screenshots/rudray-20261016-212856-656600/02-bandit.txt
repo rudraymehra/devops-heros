@@ -1,0 +1,36 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 17 — actual source scan
+UTC: 2026-10-16T15:59:10.195348+00:00
+Directory: /Users/rudraym/devops-heros/session-17-devsecops/demo
+Command: /Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python -m bandit -r app
+
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.13.11
+[tester]	WARNING	nosec encountered (B104), but no failed test on line 241
+Run started:2026-10-16 15:59:10.378459
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 177
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 1
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

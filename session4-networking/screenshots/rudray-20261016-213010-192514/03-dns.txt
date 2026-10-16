@@ -1,0 +1,10 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 03-dns
+UTC: 2026-10-16T16:00:10.205294+00:00
+Directory: /Users/rudraym/devops-heros
+Command: dig +time=3 +tries=1 example.com
+
+/AppleInternal/Library/BuildRoots/1c8f7852-1ca9-11f0-b28b-226177e5bb69/Library/Caches/com.apple.xbs/Sources/bind9/bind9/lib/isc/unix/socket.c:5580: bind: Operation not permitted
+dig: isc_socket_bind: unexpected error
+
+Exit code: 10 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

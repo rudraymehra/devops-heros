@@ -13,6 +13,11 @@ spec.loader.exec_module(capture)
 
 
 class EvidenceTests(unittest.TestCase):
+    def test_permission_error_cannot_pass_with_exit_zero(self):
+        self.assertFalse(capture.execution_succeeded(0, "netstat: sysctl: Operation not permitted"))
+        self.assertFalse(capture.execution_succeeded(0, "Permission denied"))
+        self.assertTrue(capture.execution_succeeded(0, "5 passed"))
+
     def test_real_success(self):
         code, output = capture.execute([sys.executable, "-c", "print('actual result')"], Path.cwd(), 5)
         self.assertEqual((code, output), (0, "actual result\n"))

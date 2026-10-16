@@ -1,0 +1,11 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 03 — actual script with identity input
+UTC: 2026-10-16T15:58:56.738365+00:00
+Directory: /Users/rudraym/devops-heros
+Command: /opt/homebrew/opt/python@3.13/bin/python3.13 /Users/rudraym/devops-heros/scripts/coursework-evidence.py basics system-info
+
+Rudray Mehra | 24 BCS 10425 | Batch B
+Running processes:
+/Users/rudraym/devops-heros/session3-shell-scripting/system-info.sh: line 15: /bin/ps: Operation not permitted
+
+Exit code: 1 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

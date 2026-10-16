@@ -57,6 +57,11 @@ def file_hash(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def execution_succeeded(code, output):
+    # Some macOS diagnostics return zero even when sysctl/socket access is denied.
+    return code == 0 and not re.search(r"operation not permitted|permission denied", output, re.IGNORECASE)
+
+
 def capture_window(path, description):
     print(f"\nCapture: {description}")
     print("Select ONLY the relevant Terminal/browser window, with no private information.")
@@ -106,12 +111,15 @@ class EvidenceRun:
         print(heading, flush=True)
         print(f"Running (maximum {timeout}s); complete output will appear below.\n", flush=True)
         code, output = execute(command, cwd, timeout)
+        passed = execution_succeeded(code, output)
         print(output, end="" if output.endswith("\n") else "\n")
-        result = f"Exit code: {code} | {'PASSED' if code == 0 else 'FAILED / BLOCKED'} | {IDENTITY}\n"
+        result = f"Exit code: {code} | {'PASSED' if passed else 'FAILED / BLOCKED'} | {IDENTITY}\n"
+        if code == 0 and not passed:
+            result += "Assessment: command reported a permission error despite exit 0; not accepted as successful evidence.\n"
         print(result, flush=True)
         logfile = self.output / f"{slug}.txt"
         logfile.write_text(heading + "\n" + output + "\n" + result)
-        record = {"title": title, "status": "PASS" if code == 0 else "FAILED / BLOCKED",
+        record = {"title": title, "status": "PASS" if passed else "FAILED / BLOCKED",
                   "command": command, "cwd": str(cwd), "timestamp": started, "exit_code": code,
                   "log": logfile.name, "log_sha256": file_hash(logfile), "screenshot": None}
         self.records.append(record)
@@ -119,7 +127,7 @@ class EvidenceRun:
         if self.screenshots:
             record["screenshot"] = capture_window(self.output / f"{slug}.png", title)
             self.save()
-        return code == 0
+        return passed
 
     def skip(self, title, reason):
         print(f"NOT RUN: {title}: {reason}", flush=True)
@@ -210,7 +218,7 @@ def main():
     run.skip("CI/Trivy/GHCR and cluster monitoring", "Requires actual pipeline/browser evidence; local checks do not substitute")
     run.save()
     print(f"\nEvidence saved: {run.output}\nReview README.md and every image before submission.")
-    return 1 if any(item.get("exit_code", 0) != 0 for item in run.records) else 0
+    return 1 if any(item["status"] == "FAILED / BLOCKED" for item in run.records) else 0
 
 
 if __name__ == "__main__":

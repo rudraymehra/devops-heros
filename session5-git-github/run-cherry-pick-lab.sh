@@ -2,12 +2,12 @@
 set -euo pipefail
 
 lab_directory=$(mktemp -d /tmp/git-homework.XXXXXX)
-trap 'rm -rf "$lab_directory"' EXIT
 cd "$lab_directory"
 
 git init --initial-branch=main --quiet
-git config user.name "DevOps Student"
-git config user.email "student@example.invalid"
+git config user.name "Rudray Mehra"
+git config user.email "rudray.24bcs10425@sst.scaler.com"
+git config commit.gpgsign false
 
 printf 'first line\n' > notes.txt
 git add notes.txt
@@ -38,3 +38,5 @@ test -f selected.txt
 test ! -f feature-only.txt
 printf '\nCherry-pick verification passed. Branch graph:\n'
 git log --oneline --graph --decorate --all
+git log -1 --format='Lab commit author: %an <%ae>'
+printf '\nDisposable lab retained for inspection: %s\n' "$lab_directory"

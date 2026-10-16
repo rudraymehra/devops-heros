@@ -1,5 +1,10 @@
 # Docker Networking and Volumes Homework
 
+## Screenshot evidence audit — 2026-10-16
+
+See [this session's screenshot inventory and actual capture results](screenshots/README.md).
+Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
+
 ## Task 1: three-container networking
 
 The `demo/` Compose application contains an Nginx frontend, Flask backend, and MySQL

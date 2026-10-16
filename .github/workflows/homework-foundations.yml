@@ -4,12 +4,27 @@ on:
     branches: [main]
     paths:
       - "session6-7-docker/**"
+      - "session3-shell-scripting/**"
+      - "session4-networking/**"
+      - "session5-git-github/**"
+      - "scripts/*coursework*"
+      - "session21-python/scripts/*native*"
+      - "evidence/coursework/reference-manifest.json"
       - ".github/workflows/homework-foundations.yml"
       - "scripts/foundation-check.sh"
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
+  evidence-helper-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate coursework audit and honest capture behaviour
+        run: |
+          python3 scripts/test_coursework_evidence.py
+          python3 session21-python/scripts/test_capture_native_evidence.py
+          python3 scripts/check-coursework-syntax.py
   hello-world:
     runs-on: ubuntu-latest
     strategy:

@@ -1,0 +1,9 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 01-route
+UTC: 2026-10-16T16:00:10.192959+00:00
+Directory: /Users/rudraym/devops-heros
+Command: /sbin/route -n get default
+
+route: socket: Operation not permitted
+
+Exit code: 71 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

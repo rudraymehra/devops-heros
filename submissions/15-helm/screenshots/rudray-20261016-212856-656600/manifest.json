@@ -1,0 +1,44 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Session 15 \u2014 real chart lint (not install)",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/helm",
+        "lint",
+        "session-15-helm/mini-project/notes-chart"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:59:09.190909+00:00",
+      "exit_code": 0,
+      "log": "01-helm-lint.txt",
+      "log_sha256": "6937447eff5b37f11744b0cb33c3018a524cf10cd158458774fbcfbaa17b2dee",
+      "screenshot": null
+    },
+    {
+      "title": "Session 15 \u2014 actual template rendering (not install)",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/helm",
+        "template",
+        "rudray-notes",
+        "session-15-helm/mini-project/notes-chart"
+      ],
+      "cwd": "/Users/rudraym/devops-heros",
+      "timestamp": "2026-10-16T15:59:09.412792+00:00",
+      "exit_code": 0,
+      "log": "02-helm-template.txt",
+      "log_sha256": "11561dbdb46f3e1016cf3f5c3a16fe7075e3a638ae772e49f583886499dc04cd",
+      "screenshot": null
+    },
+    {
+      "title": "Live Kubernetes/Helm/monitoring capture",
+      "status": "NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Lint/template can run offline. Install, upgrade, history, rollback and uninstall screenshots require their actual lifecycle, not lint output."
+    }
+  ]
+}

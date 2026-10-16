@@ -1,5 +1,10 @@
 # Networking Homework
 
+## Screenshot evidence audit — 2026-10-16
+
+See [this session's screenshot inventory and actual capture results](screenshots/README.md).
+Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
+
 ## Command observations
 
 | Command | What it demonstrates |
@@ -31,6 +36,6 @@ ping proves ICMP reachability but does not prove that an application port works,
 
 ## Evidence checklist
 
-- [ ] Commit a reviewed `network-command-output.txt`.
-- [ ] Add screenshots only if the submission form specifically requires them.
-- [ ] Explain any failed command (for example, ICMP blocked by a firewall).
+- [x] Reviewed command attempts and their exit codes are linked in [the evidence page](screenshots/README.md).
+- [ ] Capture successful live commands and native screenshots on the Mac.
+- [x] Current failures are explicit: sandbox socket/process restrictions and DNS failure, not evidence that the outside network is down.

@@ -1,0 +1,13 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "Live Kubernetes/Helm/monitoring capture",
+      "status": "NOT RUN: No explicit --kube-context provided; historical EKS lab was destroyed"
+    },
+    {
+      "title": "Reference-specific pending items",
+      "status": "NOT RUN: Targets/dashboard/self-healing have historical evidence. New alert firing/recovery, cAdvisor and live cluster captures are not proven by those images; the cloud cluster is offline."
+    }
+  ]
+}

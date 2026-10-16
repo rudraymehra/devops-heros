@@ -1,0 +1,12 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 04 — actual 05-http
+UTC: 2026-10-16T16:00:22.243471+00:00
+Directory: /Users/rudraym/devops-heros
+Command: curl --head --fail --max-time 10 https://example.com
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: example.com
+
+Exit code: 6 | FAILED / BLOCKED | Rudray Mehra | 24 BCS 10425 | Batch B

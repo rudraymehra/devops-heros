@@ -1,0 +1,19 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 05 — actual isolated Git lab
+UTC: 2026-10-16T15:59:08.895348+00:00
+Directory: /Users/rudraym/devops-heros
+Command: bash session5-git-github/run-cherry-pick-lab.sh
+
+Status after commit -a (new file remains untracked):
+?? untracked.txt
+
+Cherry-pick verification passed. Branch graph:
+* 697389a (feature/cherry-pick-demo) Add feature-only change
+* c8aeece (HEAD -> main) Add selected demonstration change
+* ba97af2 Update tracked notes with commit -a
+* c9338a5 Add initial notes
+Lab commit author: Rudray Mehra <rudray.24bcs10425@sst.scaler.com>
+
+Disposable lab retained for inspection: /tmp/git-homework.9CAYgn
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

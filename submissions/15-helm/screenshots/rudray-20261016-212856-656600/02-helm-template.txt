@@ -1,0 +1,60 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 15 — actual template rendering (not install)
+UTC: 2026-10-16T15:59:09.412792+00:00
+Directory: /Users/rudraym/devops-heros
+Command: /opt/homebrew/bin/helm template rudray-notes session-15-helm/mini-project/notes-chart
+
+---
+# Source: notes-chart/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rudray-notes-config
+data:
+  APP_NAME: "notes-app"
+  ENVIRONMENT: "development"
+
+---
+# Source: notes-chart/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rudray-notes-svc
+spec:
+  type: NodePort
+  selector:
+    app: rudray-notes
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30090
+
+---
+# Source: notes-chart/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rudray-notes-deploy
+  labels:
+    app: rudray-notes
+    environment: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rudray-notes
+  template:
+    metadata:
+      labels:
+        app: rudray-notes
+    spec:
+      containers:
+        - name: notes
+          image: "nginx:1.24"
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: rudray-notes-config
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

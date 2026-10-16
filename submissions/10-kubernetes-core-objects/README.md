@@ -1,5 +1,10 @@
 # Kubernetes Pods, ReplicaSets & Deployments
 
+## Screenshot evidence audit — 2026-10-16
+
+See [this session's screenshot inventory and actual capture results](screenshots/README.md).
+Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
+
 **Name:** Rudray Mehra
 **Enrollment number:** 24 BCS 10425 · **Batch:** B
 **GitHub:** [rudraymehra](https://github.com/rudraymehra)
