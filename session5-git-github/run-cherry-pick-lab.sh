@@ -37,6 +37,6 @@ git cherry-pick "$selected_commit" >/dev/null
 test -f selected.txt
 test ! -f feature-only.txt
 printf '\nCherry-pick verification passed. Branch graph:\n'
-git log --oneline --graph --decorate --all
+git --no-pager log --oneline --graph --decorate --all
 git log -1 --format='Lab commit author: %an <%ae>'
 printf '\nDisposable lab retained for inspection: %s\n' "$lab_directory"

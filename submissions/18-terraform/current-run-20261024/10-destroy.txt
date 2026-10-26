@@ -1,0 +1,12 @@
+$ terraform destroy -input=false -auto-approve -no-color
+
+Error: No value for required variable
+
+  on variables.tf line 6:
+   6: variable "bucket_name" {
+
+The root module input variable "bucket_name" is not set, and has no default
+value. Use a -var or -var-file command line argument to provide a value for
+this variable.
+
+exit_code=1

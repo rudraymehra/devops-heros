@@ -1,0 +1,8 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 live run | successful destroy
+Actual saved output from the 2026-10-24 run; account ID redacted.
+
+Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+$ /opt/homebrew/bin/terraform destroy -no-color -auto-approve -var=project_suffix=rudraym24bcs10425-20261024
+Destroy complete! Resources: 11 destroyed.
+PASS: lab resources destroyed and state resource list is empty.

@@ -77,7 +77,7 @@ should be performed on a lab VM, not a shared or production machine.
 
 ## Evidence checklist
 
-- [ ] Add terminal output for the link inode comparison.
-- [ ] Add terminal output for the test user and remove the user afterward.
-- [ ] Add redacted `journalctl` output from a lab machine.
-- [ ] Add a short command-practice transcript.
+- [x] Add terminal output for the link inode comparison: [2026-10-23 macOS capture](screenshots/rudray-20261023-085600/01-links.png). This proves the link behavior on macOS, not Linux.
+- [x] Add terminal output showing both account types and cleanup in an Ubuntu 24.04 container: [capture 1](screenshots/rudray-20261023-090351/02-user-management-setup.png) · [capture 2](screenshots/rudray-20261023-090351/03-user-management-result.png).
+- [x] Add `journalctl` output from a systemd-enabled Ubuntu 24.04 container: [2026-10-23 capture](screenshots/rudray-20261023-090745/04-journalctl.png). It shows system and cron logs, a generated test entry, journal disk usage, and container cleanup.
+- [x] Add a command-practice transcript covering the listed command groups in Ubuntu 24.04: [commands](screenshots/rudray-20261023-090932/05-command-practice-commands.png) · [results](screenshots/rudray-20261023-090932/06-command-practice-results.png).

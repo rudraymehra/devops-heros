@@ -18,8 +18,17 @@ helm uninstall notes-dev
 
 ## Evidence checklist
 
-- [ ] Successful lint and rendered YAML
-- [ ] Installed release and running Pod
-- [ ] Development-to-production upgrade
-- [ ] Revision history and rollback
-- [ ] Final cleanup
+- [x] Successful lint and rendered YAML
+- [x] Installed release and running Pod
+- [x] Development-to-production upgrade
+- [x] Revision history and rollback
+- [x] Final cleanup
+
+## Run notes
+
+- `helm lint` passed with only the optional chart icon recommendation.
+- The release upgraded from one development replica to three production replicas.
+- A deliberately invalid image tag produced `ErrImagePull`; rollback to revision 2
+  restored three Ready Pods. Helm history recorded the rollback as revision 4.
+- `helm uninstall notes-dev` removed the release. The remaining Minikube Pods belong
+  to Session 12 and were left running.

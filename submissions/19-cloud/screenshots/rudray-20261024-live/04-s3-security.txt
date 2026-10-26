@@ -1,0 +1,16 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 live run | S3 access, encryption, versioning
+Actual saved output from the 2026-10-24 run; account ID redacted.
+
+# aws_s3_bucket.artifacts:
+resource "aws_s3_bucket" "artifacts" {
+# aws_s3_bucket_public_access_block.artifacts:
+resource "aws_s3_bucket_public_access_block" "artifacts" {
+    block_public_acls       = true
+    block_public_policy     = true
+    ignore_public_acls      = true
+    restrict_public_buckets = true
+# aws_s3_bucket_server_side_encryption_configuration.artifacts:
+resource "aws_s3_bucket_server_side_encryption_configuration" "artifacts" {
+# aws_s3_bucket_versioning.artifacts:
+resource "aws_s3_bucket_versioning" "artifacts" {

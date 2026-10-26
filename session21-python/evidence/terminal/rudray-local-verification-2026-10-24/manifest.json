@@ -1,0 +1,277 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "records": [
+    {
+      "title": "M2 \u2014 actual isolated API tests",
+      "status": "PASS",
+      "command": [
+        "/Users/rudraym/devops-heros/session21-python/backend/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-v"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python/backend",
+      "timestamp": "2026-10-24T12:03:19.193790+00:00",
+      "exit_code": 0,
+      "log": "01-pytest.txt",
+      "log_sha256": "d2765b526269a74b11c9719910c3c8a911b3cea222b41d9517773f39a2631d35",
+      "screenshot": null
+    },
+    {
+      "title": "M1/M5 \u2014 React production build",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python/frontend",
+      "timestamp": "2026-10-24T12:03:20.709906+00:00",
+      "exit_code": 127,
+      "log": "02-frontend-build.txt",
+      "log_sha256": "6f830f0fdad731ed03d67bc363219d67cf4b8210d4f30ccb9aa5e9368286d9bc",
+      "screenshot": null
+    },
+    {
+      "title": "M8 \u2014 Helm syntax check (not deployment)",
+      "status": "PASS",
+      "command": [
+        "/opt/homebrew/bin/helm",
+        "lint",
+        "helm/taskboard"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:21.904069+00:00",
+      "exit_code": 0,
+      "log": "03-helm-lint.txt",
+      "log_sha256": "3716b70a0c1fa557acbf4dc6312a65c663cbcc11aa0650b2bec2a8b9037c54ed",
+      "screenshot": null
+    },
+    {
+      "title": "M7 \u2014 Terraform validation (not cloud execution)",
+      "status": "FAILED / BLOCKED",
+      "command": [
+        "/opt/homebrew/bin/terraform",
+        "validate",
+        "-no-color"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python/terraform",
+      "timestamp": "2026-10-24T12:03:22.294550+00:00",
+      "exit_code": 1,
+      "log": "04-terraform-validate.txt",
+      "log_sha256": "2359f94667926a61240c2b89413442863c172db3a0a5f76a6ce21921c5a5aa87",
+      "screenshot": null
+    },
+    {
+      "title": "M7 \u2014 new Terraform plan",
+      "status": "NOT RUN: Not requested or validation failed; historical plan remains separate"
+    },
+    {
+      "title": "M4 \u2014 Docker client and server",
+      "status": "PASS",
+      "command": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "version"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:22.664708+00:00",
+      "exit_code": 0,
+      "log": "05-docker-engine.txt",
+      "log_sha256": "79b7b8eb821a017259ff03cea8093d2651141a7b789068ef0cf135c3f50fba08",
+      "screenshot": null
+    },
+    {
+      "title": "M4 \u2014 build and start frontend/backend/PostgreSQL",
+      "status": "PASS",
+      "command": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "compose",
+        "-p",
+        "campusfix",
+        "up",
+        "--build",
+        "-d",
+        "--wait",
+        "--wait-timeout",
+        "180"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:23.124293+00:00",
+      "exit_code": 0,
+      "log": "06-compose-start.txt",
+      "log_sha256": "d47b1608de20c7fd51a0e9093a82815c3b60a1929409b2311bc9d0b08fc5d3c0",
+      "screenshot": null
+    },
+    {
+      "title": "M4 \u2014 actual Compose service status",
+      "status": "PASS",
+      "command": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "compose",
+        "-p",
+        "campusfix",
+        "ps",
+        "--all"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:41.380137+00:00",
+      "exit_code": 0,
+      "log": "07-compose-status.txt",
+      "log_sha256": "3da3d46c94e64b9399b6f0135f92b261a3cc9e315301f06447bb543f915d83b5",
+      "screenshot": null
+    },
+    {
+      "title": "M4 \u2014 backend non-root UID (must not be 0)",
+      "status": "PASS",
+      "command": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "compose",
+        "-p",
+        "campusfix",
+        "exec",
+        "-T",
+        "backend",
+        "sh",
+        "-c",
+        "id; test \"$(id -u)\" -ne 0"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:41.572294+00:00",
+      "exit_code": 0,
+      "log": "08-nonroot-backend.txt",
+      "log_sha256": "d6085b1e6b72115246c685cf9f0f7ff9410864880a919b006837cb8eeac9e18a",
+      "screenshot": null
+    },
+    {
+      "title": "M4 \u2014 frontend non-root UID (must not be 0)",
+      "status": "PASS",
+      "command": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "compose",
+        "-p",
+        "campusfix",
+        "exec",
+        "-T",
+        "frontend",
+        "sh",
+        "-c",
+        "id; test \"$(id -u)\" -ne 0"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:41.735745+00:00",
+      "exit_code": 0,
+      "log": "08-nonroot-frontend.txt",
+      "log_sha256": "28b0b44cc1c7a95bc0ee2cffd2e0b593b0774380380c10570145f6e49e817f79",
+      "screenshot": null
+    },
+    {
+      "title": "M1 \u2014 migration revision in real PostgreSQL stack",
+      "status": "PASS",
+      "command": [
+        "/Applications/Docker.app/Contents/Resources/bin/docker",
+        "compose",
+        "-p",
+        "campusfix",
+        "exec",
+        "-T",
+        "backend",
+        "alembic",
+        "current"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:42.015965+00:00",
+      "exit_code": 0,
+      "log": "09-alembic.txt",
+      "log_sha256": "ffc4c66838677444fc8bd5c570a0c1c0924776efa06255e66d1eb00ac8911f7c",
+      "screenshot": null
+    },
+    {
+      "title": "M1 \u2014 live FastAPI health",
+      "status": "PASS",
+      "command": [
+        "/usr/bin/curl",
+        "--fail",
+        "--silent",
+        "--show-error",
+        "--max-time",
+        "15",
+        "http://localhost:8000/health"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:45.305360+00:00",
+      "exit_code": 0,
+      "log": "10-health.txt",
+      "log_sha256": "a8dbc88aedce0f222d9dc65a51ccf966a5f631c52025b5392b7506fdf3e431c4",
+      "screenshot": null
+    },
+    {
+      "title": "M1 \u2014 real database/schema readiness",
+      "status": "PASS",
+      "command": [
+        "/usr/bin/curl",
+        "--fail",
+        "--silent",
+        "--show-error",
+        "--max-time",
+        "15",
+        "http://localhost:8000/ready"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:45.378079+00:00",
+      "exit_code": 0,
+      "log": "11-ready.txt",
+      "log_sha256": "d5ff2bd3b22bc5592a77763774ea18e32de9cd6956260cc4335df6c705a86706",
+      "screenshot": null
+    },
+    {
+      "title": "M1 \u2014 live maintenance REST API",
+      "status": "PASS",
+      "command": [
+        "/usr/bin/curl",
+        "--fail",
+        "--silent",
+        "--show-error",
+        "--max-time",
+        "15",
+        "http://localhost:8000/api/requests/stats"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:45.406393+00:00",
+      "exit_code": 0,
+      "log": "12-api.txt",
+      "log_sha256": "b88c00e6664b07c9c8c12ab885df6ae0214593c5f7436c7711ab675397ce923f",
+      "screenshot": null
+    },
+    {
+      "title": "M9 \u2014 live Prometheus metrics (not evidence of a cluster scrape)",
+      "status": "PASS",
+      "command": [
+        "/usr/bin/curl",
+        "--fail",
+        "--silent",
+        "--show-error",
+        "--max-time",
+        "15",
+        "http://localhost:8000/metrics"
+      ],
+      "cwd": "/Users/rudraym/devops-heros/session21-python",
+      "timestamp": "2026-10-24T12:03:45.466981+00:00",
+      "exit_code": 0,
+      "log": "13-metrics.txt",
+      "log_sha256": "52d9b7e6ab1db97e4b0abedbc4ed1e1f6a9122e23f1ff0b8769daa4e3e959705",
+      "screenshot": null
+    },
+    {
+      "title": "Kubernetes/Helm deployment",
+      "status": "NOT RUN: No explicit --kube-context supplied; the earlier AWS lab was destroyed"
+    },
+    {
+      "title": "AWS Console/destroy",
+      "status": "NOT RUN: Historical logs exist; no new paid lab authorized or run by this helper"
+    },
+    {
+      "title": "CI/Trivy/GHCR and cluster monitoring",
+      "status": "NOT RUN: Requires actual pipeline/browser evidence; local checks do not substitute"
+    }
+  ]
+}

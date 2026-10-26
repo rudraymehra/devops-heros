@@ -11,8 +11,17 @@ filename check. A failing test blocks dependent build jobs.
 
 ## Evidence checklist
 
-- [ ] Successful Actions run URL
-- [ ] Test log
-- [ ] Uploaded `calculator-build` artifact
-- [ ] Successful Docker image build
-- [ ] Intentional failing-test screenshot followed by corrected run
+- [x] Successful Actions run URL: https://github.com/rudraymehra/devops-heros/actions/runs/40083432667
+- [x] Test log: GitHub Actions `test` job passed all five tests
+- [x] Uploaded `calculator-build` artifact (downloaded and confirmed `calculator.py` and `build-info.txt`)
+- [x] Successful Docker image build in GitHub Actions and local Docker
+- [x] Intentional failing-test behavior reproduced in an isolated temporary copy (1 failed, 4 passed); the working tree remained unchanged and the corrected GitHub Actions run passed
+
+## Run notes
+
+- Local dependencies were installed into the ignored `.venv/` directory. The local
+  test run passed all five tests, `build.sh` created the build files, and Docker
+  built `session16-calculator:local`.
+- GitHub Actions was started with `workflow_dispatch` on `main`. The `test` and
+  `build` jobs passed and uploaded the artifact. The `publish` job is push-only and
+  did not run for this manual dispatch.

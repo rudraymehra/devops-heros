@@ -1,0 +1,11 @@
+$ aws s3api get-public-access-block --bucket rudraym-session18-iac-20261024 --region ap-south-1
+{
+    "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+    }
+}
+
+exit_code=0

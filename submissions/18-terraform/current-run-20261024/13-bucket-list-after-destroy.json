@@ -1,0 +1,6 @@
+$ aws s3api list-buckets --output json
+{
+  "session18_bucket_present": false
+}
+
+exit_code=0

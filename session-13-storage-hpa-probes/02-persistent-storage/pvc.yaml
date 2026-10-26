@@ -5,6 +5,8 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  # Bind to the manually defined hostPath PV, not the default dynamic provisioner.
+  storageClassName: ""
   resources:
     requests:
       storage: 500Mi

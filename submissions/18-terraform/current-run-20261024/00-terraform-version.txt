@@ -1,0 +1,5 @@
+$ terraform version
+Terraform v1.17.0
+on darwin_arm64
++ provider registry.terraform.io/hashicorp/aws v6.66.0
+

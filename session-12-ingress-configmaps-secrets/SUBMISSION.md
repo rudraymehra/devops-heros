@@ -18,8 +18,13 @@ credentials; use a secret manager, encryption at rest, RBAC, and short-lived acc
 
 ## Evidence checklist
 
-- [ ] ConfigMap values shown inside a Pod
-- [ ] Secret value shown safely (redact the real value)
-- [ ] Ingress host and path routing responses
-- [ ] Broken-secret behavior and corrected behavior
-- [ ] `kubectl get ingress,configmap,secret,pods,svc`
+- [x] ConfigMap values shown inside a Pod
+- [x] Secret value shown safely (redact the real value)
+- [x] Ingress host, path, and TLS routing responses
+- [x] Broken-secret behavior and corrected behavior (disposable value; trailing `0a` shown safely)
+- [x] `kubectl get ingress,configmap,secret,pods,svc`
+
+For the ConfigMap environment and volume checks, use the two isolated Pods in
+`01-configmap/configmap-env-pod.yaml` and
+`01-configmap/configmap-volume-pod.yaml`; the step-by-step commands are in
+`01-configmap/README.md`.

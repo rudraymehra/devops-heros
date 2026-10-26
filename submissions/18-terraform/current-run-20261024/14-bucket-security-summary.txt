@@ -1,0 +1,17 @@
+Session 18 AWS bucket settings summary
+Capture date: 2026-10-24
+Source: actual successful AWS API responses recorded before bucket deletion.
+
+Public access block:
+BlockPublicAcls=True
+IgnorePublicAcls=True
+BlockPublicPolicy=True
+RestrictPublicBuckets=True
+
+Default encryption:
+SSEAlgorithm=AES256
+
+Versioning:
+Status=Enabled
+
+Raw responses are in 07-bucket-configuration.json, 08-bucket-encryption.json, and 09-bucket-versioning.json.

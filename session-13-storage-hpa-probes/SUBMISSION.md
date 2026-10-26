@@ -22,8 +22,17 @@ kubectl top pods -n production-webapp
 
 ## Evidence checklist
 
-- [ ] PVC reaches `Bound`
-- [ ] Data remains after a Pod replacement
-- [ ] HPA changes replica count under load
-- [ ] Probe failure/recovery appears in events
-- [ ] Cleanup output
+- [x] PVC reaches `Bound`
+- [x] Data remains after a Pod replacement
+- [x] HPA changes replica count under load
+- [x] Probe failure/recovery appears in events
+- [x] Cleanup output
+
+## Run notes
+
+- The static `student-pvc` sets `storageClassName: ""` so it binds to the manually
+  defined `student-pv` instead of Minikube's default dynamic StorageClass.
+- The NGINX request loop produced no measurable CPU in this Minikube run. For the
+  scaling demonstration, a temporary BusyBox CPU-load sidecar drove the capstone HPA
+  from 2 to 4 replicas at `100%` against its `50%` target; deleting the project
+  namespace removed that temporary workload.

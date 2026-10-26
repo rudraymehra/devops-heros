@@ -1,9 +1,9 @@
 # Git Homework
 
-## Screenshot evidence audit — 2026-10-16
+## Screenshot evidence audit — 2026-10-23
 
 See [this session's screenshot inventory and actual capture results](screenshots/README.md).
-Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
+The 2026-10-16 records remain historical. A fresh native capture of the isolated lab is linked in the evidence page.
 
 **Student:** Rudray Mehra | **Roll number:** 24 BCS 10425 | **Batch:** B
 
@@ -60,4 +60,4 @@ it does not merge the complete feature branch.
 - [x] Actual `git status --short` output demonstrates the `-a` behavior.
 - [x] Actual branch graph and Rudray Mehra commit author recorded in [the fresh lab log](screenshots/README.md).
 - [x] Public repository: https://github.com/rudraymehra/devops-heros
-- [ ] Native screenshot of the fresh lab: run the capture helper from Terminal.
+- [x] Native screenshot of the fresh lab: the `commit -a` status, cherry-pick graph, and returned prompt are visible in [the evidence page](screenshots/README.md).

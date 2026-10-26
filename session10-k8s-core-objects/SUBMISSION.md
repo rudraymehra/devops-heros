@@ -1,5 +1,13 @@
 # Session 10 Submission Checklist
 
+For a fresh live run of Task 1, execute `bash ./run-deployment-strategies-lab.sh`
+from this directory. The helper uses a separate Minikube profile and removes only
+that profile after verifying the four strategies.
+
+For a fresh live run of Task 2, execute `bash ./run-pod-lifecycle-lab.sh` from
+this directory. It walks through the twelve examples in order, prints status,
+events, and relevant logs, then removes only its separate Minikube profile.
+
 ## Task 1: deployment strategies
 
 The four implementations are under `01-rolling-update/`, `02-blue-green/`,
@@ -33,8 +41,13 @@ Repeat with each manifest as explained in `pod-lifecycle/README.md`.
 
 ## Evidence checklist
 
-- [ ] Rolling update output and version response
-- [ ] Blue/green traffic switch output
-- [ ] Stable/canary responses
-- [ ] Recreate Pod termination/recreation output
-- [ ] Status, events, and explanation for all lifecycle examples
+- [x] Rolling update output and version response
+- [x] Blue/green traffic switch output
+- [x] Stable/canary responses
+- [x] Recreate Pod termination/recreation output
+- [x] Status, events, and explanation for all lifecycle examples
+
+Lifecycle evidence is saved under `screenshots/rudray-20261023-224618/`. The
+liveness capture shows failed probes and the kubelet starting a restart; the
+status snapshot was taken before the restart count advanced, so the immediate
+`--previous` log query reported that no previous container was available yet.

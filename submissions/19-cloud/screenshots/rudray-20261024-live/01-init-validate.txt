@@ -1,0 +1,28 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 live run | init, fmt, validate
+Actual saved output from the 2026-10-24 run; account ID redacted.
+
+$ /opt/homebrew/bin/terraform init -no-color
+Initializing the backend...
+
+Initializing provider plugins...
+- Reusing version 6.68.0 of hashicorp/aws from the dependency lock file
+- Installing hashicorp/aws v6.68.0...
+- Installed hashicorp/aws v6.68.0 (signed by HashiCorp)
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+ 
+$ /opt/homebrew/bin/terraform fmt -check
+ 
+$ /opt/homebrew/bin/terraform validate -no-color
+$ /opt/homebrew/bin/terraform fmt -check
+ 
+$ /opt/homebrew/bin/terraform validate -no-color

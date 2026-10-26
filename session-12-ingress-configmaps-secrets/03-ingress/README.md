@@ -126,9 +126,10 @@ yatri-ingress   nginx   yatri.local  192.168.49.2   80      12s
 To secure your Ingress with HTTPS without paying a third-party certificate authority in local testing, create a local certificate pair:
 
 ```bash
+tls_dir=$(mktemp -d)
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-  -keyout tls.key \
-  -out tls.crt \
+  -keyout "$tls_dir/tls.key" \
+  -out "$tls_dir/tls.crt" \
   -subj "/CN=campus.local/O=CampusDevOps"
 ```
 
@@ -137,8 +138,9 @@ Store the public certificate and private key inside Kubernetes as a `kubernetes.
 
 ```bash
 kubectl create secret tls campus-tls-cert \
-  --cert=tls.crt \
-  --key=tls.key
+  --cert="$tls_dir/tls.crt" \
+  --key="$tls_dir/tls.key"
+rm -rf "$tls_dir"
 ```
 
 Verify secret creation:
@@ -189,6 +191,5 @@ curl -k --resolve api.campus.local:443:$INGRESS_IP https://api.campus.local/api/
 ```bash
 kubectl delete ingress campus-ingress-tls
 kubectl delete secret campus-tls-cert
-rm -f tls.key tls.crt
 ```
 

@@ -1,6 +1,6 @@
 # Docker Networking and Volumes Homework
 
-## Screenshot evidence audit — 2026-10-16
+## Screenshot evidence audit — 2026-10-23
 
 See [this session's screenshot inventory and actual capture results](screenshots/README.md).
 Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
@@ -37,6 +37,10 @@ docker compose -f host-network/docker-compose.yml down
 Docker Desktop requires host networking to be enabled in Settings and its behavior
 differs from native Linux.
 
+For the live check on this Mac, run `bash ./run-host-network-lab.sh` from this directory.
+The helper stops if port 80 or its isolated Compose project is already in use and
+cleans up only its own temporary container.
+
 ## Task 3: bind mount
 
 ```bash
@@ -66,13 +70,19 @@ docker network inspect app-overlay
 ```
 
 Do not initialize Swarm on a shared or production host solely for this exercise.
+For an isolated local lab, `bash ./run-overlay-lab.sh` checks that Swarm is inactive,
+initializes it temporarily, creates and inspects an attachable overlay network, then
+removes the network and leaves the Swarm. It refuses to change an already active Swarm.
+The helper suppresses the worker join token from `docker swarm init` output so it does
+not appear in the evidence capture.
 
 ## Evidence checklist
 
-- [ ] `docker compose ps` and successful `/api` response
-- [ ] DNS/connectivity checks between allowed tiers
-- [ ] Apache response through host networking
-- [ ] Bind-mount page before and after editing
-- [ ] `docker network inspect` output for the lab networks
+- [x] `docker compose ps` and successful `/api` response; see the fresh [Task 1 captures](screenshots/README.md).
+- [x] DNS/connectivity checks between allowed tiers
+- [x] Apache host-network attempt recorded; blocked because `localhost:80` returned no response on Docker Desktop.
+- [x] Bind-mount page before and after editing; the tracked original was restored by cleanup.
+- [x] `docker network inspect` output for the three Compose networks
+- [x] Swarm overlay network inspection; the helper confirmed Swarm was inactive first and cleaned up afterward.
 
 Resource: <https://docs.docker.com/engine/network/drivers/>

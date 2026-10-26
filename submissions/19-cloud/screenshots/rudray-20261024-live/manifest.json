@@ -1,0 +1,42 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "date": "2026-10-24",
+  "capture_method": "Untouched native macOS Terminal window captures showing saved actual output from the live 2026-10-24 run; account ID redacted.",
+  "records": [
+    {
+      "file": "01-init-validate.png",
+      "sha256": "5de25c2d82c8146b82f6ccea857877033a4fe8469940e9d4e0b289ca8fa53f56",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    },
+    {
+      "file": "02-plan.png",
+      "sha256": "7e2cecd6511da84072fd4159fea1d3c0f8ecc7bf59813669c193d31fc90e72a6",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    },
+    {
+      "file": "03-apply-outputs.png",
+      "sha256": "225b79e30620606e2825cd8215b4b490c354b013d3eceb64f484b47153a33a7f",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    },
+    {
+      "file": "04-state-and-output.png",
+      "sha256": "e23ee0f215f8c3cd7ee20ad264b825cf7298fdf904dae2f5d403518610392cd7",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    },
+    {
+      "file": "04-s3-security.png",
+      "sha256": "a870a9f5046e8083222521a59814291d53d3a421151b7ee5dbbf20fbc4623951",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    },
+    {
+      "file": "05-destroy.png",
+      "sha256": "dfe220055989f23932a8c926ae1d326839dd59cb6118d1ae2e5cfbe52e26e6da",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    },
+    {
+      "file": "06-post-destroy.png",
+      "sha256": "029555e1ac8cf57d86010b1a141011fdce0fede7bdd34581aa517d8b0a7e247a",
+      "type": "native macOS Terminal window capture showing actual saved run output"
+    }
+  ]
+}

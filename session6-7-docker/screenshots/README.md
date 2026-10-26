@@ -6,9 +6,19 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 17. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
+Reference images: 17. Fresh native captures: 6 accepted for the six-app Docker build and HTTP run.
 
 ## Fresh execution records
+
+### [rudray-20261023-092927](rudray-20261023-092927/README.md)
+
+- Six application images built successfully. All six localhost HTTP checks returned content, and `docker ps` showed all six containers before the cleanup trap removed them.
+- [Build commands and Node build](rudray-20261023-092927/01-commands-and-node-build.png)
+- [Java, Apache, and React build output](rudray-20261023-092927/02-java-apache-react-builds.png)
+- [Apache and React build output](rudray-20261023-092927/03-apache-and-react-builds.png)
+- [React and Nginx build output](rudray-20261023-092927/04-react-and-nginx-builds.png)
+- [Six HTTP responses](rudray-20261023-092927/05-http-checks.png)
+- [Running containers and cleanup confirmation](rudray-20261023-092927/06-all-containers-and-cleanup.png)
 
 ### [rudray-20261016-212856-656600](rudray-20261016-212856-656600/README.md)
 
@@ -33,9 +43,9 @@ These are explicitly labelled renderings. They do not change native-capture coun
 
 Historical timestamps, identities and resource names remain unchanged. These links do not imply a current live deployment.
 
-## Still needs genuine capture
+## Historical capture context
 
-Docker must be running. Capture six real image builds, HTTP responses, container state and corresponding browser pages.
+The pending notes below predate the successful 2026-10-23 Docker build and HTTP run. The new captures show terminal HTTP responses; separate browser screenshots were not part of this run.
 
 Use the [coursework capture guide](../../COURSEWORK-EVIDENCE.md). The helper displays Rudray Mehra around freshly executed commands.
 

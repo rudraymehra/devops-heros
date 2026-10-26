@@ -1,9 +1,9 @@
 # Docker Multi-Stage Build Homework
 
-## Screenshot evidence audit — 2026-10-16
+## Screenshot evidence audit — 2026-10-23
 
 See [this session's screenshot inventory and actual capture results](screenshots/README.md).
-Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
+Fresh Task 1 build/run evidence was captured on 2026-10-23. Fresh Task 3 app-type verification is still pending.
 
 ## Student Details
 

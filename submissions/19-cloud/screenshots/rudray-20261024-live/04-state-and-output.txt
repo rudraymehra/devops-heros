@@ -1,0 +1,52 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 live run | observed Terraform resource state
+Actual saved output from the 2026-10-24 run; account ID redacted.
+
+    id                    = "ami-0a2959dc023f72880"
+    id         = "[AWS_ACCOUNT_ID]"
+# aws_instance.web:
+resource "aws_instance" "web" {
+    id                                   = "i-05cc0eed92d70fdcf"
+    instance_state                       = "running"
+    instance_type                        = "t3.micro"
+    public_ip                            = "13.233.149.11"
+    subnet_id                            = "subnet-0c410289bd44a34b9"
+# aws_internet_gateway.main:
+resource "aws_internet_gateway" "main" {
+    id       = "igw-07d9ca8183c9fffa1"
+    vpc_id   = "vpc-02156ae5d5b4c363d"
+# aws_route_table.public:
+resource "aws_route_table" "public" {
+    id               = "rtb-098c87d16d34d01bd"
+    vpc_id           = "vpc-02156ae5d5b4c363d"
+# aws_route_table_association.public:
+resource "aws_route_table_association" "public" {
+    id             = "rtbassoc-065c7ddc230186da9"
+    subnet_id      = "subnet-0c410289bd44a34b9"
+# aws_s3_bucket.artifacts:
+resource "aws_s3_bucket" "artifacts" {
+    bucket                      = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+    id                          = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+# aws_s3_bucket_public_access_block.artifacts:
+resource "aws_s3_bucket_public_access_block" "artifacts" {
+    block_public_acls       = true
+    block_public_policy     = true
+    bucket                  = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+    id                      = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+    ignore_public_acls      = true
+    restrict_public_buckets = true
+# aws_s3_bucket_server_side_encryption_configuration.artifacts:
+resource "aws_s3_bucket_server_side_encryption_configuration" "artifacts" {
+    bucket                = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+    id                    = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+# aws_s3_bucket_versioning.artifacts:
+resource "aws_s3_bucket_versioning" "artifacts" {
+    bucket                = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+    id                    = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024"
+    versioning_configuration {
+# aws_security_group.web:
+resource "aws_security_group" "web" {
+    id                     = "sg-087f774cc18205d22"
+    vpc_id                 = "vpc-02156ae5d5b4c363d"
+# aws_subnet.public:
+resource "aws_subnet" "public" {

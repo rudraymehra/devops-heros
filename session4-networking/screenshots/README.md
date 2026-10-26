@@ -10,6 +10,17 @@ Reference images: 6. Native captures: 4 accepted; 0 awaiting review; 1 rejected.
 
 ## Fresh execution records
 
+### [rudray-20261023-092042](rudray-20261023-092042/README.md)
+
+- Hostname, interface/IP, ping, traceroute, DNS, TCP connections, routes, ARP, HTTPS, GitHub API, TCP ports 443/80, DNS configuration, default route, listening sockets, and WHOIS checks completed successfully. See the paired native captures for the visible output.
+- `wget` was unavailable and is recorded as skipped; this one optional check is not claimed as a pass.
+- The native captures include network identifiers (interface address, MAC addresses, routes) and process names. Review them before publishing this public repository.
+
+![Networking checks, first output](rudray-20261023-092042/01-network-checks-start.png)
+![Networking checks, DNS and routing](rudray-20261023-092042/02-network-checks-dns-and-routing.png)
+![Networking checks, interfaces and HTTP](rudray-20261023-092042/03-network-checks-interfaces-and-http.png)
+![Networking checks, ports and WHOIS](rudray-20261023-092042/04-network-checks-ports-and-whois.png)
+
 ### [rudray-20261016-213010-192514](rudray-20261016-213010-192514/README.md)
 
 - [Session 04 — actual 01-route](rudray-20261016-213010-192514/01-route.txt): FAILED / BLOCKED.
@@ -17,7 +28,7 @@ Reference images: 6. Native captures: 4 accepted; 0 awaiting review; 1 rejected.
 - [Session 04 — actual 03-dns](rudray-20261016-213010-192514/03-dns.txt): FAILED / BLOCKED.
 - [Session 04 — actual 04-ping](rudray-20261016-213010-192514/04-ping.txt): FAILED / BLOCKED.
 - [Session 04 — actual 05-http](rudray-20261016-213010-192514/05-http.txt): FAILED / BLOCKED.
-- Reference-specific pending items: NOT RUN: Capture routes, sockets, DNS, ping and HTTP on the actual host. Record network restrictions as failures, not successful connectivity..
+- Historical reference-specific pending note from 2026-10-16; the live checks were captured on the host on 2026-10-23 (see record above).
 
 ### [rudray-20261016-215104-093414](rudray-20261016-215104-093414/README.md)
 
@@ -47,7 +58,7 @@ Reviewed native capture: Actual ping results and Rudray heading visible.
 
 - [Session 04 — actual 05-http](rudray-20261016-215104-093414/05-http.txt): FAILED / BLOCKED.
 - Native capture REJECTED: Wrong window: chat conversation instead of HTTP command output. Retake; the paired curl log records a timeout, not success.
-- Reference-specific pending items: NOT RUN: Capture routes, sockets, DNS, ping and HTTP on the actual host. Record network restrictions as failures, not successful connectivity..
+- Historical reference-specific pending note from 2026-10-16; the live checks were captured on the host on 2026-10-23 (see record above).
 
 
 ## Rendered record images (not native screenshots)
@@ -62,9 +73,9 @@ These are explicitly labelled renderings. They do not change native-capture coun
 
 Historical timestamps, identities and resource names remain unchanged. These links do not imply a current live deployment.
 
-## Still needs genuine capture
+## Historical capture context
 
-Capture routes, sockets, DNS, ping and HTTP on the actual host. Record network restrictions as failures, not successful connectivity.
+The older 2026-10-16 note below predates the successful host run documented above. The optional `wget` command was unavailable in the 2026-10-23 run.
 
 Use the [coursework capture guide](../../COURSEWORK-EVIDENCE.md). The helper displays Rudray Mehra around freshly executed commands.
 

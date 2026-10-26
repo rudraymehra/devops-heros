@@ -1,0 +1,18 @@
+$ aws ec2 describe-instances --filters Name=instance-id,Values=i-05cc0eed92d70fdcf --query Reservations[].Instances[?State.Name!='terminated'][]
+[]
+PASS: none remain
+$ aws ec2 describe-volumes --filters Name=attachment.instance-id,Values=i-05cc0eed92d70fdcf --query Volumes
+[]
+PASS: none remain
+$ aws ec2 describe-vpcs --vpc-ids vpc-02156ae5d5b4c363d --query Vpcs
+PASS: resource ID is absent (An error occurred (InvalidVpcID.NotFound) when calling the DescribeVpcs operation: The vpc ID 'vpc-02156ae5d5b4c363d' does not exist)
+$ aws ec2 describe-security-groups --filters Name=group-name,Values=session19-mini-web-sg --query SecurityGroups
+[]
+PASS: none remain
+$ aws ec2 describe-nat-gateways --filter Name=vpc-id,Values=vpc-02156ae5d5b4c363d --query NatGateways[?State!='deleted']
+[]
+PASS: none remain
+$ aws s3api list-buckets --query Buckets[?starts_with(Name, 'session19-') && ends_with(Name, '-rudraym24bcs10425-20261024')]
+[]
+PASS: none remain
+Session 19 post-destroy AWS verification PASS.

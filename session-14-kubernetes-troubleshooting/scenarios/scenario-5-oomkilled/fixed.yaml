@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fail-5-oomkilled-pod
+  labels:
+    tier: triage-gauntlet
+    scenario: oomkilled
+spec:
+  containers:
+    - name: app
+      image: busybox:1.36
+      command: ["sh", "-c", "echo 'Memory use is within the configured limit'; sleep 3600"]
+      resources:
+        requests:
+          memory: 8Mi
+        limits:
+          memory: 32Mi

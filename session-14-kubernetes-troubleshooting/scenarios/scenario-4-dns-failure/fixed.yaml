@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fail-4-dns-failure-pod
+  labels:
+    tier: triage-gauntlet
+    scenario: dns-failure
+spec:
+  containers:
+    - name: client
+      image: busybox:1.36
+      command: ["sh", "-c"]
+      args:
+        - |
+          nslookup web-service.default.svc.cluster.local
+          wget -qO- http://web-service.default.svc.cluster.local/ | head -n 2
+          sleep 3600

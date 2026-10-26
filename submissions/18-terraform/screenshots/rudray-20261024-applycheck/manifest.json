@@ -1,0 +1,98 @@
+{
+  "student": "Rudray Mehra | 24 BCS 10425 | Batch B",
+  "date": "2026-10-24",
+  "capture_method": "Untouched native macOS screenshots of Terminal windows displaying actual saved command logs. The AWS settings summary is explicitly derived from raw responses collected before destroy. Visual review is hash-bound in evidence/coursework/native-review.json.",
+  "records": [
+    {
+      "title": "Terraform init, fmt check, and validate",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/00-terraform-version.txt",
+        "../../current-run-20261024/01-fmt-check.txt",
+        "../../current-run-20261024/02-validate.txt"
+      ],
+      "screenshot": {
+        "file": "01-init-fmt-validate-01.png",
+        "sha256": "9c10bce2bca8796a4cef2a10b1a8d256e7a1291f9b742d893f01e2a368e5f85a",
+        "type": "native macOS Terminal window capture"
+      }
+    },
+    {
+      "title": "Terraform plan",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/03-plan.txt"
+      ],
+      "screenshot": {
+        "file": "02-plan-01.png",
+        "sha256": "d61e69f3f4982b9f7cbecab46dc4b0b7b071942cee0706fdadff7d557b403ec8",
+        "type": "native macOS Terminal window capture"
+      }
+    },
+    {
+      "title": "Terraform apply",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/04-apply.txt"
+      ],
+      "screenshot": {
+        "file": "03-apply-01.png",
+        "sha256": "155bdf46775213c6af131f759e86fbc1449a1c27c610ea7374ab203bbeeb3b0d",
+        "type": "native macOS Terminal window capture"
+      }
+    },
+    {
+      "title": "Terraform state list and outputs",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/05-state-list.txt",
+        "../../current-run-20261024/06-outputs.txt"
+      ],
+      "screenshot": {
+        "file": "04-show-output-01.png",
+        "sha256": "b63c5a7dca3de1775dc17e8b74481268cd8998ce42d4d135126e82ec656840a7",
+        "type": "native macOS Terminal window capture"
+      }
+    },
+    {
+      "title": "AWS bucket security settings",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/14-bucket-security-summary.txt",
+        "../../current-run-20261024/07-bucket-configuration.json",
+        "../../current-run-20261024/08-bucket-encryption.json",
+        "../../current-run-20261024/09-bucket-versioning.json"
+      ],
+      "screenshot": {
+        "file": "04-show-output-02.png",
+        "sha256": "1d21aee2fd76fd1a04c6135163fe25f7403f86db6cd64d32f07efa5efefa0153",
+        "type": "native macOS Terminal window capture"
+      }
+    },
+    {
+      "title": "Terraform destroy",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/11-destroy-success.txt"
+      ],
+      "screenshot": {
+        "file": "05-destroy-01.png",
+        "sha256": "b5f575d26be3c9449b5620b88abca3df72ef18a2f95163133eba7a012e126bf1",
+        "type": "native macOS Terminal window capture"
+      }
+    },
+    {
+      "title": "Post-destroy verification",
+      "status": "PASS",
+      "logs": [
+        "../../current-run-20261024/12-state-after-destroy.txt",
+        "../../current-run-20261024/13-bucket-list-after-destroy.json"
+      ],
+      "screenshot": {
+        "file": "05-destroy-02.png",
+        "sha256": "3bed1246fae93d61112457ea24249d955a236e61632faa13be72e8ae4934287c",
+        "type": "native macOS Terminal window capture"
+      }
+    }
+  ]
+}

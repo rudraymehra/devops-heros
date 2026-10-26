@@ -69,9 +69,21 @@ kubectl delete deployment kubernetes-bootcamp
 
 ## Evidence checklist
 
-- [ ] Add `minikube status` and `kubectl get nodes -o wide` output.
-- [ ] Add screenshots for deploy, expose, scale, update, and rollback.
-- [ ] Record observations for Pod replacement and Service stability.
+- [x] Add `minikube status` and `kubectl get nodes -o wide` output.
+- [x] Add screenshots for deploy, expose, scale, update, and rollback.
+- [x] Record observations for Pod replacement and Service stability.
+
+## Fresh run notes
+
+The successful 2026-10-23 run started a dedicated Minikube profile and verified the
+Service returned v1 initially and after scaling, v2 after the image update, and v1
+after rollback. The helper removed only its isolated profile. Captures are indexed in
+[`screenshots/`](screenshots/README.md); earlier incomplete runs remain documented.
+
+For a fresh isolated run, use `bash ./run-kubernetes-lab.sh` from this directory. It
+creates a uniquely named Minikube profile, performs the deployment/NodePort/scale/update/
+rollback checks, then removes only that profile. On macOS with the Docker driver,
+`minikube service --url` keeps a tunnel process alive while the service is checked.
 
 ## Resources
 

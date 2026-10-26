@@ -40,10 +40,14 @@ jobs:
       - name: SCA
         run: pip-audit -r requirements.txt
         working-directory: ${{ env.PROJECT_DIR }}
-      - name: Secret scan
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Secret scan (Session 17 history)
+        run: >-
+          docker run --rm
+          -v "$GITHUB_WORKSPACE:/repo:ro"
+          ghcr.io/gitleaks/gitleaks:v8.24.2
+          git --redact --exit-code 1
+          --log-opts="--all -- session-17-devsecops/demo"
+          /repo
 
   image-security-and-publish:
     needs: test-and-source-security

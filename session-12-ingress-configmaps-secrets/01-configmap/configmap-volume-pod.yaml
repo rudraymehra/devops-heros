@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-volume-check
+spec:
+  restartPolicy: Never
+  containers:
+    - name: volume-check
+      image: busybox:1.36
+      command: ["sh", "-c", "cat /etc/app-config/ENVIRONMENT /etc/app-config/LOG_LEVEL /etc/app-config/DEFAULT_CURRENCY; sleep 3600"]
+      volumeMounts:
+        - name: app-config
+          mountPath: /etc/app-config
+          readOnly: true
+  volumes:
+    - name: app-config
+      configMap:
+        name: yatri-app-config

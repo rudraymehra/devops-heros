@@ -14,7 +14,7 @@ args = parser.parse_args()
 root = Path(__file__).resolve().parents[2]
 path = root / ("session18-terraform-iac/terraform-s3-demo" if args.topic == "18"
                else "session19-cloud-terraform/08-mini-project")
-variables = ["-var=bucket_name=sudhir-mehra-24bcs10425-lab-20261013-0738"] if args.topic == "18" else ["-var=project_suffix=sudhir24bcs10425-20261013"]
+variables = ["-var=bucket_name=rudraym-session18-iac-20261024"] if args.topic == "18" else ["-var=project_suffix=rudraym24bcs10425-20261024"]
 
 
 def run(*arguments):

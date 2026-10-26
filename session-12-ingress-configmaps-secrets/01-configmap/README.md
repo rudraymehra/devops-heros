@@ -97,7 +97,27 @@ Output:
 INFO
 ```
 
+## Verify environment and volume injection
+
+Apply the ConfigMap, then create one Pod that receives every key as environment
+variables and another that mounts the values as files:
+
+```bash
+kubectl apply -f 01-configmap/app-config.yaml
+kubectl apply -f 01-configmap/configmap-env-pod.yaml
+kubectl apply -f 01-configmap/configmap-volume-pod.yaml
+kubectl wait --for=condition=Ready pod/configmap-env-check pod/configmap-volume-check --timeout=180s
+kubectl logs configmap-env-check
+kubectl exec configmap-volume-check -- sh -c 'for key in ENVIRONMENT LOG_LEVEL DEFAULT_CURRENCY; do printf "%s=" "$key"; cat "/etc/app-config/$key"; done'
+```
+
+The first Pod's output should include the ConfigMap keys in its environment.
+The second reads three mounted ConfigMap files. These examples contain no
+credentials.
+
 ### Cleanup
 ```bash
+kubectl delete -f 01-configmap/configmap-env-pod.yaml --ignore-not-found
+kubectl delete -f 01-configmap/configmap-volume-pod.yaml --ignore-not-found
 kubectl delete configmap yatri-app-config
 ```

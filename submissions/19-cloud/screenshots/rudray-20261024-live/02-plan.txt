@@ -1,0 +1,36 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+Session 19 live run | Terraform plan
+Actual saved output from the 2026-10-24 run; account ID redacted.
+
+  # aws_instance.web will be created
+  # aws_internet_gateway.main will be created
+  # aws_route_table.public will be created
+  # aws_route_table_association.public will be created
+  # aws_s3_bucket.artifacts will be created
+  # aws_s3_bucket_public_access_block.artifacts will be created
+  # aws_s3_bucket_server_side_encryption_configuration.artifacts will be created
+  # aws_s3_bucket_versioning.artifacts will be created
+  # aws_security_group.web will be created
+  # aws_subnet.public will be created
+  # aws_vpc.main will be created
+Plan: 11 to add, 0 to change, 0 to destroy.
+  # aws_instance.web will be destroyed
+  # aws_internet_gateway.main will be destroyed
+  # aws_route_table.public will be destroyed
+  # aws_route_table_association.public will be destroyed
+  # aws_s3_bucket.artifacts will be destroyed
+  # aws_s3_bucket_public_access_block.artifacts will be destroyed
+  # aws_s3_bucket_server_side_encryption_configuration.artifacts will be destroyed
+  # aws_s3_bucket_versioning.artifacts will be destroyed
+  # aws_security_group.web will be destroyed
+  # aws_subnet.public will be destroyed
+  # aws_vpc.main will be destroyed
+Changes to Outputs:
+  + artifact_bucket   = (known after apply)
+  + vpc_cidr          = "10.20.0.0/16"
+vpc_cidr = "10.20.0.0/16"
+vpc_cidr = "10.20.0.0/16"
+  "vpc_cidr": {
+Changes to Outputs:
+  - artifact_bucket   = "session19-[AWS_ACCOUNT_ID]-rudraym24bcs10425-20261024" -> null
+  - vpc_cidr          = "10.20.0.0/16" -> null

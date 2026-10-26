@@ -5,9 +5,10 @@
 See [this session's screenshot inventory and actual capture results](screenshots/README.md).
 Missing native captures remain marked pending; historical logs are not relabelled as fresh screenshots.
 
-`system-info.sh` completes the assigned system-information script. It uses variables,
-interactive input, `mkdir`, `touch`, `date`, `hostname`, `whoami`, `df`, `ps`, and
-output redirection.
+`system-info.sh` completes the assigned system-information script. It prints the
+date, hostname, username, disk usage, and process list; uses variables and three
+interactive prompts; creates a requested directory and `process.log`; and redirects
+the process list into that file with `>`.
 
 ```bash
 chmod +x system-info.sh
@@ -21,6 +22,7 @@ sensitive information before committing it.
 
 ## Evidence checklist
 
-- [x] Script syntax checked; actual local attempt recorded in [evidence](screenshots/README.md).
-- [ ] Successful process/report output and native screenshot: process inspection is blocked in the editing sandbox.
+- [x] Script syntax checked; an earlier local attempt is recorded in [evidence](screenshots/README.md).
+- [x] Run the corrected interactive script; [native capture](screenshots/rudray-20261023-091725/02-system-info-run.png) and [generated process file](devops/process.log) show the complete run.
+- [x] The user confirmed `rudray` / `371` as the correct identity inputs for this assignment.
 - [x] Public repository: https://github.com/rudraymehra/devops-heros

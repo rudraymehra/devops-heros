@@ -27,8 +27,8 @@ Detailed Service behavior is documented in `service.md`; Kubernetes naming is in
 
 ## Evidence checklist
 
-- [ ] YAML and output for all five Service forms
-- [ ] Connectivity checks from client Pods
-- [ ] `nslookup` output for short name and FQDN
-- [ ] CoreDNS configuration/log inspection
-- [ ] Empty-endpoints failure, diagnosis, and fix
+- [x] YAML and output for all five Service forms
+- [x] Connectivity checks from client Pods
+- [x] `nslookup` output for short name and FQDN
+- [x] CoreDNS configuration/log inspection
+- [x] Empty-endpoints failure, diagnosis, and fix

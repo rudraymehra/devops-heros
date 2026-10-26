@@ -6,9 +6,52 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 8. Native captures: 2 accepted; 0 awaiting review; 0 rejected.
+Reference images: 8. Native captures: 9 accepted; 0 awaiting review; 0 rejected.
 
 ## Fresh execution records
+
+### [rudray-20261023-085600](rudray-20261023-085600/README.md)
+
+- Task 1 hard/soft link demonstration: PASS on macOS. The hard link shares the
+  original inode and remains readable after the original name is removed; the
+  soft link becomes dangling as expected.
+
+![Task 1 hard and soft link terminal capture](rudray-20261023-085600/01-links.png)
+
+### [rudray-20261023-085851](rudray-20261023-085851/README.md)
+
+- Task 2 user-management attempt: INCOMPLETE. `adduser` succeeded, but
+  `deluser --remove-home` stopped because `perl` was not installed. With `set -e`,
+  the `useradd` demonstration and cleanup checks did not run. This is recorded as
+  a failed attempt, not as completed task evidence.
+
+![Task 2 incomplete user-management attempt](rudray-20261023-085851/02-user-management-attempt.png)
+
+### [rudray-20261023-090351](rudray-20261023-090351/README.md)
+
+- Task 2 user management: PASS in an Ubuntu 24.04 container. `adduser` created a
+  regular account and home directory; `useradd` created a system account with the
+  `nologin` shell; both accounts were removed and the lookup confirmed cleanup.
+
+![Task 2 account creation](rudray-20261023-090351/02-user-management-setup.png)
+![Task 2 verification and cleanup](rudray-20261023-090351/03-user-management-result.png)
+
+### [rudray-20261023-090745](rudray-20261023-090745/README.md)
+
+- Task 3 journalctl: PASS in a systemd-enabled Ubuntu 24.04 container. Journald
+  and cron were active, the test entry and cron logs appeared, and the lab
+  container was stopped and removed.
+
+![Task 3 journalctl terminal capture](rudray-20261023-090745/04-journalctl.png)
+
+### [rudray-20261023-090932](rudray-20261023-090932/README.md)
+
+- Task 4 command practice: PASS in an Ubuntu 24.04 container. The transcript covers
+  navigation, file and text commands, permissions, processes, storage, networking,
+  and archives. The local HTTP request returned `200 OK`.
+
+![Task 4 commands](rudray-20261023-090932/05-command-practice-commands.png)
+![Task 4 command results](rudray-20261023-090932/06-command-practice-results.png)
 
 ### [rudray-20261016-212856-656600](rudray-20261016-212856-656600/README.md)
 
@@ -49,9 +92,11 @@ These are explicitly labelled renderings. They do not change native-capture coun
 
 Historical timestamps, identities and resource names remain unchanged. These links do not imply a current live deployment.
 
-## Still needs genuine capture
+## Capture scope
 
-Linux useradd/adduser and journalctl need a real Linux/systemd environment. macOS link tests are labelled macOS, not Linux VM results.
+All four tasks have fresh evidence. Task 1's link demonstration ran on macOS;
+Tasks 2–4 ran in Ubuntu 24.04 containers. The failed first Task 2 attempt remains
+preserved separately and is not counted as a task pass.
 
 Use the [coursework capture guide](../../COURSEWORK-EVIDENCE.md). The helper displays Rudray Mehra around freshly executed commands.
 

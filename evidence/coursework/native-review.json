@@ -1,7 +1,52 @@
 {
-  "review_date": "2026-10-16",
-  "method": "Visual inspection of untouched user-selected macOS window captures; decisions apply only to the listed SHA-256. Originals remain unchanged.",
+  "review_date": "2026-10-24",
+  "method": "Visual inspection of untouched native captures; each decision applies only to the exact listed SHA-256. Captures are not rendered screenshots.",
   "images": {
+    "session2-linux/screenshots/rudray-20261023-085600/01-links.png": {
+      "sha256": "b2ab12d914e6559d5b61b30aab8e09df1af08cfeb15ad82c47c90c5cf5e602d5",
+      "decision": "accepted",
+      "note": "Task 1 hard/soft link output is visible and consistent; macOS host, not a Linux VM."
+    },
+    "session2-linux/screenshots/rudray-20261023-085851/02-user-management-attempt.png": {
+      "sha256": "c5955a8e40e5ab9ebd32e4be80948c1e0518242a77dd00ff1cf51504953da04f",
+      "decision": "accepted",
+      "note": "Authentic Ubuntu container attempt; adduser succeeded, then cleanup failed because perl was missing, so useradd did not run. Not completion evidence."
+    },
+    "session2-linux/screenshots/rudray-20261023-090351/02-user-management-setup.png": {
+      "sha256": "160991b866910e388763868895940af71e9d16f21869efcac0e7d439c94277df",
+      "decision": "accepted",
+      "note": "Task 2 Ubuntu container run; package installation and adduser creation are visible. The paired result image shows useradd and cleanup."
+    },
+    "session2-linux/screenshots/rudray-20261023-090351/03-user-management-result.png": {
+      "sha256": "026743b13a79ecfe82d4e57c6ba1e8e3f50c5f9fdc1cbe0096c2072da3ca2c6a",
+      "decision": "accepted",
+      "note": "Task 2 Ubuntu container run; adduser account removal, useradd system account, and cleanup verification are visible."
+    },
+    "session2-linux/screenshots/rudray-20261023-090745/04-journalctl.png": {
+      "sha256": "17a2c970c52abbe106135148ab999d32243f0f9905e869409110621612a561f1",
+      "decision": "accepted",
+      "note": "Task 3 systemd-enabled Ubuntu container; journald and cron are active, system/test/service logs and disk usage are visible, and the container was removed."
+    },
+    "session2-linux/screenshots/rudray-20261023-090932/05-command-practice-commands.png": {
+      "sha256": "807c625bd2af2338e689376bfc74057163f6eff428077fb5c44105da1cfa6df2",
+      "decision": "accepted",
+      "note": "Task 4 command transcript for navigation, file/text operations, permissions, processes, storage, networking, and archives in an Ubuntu 24.04 container. Paired results image shows successful output."
+    },
+    "session2-linux/screenshots/rudray-20261023-090932/06-command-practice-results.png": {
+      "sha256": "feaf37d2853b4f31dae9defd94da766838cd0e1a00a1b445ab01244f71937554",
+      "decision": "accepted",
+      "note": "Task 4 output includes file/text/permission/process/storage/network/archive results and local HTTP 200 response."
+    },
+    "session3-shell-scripting/screenshots/rudray-20261023-091529/01-system-info-incomplete.png": {
+      "sha256": "431a026053413083d5c0151b1744554a24dada0af449166fe64cdee4d83c7653",
+      "decision": "accepted",
+      "note": "Authentic native macOS capture of the updated Session 3 script stopping after process output due to the head/pipefail issue. It is recorded as incomplete, not a task pass."
+    },
+    "session3-shell-scripting/screenshots/rudray-20261023-091725/02-system-info-run.png": {
+      "sha256": "42acaf440d5e88cdf5032f34881c28ca944c7bbce659811006327ec8eeb6e2f1",
+      "decision": "accepted",
+      "note": "Current Session 3 script completed all inputs and process-file output is visible. The user confirmed rudray / 371 as the correct identity for this assignment."
+    },
     "session2-linux/screenshots/rudray-20261016-215104-093414/02-host.png": {
       "sha256": "951f6097523e8de0e760215a65f85a2c20834296db35d2f4eb7d748f72318853",
       "decision": "accepted",
@@ -61,6 +106,361 @@
       "sha256": "a4d5acbc630cfb58249cac9645b729429941753418bb3b51b8c8323ff8628a29",
       "decision": "accepted",
       "note": "Actual rendered-manifest output tail visible; paired log gives command context. Not proof of a live deployment."
+    },
+    "session4-networking/screenshots/rudray-20261023-092042/01-network-checks-start.png": {
+      "sha256": "69db1c9f44eb33b6d76ad182ecf1234fc59f16657f89ebc5a8e8485dc623b2e5",
+      "decision": "accepted",
+      "note": "Native terminal capture showing the command batch and initial live results: hostname, interface, IP, ping, traceroute, DNS, and DNS answers. Personal network details are visible."
+    },
+    "session4-networking/screenshots/rudray-20261023-092042/02-network-checks-dns-and-routing.png": {
+      "sha256": "cfbb6f53328af04e21d8d8a234cff397b716f312f913a3d6224777404bf8f19d",
+      "decision": "accepted",
+      "note": "Native terminal capture showing DNS, TCP connections, routes, ARP, and successful HTTPS status. Network addresses and MAC addresses are visible."
+    },
+    "session4-networking/screenshots/rudray-20261023-092042/03-network-checks-interfaces-and-http.png": {
+      "sha256": "b64ad9a56439f43651b10fbb844757c1556b122852508219ab5ebfe769fb82a2",
+      "decision": "accepted",
+      "note": "Native terminal capture showing successful GitHub API, TCP ports 443 and 80, DNS configuration, default route, and listening processes. Process names and local network details are visible."
+    },
+    "session4-networking/screenshots/rudray-20261023-092042/04-network-checks-ports-and-whois.png": {
+      "sha256": "d51237d86d5fae6b39b52d21eb7d80b4834a19e4d73528502554f715471a7cb5",
+      "decision": "accepted",
+      "note": "Native terminal capture showing listening sockets, wget unavailable, and successful WHOIS response. Personal network/process details are visible."
+    },
+    "session5-git-github/screenshots/rudray-20261023-092416/01-pager-tail-incomplete.png": {
+      "sha256": "dc7d48c7506413c8a51b06965aaf84969b87fb8f1566c70a4b6ddafc148e66fa",
+      "decision": "rejected",
+      "note": "Authentic native terminal screenshot of the end of the branch graph inside the pager, but it omits the commit -a status and returned shell prompt. Incomplete evidence; helper updated to disable pager for retake."
+    },
+    "session5-git-github/screenshots/rudray-20261023-092609/01-author-pager-incomplete.png": {
+      "sha256": "9da01f625bd2eca1db0b740eeaad7ce1b20fde480a17df8fbe51265bfa800a14",
+      "decision": "rejected",
+      "note": "Authentic native terminal screenshot showing the lab commit author, but the pager remains open and the required status and graph evidence are absent. Complete paired capture follows."
+    },
+    "session5-git-github/screenshots/rudray-20261023-092609/02-git-lab-complete.png": {
+      "sha256": "ad21b0ffc4b8fddfa4c754546da0acf4f928a87e0ac9bfde94c0ab629ce01c3c",
+      "decision": "accepted",
+      "note": "Native terminal capture of the disposable Git lab showing the untracked file after commit -a, successful cherry-pick verification, full branch graph, retained temporary lab path, and returned prompt."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-092927/01-commands-and-node-build.png": {
+      "sha256": "408674c9d8338b12d7406af300908c43db9d82797fb8cef393ceadfd468ac84a",
+      "decision": "accepted",
+      "note": "Native capture showing the six-app Docker command batch, unique container preflight and first successful Node image build."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-092927/02-java-apache-react-builds.png": {
+      "sha256": "59df7537f3e9fc72f5edfbbe6a35ca616bff1ed3940b1a711d7d1dcd0bde8684",
+      "decision": "accepted",
+      "note": "Native capture of Docker build output during the Java, Apache, and React app builds."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-092927/03-apache-and-react-builds.png": {
+      "sha256": "7664026f1dee14fb127169e029b7612d96c0d0c1b806be8f68856a33c677b3c8",
+      "decision": "accepted",
+      "note": "Native capture showing successful Java and Apache build completion and React build output."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-092927/04-react-and-nginx-builds.png": {
+      "sha256": "6977eb88466c010e03d3623b18a23a393810ca8bd6e88b18eaf34a0eca89790c",
+      "decision": "accepted",
+      "note": "Native capture showing React and Nginx Docker image builds progressing/completing."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-092927/05-http-checks.png": {
+      "sha256": "517b99cfcedd107d6d263e847906550e52c6907740f72b28c2224f7b0c078257",
+      "decision": "accepted",
+      "note": "Native terminal output showing HTTP responses from all six mapped application ports."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-092927/06-all-containers-and-cleanup.png": {
+      "sha256": "c599905e758a6235f5127e9c78784676e1e5fc243f46b94bbec43aca7ad8e101",
+      "decision": "accepted",
+      "note": "Native terminal output showing all six containers in docker ps and successful completion message before temporary container cleanup."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-093325/01-unclosed-quote-attempt.png": {
+      "sha256": "737863e61c7ffe0ee3e5bb12cffd43cf9b3e39011a59fbba9d167478e44c82c4",
+      "decision": "rejected",
+      "note": "Authentic native terminal screenshot showing zsh waiting at dquote> for a missing quote. Docker build/run commands did not execute; retained as an incomplete attempt."
+    },
+    "session6-7-docker/screenshots/rudray-20261023-093738/01-build-passed-http-reset.png": {
+      "sha256": "b7cf6e748c0064b741d9755693fd227f12f4d7303150c4d41cbcc89056ca7794",
+      "decision": "accepted",
+      "note": "Authentic native terminal capture showing the multi-stage build completed and the container was launched, followed by curl connection reset. Kept as an incomplete failure record, not a successful HTTP pass."
+    },
+    "session6-7-docker/multi-stage-dockerfile/screenshots/rudray-20261023-203855/01-multistage-build-and-http.png": {
+      "sha256": "d6607df7f5cb712eba676f440ae6cd7b97d194748cabca91ba4d3fee5430c920",
+      "decision": "accepted",
+      "note": "Native terminal capture showing successful multi-stage Docker image build, expected HTTP Hello World output, and running container mapped to host port 8080 before cleanup."
+    },
+    "session6-7-docker/multi-stage-dockerfile/screenshots/rudray-20261023-204406/01-builds-and-node-output.png": {
+      "sha256": "458c8cabe3886fcd08a3a9b7ca708f93ab3167aa62477f911a1dfd1a786d448c",
+      "decision": "accepted",
+      "note": "Native terminal capture showing successful builds for Node.js, Python, and Java, followed by the Node.js app HTTP response."
+    },
+    "session6-7-docker/multi-stage-dockerfile/screenshots/rudray-20261023-204406/02-all-apps-and-image-sizes.png": {
+      "sha256": "a56300fb1536b9a9586e6322520e3f01a218135ac9bd74b3a272cc047d227358",
+      "decision": "accepted",
+      "note": "Native terminal capture showing the expected Python and Java responses, all three app containers running, image sizes, and cleanup confirmation."
+    },
+    "session8-docker-networking-volume/screenshots/rudray-20261023-204911/01-compose-build-and-status.png": {
+      "sha256": "27a14d967bb510c1f49e14b0f6317453973c344ab0b6dcf78df6b38ce649fbf8",
+      "decision": "accepted",
+      "note": "Native terminal output showing all three isolated Compose services healthy and the Compose network/volume creation."
+    },
+    "session8-docker-networking-volume/screenshots/rudray-20261023-204911/02-dns-networks-and-api.png": {
+      "sha256": "a8f9e19c936169aaf2ef48c7a62243923d3ae6a83d6dd67737b6799cd49269a1",
+      "decision": "accepted",
+      "note": "Native terminal output showing allowed service-name DNS resolution, internal database network, successful backend/MySQL API response, and lab completion."
+    },
+    "session8-docker-networking-volume/screenshots/rudray-20261023-211109/01-host-network-blocked.png": {
+      "sha256": "68293b4dde6f48608fb179a78dbf30d368f638a23dfe61ef734e326db8fbbaa6",
+      "decision": "accepted",
+      "note": "Authentic native terminal capture showing Apache running with NetworkMode=host, but localhost:80 returned no HTTP response. Docker Desktop host-networking limitation is recorded; not a successful task pass."
+    },
+    "session8-docker-networking-volume/screenshots/rudray-20261023-211607/01-bind-mount-live-update.png": {
+      "sha256": "ac3aad926d3eebf56788290c1e35bdca289026615dbac6154965752964a59583",
+      "decision": "accepted",
+      "note": "Native terminal capture showing Nginx served the original and changed host-mounted page while the same container stayed up; cleanup restores the original file and removes the temporary container."
+    },
+    "session8-docker-networking-volume/screenshots/rudray-20261023-212307/01-overlay-network-inspection.png": {
+      "sha256": "e6613f4069ce88d01e78242a085fe6a1747158a182b4703163f0d58aed55fcbc",
+      "decision": "accepted",
+      "note": "Native terminal capture showing Swarm was inactive before the disposable lab, the local manager node was ready, and the attachable overlay network was created and inspected. Join token output was suppressed; cleanup left the temporary Swarm."
+    },
+    "session9-k8s/screenshots/rudray-20261023-213319/01-cluster-and-initial-scale-attempt.png": {
+      "sha256": "ed6fa096a39afa390d5f0128b401956ad75dc8ab14c7d68797e90784815caa5f",
+      "decision": "accepted",
+      "note": "Authentic native terminal capture showing dedicated Minikube profile startup, early NotReady status, deployment and NodePort Service creation, initial HTTP 200, and start of scaling. Incomplete attempt."
+    },
+    "session9-k8s/screenshots/rudray-20261023-213319/02-scale-service-reset.png": {
+      "sha256": "56a9025e78f66eca973861ef8389e8fb05df6543ca9c5489788a7764fa590aa4",
+      "decision": "accepted",
+      "note": "Authentic native terminal capture showing three replicas reached Ready, but the service request reset during scale; later update and rollback steps were not reached."
+    },
+    "session9-k8s/screenshots/rudray-20261023-215445/01-cluster-deploy-and-scale.png": {
+      "sha256": "170ee35e4ebbd7d580a23c2212dfc82a2eb2d10134a89194323c4fbf58e67835",
+      "decision": "accepted",
+      "note": "Authentic native terminal capture showing Ready Minikube node, deployment and NodePort Service, initial HTTP 200 with v1, and three Ready replicas with HTTP 200 after scaling."
+    },
+    "session9-k8s/screenshots/rudray-20261023-215445/02-update-and-rollback-attempt.png": {
+      "sha256": "981d7407996dbb3f87d16c4f40a3f2e0145b0c30f683fafab853b49becc4596e",
+      "decision": "accepted",
+      "note": "Authentic native terminal capture showing successful v2 rollout and rollout undo. The post-rollback Service response still reports v2 while old pods terminate, so application rollback is not verified."
+    },
+    "session9-k8s/screenshots/rudray-20261023-220036/01-cluster-deploy-scale-update.png": {
+      "sha256": "925251f1c3e540eda76dad05fafe71526fa5b668b78e785fd1fcf94d060ffc1f",
+      "decision": "accepted",
+      "note": "Native terminal capture showing Ready Minikube node, deployment and NodePort Service, initial and scaled HTTP 200 responses reporting v1, and rollout to the v2 image."
+    },
+    "session9-k8s/screenshots/rudray-20261023-220036/02-rollout-rollback-v1.png": {
+      "sha256": "4d8318d05221537439c30afcb145599dde8ee92e3b2297820c9486363d6a2976",
+      "decision": "accepted",
+      "note": "Native terminal capture showing v2 response after update, successful rollout undo, deployment restored to the v1 image, v1 HTTP response after rollback, and isolated profile cleanup."
+    },
+    "session-12-ingress-configmaps-secrets/screenshots/rudray-20261024-143450/01-https-ingress-host-routing.png": {
+      "sha256": "2b6c43678ccb3ebe71bf94d7bf644dbb4e1a6d0b26f0242a1ed98e1205e92ecd",
+      "decision": "accepted",
+      "note": "Native terminal capture showing HTTPS host routing for portal.campus.local and api.campus.local; both requests returned HTTP/2 200, with /api/ routed to backend configuration and no password exposed. -k is used for the lab self-signed certificate."
+    },
+    "session-12-ingress-configmaps-secrets/screenshots/rudray-20261024-143917/01-newline-bug-and-resource-inventory.png": {
+      "sha256": "a35a9feb52a95dcc182633aa3227e784f63bf9a43fc8c2223ccf85a1d685011f",
+      "decision": "accepted",
+      "note": "Native terminal capture showing the newline-terminated Base64 example and corrected encoding, byte dumps with the trailing 0a only in the first value, and the final Ingress/ConfigMap/Secret/Pod/Service inventory. No Secret values are displayed."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/01-init-fmt-validate-01.png": {
+      "sha256": "9c10bce2bca8796a4cef2a10b1a8d256e7a1291f9b742d893f01e2a368e5f85a",
+      "decision": "accepted",
+      "note": "Terraform version, fmt check, and validate logs; successful validation is visible."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/02-plan-01.png": {
+      "sha256": "d61e69f3f4982b9f7cbecab46dc4b0b7b071942cee0706fdadff7d557b403ec8",
+      "decision": "accepted",
+      "note": "The actual saved plan shows four additions and no changes or destroys."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/03-apply-01.png": {
+      "sha256": "155bdf46775213c6af131f759e86fbc1449a1c27c610ea7374ab203bbeeb3b0d",
+      "decision": "accepted",
+      "note": "Actual saved apply output shows all four resources created and outputs; captured after execution from the preserved command log."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/04-show-output-01.png": {
+      "sha256": "b63c5a7dca3de1775dc17e8b74481268cd8998ce42d4d135126e82ec656840a7",
+      "decision": "accepted",
+      "note": "Actual saved state and output command logs show the four resources and bucket outputs before cleanup."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/04-show-output-02.png": {
+      "sha256": "1d21aee2fd76fd1a04c6135163fe25f7403f86db6cd64d32f07efa5efefa0153",
+      "decision": "accepted",
+      "note": "Native Terminal capture of a concise summary parsed from the actual saved AWS API responses. The bucket was later destroyed; raw responses remain in current-run logs."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/05-destroy-01.png": {
+      "sha256": "b5f575d26be3c9449b5620b88abca3df72ef18a2f95163133eba7a012e126bf1",
+      "decision": "accepted",
+      "note": "Actual saved destroy output shows four resources destroyed; captured after execution from the preserved command log."
+    },
+    "submissions/18-terraform/screenshots/rudray-20261024-applycheck/05-destroy-02.png": {
+      "sha256": "3bed1246fae93d61112457ea24249d955a236e61632faa13be72e8ae4934287c",
+      "decision": "accepted",
+      "note": "Actual saved Terraform state list is empty and AWS list-buckets confirms the Session 18 bucket is absent."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/01-init-validate.png": {
+      "sha256": "5de25c2d82c8146b82f6ccea857877033a4fe8469940e9d4e0b289ca8fa53f56",
+      "decision": "rejected",
+      "note": "Rejected: screenshot repeats commands and omits the final validation result; the visible command/output pairing is incomplete."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/02-plan.png": {
+      "sha256": "7e2cecd6511da84072fd4159fea1d3c0f8ecc7bf59813669c193d31fc90e72a6",
+      "decision": "rejected",
+      "note": "Rejected: screenshot mixes plan creation and destroy sections, so it does not show a clean plan-only result."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/03-apply-outputs.png": {
+      "sha256": "225b79e30620606e2825cd8215b4b490c354b013d3eceb64f484b47153a33a7f",
+      "decision": "rejected",
+      "note": "Rejected: captured image shows destroy output rather than the labeled apply and outputs section."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/04-state-and-output.png": {
+      "sha256": "e23ee0f215f8c3cd7ee20ad264b825cf7298fdf904dae2f5d403518610392cd7",
+      "decision": "rejected",
+      "note": "Rejected: resource listing is cut off before the complete state/output result."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/04-s3-security.png": {
+      "sha256": "a870a9f5046e8083222521a59814291d53d3a421151b7ee5dbbf20fbc4623951",
+      "decision": "rejected",
+      "note": "Rejected: security resource blocks are cut off and do not show the required full configuration values."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/05-destroy.png": {
+      "sha256": "dfe220055989f23932a8c926ae1d326839dd59cb6118d1ae2e5cfbe52e26e6da",
+      "decision": "rejected",
+      "note": "Rejected: screenshot shows a brief summary excerpt, not the complete destroy and state-empty result."
+    },
+    "submissions/19-cloud/screenshots/rudray-20261024-live/06-post-destroy.png": {
+      "sha256": "029555e1ac8cf57d86010b1a141011fdce0fede7bdd34581aa517d8b0a7e247a",
+      "decision": "rejected",
+      "note": "Rejected as submission screenshot: output is a saved excerpt in a new Terminal tab, not a direct capture of the live AWS queries. The separate text cleanup log is retained."
     }
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-222751/01-rolling-update.png": {
+    "sha256": "958a2101e9f4f031b9cb107d0d6452fd6fa3df2315be326a711a492edbfcea4c",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Minikube deployment-strategy lab; shows the live strategy behavior and output."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-222751/02-blue-green-and-canary.png": {
+    "sha256": "d7cbcb71d8546d053bb3396bd8d15d1cc8fc328081bb0a2f89b9290de407a8b3",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Minikube deployment-strategy lab; shows the live strategy behavior and output."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-222751/03-canary-promotion-and-recreate.png": {
+    "sha256": "b714d81e2edda3eea495dc351c6281dc539e2dbe2adbdbe9e52793d9ed5aba3e",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Minikube deployment-strategy lab; shows the live strategy behavior and output."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-222751/04-recreate-and-cleanup.png": {
+    "sha256": "9503b8d163609cfeb1968defaa18c3940b945c403f47a570ad3693af0619dfdd",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Minikube deployment-strategy lab; shows the live strategy behavior and output."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-224618/01-running-and-pending.png": {
+    "sha256": "2023c35eaf7f9886a516a0f0680330dc220649f35ca392db78e8b5773d902bc0",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Pod lifecycle lab. Shows the Running Pod and the Pending Pod with insufficient-memory scheduling event."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-224618/02-completed-failed-crashloop-imagepull.png": {
+    "sha256": "fa7eb2dd459bbef0d6d4739af8b145fd7a8711ee7f0295d4a93459eeb6759126",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Pod lifecycle lab. Shows Succeeded and Failed terminal outcomes, CrashLoopBackOff events, and the ImagePullBackOff example."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-224618/03-readiness-liveness-startup.png": {
+    "sha256": "806f32a8cdacc0a95c2c2cec9a475780fdfe4829f024f65af562149f4f8e1c7b",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Pod lifecycle lab. Shows readiness, liveness probe failures and restart initiation, and startup probe progress."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-224618/04-startup-init-multicontainer.png": {
+    "sha256": "9981597a08cbab6ef05ca7a38a1ebaea77932c6e91f463565b5a7c5a97b15f0f",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Pod lifecycle lab. Shows startup completion, init container logs and completion, and both containers Ready in the multi-container Pod."
+  },
+  "session10-k8s-core-objects/screenshots/rudray-20261023-224618/05-init-multicontainer-termination-cleanup.png": {
+    "sha256": "69aaa0c8eed8237f49dd7028f05989f3d943128b31d24f2435de978814812d32",
+    "decision": "accepted",
+    "note": "Authentic native terminal capture from the Session 10 Pod lifecycle lab. Shows init and sidecar logs, graceful SIGTERM cleanup, and successful cleanup of the isolated Minikube profile."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261023-235102/01-clusterip-instructions.png": {
+    "sha256": "71cc48cbe79d98e6027daa305b528252461d4609bbfc0a84f6ff5b13c4f5c592",
+    "decision": "accepted",
+    "note": "Native terminal capture of the Session 11 ClusterIP instructions."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261023-235102/02-clusterip-manifests-and-setup.png": {
+    "sha256": "36dd6776d349c2b40bcb14b190a474d8b0d9f3aa4809d9438718c3515d50b1e9",
+    "decision": "accepted",
+    "note": "Native terminal capture showing the ClusterIP Deployment and Service manifests and run steps."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261023-235102/03-clusterip-endpoints-and-dns-tests.png": {
+    "sha256": "079511f6b3c9d009ed3a351f811c97d86894a3907d9434aa7d666deba8fcd280",
+    "decision": "accepted",
+    "note": "Native terminal capture showing the ClusterIP Service endpoint and DNS test instructions."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261023-235102/04-clusterip-tests-and-cleanup-instructions.png": {
+    "sha256": "b13e757f0476bd1a55c29f9b4f622bced8180fcc041561a479fcdba4c64bb376",
+    "decision": "accepted",
+    "note": "Native terminal capture of DNS/traffic test and cleanup instructions."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261023-235102/05-clusterip-deploy-and-dns-response.png": {
+    "sha256": "88210f3b7cd32ec0aa750290fa62783bcf253cd2df0371de6c0071f777a89f6e",
+    "decision": "accepted",
+    "note": "Live ClusterIP run: three Deployment Pods Ready, Service exposes all three endpoints, and short-name plus FQDN requests return the NGINX welcome page."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261023-235102/06-clusterip-response.png": {
+    "sha256": "45f9dd29a206b3db7415016e5c5166612348c2f15f16f289b00d566325774967",
+    "decision": "accepted",
+    "note": "Live ClusterIP response confirming NGINX content through the Service."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-021721/01-minikube-tunnel-running.png": {
+    "sha256": "d6439ee56620223411fe28ac7abcf613934b3ffadf81febda87ffc985cc86c24",
+    "decision": "accepted",
+    "note": "Authentic terminal capture showing the Minikube tunnel running for the LoadBalancer Service."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-021721/02-loadbalancer-external-ip.png": {
+    "sha256": "6d65a99bd3f8efe0b8bfea34cf8da22d7ad6ad0ee7fa0c19d66a85d6cbbce81a",
+    "decision": "accepted",
+    "note": "Authentic terminal capture showing web-service-loadbalancer assigned external IP 127.0.0.1; HTTP test still pending."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-022930/01-externalname-cname-and-github-response.png": {
+    "sha256": "1ddc499cb0cc019db4887702c69a5b5fdc6dea80bd944e5cee155f655cdcbc0e",
+    "decision": "accepted",
+    "note": "Native terminal capture showing the ExternalName Service alias to api.github.com, successful CNAME resolution and GitHub API response. nslookup prints search-suffix NXDOMAIN attempts before resolving the full service DNS name."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-023304/01-headless-dns-and-pod-response.png": {
+    "sha256": "b480bb65a83ff9e2eb45965e4580c8791b6b5737f23adc89c680cd0b6330a64b",
+    "decision": "accepted",
+    "note": "Native terminal capture showing headless Service ClusterIP None, all three StatefulSet replicas Ready, DNS results for all three Pods and a specific Pod, and NGINX response from that Pod."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-043051/01-coredns-and-empty-endpoints.png": {
+    "sha256": "2d3b2fcb2caa63333aaf6e1094a1ece1da79310b4ebda2a34fd233787a267b58",
+    "decision": "accepted",
+    "note": "Native terminal capture showing CoreDNS Deployment, two Ready CoreDNS Pods, kube-dns Service, Corefile ConfigMap, logs, Pod resolver configuration, and successful kubernetes.default.svc.cluster.local lookup."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-043051/02-selector-mismatch-and-failed-curl.png": {
+    "sha256": "6f1a27c8695f08dedb5ece1178fe521cc179d1eb8e7d0b6f781cfc26f7a6b459",
+    "decision": "accepted",
+    "note": "Native terminal capture showing the empty endpoint failure, Service selector app=wrong-backend-name, three backend Pods labeled app=yatri-backend, and curl connection failure."
+  },
+  "session-11-kubernetes-services/screenshots/rudray-20261024-043513/01-selector-fixed-and-endpoints-restored.png": {
+    "sha256": "ed087f53d7d8b4dbfdc9d14119f063044ff2009988143a23e65caa49d904443f",
+    "decision": "accepted",
+    "note": "Native terminal capture showing the broken service selector patched to app=yatri-backend, all three endpoints restored on port 5000, and successful curl response from the backend."
+  },
+  "session-12-ingress-configmaps-secrets/screenshots/rudray-20261024-065559/01-configmap-env-and-volume-injection.png": {
+    "sha256": "0412935ab5709f2e16e8fbd59ecb28865f1dddf54b7fc04efdffa4b3c6b193be",
+    "decision": "accepted",
+    "note": "Native terminal capture showing yatri-app-config applied, env and volume consumer Pods Ready, ConfigMap keys in the environment Pod, and mounted ConfigMap values read from the volume Pod."
+  },
+  "session-12-ingress-configmaps-secrets/screenshots/rudray-20261024-065840/01-configmap-files-and-secret-injection.png": {
+    "sha256": "7d7ed5b74d2409d2539e598e7b89442c340bc5960eb226d7a34b6e172a59a146",
+    "decision": "accepted",
+    "note": "Native terminal capture showing readable ConfigMap volume values, Secret metadata with key byte counts but no secret contents, backend rollout, and secret environment variable presence confirmed with the value redacted."
+  },
+  "session-12-ingress-configmaps-secrets/screenshots/rudray-20261024-142752/01-ingress-addon-ready.png": {
+    "sha256": "f88e565449485b2b54dbcaf998fe2a731eb30834ef68549f94bfd15f93d1f77c",
+    "decision": "accepted",
+    "note": "Native terminal capture showing the Minikube NGINX Ingress addon enabled, controller Pod Ready, and ingress controller HTTP/HTTPS NodePort Service."
+  },
+  "session-12-ingress-configmaps-secrets/screenshots/rudray-20261024-143112/01-http-ingress-path-routing.png": {
+    "sha256": "1a23c5520fe8c6dfb0bbf07276da247b2754b19d8f8a311306ecbdc9ec80a266",
+    "decision": "accepted",
+    "note": "Native terminal capture showing HTTP 200 for yatri.local root routed to NGINX and /api/ routed to backend, which reports ConfigMap and non-password Secret values."
   }
 }

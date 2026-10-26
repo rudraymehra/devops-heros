@@ -6,9 +6,30 @@ Reference: Vivek's supplied ZIP. Filenames below are an audit inventory, not imp
 No reference screenshot has been relabelled. A command log is not a native screenshot.
 
 Required entry point/core-file checks: all listed files present (not a runtime pass).
-Reference images: 6. Native captures: 0 accepted; 0 awaiting review; 0 rejected.
+Reference images: 6. Five fresh native captures document the Compose network lab, the blocked host-network attempt, the bind-mount update, and the overlay network inspection.
 
 ## Fresh execution records
+
+### [rudray-20261023-204911](rudray-20261023-204911/README.md)
+
+- Task 1: PASS. Frontend, backend, and database became healthy; frontend resolved `backend`, backend resolved `database`; `database_net` was internal; `/api` returned backend and MySQL messages.
+- [Compose build and service status](rudray-20261023-204911/01-compose-build-and-status.png)
+- [DNS, network inspection, and API output](rudray-20261023-204911/02-dns-networks-and-api.png)
+
+### [rudray-20261023-211109](rudray-20261023-211109/README.md)
+
+- Task 2: BLOCKED on Docker Desktop. Apache started with `NetworkMode=host`, but `localhost:80` returned no HTTP response; the run output notes host networking may need to be enabled in Docker Desktop settings.
+- [Host-network attempt and Apache logs](rudray-20261023-211109/01-host-network-blocked.png)
+
+### [rudray-20261023-211607](rudray-20261023-211607/README.md)
+
+- Task 3: PASS. Nginx first served the tracked page, then served the changed host-mounted page without rebuilding or restarting. The helper restored the tracked page and removed its container.
+- [Before/after bind-mount output](rudray-20261023-211607/01-bind-mount-live-update.png)
+
+### [rudray-20261023-212307](rudray-20261023-212307/README.md)
+
+- Task 4: PASS. The helper confirmed Swarm was inactive, initialized a temporary manager, inspected the attachable `overlay` network, and cleaned up.
+- [Swarm node and overlay network details](rudray-20261023-212307/01-overlay-network-inspection.png)
 
 ### [rudray-20261016-212856-656600](rudray-20261016-212856-656600/README.md)
 
@@ -35,9 +56,9 @@ Historical timestamps, identities and resource names remain unchanged. These lin
 
 ## Still needs genuine capture
 
-Capture Compose networks/connectivity. Bind-mount edit/reload and host-network behaviour need their own live run; Docker Desktop host networking may need explicit support.
+The four assignment tasks now have execution records. Task 2 is explicitly blocked because Docker Desktop did not serve the Apache host-network container on `localhost:80`; all other task checks passed.
 
-Use the [coursework capture guide](../../COURSEWORK-EVIDENCE.md). The helper displays Rudray Mehra around freshly executed commands.
+The overlay capture was rerun with Swarm initialization output suppressed. The first successful run that displayed a worker join token is intentionally excluded from this repo.
 
 ## Reference image inventory (not copied)
 

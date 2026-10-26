@@ -1,0 +1,534 @@
+  PID USER              %CPU %MEM COMM
+    1 root               0.0  0.1 /sbin/launchd
+  137 root               0.0  0.1 /usr/libexec/logd
+  139 root               0.0  0.1 /usr/libexec/UserEventAgent
+  141 root               0.1  0.0 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd
+  142 root               0.0  0.0 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted
+  145 root               0.0  0.1 /usr/sbin/systemstats
+  148 root               0.0  0.1 /usr/libexec/configd
+  150 root               0.4  0.1 /System/Library/CoreServices/powerd.bundle/powerd
+  151 root               0.0  0.0 /usr/libexec/IOMFB_bics_daemon
+  159 _corespeechd       0.0  0.0 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd_system
+  161 root               0.0  0.0 /usr/libexec/watchdogd
+  165 root               0.0  0.2 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+  167 root               0.0  0.0 /usr/libexec/kernelmanagerd
+  168 root               0.0  0.0 /usr/libexec/diskarbitrationd
+  172 root               0.0  0.0 /usr/sbin/syslogd
+  175 root               0.0  0.0 /usr/libexec/thermalmonitord
+  176 root               0.0  0.1 /usr/libexec/opendirectoryd
+  178 root               0.0  0.1 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd
+  179 root               0.3  0.1 /System/Library/CoreServices/launchservicesd
+  180 _timed             0.0  0.0 /usr/libexec/timed
+  181 _usbmuxd           0.0  0.0 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd
+  182 root               0.0  0.0 /usr/sbin/securityd
+  184 _locationd         0.0  0.2 /usr/libexec/locationd
+  187 root               0.0  0.0 autofsd
+  188 root               0.0  0.1 /usr/libexec/dasd
+  190 _distnote          0.0  0.0 /usr/sbin/distnoted
+  192 root               0.1  0.1 /usr/libexec/PerfPowerServices
+  194 root               0.0  0.0 /System/Library/CoreServices/logind
+  195 root               0.0  0.0 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+  196 root               0.0  0.0 /usr/sbin/KernelEventAgent
+  199 root               0.0  0.2 /usr/sbin/bluetoothd
+  200 root               0.0  0.0 /usr/sbin/notifyd
+  202 root               0.1  0.1 /usr/libexec/corebrightnessd
+  203 root               0.0  0.0 /usr/libexec/AirPlayXPCHelper
+  204 root               0.0  0.1 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/com.apple.cmio.registerassistantservice
+  206 _windowserver      8.0  0.7 /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer
+  207 root               0.0  0.0 /System/Library/PrivateFrameworks/TCC.framework/Support/tccd
+  208 rudraym            0.0  0.1 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow
+  209 root               0.0  0.0 /usr/sbin/cfprefsd
+  210 root               1.6  0.1 /usr/libexec/runningboardd
+  212 root               0.0  0.1 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored
+  213 root               0.0  0.0 /System/Library/CoreServices/coreservicesd
+  214 _analyticsd        0.0  0.1 /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd
+  215 root               0.0  0.2 /usr/libexec/airportd
+  218 root               0.0  0.1 /usr/libexec/lsd
+  221 _coreaudiod        2.1  0.1 /usr/sbin/coreaudiod
+  240 _nsurlsessiond     0.0  0.1 /usr/libexec/nsurlsessiond
+  241 root               0.0  0.0 /usr/libexec/apfsd
+  244 root               0.0  0.0 /usr/libexec/biometrickitd
+  246 root               0.0  0.0 /usr/sbin/distnoted
+  247 _networkd          0.1  0.1 /usr/libexec/symptomsd
+  248 root               0.0  0.0 /usr/libexec/eligibilityd
+  249 _coreaudiod        0.0  0.0 /usr/sbin/distnoted
+  251 root               0.0  0.0 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd
+  253 _windowserver      0.0  0.0 /usr/sbin/distnoted
+  258 _mdnsresponder     0.6  0.1 /usr/sbin/mDNSResponder
+  260 root               0.0  0.0 /usr/libexec/ApplicationFirewall/socketfilterfw
+  263 root               0.0  0.0 /usr/sbin/mDNSResponderHelper
+  265 root               0.0  0.1 /usr/libexec/syspolicyd
+  270 root               0.0  0.0 /usr/libexec/audioclocksyncd
+  287 _cmiodalassistants   0.0  0.0 /usr/sbin/distnoted
+  306 _locationd         0.0  0.0 /usr/sbin/distnoted
+  335 _modelmanagerd     0.0  0.0 /usr/libexec/modelmanagerd
+  343 root               0.0  0.2 /usr/libexec/searchpartyd
+  344 _cmiodalassistants   0.0  0.0 /usr/sbin/appleh13camerad
+  345 _cmiodalassistants   0.0  0.0 /usr/libexec/cameracaptured
+  346 _cmiodalassistants   0.0  0.0 /System/Library/Frameworks/CoreMediaIO.framework/Versions/A/Resources/UVCAssistant.systemextension/Contents/MacOS/UVCAssistant
+  347 _appleevents       0.0  0.0 /System/Library/CoreServices/appleeventsd
+  351 root               0.0  0.1 /usr/sbin/WirelessRadioManagerd
+  356 root               0.0  0.0 /System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd
+  361 _softwareupdate    0.0  0.0 /usr/sbin/distnoted
+  365 _nsurlsessiond     0.0  0.0 /usr/sbin/distnoted
+  371 root               0.0  0.1 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+  372 root               0.0  1.1 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+  373 root               0.0  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp
+  380 _ctkd              0.0  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd
+  389 _accessoryupdater   0.0  0.0 /usr/sbin/distnoted
+  401 root               0.0  0.0 /usr/sbin/systemstats
+  403 root               0.0  0.0 /Library/PrivilegedHelperTools/com.docker.vmnetd
+  405 _spotlight         0.0  0.0 /usr/sbin/distnoted
+  408 root               0.0  0.0 /usr/sbin/cron
+  412 _driverkit         0.0  0.0 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+  413 _driverkit         0.0  0.0 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+  414 _driverkit         1.0  0.4 /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN
+  415 _driverkit         0.0  0.0 /System/Library/DriverExtensions/IOUserBluetoothSerialDriver.dext/IOUserBluetoothSerialDriver
+  416 _driverkit         0.0  0.0 /System/Library/DriverExtensions/com.apple.DriverKit-IOUserDockChannelSerial.dext/com.apple.DriverKit-IOUserDockChannelSerial
+  417 _driverkit         0.0  0.0 /System/Library/DriverExtensions/com.apple.AppleUserHIDDrivers.dext/com.apple.AppleUserHIDDrivers
+  423 _applepay          0.0  0.0 /usr/sbin/distnoted
+  437 root               0.0  0.1 /usr/libexec/wifianalyticsd
+  444 rudraym            0.0  0.0 /usr/sbin/distnoted
+  445 rudraym            0.0  0.0 /usr/sbin/cfprefsd
+  447 rudraym            0.0  0.0 /usr/libexec/UserEventAgent
+  453 rudraym            0.0  0.1 /usr/sbin/universalaccessd
+  454 rudraym            0.0  0.1 /usr/libexec/pboard
+  456 rudraym            0.0  0.1 /usr/libexec/lsd
+  460 rudraym            0.1  0.1 /usr/libexec/nsurlsessiond
+  461 rudraym            0.0  0.1 /usr/sbin/usernoted
+  463 rudraym            0.1  0.1 /usr/libexec/rapportd
+  466 rudraym            0.0  0.0 /System/Library/CoreServices/lockoutagent
+  468 rudraym            0.0  0.1 /usr/libexec/trustd
+  473 rudraym            0.0  0.1 /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent
+  474 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/UserNotificationsCore.framework/Support/usernotificationsd
+  475 rudraym            0.0  0.0 /usr/libexec/containermanagerd
+  476 rudraym            0.0  0.1 /usr/libexec/studentd
+  477 rudraym            0.2  1.5 /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+  479 rudraym            0.0  0.2 /System/Library/CoreServices/WindowManager.app/Contents/MacOS/WindowManager
+  491 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd
+  492 root               0.0  0.0 /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd
+  493 rudraym            0.0  0.1 /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd
+  500 _netbios           0.0  0.0 /usr/sbin/netbiosd
+  505 rudraym            0.0  0.3 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter
+  507 _appleevents       0.0  0.0 /usr/sbin/distnoted
+  508 rudraym            0.3  0.8 /Applications/Cursor.app/Contents/MacOS/Cursor
+  516 rudraym            1.2  0.5 /Applications/WhatsApp.app/Contents/MacOS/WhatsApp
+  519 rudraym            0.0  0.1 /System/Applications/System Settings.app/Contents/MacOS/System Settings
+  520 rudraym            0.0  0.1 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+  521 rudraym            0.0  0.1 /System/Library/CoreServices/sharedfilelistd
+  522 rudraym            0.0  0.0 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  523 rudraym            0.0  0.4 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter
+  526 rudraym            0.0  0.1 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+  528 rudraym            0.0  0.4 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+  531 rudraym            0.0  0.1 /usr/libexec/sharingd
+  532 rudraym            0.0  0.0 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/fontworker
+  533 rudraym            0.0  0.1 /System/Library/CoreServices/WallpaperAgent.app/Contents/MacOS/WallpaperAgent
+  534 root               0.0  0.1 /usr/sbin/filecoordinationd
+  544 rudraym            0.0  0.1 /usr/libexec/ContinuityCaptureAgent
+  545 rudraym            0.1  0.1 /System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary
+  547 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd
+  548 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/AMPDevices.framework/Versions/A/Support/AMPDeviceDiscoveryAgent
+  552 rudraym            0.0  0.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/chrome_crashpad_handler
+  560 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/FamilyCircle.framework/Versions/A/Resources/familycircled
+  566 _oahd              0.0  0.0 /usr/libexec/rosetta/oahd
+  567 root               0.1  0.1 /usr/libexec/gamepolicyd
+  574 rudraym            0.0  0.5 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)
+  575 rudraym            0.5  0.7 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)
+  576 _nearbyd           0.0  0.1 /usr/libexec/nearbyd
+  579 rudraym            0.0  0.2 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent
+  580 rudraym            0.0  0.1 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)
+  587 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoteagent
+  588 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd
+  592 rudraym            0.0  0.0 /usr/libexec/avconferenced
+  595 rudraym            0.1  0.1 /System/Library/CoreServices/UIKitSystem.app/Contents/MacOS/UIKitSystem
+  597 rudraym            0.0  0.1 /usr/libexec/milod
+  602 rudraym            0.0  1.1 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+  608 rudraym            0.0  0.0 /System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent
+  613 rudraym            0.0  0.4 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd
+  617 rudraym            0.0  0.1 /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension
+  618 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.iCloudDriveFileProvider.appex/Contents/MacOS/com.apple.CloudDocs.iCloudDriveFileProvider
+  630 rudraym            0.0  0.1 /System/Applications/System Settings.app/Contents/PlugIns/GeneralSettings.appex/Contents/MacOS/GeneralSettings
+  631 rudraym            0.0  0.1 /System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.extra.xpc/Contents/MacOS/com.apple.dock.extra
+  632 rudraym            0.0  0.0 /System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.external.extra.arm64.xpc/Contents/MacOS/com.apple.dock.external.extra.arm64
+  669 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce
+  672 _audiomxd          0.0  0.0 /usr/libexec/audiomxd
+  677 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/AppleIDSettings.appex/Contents/MacOS/AppleIDSettings
+  695 rudraym            0.0  0.0 /Applications/Cursor.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler
+  704 rudraym            0.0  0.1 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdbulkimport
+  707 rudraym            0.0  0.2 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper
+  710 rudraym            0.0  0.2 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper
+  711 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/WallpaperVideoExtension.appex/Contents/MacOS/WallpaperVideoExtension
+  716 rudraym            0.0  0.0 /System/Library/ExtensionKit/Extensions/VPN.appex/Contents/MacOS/VPN
+  717 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/FamilySettings.appex/Contents/MacOS/FamilySettings
+  718 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/FollowUpSettingsExtension.appex/Contents/MacOS/FollowUpSettingsExtension
+  719 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/HeadphoneSettingsExtension.appex/Contents/MacOS/HeadphoneSettingsExtension
+  720 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/ClassroomSettings.appex/Contents/MacOS/ClassroomSettings
+  724 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd
+  729 rudraym            0.0  0.0 /System/Library/Image Capture/Support/icdd
+  730 rudraym            0.0  0.0 /opt/homebrew/opt/ollama/bin/ollama
+  731 rudraym            0.2  0.3 /opt/homebrew/opt/mongodb-community@8.0/bin/mongod
+  734 rudraym            0.0  0.0 /opt/homebrew/opt/postgresql@14/bin/postgres
+  735 rudraym            0.0  0.0 /System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent
+  737 rudraym            0.0  0.2 com.apple.weather.menu
+  738 rudraym            0.0  0.0 /System/Library/CoreServices/diagnostics_agent
+  739 rudraym            0.0  0.1 /System/Library/CoreServices/TextInputMenuAgent.app/Contents/MacOS/TextInputMenuAgent
+  741 rudraym            0.0  0.1 /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python
+  743 rudraym            0.0  0.0 /System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp
+  746 rudraym            0.8  0.3 /Applications/Granola.app/Contents/MacOS/Granola
+  748 rudraym            0.0  0.1 /Applications/TakeSip.app/Contents/MacOS/TakeSip
+  751 rudraym            0.0  0.3 Cursor Helper: shared-process
+  753 rudraym            0.4  1.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Renderer).app/Contents/MacOS/Cursor Helper (Renderer)
+  779 rudraym            0.0  0.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper
+  853 rudraym            0.0  0.2 Cursor Helper: fileWatcher [1:a7d4bf02a7ea45e8f607c1ecf082c091]
+  856 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/TextInputUIMacHelper.framework/Versions/A/XPCServices/CursorUIViewService.xpc/Contents/MacOS/CursorUIViewService
+  860 root               0.0  0.0 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer
+  891 rudraym            0.0  0.2 Cursor Helper: mcp-process
+  892 rudraym            0.4  0.3 Cursor Helper (Plugin): extension-host (user) Cashing [1-1]
+  896 rudraym            0.3  0.3 Cursor Helper: terminal pty-host
+  900 _gamecontrollerd   0.0  0.0 /usr/sbin/distnoted
+  984 rudraym            0.0  0.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin)
+ 1064 rudraym            0.0  0.0 /Applications/Granola.app/Contents/Frameworks/Electron Framework.framework/Helpers/chrome_crashpad_handler
+ 1067 rudraym            0.0  0.1 /Users/rudraym/.cursor/extensions/openai.chatgpt-26.908.40401-darwin-arm64/bin/macos-aarch64/codex
+ 1076 rudraym            0.0  0.1 /Applications/Granola.app/Contents/Frameworks/Granola Helper.app/Contents/MacOS/Granola Helper
+ 1078 rudraym            0.0  0.1 /Applications/Granola.app/Contents/Frameworks/Granola Helper.app/Contents/MacOS/Granola Helper
+ 1085 rudraym            0.0  0.1 /Applications/Granola.app/Contents/Frameworks/Granola Helper (Renderer).app/Contents/MacOS/Granola Helper (Renderer)
+ 1090 rudraym            0.4  0.1 Granola Helper (MacOSMicAppsWithDevices)
+ 1109 rudraym            0.0  0.2 /Applications/Granola.app/Contents/Frameworks/Granola Helper (Renderer).app/Contents/MacOS/Granola Helper (Renderer)
+ 1113 rudraym            0.0  0.1 Granola Helper (MissionControl)
+ 1251 rudraym            0.0  0.1 Granola Helper (Storage)
+ 1281 rudraym            0.0  0.1 /Applications/Granola.app/Contents/Frameworks/Granola Helper.app/Contents/MacOS/Granola Helper
+ 1282 rudraym            0.0  0.1 /Applications/Granola.app/Contents/Frameworks/Granola Helper.app/Contents/MacOS/Granola Helper
+ 1312 rudraym            0.0  0.0 /usr/bin/ssh-agent
+ 1348 rudraym            0.0  0.0 postgres: checkpointer 
+ 1349 rudraym            0.0  0.0 postgres: background writer 
+ 1350 rudraym            0.0  0.0 postgres: walwriter 
+ 1351 rudraym            0.0  0.0 postgres: autovacuum launcher 
+ 1352 rudraym            0.0  0.0 postgres: stats collector 
+ 1353 rudraym            0.0  0.0 postgres: logical replication launcher 
+ 1377 root               0.0  0.1 /System/Library/CoreServices/SubmitDiagInfo
+ 1387 root               0.0  0.0 automountd
+ 1428 rudraym            0.0  0.8 /Users/rudraym/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/bin/codex
+ 1445 rudraym            0.0  0.1 /Users/rudraym/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/bin/codex
+ 1626 _fpsd              0.0  0.0 /System/Library/PrivateFrameworks/CoreFP.framework/Versions/A/fairplayd
+ 1740 root               0.0  0.0 /System/Library/CoreServices/CrashReporterSupportHelper
+ 1743 rudraym            0.0  0.0 /Users/rudraym/.codex/packages/app-server-daemon/releases/0.163.0-aarch64-apple-darwin/bin/codex-code-mode-host
+ 2121 _rmd               0.0  0.0 /usr/sbin/distnoted
+ 2234 rudraym            0.0  0.0 /System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime
+ 2272 rudraym            0.0  0.0 /Applications/Cursor.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt
+ 2676 rudraym            0.0  0.0 /System/Cryptexes/App/usr/libexec/PasswordBreachAgent
+ 3473 rudraym            0.0  0.0 /System/Library/Frameworks/CoreSpotlight.framework/spotlightknowledged
+ 3643 _neuralengine      0.0  0.0 /usr/sbin/distnoted
+ 5319 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/FileProviderDaemon.framework/XPCServices/FPCKService.xpc/Contents/MacOS/FPCKService
+ 8135 rudraym            0.0  0.0 /System/Applications/Mail.app/Contents/PlugIns/com.apple.mail.SpotlightIndexExtension.appex/Contents/MacOS/com.apple.mail.SpotlightIndexExtension
+ 8137 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/EmailDaemon.framework/Versions/A/maild
+10563 rudraym            0.0  0.2 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+10572 rudraym            0.0  0.6 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+10579 rudraym            0.0  0.4 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+10583 rudraym            0.0  0.1 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)
+10584 rudraym            0.0  0.1 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)
+10587 rudraym            0.0  0.8 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+10592 rudraym            0.0  1.0 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+10595 rudraym            0.0  0.2 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+16197 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd
+17472 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/People.framework/peopled
+18996 rudraym            0.0  0.0 /System/Library/CoreServices/talagentd
+20477 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ChronoCore.framework/Support/chronod
+20509 rudraym            0.0  0.2 /System/Applications/Weather.app/Contents/PlugIns/WeatherWidget.appex/Contents/MacOS/WeatherWidget
+21282 rudraym            0.0  0.1 /System/Library/CoreServices/Screen Time.app/Contents/PlugIns/ScreenTimeWidgetExtension.appex/Contents/MacOS/ScreenTimeWidgetExtension
+21342 rudraym            0.0  0.1 /System/Applications/Calendar.app/Contents/PlugIns/CalendarWidgetExtension.appex/Contents/MacOS/CalendarWidgetExtension
+21741 rudraym            0.0  0.1 /System/Library/CoreServices/audioaccessoryd
+22166 rudraym            0.0  0.1 /usr/libexec/bluetoothuserd
+24676 rudraym            0.0  0.0 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
+25050 rudraym            0.0  0.1 /System/Applications/Stocks.app/Contents/PlugIns/StocksWidget.appex/Contents/MacOS/StocksWidget
+25332 rudraym            0.0  0.4 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+31480 root               0.0  0.1 /usr/libexec/aned
+33099 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/BiomeAgent
+33138 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/ContextStoreAgent
+34308 _modelmanagerd     0.0  0.0 /usr/sbin/distnoted
+34309 _modelmanagerd     0.0  0.0 /System/Library/ExtensionKit/Extensions/TGOnDeviceInferenceProviderService.appex/Contents/MacOS/TGOnDeviceInferenceProviderService
+34314 _modelmanagerd     0.0  0.0 /System/Library/ExtensionKit/Extensions/TGOnDeviceInferenceProviderService.appex/Contents/MacOS/TGOnDeviceInferenceProviderService
+34377 rudraym            0.0  0.0 /Applications/WhatsApp.app/Contents/PlugIns/ServiceExtension.appex/Contents/MacOS/ServiceExtension
+38284 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd
+40809 root               0.0  0.0 /usr/libexec/sysmond
+42447 rudraym            0.0  0.0 /usr/libexec/seserviced
+42609 _audiomxd          0.0  0.0 /usr/sbin/distnoted
+42750 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed
+42758 rudraym            0.0  0.8 /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight
+42776 _trustd            0.0  0.1 /usr/libexec/trustd
+42782 rudraym            0.0  0.7 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+42784 rudraym            0.0  0.3 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+43005 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent
+44576 rudraym            0.0  0.0 /usr/sbin/BTLEServerAgent
+48757 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/HearingCore.framework/heard
+48871 rudraym            0.0  0.1 /usr/libexec/searchpartyuseragent
+50045 root               0.0  0.0 /usr/sbin/BTLEServer
+50102 rudraym            0.0  0.1 /usr/libexec/secd
+50205 root               0.0  0.0 /System/Library/CoreServices/TimeMachine/backupd
+50248 rudraym            0.0  0.1 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+52937 rudraym            0.0  0.4 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+53073 rudraym            0.1  1.7 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Renderer).app/Contents/MacOS/Cursor Helper (Renderer)
+53251 rudraym            0.0  0.4 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+53325 rudraym            0.3  0.5 Cursor Helper (Plugin): extension-host (user) devops-heros [2-18]
+53329 rudraym            0.0  0.2 Cursor Helper: fileWatcher [2:8f08820ac85c85e30b795489ce8dfa10]
+53421 rudraym            0.0  0.1 /Users/rudraym/.cursor/extensions/openai.chatgpt-26.908.40401-darwin-arm64/bin/macos-aarch64/codex
+53747 rudraym            0.0  0.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin)
+54955 root               0.0  0.0 /usr/libexec/nehelper
+55176 rudraym            0.0  0.1 /usr/libexec/knowledge-agent
+55843 rudraym            0.0  0.5 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell
+56389 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper
+57579 _biome             0.0  0.1 /System/Library/PrivateFrameworks/BiomeStreams.framework/Support/biomed
+57596 rudraym            0.0  0.1 /usr/libexec/duetexpertd
+57598 rudraym            0.0  0.2 /usr/libexec/routined
+57623 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd
+57642 rudraym            0.0  0.1 /usr/libexec/triald
+57644 root               0.0  0.1 /System/Library/PrivateFrameworks/SystemStatusServer.framework/Support/systemstatusd
+58066 root               0.0  0.0 /System/Library/Frameworks/Security.framework/Versions/A/XPCServices/com.apple.CodeSigningHelper.xpc/Contents/MacOS/com.apple.CodeSigningHelper
+58080 root               0.0  0.0 /usr/libexec/mobileassetd
+58134 rudraym            0.0  0.1 /System/Library/Frameworks/Contacts.framework/Support/contactsd
+58192 rudraym            0.0  0.1 /System/Library/Frameworks/CoreSpotlight.framework/spotlightknowledged
+58791 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+58800 rudraym            0.0  0.1 /usr/libexec/networkserviceproxy
+58803 root               0.0  0.1 /usr/libexec/rtcreportingd
+59464 rudraym            0.0  0.1 /System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter
+59471 root               0.0  0.1 /usr/libexec/PowerUIAgent
+59472 root               0.0  0.0 /usr/libexec/usermanagerd
+59479 root               0.0  0.1 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+59487 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/TCC.framework/Support/tccd
+59488 root               0.0  0.0 /usr/libexec/sandboxd
+59490 rudraym            0.0  0.0 /usr/libexec/secinitd
+59491 rudraym            0.1  0.0 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/XPCServices/com.apple.hiservices-xpcservice.xpc/Contents/MacOS/com.apple.hiservices-xpcservice
+59495 rudraym            0.0  0.1 /usr/libexec/proactived
+59496 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/DoNotDisturbServer.framework/Support/donotdisturbd
+59497 rudraym            0.0  0.1 /usr/libexec/findmylocateagent
+59498 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+59500 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd
+59501 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CoreCDP.framework/Versions/A/Resources/cdpd
+59503 rudraym            0.0  0.1 /usr/libexec/neagent
+59504 _fpsd              0.0  0.0 /System/Library/PrivateFrameworks/CoreADI.framework/adid
+59506 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService
+59507 root               0.0  0.1 /System/Library/CoreServices/osanalyticshelper
+59531 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/SiriInference.framework/Versions/A/siriinferenced
+59534 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/SiriSuggestionsSupport.framework/Versions/A/XPCServices/SiriSuggestionsBookkeepingService.xpc/Contents/MacOS/SiriSuggestionsBookkeepingService
+59535 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/iCloudNotification.framework/iCloudNotificationAgent
+59536 rudraym            0.0  0.1 /usr/libexec/appleaccountd
+59537 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd
+59538 rudraym            0.0  0.0 /usr/libexec/swtransparencyd
+59539 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService
+59540 root               0.0  0.0 /usr/libexec/mobileactivationd
+59541 rudraym            0.0  0.1 /System/Library/Frameworks/CryptoTokenKit.framework/ctkd
+59542 rudraym            0.0  0.1 /usr/libexec/pkd
+59543 rudraym            0.0  0.1 /usr/libexec/linkd
+59568 root               0.0  0.1 /usr/libexec/coreduetd
+59571 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService
+59575 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd
+59579 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/GenerativeExperiencesRuntime.framework/Versions/A/generativeexperiencesd
+59580 rudraym            0.0  0.1 /usr/libexec/siriknowledged
+59581 root               0.0  0.1 /System/Library/PrivateFrameworks/ModelCatalogRuntime.framework/Versions/A/modelcatalogd
+59585 rudraym            0.0  0.2 /System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
+59586 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/iTunesCloud.framework/Support/itunescloudd
+59587 root               0.0  0.1 /usr/libexec/wifip2pd
+59591 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AppleMediaServices.framework/Resources/amsaccountsd
+59592 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd
+59593 rudraym            0.0  0.1 /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent
+59604 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/iCloudDriveCore.framework/Versions/A/Support/bird
+59649 root               0.0  0.0 /usr/libexec/securityd_system
+59650 rudraym            0.0  0.1 /usr/libexec/remindd
+59651 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd
+59653 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ContactsDonation.framework/Versions/A/Support/contactsdonationagent
+59656 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService
+59713 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ReplicatorCore.framework/Support/replicatord
+59714 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/StatusKit.framework/StatusKitAgent
+59721 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/OnDeviceStorage.framework/Support/amsondevicestoraged
+59755 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/DataAccess.framework/Support/dataaccessd
+59760 rudraym            0.0  0.0 /usr/libexec/findmydevice-user-agent
+59771 rudraym            0.0  0.1 /System/Cryptexes/App/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent
+59773 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ScreenTimeCore.framework/Versions/A/ScreenTimeAgent
+59869 rudraym            0.0  0.6 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+59906 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent
+59935 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CoreRecents.framework/Versions/A/Support/recentsd
+59936 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd
+59939 rudraym            0.0  0.1 /System/Applications/Messages.app/Contents/PlugIns/Messages Assistant Extension.appex/Contents/MacOS/Messages Assistant Extension
+59941 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd
+59947 _softwareupdate    0.0  0.1 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+59954 rudraym            0.0  0.1 /usr/libexec/adprivacyd
+59956 rudraym            0.0  0.1 /System/Cryptexes/App/usr/libexec/AuthenticationServicesAgent
+59963 root               0.0  0.1 /usr/libexec/ospredictiond
+59972 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/IntelligencePlatformCompute.framework/Versions/A/XPCServices/IntelligencePlatformComputeService.xpc/Contents/MacOS/IntelligencePlatformComputeService
+59982 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/XPCServices/AppPredictionIntentsHelperService.xpc/Contents/MacOS/AppPredictionIntentsHelperService
+59983 root               0.0  0.0 /System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/XPCServices/PerfPowerTelemetryClientRegistrationService.xpc/Contents/MacOS/PerfPowerTelemetryClientRegistrationService
+60026 rudraym            0.0  0.1 /usr/libexec/transparencyd
+60028 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Helpers/ProtectedCloudKeySyncing
+60054 rudraym            0.0  0.1 /usr/libexec/mlhostd
+60055 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd
+60063 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent
+60091 root               0.0  0.0 /usr/libexec/logd_helper
+60094 rudraym            0.0  0.1 /usr/libexec/promotedcontentd
+60105 rudraym            0.0  0.1 /usr/libexec/tipsd
+60111 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/MapsSync.framework/mapssyncd
+60117 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbagent.app/Contents/MacOS/nbagent
+60125 root               0.0  0.0 /usr/libexec/mmaintenanced
+60133 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager
+60148 rudraym            0.0  0.1 /usr/libexec/intelligentroutingd
+60162 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent
+60163 rudraym            0.0  0.0 /System/Library/Frameworks/ManagedSettings.framework/Versions/A/ManagedSettingsAgent
+60164 root               0.0  0.0 /usr/libexec/amfid
+60170 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+60182 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ContinuousDialogManagerService.framework/assistant_cdmd
+60190 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/UIFoundation.framework/Versions/A/XPCServices/nsattributedstringagent.xpc/Contents/MacOS/nsattributedstringagent
+60204 rudraym            0.0  0.1 /System/Library/CoreServices/Keychain Circle Notification.app/Contents/MacOS/Keychain Circle Notification
+60207 rudraym            0.0  0.0 /usr/libexec/feedbackd
+60213 rudraym            0.0  0.0 /System/Library/CoreServices/ReportCrash
+60215 root               0.0  0.0 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+60216 rudraym            0.0  0.1 /usr/libexec/keyboardservicesd
+60218 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/IMTransferServices.framework/IMTransferAgent.app/Contents/MacOS/IMTransferAgent
+60219 root               0.0  0.0 /usr/libexec/online-auth-agent
+60222 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/IntlPreferences.framework/Support/localizationswitcherd
+60228 rudraym            0.9  0.1 /System/Library/CoreServices/Siri.app/Contents/MacOS/Siri
+60233 root               0.0  0.1 /usr/libexec/audioanalyticsd
+60234 rudraym            0.0  0.1 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice
+60235 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/CascadeSets.framework/Versions/A/XPCServices/SetStoreUpdateService.xpc/Contents/MacOS/SetStoreUpdateService
+60239 rudraym            0.3  0.1 /System/Library/CoreServices/Siri.app/Contents/XPCServices/SiriNCService.xpc/Contents/MacOS/SiriNCService
+60253 root               0.0  0.0 /usr/libexec/smd
+60280 rudraym            0.0  0.1 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/managedcorespotlightd
+60294 rudraym            0.0  0.1 /System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent
+60295 root               0.0  0.0 /System/Library/CoreServices/TimeMachine/backupd-helper
+60300 root               0.0  0.0 /usr/libexec/storagekitd
+60302 root               0.0  0.0 /usr/libexec/containermanagerd_system
+60304 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/IntelligencePlatformCore.framework/Versions/A/knowledgeconstructiond
+60305 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/XPCServices/media-indexer.xpc/Contents/MacOS/media-indexer
+60306 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPLibraryAgent
+60308 rudraym            0.0  0.1 /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent
+60368 root               0.0  0.0 /usr/libexec/powerexperienced
+60369 root               0.0  0.0 /usr/libexec/findmybeaconingd
+60376 root               0.0  0.0 /usr/libexec/powerdatad
+60400 rudraym            0.0  0.0 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice
+60401 _locationd         0.0  0.1 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+60404 _locationd         0.0  0.0 /usr/libexec/trustd
+60408 _locationd         0.0  0.0 /usr/libexec/containermanagerd
+60412 _cmiodalassistants   0.0  0.1 /System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+60414 root               0.0  0.0 /usr/libexec/countryd
+60415 _cmiodalassistants   0.0  0.0 /usr/libexec/trustd
+60416 _cmiodalassistants   0.0  0.0 /usr/libexec/containermanagerd
+60437 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CloudPhotoServices.framework/Versions/A/XPCServices/com.apple.CloudPhotosConfiguration.xpc/Contents/MacOS/com.apple.CloudPhotosConfiguration
+60447 _iconservices      0.0  0.0 /System/Library/CoreServices/iconservicesd
+60455 rudraym            0.0  0.1 /System/Library/CoreServices/iconservicesagent
+60464 rudraym            0.0  0.1 /System/Library/Frameworks/ClassKit.framework/Versions/A/progressd
+60504 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/MobileTimer.framework/Executables/mobiletimerd
+60523 root               0.0  0.0 /usr/libexec/keybagd
+60524 root               0.0  0.1 /System/Library/PrivateFrameworks/Categories.framework/Versions/A/XPCServices/CategoriesService.xpc/Contents/MacOS/CategoriesService
+60527 root               0.0  0.0 /System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService
+60554 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf
+60562 root               0.0  0.0 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XprotectService.xpc/Contents/MacOS/XprotectService
+60584 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/DeviceCheckInternal.framework/devicecheckd
+60587 root               0.0  0.0 /System/Library/CoreServices/ReportCrash
+60647 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/ModelCatalogRuntime.framework/Versions/A/ModelCatalogAgent
+60819 rudraym            0.3  0.5 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+60909 root               0.0  0.1 /usr/libexec/wifivelocityd
+60935 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/GeoAnalytics.framework/geoanalyticsd
+61037 rudraym            0.0  0.1 /System/Library/Frameworks/LocalAuthentication.framework/Support/coreautha.bundle/Contents/MacOS/coreautha
+61047 root               0.0  0.0 /System/Library/PrivateFrameworks/AppleCredentialManager.framework/AppleCredentialManagerDaemon
+61050 rudraym            0.0  0.0 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+61054 rudraym            0.0  0.0 /usr/libexec/SidecarRelay
+61055 rudraym            0.0  0.1 /System/Library/CoreServices/UniversalControl.app/Contents/MacOS/UniversalControl
+61058 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/Synapse.framework/Support/contentlinkingd
+61059 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/SiriTTSService.framework/Versions/A/XPCServices/com.apple.SiriTTSService.TrialProxy.xpc/Contents/MacOS/com.apple.SiriTTSService.TrialProxy
+61060 rudraym            0.0  0.0 /usr/libexec/keychainsharingmessagingd
+61062 rudraym            0.0  0.4 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+61069 root               0.0  0.0 /usr/libexec/nesessionmanager
+61070 root               0.0  0.0 /System/Library/Frameworks/SystemExtensions.framework/Versions/A/Helpers/sysextd
+61097 rudraym            0.0  0.0 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService
+61103 rudraym            0.0  0.0 /System/Library/Frameworks/Intents.framework/XPCServices/intents_helper.xpc/Contents/MacOS/intents_helper
+61104 rudraym            0.0  0.1 /System/Library/Frameworks/Intents.framework/XPCServices/intents_helper.xpc/Contents/MacOS/intents_helper
+61124 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/SiriAnalytics.framework/Versions/A/XPCServices/SAExtensionOrchestrator.xpc/Contents/MacOS/SAExtensionOrchestrator
+61125 rudraym            0.0  0.0 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice
+61126 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/GMSSELFIngestor.appex/Contents/MacOS/GMSSELFIngestor
+61127 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/IFTranscriptSELFIngestor.appex/Contents/MacOS/IFTranscriptSELFIngestor
+61128 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/BiomeSELFIngestor.appex/Contents/MacOS/BiomeSELFIngestor
+61129 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/IFTelemetrySELFIngestor.appex/Contents/MacOS/IFTelemetrySELFIngestor
+61133 rudraym            0.0  0.1 /usr/libexec/swcd
+61141 rudraym            0.0  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+61146 rudraym            0.0  0.6 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+61180 rudraym            0.4  0.5 Cursor Helper (Plugin): extension-host (retrieval) Cashing [1-29]
+61181 rudraym            0.7  0.8 Cursor Helper (Plugin): extension-host (always-local) Cashing [1-30]
+61182 rudraym            1.6  0.8 Cursor Helper (Plugin): extension-host (agent-exec) Cashing [1-31]
+61184 rudraym            0.3  0.6 Cursor Helper (Plugin): extension-host (retrieval) devops-heros [2-32]
+61185 rudraym            0.3  0.7 Cursor Helper (Plugin): extension-host (always-local) devops-heros [2-33]
+61186 rudraym            0.3  0.7 Cursor Helper (Plugin): extension-host (agent-exec) devops-heros [2-34]
+61195 rudraym            0.0  0.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin)
+61197 rudraym            0.0  0.1 /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin)
+61254 rudraym            0.0  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+61650 rudraym            0.0  0.1 /System/Library/CoreServices/Dock.app/Contents/XPCServices/DockHelper.xpc/Contents/MacOS/DockHelper
+61654 rudraym            0.0  0.1 /usr/libexec/inputanalyticsd
+61657 rudraym            0.0  0.1 /usr/libexec/dmd
+61658 rudraym            0.0  0.1 /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice
+61659 rudraym            0.0  0.1 /System/Library/ExtensionKit/Extensions/PackageThumbnailExtension.appex/Contents/MacOS/PackageThumbnailExtension
+61660 rudraym            3.3  0.7 /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+61666 root               0.0  0.1 /usr/sbin/systemsoundserverd
+61667 root               0.0  0.0 /System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar
+61671 root               0.0  0.0 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+61755 rudraym            0.0  0.1 /System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar
+61756 rudraym            0.0  0.0 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/CarbonComponentScannerXPC.xpc/Contents/MacOS/CarbonComponentScannerXPC
+61757 root               0.0  0.0 /System/Library/PrivateFrameworks/EcosystemAnalytics.framework/Support/ecosystemanalyticsd
+61833 rudraym            0.0  0.1 /System/Library/CoreServices/OSDUIHelper.app/Contents/MacOS/OSDUIHelper
+62069 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/IntelligenceFlowRuntime.framework/Versions/A/intelligenceflowd
+62070 rudraym            0.0  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+62071 rudraym            0.0  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+62072 rudraym            0.0  0.0 /System/Library/Frameworks/CoreGraphics.framework/Versions/A/XPCServices/CGPDFService.xpc/Contents/MacOS/CGPDFService
+62073 rudraym            0.0  0.0 /System/Library/Frameworks/NetFS.framework/Versions/A/XPCServices/PlugInLibraryService.xpc/Contents/MacOS/PlugInLibraryService
+62074 rudraym            0.0  0.1 /Applications/Docker.app/Contents/MacOS/com.docker.backend
+62075 rudraym            1.1  0.4 /Applications/Docker.app/Contents/MacOS/com.docker.backend
+62076 rudraym            0.0  0.0 /Applications/Docker.app/Contents/MacOS/com.docker.backend
+62105 root               0.0  0.1 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Resources/backgroundtaskmanagementd
+62112 rudraym            0.0  0.0 /Applications/Docker.app/Contents/MacOS/com.docker.build
+62113 rudraym            0.9  0.6 /Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/MacOS/Docker Desktop
+62117 rudraym            0.0  0.1 /Applications/Docker.app/Contents/MacOS/com.docker.virtualization
+62118 rudraym            1.8  1.2 /System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine
+62134 rudraym            0.0  0.1 /Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper (GPU).app/Contents/MacOS/Docker Desktop Helper (GPU)
+62136 rudraym            0.0  0.1 /Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper.app/Contents/MacOS/Docker Desktop Helper
+62142 rudraym            0.0  0.0 /System/Library/CoreServices/pbs
+62161 rudraym            0.3  0.5 /Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper (Renderer).app/Contents/MacOS/Docker Desktop Helper (Renderer)
+62178 rudraym            0.0  0.0 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTEncoderXPCService.xpc/Contents/MacOS/VTEncoderXPCService
+62179 root               0.0  0.0 /System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService
+62181 root               0.0  0.0 /System/Library/PrivateFrameworks/XprotectFramework.framework/Versions/A/XPCServices/XProtectBridgeService.xpc/Contents/MacOS/XProtectBridgeService
+62285 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AXAssetLoader.framework/Support/axassetsd
+62286 rudraym            0.0  0.0 /System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.ComponentTagHelper.xpc/Contents/MacOS/com.apple.audio.ComponentTagHelper
+62287 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/SiriTTSService.framework/Versions/A/XPCServices/com.apple.SiriTTSService.TrialProxy.xpc/Contents/MacOS/com.apple.SiriTTSService.TrialProxy
+62289 _gamecontrollerd   0.0  0.1 /usr/libexec/gamecontrollerd
+62290 rudraym            0.0  0.0 /usr/libexec/gamecontrolleragentd
+62291 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/NewDeviceOutreach.framework/ndoagent
+62357 rudraym            0.0  0.1 /usr/libexec/replayd
+62358 root               0.0  0.1 /System/Library/PrivateFrameworks/TVIdleServices.framework/idleassetsd
+62411 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/BusinessChatService.framework/businessservicesd
+62412 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/MessagesBlastDoorSupport.framework/Versions/A/XPCServices/MessagesBlastDoorService.xpc/Contents/MacOS/MessagesBlastDoorService
+62443 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistorySyncHelper
+62445 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistoryPluginHelper
+62450 rudraym            0.0  0.0 /System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+62490 rudraym            0.0  0.1 /System/Library/CoreServices/appplaceholdersyncd
+62491 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd
+62492 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/iCloudDriveService.framework/XPCServices/ContainerMetadataExtractor.xpc/Contents/MacOS/ContainerMetadataExtractor
+62493 rudraym            0.0  0.0 /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/XPCServices/com.apple.StreamingUnzipService.xpc/Contents/MacOS/com.apple.StreamingUnzipService
+62497 root               0.0  0.1 /usr/sbin/spindump
+62498 rudraym            0.0  0.0 /usr/libexec/spindump_agent
+62594 rudraym            0.0  0.1 /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node
+62644 rudraym            0.0  0.0 /usr/libexec/MTLAssetUpgraderD
+62645 rudraym            0.0  0.0 /System/Library/Frameworks/MediaExtension.framework/Versions/A/Helpers/MENotificationAgent
+62646 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Support/BackgroundTaskManagementAgent.app/Contents/MacOS/BackgroundTaskManagementAgent
+62688 rudraym            0.0  0.1 /usr/libexec/naturallanguaged
+63132 rudraym            0.0  0.5 /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.85/Helpers/Google Chrome Helper (Aperitif Renderer).app/Contents/MacOS/Google Chrome Helper (Aperitif Renderer)
+63531 rudraym            0.0  0.2 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+63542 rudraym            0.0  0.1 /System/Library/PrivateFrameworks/AOSKit.framework/Versions/A/XPCServices/com.apple.iCloudHelper.xpc/Contents/MacOS/com.apple.iCloudHelper
+63543 rudraym            0.0  0.2 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+  155 root               0.0  0.0 /usr/libexec/remoted
+46777 rudraym            0.0  0.0 /bin/zsh
+47481 rudraym            0.6  1.7 claude
+48474 rudraym            0.0  0.0 /bin/zsh
+48576 rudraym            0.0  0.0 node
+48577 rudraym            0.0  0.2 /opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex
+53506 rudraym            0.0  0.0 /bin/zsh
+61262 rudraym            0.0  0.0 node
+61263 rudraym            0.0  0.1 /opt/homebrew/lib/node_modules/@openai/codex/node_modules/@openai/codex-darwin-arm64/vendor/aarch64-apple-darwin/bin/codex
+53798 rudraym            0.0  0.0 /bin/zsh
+63655 root               0.0  0.0 login
+63656 rudraym            0.0  0.1 -zsh
+63702 rudraym            0.0  0.0 bash
+63715 root               0.0  0.0 ps

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fail-1-crashloop-pod
+  labels:
+    tier: triage-gauntlet
+    scenario: crashloop
+spec:
+  containers:
+    - name: python-app
+      image: python:3.11-alpine
+      command:
+        - python3
+        - -c
+        - |
+          import os, time
+          print("Application started with DATABASE_URL configured", flush=True)
+          time.sleep(3600)
+      env:
+        - name: DATABASE_URL
+          value: postgres://demo@db:5432/app

@@ -1,0 +1,6 @@
+$ terraform output
+bucket_arn = "arn:aws:s3:::rudraym-session18-iac-20261024"
+bucket_name = "rudraym-session18-iac-20261024"
+bucket_region = "ap-south-1"
+
+exit_code=0

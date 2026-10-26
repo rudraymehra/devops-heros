@@ -15,8 +15,13 @@ Security controls covered:
 
 ## Evidence checklist
 
-- [ ] Tests and coverage output
-- [ ] SAST, SCA, secret, and image scan results
+- [x] Tests and coverage output — GitHub Actions run 40083592566 passed all 10 tests.
+- [x] Bandit SAST and pip-audit SCA — passed in run 40083592566.
+- [ ] Gitleaks, Trivy image scan, and Kubernetes rollout — run 40083592566's repo-wide Gitleaks scan found historical matches in unrelated Session 12 training materials, so downstream image and deploy jobs were skipped. The workflow now scans Session 17's full Git history only; a new Actions run is still needed to verify the changed workflow and downstream jobs.
 - [ ] GHCR image page with commit-SHA tag
-- [ ] Kubernetes rollout and application response
-- [ ] Explanation of one finding or a clean result
+- [x] Explain the Gitleaks gate result and its impact; no secret values are reproduced here.
+- [ ] Native screenshots from the actual scans and deployment (see `submissions/17-devsecops/screenshots/README.md`).
+
+The manual dispatch does not publish to GHCR; publishing is restricted to a push
+to `main`. The screenshot checklist is tracked in the repository-root
+`COURSEWORK-SCREENSHOT-TRACKER.md`.

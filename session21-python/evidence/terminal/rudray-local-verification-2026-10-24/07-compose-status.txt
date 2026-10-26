@@ -1,0 +1,12 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+M4 — actual Compose service status
+UTC: 2026-10-24T12:03:41.380137+00:00
+Directory: /Users/rudraym/devops-heros/session21-python
+Command: /Applications/Docker.app/Contents/Resources/bin/docker compose -p campusfix ps --all
+
+NAME                   IMAGE                      COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+campusfix-backend-1    campusfix-backend:local    "sh -c 'python -m ap…"   backend    15 seconds ago   Up 7 seconds (healthy)    127.0.0.1:8000->8000/tcp
+campusfix-frontend-1   campusfix-frontend:local   "/docker-entrypoint.…"   frontend   15 seconds ago   Up 1 second               127.0.0.1:3000->8080/tcp
+campusfix-postgres-1   postgres:16-alpine         "docker-entrypoint.s…"   postgres   11 days ago      Up 14 seconds (healthy)   5432/tcp
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

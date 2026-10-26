@@ -1,0 +1,19 @@
+$ terraform apply -input=false -no-color /tmp/session18.tfplan
+aws_s3_bucket.devops553: Creating...
+aws_s3_bucket.devops553: Creation complete after 2s [id=rudraym-session18-iac-20261024]
+aws_s3_bucket_public_access_block.devops553: Creating...
+aws_s3_bucket_versioning.devops553: Creating...
+aws_s3_bucket_server_side_encryption_configuration.devops553: Creating...
+aws_s3_bucket_public_access_block.devops553: Creation complete after 0s [id=rudraym-session18-iac-20261024]
+aws_s3_bucket_server_side_encryption_configuration.devops553: Creation complete after 0s [id=rudraym-session18-iac-20261024]
+aws_s3_bucket_versioning.devops553: Creation complete after 1s [id=rudraym-session18-iac-20261024]
+
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+bucket_arn = "arn:aws:s3:::rudraym-session18-iac-20261024"
+bucket_name = "rudraym-session18-iac-20261024"
+bucket_region = "ap-south-1"
+
+exit_code=0

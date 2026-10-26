@@ -1,0 +1,9 @@
+Rudray Mehra | 24 BCS 10425 | Batch B
+M4 — frontend non-root UID (must not be 0)
+UTC: 2026-10-24T12:07:06.138206+00:00
+Directory: /Users/rudraym/devops-heros/session21-python
+Command: /Applications/Docker.app/Contents/Resources/bin/docker compose -p campusfix exec -T frontend sh -c 'id; test "$(id -u)" -ne 0'
+
+uid=101(nginx) gid=101(nginx) groups=101(nginx)
+
+Exit code: 0 | PASSED | Rudray Mehra | 24 BCS 10425 | Batch B

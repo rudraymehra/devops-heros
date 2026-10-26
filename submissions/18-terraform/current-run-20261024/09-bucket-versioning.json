@@ -1,0 +1,6 @@
+$ aws s3api get-bucket-versioning --bucket rudraym-session18-iac-20261024 --region ap-south-1
+{
+    "Status": "Enabled"
+}
+
+exit_code=0
