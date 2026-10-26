@@ -9,10 +9,10 @@ spec = importlib.util.spec_from_file_location("coursework", root / "scripts/cour
 coursework = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(coursework)
 roots = sorted({name for item in coursework.CATALOG for name in item["roots"]})
-listed = subprocess.run(["rg", "--files", *roots, "-g", "*.py", "-g", "*.sh"],
+listed = subprocess.run(["git", "ls-files", "--", *roots],
                         cwd=root, capture_output=True, text=True, check=True)
 failed = []
-checked = sorted(set(listed.stdout.splitlines()))
+checked = sorted({name for name in listed.stdout.splitlines() if name.endswith((".py", ".sh"))})
 print("Rudray Mehra | 24 BCS 10425 | Batch B")
 print("Static syntax only — not runtime, deployment, vulnerability or screenshot proof.")
 for name in checked:
