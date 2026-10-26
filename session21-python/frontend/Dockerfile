@@ -6,6 +6,10 @@ COPY . .
 RUN npm run build
 
 FROM nginxinc/nginx-unprivileged:stable-alpine
+# Pull patched Alpine packages; the base image can lag behind security fixes.
+USER root
+RUN apk upgrade --no-cache
+USER 101
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 8080

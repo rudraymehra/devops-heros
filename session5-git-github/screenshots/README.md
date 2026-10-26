@@ -13,12 +13,12 @@ Reference images: 3. Native captures: 0 accepted; 0 awaiting review; 1 rejected.
 ### [rudray-20261023-092609](rudray-20261023-092609/README.md)
 
 - [Session 05 — complete isolated Git lab](rudray-20261023-092609/02-git-lab-complete.png): PASS. The screenshot shows `untracked.txt`, the successful cherry-pick, branch graph, and returned prompt.
-- The paired [author pager capture](rudray-20261023-092609/01-author-pager-incomplete.png) is retained as incomplete; the pager remained open in that earlier image.
+- The paired author pager capture (`rudray-20261023-092609/01-author-pager-incomplete.png`) is retained as incomplete; the pager remained open in that earlier image.
 
 ### [rudray-20261023-092416](rudray-20261023-092416/README.md)
 
 - The isolated Git lab reached the branch graph, but this capture only shows the pager tail. It omits the `commit -a` status and the returned prompt, so it is retained as incomplete evidence. The helper now disables Git's pager; rerun it and capture the full output.
-- [Pager-tail capture](rudray-20261023-092416/01-pager-tail-incomplete.png)
+- Pager-tail capture (rejected, not linked): `rudray-20261023-092416/01-pager-tail-incomplete.png`
 
 ### [rudray-20261016-212856-656600](rudray-20261016-212856-656600/README.md)
 

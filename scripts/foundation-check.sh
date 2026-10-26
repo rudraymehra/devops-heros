@@ -27,7 +27,7 @@ ip route
 ss -tuln
 getent hosts github.com
 curl -I --fail https://example.com
-printf 'Rudray Mehra\n24 BCS 10425\n' | bash session3-shell-scripting/system-info.sh
+printf 'Rudray Mehra\n24 BCS 10425\nsystem-info-output\n' | bash session3-shell-scripting/system-info.sh
 bash session5-git-github/run-cherry-pick-lab.sh
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml up -d --build --wait --wait-timeout 180
 docker compose -p campusfix-homework -f session8-docker-networking-volume/demo/docker-compose.yml ps

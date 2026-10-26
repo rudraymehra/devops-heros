@@ -4,4 +4,4 @@ Capture date: 2026-10-23 (Asia/Kolkata). The native terminal screenshot shows th
 
 The helper was updated to run the graph command without a pager. See [the updated helper](../../run-cherry-pick-lab.sh) and rerun it for a complete capture.
 
-- [Pager-tail capture](01-pager-tail-incomplete.png)
+- Pager-tail capture (rejected, not linked): `01-pager-tail-incomplete.png`
